@@ -44,6 +44,7 @@ and load-next hints.
 | `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
+| `whiteboard-operator-sketch` | seed | White-background tiny-worker sketch, sparse Chinese labels, one low-tech physical action. |
 
 ## Candidate Policy
 
