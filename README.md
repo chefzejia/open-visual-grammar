@@ -86,6 +86,7 @@ Do not load the whole repository into context.
 | `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
+| `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
 
 Candidate patterns stay in `patterns/` when they have enough structure to guide
 future extraction. Promote only after references, boundaries, and production

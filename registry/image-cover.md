@@ -26,7 +26,7 @@ posters, and other single-image editorial assets.
 | `eastern-texture-handdrawn` | seed | slow editorial metaphor, paper texture, restraint | hard technical proof, dense explainer |
 | `whimsical-journal-sketch` | seed | warm approachable journal-collage, creative notes, lighter technical entry | serious financial warning, strict product proof |
 | `minimal-handdrawn-linework` | seed | quiet concept illustration with one clear relation | strong public conflict, high-density explainer |
-| `whiteboard-operator-sketch` | seed | white-background tiny-worker sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
+| `whiteboard-operator-sketch` | seed | white-background GanFan threadball sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, full PPT-style decks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
 
 ## Required Output
 

@@ -11,58 +11,85 @@ when_to_use: White-background handdrawn body illustrations for agent workflows, 
 avoid_when: Strong feed covers, serious risk arguments, exact UI proof, polished product hero images, formal diagrams, or scenes that need exact brand-owned characters.
 load_next:
   references: refs/README.md
+  example: examples/context-carrying-threadball/
 ```
 
-中文名：白板小工草图
+中文名：白板线团小工草图
 English name: Whiteboard Tiny Worker Sketch
 
 Status: seed
 
 ## Definition / 定义
 
-EN: Whiteboard Tiny Worker Sketch is a white-background handdrawn illustration
-pattern. It turns one abstract technical relation into a small physical work
-scene: a tiny non-human worker, one low-tech object or path, sparse Chinese
-labels, red/orange/blue notes, and generous whitespace.
+EN: Whiteboard Tiny Worker Sketch is a GanFan/SorryCode adaptation of a
+white-background Chinese handdrawn technical explanation style. It turns one
+abstract technical relation into a small physical work scene: a tiny non-human
+threadball worker, one low-tech object or path, sparse Chinese labels,
+red/orange/blue notes, and generous whitespace.
 
-CN: 白板小工草图是一种白底手绘正文插图范式。它把一个抽象技术关系转成一个小型物理劳动现场：一个非人类小工、一个低科技物件或路径、少量中文标注、红橙蓝批注和大量留白。
+CN: 白板线团小工草图是 GanFan / SorryCode 对白底中文手绘技术解释风格的改造。它把一个抽象技术关系转成一个小型物理劳动现场：一个非人类线团小工、一个低科技物件或路径、少量中文标注、红橙蓝批注和大量留白。
 
 ## Source Decomposition / 来源拆解
 
-EN: This OVG capsule is decomposed from the public
-`helloianneo/ian-xiaohei-illustrations` skill. It preserves the reusable visual
-grammar, not the original protagonist as GanFan brand material.
+EN: This OVG capsule was recovered from GanFan production experiments that used
+the public `helloianneo/ian-handdrawn-ppt` visual system and a related
+Xiaohei-style handdrawn lineage as calibration inputs. OVG keeps the reusable
+method-level grammar, not the upstream protagonist, raw examples, or page-deck
+workflow as GanFan-owned IP.
 
-CN: 这个 OVG capsule 拆自公开的 `helloianneo/ian-xiaohei-illustrations` skill。这里沉淀的是可复用视觉语法，不把原主角当作 GanFan 品牌素材。
+CN: 这个 OVG capsule 是从 GanFan 生产实验里恢复出来的。当时参考了公开的 `helloianneo/ian-handdrawn-ppt` 视觉系统，也吸收了相关小黑手绘谱系作为校准输入。OVG 保留的是方法级视觉语法，不把上游主角、原始样例或整套页面 deck 工作流包装成 GanFan 自有资产。
+
+Public source lineages:
+
+- `https://github.com/helloianneo/ian-handdrawn-ppt`
+- `https://github.com/helloianneo/ian-xiaohei-illustrations`
+
+来源谱系：
+
+- `https://github.com/helloianneo/ian-handdrawn-ppt`
+- `https://github.com/helloianneo/ian-xiaohei-illustrations`
 
 Mapped layers:
 
-1. `style-dna`: pure white canvas, thin black handdrawn lines, strong
-   whitespace, sparse red/orange/blue handwritten Chinese notes.
-2. `character-ip`: converted into a replaceable tiny-worker slot. GanFan should
-   use its own worker species rather than copying the source mascot.
-3. `composition-patterns`: workflow, system-local, before/after, character
+1. `handdrawn-page-dna`: near-white canvas, thin black handdrawn line, large
+   negative space, restrained Chinese text, and pastel marker notes.
+2. `article-body-focus`: extracted from the broader PPT-style page-image
+   workflow into a reusable body-illustration pattern.
+3. `character-ip`: converted into a replaceable GanFan worker-species slot. The
+   default is the threadball worker, not upstream Xiaohei.
+4. `composition-patterns`: workflow, system-local, before/after, character
    state, concept metaphor, method layers, map route, and mini comic.
-4. `prompt-template`: converted into OVG adapter slots.
-5. `qa-checklist`: converted into failure modes and visual QA.
+5. `prompt-template`: converted into OVG adapter slots.
+6. `qa-checklist`: converted into failure modes and visual QA.
 
 拆解层：
 
-1. `style-dna`：纯白画布、细黑手绘线、大量留白、少量红橙蓝中文手写批注。
-2. `character-ip`：转成可替换的小工插槽。GanFan 应该使用自己的小工物种，而不是复制来源 mascot。
-3. `composition-patterns`：workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线、小漫画分镜。
-4. `prompt-template`：转成 OVG adapter slots。
-5. `qa-checklist`：转成失败模式和视觉 QA。
+1. `handdrawn-page-dna`：近白画布、细黑手绘线、大留白、克制中文文字、淡色手写标记。
+2. `article-body-focus`：从更大的 PPT-style 页面图工作流里抽出正文解释图范式。
+3. `character-ip`：转成可替换的 GanFan 小工物种插槽，默认使用线团小工，而不是上游小黑。
+4. `composition-patterns`：workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线、小漫画分镜。
+5. `prompt-template`：转成 OVG adapter slots。
+6. `qa-checklist`：转成失败模式和视觉 QA。
+
+## Scope Boundary / 范围边界
+
+EN: `ian-handdrawn-ppt` is a full PPT-style page-image skill: it plans narrative
+spines, selects slide archetypes, locks deck-level style, and generates 21:9
+covers or 16:9 page images. This OVG pattern is narrower. It only owns the
+white-background tiny-worker body-illustration grammar. Do not use this pattern
+as a substitute for the full page-deck workflow.
+
+CN: `ian-handdrawn-ppt` 是完整的 PPT-style 页面图 skill：它会规划叙事、选择页面 archetype、锁定整套风格，并生成 21:9 封面或 16:9 页面图。当前 OVG 范式更窄，只维护白底小工正文解释图语法。不要把它当作完整页面 deck 工作流的替代品。
 
 ## License And Attribution / 授权与归属
 
-EN: The source repository is MIT-licensed, which permits use, modification, and
-redistribution, including commercial use, as long as the copyright and license
-notice are preserved. MIT also disclaims warranty. Even with that permission,
-GanFan should not present the original protagonist or raw example images as its
-own visual IP.
+EN: The source repositories are MIT-licensed. MIT permits use, modification,
+and redistribution, including commercial use, as long as the copyright and
+license notice are preserved. MIT also disclaims warranty. Even with that
+permission, GanFan should not present upstream protagonists, raw example images,
+or Ian's page-deck identity as its own visual IP.
 
-CN: 来源仓库使用 MIT 许可证。MIT 允许使用、修改、再分发，也允许商业使用，前提是保留版权和许可证声明；同时它不提供担保。即便法律上允许，GanFan 也不应该把原主角或原始样例图包装成自己的视觉 IP。
+CN: 来源仓库使用 MIT 许可证。MIT 允许使用、修改、再分发，也允许商业使用，前提是保留版权和许可证声明；同时它不提供担保。即便法律上允许，GanFan 也不应该把上游主角、原始样例图或 Ian 的页面 deck 身份包装成自己的视觉 IP。
 
 ## Protagonist Slot / 主角插槽
 
@@ -111,6 +138,7 @@ EN:
 - blue only for secondary note, feedback, loop, or system state;
 - at least 35% blank white space;
 - one cognitive action, not a full architecture diagram.
+- not a full PPT page system, slide deck, page cover, or deterministic diagram.
 
 CN:
 
@@ -126,6 +154,7 @@ CN:
 - 蓝色只表达补充说明、反馈、回路或系统状态；
 - 至少 35% 空白留白；
 - 只画一个认知动作，不画完整架构图。
+- 不是完整 PPT 页面系统、slide deck、页面封面或确定性图表。
 
 ## Composition Modes / 构图模式
 

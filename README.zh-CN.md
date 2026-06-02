@@ -83,6 +83,7 @@ Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链
 | `whimsical-journal-sketch` | seed | 水彩速写、马克笔、拼贴、轻松温暖。 |
 | `flowing-gaze-minimal-cover` | seed | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
 | `minimal-handdrawn-linework` | seed | 干净线稿、克制反差、低饱和、高级克制。 |
+| `whiteboard-operator-sketch` | seed | 白底 GanFan 线团小工、手绘技术解释、少量中文标注。 |
 
 ## Evals / 评测
 
