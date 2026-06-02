@@ -1,24 +1,25 @@
 # Adapter: Deterministic Layout
 
-This adapter compiles a `print-menu-layout` Visual Score into a spec for a
-deterministic layout engine (HTML/CSS, Typst, or equivalent).
+This adapter translates a `print-menu-layout` visual brief into the decisions a
+deterministic layout engine must own. HTML/CSS, Typst, PDF, or another fixed
+layout engine can carry the result; none of them is the pattern's source of
+truth.
 
 ## Output Contract
 
 ```text
-Format:    PNG + PDF
-Dimensions: 2550 × 3300 px (US Letter at 300 DPI)
-PDF:       US Letter portrait, single page
-Text:      Exact — no model-generated text in the final output
+Format:      Fixed-format deliverable such as PNG, PDF, or both
+Dimensions:  Explicit final canvas or page size
+Text:        Exact — no model-generated text in the final output
 ```
 
-These are fixed. The consuming project's engine must enforce them.
+The consuming project's engine must enforce its chosen output contract.
 
 ## Compile Slots
 
 ```text
-Output format:     PNG + PDF
-Output dimensions: 2550 × 3300 px / US Letter portrait
+Output format:
+Output dimensions:
 
 Viewer:
 Job:
@@ -40,7 +41,7 @@ Content:
   Featured items:
   Contact:
 
-Style direction:   [warm-cafe | clean-modern | retro-american | elegant-classic]
+Style direction:   [named hospitality direction]
   Background:
   Surface:
   Text:
@@ -48,10 +49,10 @@ Style direction:   [warm-cafe | clean-modern | retro-american | elegant-classic]
   Accent:
   Secondary accent:
   Rule color:
-  Display font:     [packaged primary family]
-  Body font:        [packaged primary family]
-  Accent font:      [packaged primary family]
-  Font package:     [source, license, runtime path]
+  Display role:     [visual voice, size behavior, fallback policy]
+  Body role:        [reading behavior, numeric behavior, fallback policy]
+  Accent role:      [section or ceremonial behavior, fallback policy]
+  Numeric role:     [price alignment behavior]
 
 Typography scale:  [standard | dense — determined by item count]
   Restaurant name:
@@ -66,7 +67,7 @@ Density:           [standard (≤12 items) | dense (13–20 items)]
   Dense behavior:  two-column layout, smaller type scale
 
 Forbidden:
-  - MyPromptist branding in the output file
+  - producer, platform, or consuming-project branding unless requested
   - decorative elements outside the named style direction
   - web-scale font sizes on a print canvas
   - centered alignment except where the direction requires it
@@ -92,18 +93,14 @@ All prices must use tabular numerals and align to a consistent right column
 within each section. The gutter between item name and price must be visually
 unambiguous — not just a space character.
 
-## Font Packaging Rule
+## Typography Runtime Rule
 
-The renderer must load the exact font files selected by the visual score. A
-font stack is not a permission to accept whatever happens to exist on the host.
-For production deliverables, a missing primary font is a QA failure.
+The visual brief defines type roles. The consuming project chooses the exact
+font files and packaging strategy.
 
-Consuming projects should vendor the font files, keep license/source metadata
-with them, load them from an explicit runtime font path, and disable system
-font lookup when the engine supports that. Local, CI, and production output
-must be rendered with the same font package.
-
-The launch font contract for this pattern lives in `../typography.md`.
+For production deterministic deliverables, a missing primary font is a QA
+failure. See `../../../runtimes/font-packaging.md` for generic packaging and
+parity rules.
 
 ## Signature Detail Rule
 

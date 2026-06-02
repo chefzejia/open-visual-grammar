@@ -95,7 +95,7 @@ These references were distilled from:
 - Huashu-Design design philosophy schools (`references/design-styles.md`) —
   for the named tradition vocabulary (Pentagram, Build, Takram, Kenya Hara,
   Müller-Brockmann)
-- Restaurant Menu style direction briefs in MyPromptist — for the hospitality
+- reviewed hospitality and print-menu production work — for the hospitality
   and print traditions
 
 These sources are external references. The vocabulary above is Open Visual

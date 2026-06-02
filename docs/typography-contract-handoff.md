@@ -31,7 +31,7 @@ The first pattern-local typography draft is:
 patterns/print-menu-layout/typography.md
 ```
 
-That document records the MyPromptist Restaurant Menu font-role problem:
+That document records the print menu font-role problem:
 
 - avoid host system fonts as paid-output targets;
 - use packageable open-source fonts after review;
@@ -97,13 +97,13 @@ For deterministic deliverables, a consuming project should:
 5. Deterministic render parity with packaged fonts is a promotion gate for
    fixed-format paid-output patterns.
 
-## MyPromptist Gate
+## Consuming Project Gate
 
-MyPromptist should not treat the current Restaurant Menu font-family list as an
-approved production contract.
+Consuming projects should not treat pattern-local typography notes as approved
+production font contracts.
 
-Before MP packages fonts or renders customer-facing menu output, the operator
-must review real PNG/PDF samples for each style direction.
+Before a consuming project packages fonts or renders customer-facing output, the
+operator must review real PNG/PDF samples for each style direction.
 
 The eventual consumption path is:
 
@@ -115,6 +115,6 @@ patterns/print-menu-layout/typography.md
 runtimes/font-packaging.md
 ```
 
-Until review passes, MP may read these files to understand the architecture,
-but should not vendor the candidate font families as final assets or claim
-deterministic typography is ready for production.
+Until review passes, a consuming project may read these files to understand the
+architecture, but should not vendor any referenced font families as final assets
+or claim deterministic typography is ready for production.

@@ -101,8 +101,8 @@ Do not create a complex schema before real consumers need it.
 
 ## Typography And Deterministic Layout
 
-The MyPromptist Restaurant Menu work exposed a new OVG concern: typography is
-part of visual identity and deterministic delivery.
+The print menu layout work exposed a new OVG concern: typography is part of
+visual identity and deterministic delivery.
 
 Generic typography vocabulary belongs in:
 

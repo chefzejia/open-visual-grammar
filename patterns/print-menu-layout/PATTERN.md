@@ -9,7 +9,7 @@ runtimes:
   - html-css
   - typst
   - pdf
-when_to_use: Single-page restaurant menus that must become print-ready PNG/PDF or deterministic HTML/Typst output.
+when_to_use: Single-page restaurant menus that must become print-ready fixed-format output.
 avoid_when: Multi-page brochures, digital-only screen menus, unpriced posters, or editable customer templates.
 requires_grammar:
   - typography
@@ -99,9 +99,9 @@ The layout must solve three problems simultaneously:
 - Descriptions are subordinate to item names; they add texture, not structure.
 - Contact information is present when provided and legible, but does not compete
   with the menu content.
-- The composition holds at both full print size (2550 × 3300 px) and scaled
-  preview size.
-- No MyPromptist branding appears in the deliverable.
+- The composition holds at both final delivery size and scaled preview size.
+- No producer, platform, or consuming-project branding appears in the
+  deliverable unless the buyer explicitly asked for it.
 - No decorative elements that are not part of the named style direction.
 
 - 一个支配性的餐厅名，定义最高层级；
@@ -109,8 +109,8 @@ The layout must solve three problems simultaneously:
 - 菜品名和价格必须形成清楚视觉配对；
 - 描述文字低于菜品名，只增加质感，不承担结构；
 - 有联系方式时必须清楚可读，但不能抢菜单内容；
-- 构图在完整打印尺寸和缩略预览中都成立；
-- 交付物不能出现 MyPromptist 品牌；
+- 构图在最终交付尺寸和缩略预览中都成立；
+- 除非购买者明确要求，交付物不能出现生产方、平台方或消费项目的品牌；
 - 不加入命名风格方向之外的装饰元素。
 
 ## Composition Models
@@ -147,7 +147,8 @@ The restaurant name should behave like a headline, not a label:
 - large enough to anchor the composition;
 - set with negative tracking at display sizes;
 - placed with enough margin that it breathes;
-- in the style direction's packaged display font, not a host fallback.
+- in the style direction's intended display role, not an accidental host
+  fallback.
 
 Section labels are structural markers. They should be visually distinct from
 item names but not compete with the restaurant name.
@@ -156,13 +157,11 @@ Item names and prices must be typeset with tabular numerals for price alignment.
 Descriptions are set smaller and in a muted color.
 
 Typography is part of the visual grammar, not an implementation afterthought.
-For the candidate typography brief and runtime packaging rules, see
-`typography.md`. Specific font families are not production-approved until the
-operator reviews rendered samples. The consuming project must use packaged
-fonts for final output and must not rely on macOS, Windows, or Linux system
-fonts for the intended appearance.
+For the pattern-local typography roles, see `typography.md`. Runtime font
+packaging rules live in `../../runtimes/font-packaging.md`. The consuming
+project chooses and packages the exact font files for final output.
 
-Print-scale sizes (on a 2550 × 3300 canvas):
+Recommended print-scale ranges:
 
 | Element | Standard menu | Dense menu |
 | --- | --- | --- |
@@ -204,20 +203,21 @@ A style direction defines:
 - signature detail (the one element that makes the direction memorable)
 - composition model
 
-The four initial directions for Restaurant Menu:
+Reusable hospitality directions:
 
-| Direction | Tradition | Typography status | Signature detail |
-| --- | --- | --- | --- |
-| Warm Cafe | Warm paper | candidate fonts pending review | Hand-marked or brush divider |
-| Clean Modern | Editorial restraint | candidate fonts pending review | Thin editorial rule system |
-| Retro American | Diner energy | candidate fonts pending review | Ticket border and star ornaments |
-| Elegant Classic | Print ceremony | candidate fonts pending review | Gold hairline and serif hierarchy |
+| Direction | Tradition | Signature detail |
+| --- | --- | --- |
+| Warm Cafe | Warm paper | Hand-marked or brush divider |
+| Clean Modern | Editorial restraint | Thin editorial rule system |
+| Retro American | Diner energy | Ticket border and star ornaments |
+| Elegant Classic | Print ceremony | Gold hairline and serif hierarchy |
 
 ## Runtime Adapter Slots
 
-When compiling into a Typst template or deterministic renderer, define:
+When adapting this pattern into a deterministic renderer, the consuming project
+must define:
 
-- output dimensions (2550 × 3300 px PNG, US Letter PDF)
+- output format and dimensions
 - style direction and variant (Signature, Compact, Feature, Quiet)
 - restaurant name, cuisine type, tagline
 - sections and items (name, description, price, featured flag)
@@ -225,7 +225,7 @@ When compiling into a Typst template or deterministic renderer, define:
 - layout density (standard or dense, determined by item count)
 - composition model for this direction
 - signature detail implementation
-- packaged display, body, and accent font roles
+- display, body, accent, and numeric font roles
 - color tokens (background, surface, text, muted, accent, secondary accent, rule)
 
 ## Variants

@@ -1,80 +1,46 @@
 # Typography: Print Menu Layout
 
-Status: candidate typography brief; font families pending operator review
+Status: pattern typography brief
 
 This document is the typography brief for the `print-menu-layout` pattern. It
-defines font roles and runtime constraints. Specific font families in this file
-are candidates until the operator reviews rendered PNG/PDF samples.
+defines font roles and typography failure modes. It does not approve or package
+specific production font families for any consuming project.
 
 字体是 `print-menu-layout` 的视觉语法，不是渲染器的随机 fallback。这里定义字体的视觉角色、开源边界和运行时约束；具体项目再把字体文件打包进自己的渲染环境。
 
-Architecture note: this file is pattern-local because Restaurant Menu is the
-first production pressure case. Generic typography roles and packaging rules
-live in `../../grammar/typography.md` and `../../runtimes/font-packaging.md`.
+Architecture note: this file is pattern-local because print menus have specific
+typography pressure: restaurant-name identity, price scanning, dense menu
+readability, and print-scale hierarchy. Generic typography roles and packaging
+rules live in `../../grammar/typography.md` and
+`../../runtimes/font-packaging.md`.
 
-## Architecture Decision
+## Architecture Rule
 
-Use packaged, open-source fonts for all primary Restaurant Menu output. Do not
-use host system fonts as the design target.
+Use explicit font roles for primary print menu output. Do not let the renderer's
+host fallback decide the visual identity.
 
 Reasons:
 
 - local macOS fonts and Linux production fonts differ;
 - commercial/system faces such as Didot, Hoefler Text, Avenir Next, Cooper
-  Black, and Bodoni 72 cannot be assumed in production;
-- paid PNG/PDF output must be deterministic across local QA, CI, and server;
+  Black, and Bodoni 72 cannot be assumed in every runtime;
+- deterministic output should match across local QA, CI, and production;
 - typography is a visible part of the deliverable's taste.
 
-Open-source does not mean visually generic. The approved faces must carry the
-named style direction after visual review.
+Open-source does not mean visually generic. A consuming project should choose
+faces that carry the named style direction after rendered-output review.
 
-## Candidate Font Families
+## Role Directions
 
-These are candidates for review, not an approved launch contract. Use them to
-produce review samples only. Do not vendor them as production assets until the
-operator approves the rendered output.
+These are role directions, not a font registry. The consuming project owns exact
+font choices, licenses, files, and renderer wiring.
 
 | Direction | Display role | Body / menu role | Voice |
 | --- | --- | --- | --- |
-| Warm Cafe | Fraunces | Source Sans 3 | warm serif personality with clean hospitality reading |
-| Clean Modern | Newsreader | IBM Plex Sans | editorial restraint with precise scanning |
-| Retro American | Bowlby One SC | Archivo | bold diner vernacular without relying on Cooper Black |
-| Elegant Classic | Bodoni Moda | Cormorant Garamond | formal high-contrast ceremony without relying on Didot or Hoefler |
-
-Candidate weights for review samples:
-
-| Family | Minimum files |
-| --- | --- |
-| Fraunces | 700 or 900 for restaurant names; 600 optional for shorter names |
-| Source Sans 3 | Regular, Semibold, Bold |
-| Newsreader | Regular, Medium, Semibold |
-| IBM Plex Sans | Regular, Semibold, Bold |
-| Bowlby One SC | Regular |
-| Archivo | Regular, Semibold, Bold, Black |
-| Bodoni Moda | Regular, Semibold |
-| Cormorant Garamond | Regular, Semibold, Italic |
-
-Before any production vendoring, verify the license for each downloaded package
-and keep the license text with the font files in the consuming project. Prefer
-upstream Google Fonts / official repository packages with clear SIL Open Font
-License or equivalent open terms.
-
-Reference source paths to verify during review:
-
-| Family | Source path |
-| --- | --- |
-| Fraunces | `https://github.com/google/fonts/tree/main/ofl/fraunces` |
-| Source Sans 3 | `https://github.com/google/fonts/tree/main/ofl/sourcesans3` |
-| Newsreader | `https://github.com/google/fonts/tree/main/ofl/newsreader` |
-| IBM Plex Sans | `https://github.com/google/fonts/tree/main/ofl/ibmplexsans` |
-| Bowlby One SC | `https://github.com/google/fonts/tree/main/ofl/bowlbyonesc` |
-| Archivo | `https://github.com/google/fonts/tree/main/ofl/archivo` |
-| Bodoni Moda | `https://github.com/google/fonts/tree/main/ofl/bodonimoda` |
-| Cormorant Garamond | `https://github.com/google/fonts/tree/main/ofl/cormorantgaramond` |
-
-The source directories usually include `OFL.txt`, but the consuming project
-must still copy the license file beside any vendored font files and record the
-exact download date after approval.
+| Warm Cafe | warm, tactile display serif or softened display face | clean hospitality reading face | approachable, handmade, not childish |
+| Clean Modern | restrained editorial display face | precise sans or quiet editorial body face | calm, high-trust, easy scanning |
+| Retro American | heavy vernacular display face | sturdy sans with strong numerals | energetic diner print without novelty clutter |
+| Elegant Classic | high-contrast ceremonial display face | formal serif or quiet classic body face | refined, spacious, not wedding-template ornate |
 
 ## Role Rules
 
@@ -93,22 +59,11 @@ Variants inside one direction share the same font role mapping. Variants may
 change spacing, type scale, emphasis, and decoration density; they must not
 change typeface.
 
-## Runtime Packaging Contract
+## Runtime Packaging
 
-A consuming project must:
-
-- vendor the exact font files used in production;
-- record source URL, download date, license, and preferably file hashes;
-- load fonts from an explicit runtime font path;
-- disable or ignore system fonts when the renderer supports it;
-- fail QA when a primary font is missing instead of silently accepting a host
-  fallback;
-- render local, CI, and production QA samples with the same font files;
-- avoid runtime network font fetching for customer deliverables.
-
-Static font files are preferred for launch because they reduce runtime
-variation. Variable fonts may be used only after the exact axes, named
-instances, and renderer behavior are inspected in output PNG/PDF files.
+Runtime packaging is intentionally not pattern-local. Use
+`../../runtimes/font-packaging.md` when a consuming project needs deterministic
+font files, license metadata, renderer paths, or local/CI/production parity.
 
 ## Visual QA
 
@@ -126,7 +81,7 @@ Inspect each style direction at short and dense menu lengths. Pass criteria:
 
 ## Deferred
 
-These are not solved by the launch font contract:
+These are not solved by this pattern typography brief:
 
 - non-Latin scripts and CJK menus;
 - right-to-left scripts;
