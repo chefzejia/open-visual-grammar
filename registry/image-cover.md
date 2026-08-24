@@ -6,14 +6,19 @@ posters, and other single-image editorial assets.
 ## Load Order
 
 1. Read this registry.
-2. Pick one pattern from the table.
-3. Read `patterns/<pattern>/PATTERN.md`.
-4. Read `patterns/<pattern>/refs/README.md` only when visual calibration matters.
-5. Read `patterns/<pattern>/adapters/image-generation.md` if it exists.
-6. Read `runtimes/image-generation.md` only when compiling the final prompt.
-7. Read `grammar/visual-argument.md`, `grammar/density.md`, or
-   `grammar/metaphor-distance.md` only when the selected pattern or task needs
-   that specific decision.
+2. For a public editorial cover, read `grammar/visual-argument.md` and finish
+   the visual argument before selecting a pattern.
+3. Pick one pattern whose visual language fits the completed argument.
+4. Read `patterns/<pattern>/PATTERN.md`.
+5. Read `patterns/<pattern>/refs/README.md` only when visual calibration matters.
+6. Read `patterns/<pattern>/adapters/image-generation.md` if it exists.
+7. Read `runtimes/image-generation.md` only when compiling the final prompt.
+8. Read `grammar/density.md` or `grammar/metaphor-distance.md` only when the
+   completed argument still leaves that specific decision unresolved.
+
+Pattern selection is downstream of meaning. A pattern may encode material,
+hierarchy, typography, density, color behavior, and emotional temperature; it
+must not choose the article's claim, visual action, or main subject.
 
 ## Candidate Patterns
 
@@ -26,6 +31,8 @@ posters, and other single-image editorial assets.
 | `eastern-texture-handdrawn` | seed | slow editorial metaphor, paper texture, restraint | hard technical proof, dense explainer |
 | `whimsical-journal-sketch` | seed | warm approachable journal-collage, creative notes, lighter technical entry | serious financial warning, strict product proof |
 | `minimal-handdrawn-linework` | seed | quiet concept illustration with one clear relation | strong public conflict, high-density explainer |
+| `semantic-concept-poster` | seed | horizontal concept posters where one short sentence must be the main visual object and the image reveals its hidden tension | exact UI proof, dense tutorials, long commands, decorative text-on-background covers |
+| `retro-pixel-halftone-tech-editorial` | seed | technical editorials where one conflict, decision, bottleneck, comparison, or human-system relation should become a quickly legible pixel-halftone scene | photographic proof, exact UI, multi-step tutorials, mood-only covers |
 | `whiteboard-operator-sketch` | seed | white-background GanFan threadball sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, full PPT-style decks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
 
 ## Required Output
@@ -35,18 +42,31 @@ Before generation, produce a visual score with:
 ```text
 Artifact kind: image-cover
 Runtime: image-generation
-Pattern:
+Visual job:
 Primary source:
+Supporting sources:
+Source inclusion rule:
 Reader pain:
 False belief:
 Correction:
-First read:
+Stakes:
+First read / cover sentence:
 Concrete evidence:
 Visual action:
+Why it bites:
+Main subject:
+Composition:
+Pattern:
 Density:
+Text handling:
 Temperature:
 Forbidden:
 ```
 
-Then compile the score into the image runtime. The prompt is a one-off compiled
-artifact and does not belong in Open Visual Grammar.
+The first-read sentence, visual action, main subject, and composition must make
+the correction recoverable without reading the source article. If the score
+only communicates the broad topic, stop and revise the visual argument.
+
+Select the pattern only after those semantic fields are fixed, then compile the
+score into the image runtime. The prompt is a one-off compiled artifact and does
+not belong in Open Visual Grammar.

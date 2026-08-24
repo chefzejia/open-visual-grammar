@@ -1,0 +1,4 @@
+interface:
+  display_name: "OVG 风格逆向"
+  short_description: "从多张视觉参考中分离稳定语法、变量槽位与可迁移元提示词"
+  default_prompt: "Use $ovg-style-reverse to reverse-engineer these references into a reusable style meta-prompt."

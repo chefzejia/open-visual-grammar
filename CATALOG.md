@@ -24,6 +24,19 @@ Do not browse the repository. Route first, then load one pattern capsule.
 | `shader-effect` | `registry/shader-effect.md` | WebGL/GLSL-style fields, light, material, motion, invisible systems |
 | `motion-video` | `registry/motion-video.md` | Video compositions, animated covers, motion explainers |
 
+## Reverse A Visual Style
+
+When the task starts from reference images and asks to reverse-engineer a style
+or extract a reusable meta-prompt, read:
+
+```text
+skills/ovg-style-reverse/SKILL.md
+```
+
+The skill separates stable visual grammar from content-specific variables, then
+routes the result into an existing pattern or a new seed pattern. It does not
+store one-off compiled prompts in this repository.
+
 ## Default Rule
 
 If the request already names a delivery surface, route by artifact kind first.

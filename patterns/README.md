@@ -44,6 +44,8 @@ and load-next hints.
 | `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
+| `semantic-concept-poster` | seed | Short exact text as the visual object, one precise metaphor relation, premium editorial restraint. |
+| `retro-pixel-halftone-tech-editorial` | seed | One quickly legible technical narrative, one-bit pixel and halftone material, one controlled signal color. |
 | `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, sparse Chinese labels, one low-tech physical action. |
 
 ## Candidate Policy

@@ -41,6 +41,7 @@ grammar/     Cross-pattern visual language. Read only when a decision needs it.
 patterns/    Stable visual patterns. Load one pattern at a time.
 runtimes/    Cross-pattern execution constraints.
 evals/       Reproduction cases and rubrics for testing pattern stability.
+skills/      Reusable agent workflows for extracting or maintaining visual grammar.
 docs/        Protocols and operating notes.
 decisions/   Architecture notes and project decisions.
 ```
@@ -87,6 +88,7 @@ Do not load the whole repository into context.
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
 | `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
+| `retro-pixel-halftone-tech-editorial` | seed | One quickly legible technical narrative, one-bit pixel and halftone material, one controlled signal color. |
 
 Candidate patterns stay in `patterns/` when they have enough structure to guide
 future extraction. Promote only after references, boundaries, and production
