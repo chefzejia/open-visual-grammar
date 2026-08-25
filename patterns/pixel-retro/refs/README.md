@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `agent-runtime-cost-pixel-01.png`
+## `agent-runtime-cost-pixel-01.webp`
+
+![Agent runtime cost pixel reference one](agent-runtime-cost-pixel-01.webp)
 
 Source run:
 
@@ -27,7 +29,9 @@ Why it belongs:
 - 极客工具气质清楚；
 - 能读到 runtime 成本冲突。
 
-## `agent-runtime-cost-pixel-02.png`
+## `agent-runtime-cost-pixel-02.webp`
+
+![Agent runtime cost pixel reference two](agent-runtime-cost-pixel-02.webp)
 
 Source run:
 

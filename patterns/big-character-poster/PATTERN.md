@@ -207,8 +207,8 @@ channel. The pattern should shape judgment, not replace it.
 Use references as taste anchors, not as things to copy pixel by pixel:
 
 ```text
-refs/agent-runtime-cost-x-cover.png
-refs/context-token-economics-x-cover.png
+refs/agent-runtime-cost-x-cover.webp
+refs/context-token-economics-x-cover.webp
 ```
 
 Ask what makes them work:

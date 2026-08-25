@@ -37,6 +37,31 @@ The skill separates stable visual grammar from content-specific variables, then
 routes the result into an existing pattern or a new seed pattern. It does not
 store one-off compiled prompts in this repository.
 
+## Create A Visual Asset
+
+When the task starts from an article, script, product brief, or approved claim
+and asks for a cover or other visual asset, read:
+
+```text
+skills/ovg-create/SKILL.md
+```
+
+The skill owns the end-to-end compilation path from primary source to visual
+argument, pattern, composition family, runtime prompt, and acceptance check.
+
+## Review A Visual Asset
+
+When the task starts from a generated candidate and asks why it misses the
+claim or reference style, read:
+
+```text
+skills/ovg-review/SKILL.md
+```
+
+The skill separates visual-argument failure, pattern-fidelity failure, and
+runtime failure before recommending one correction. It does not regenerate or
+overwrite an asset without an explicit request.
+
 ## Default Rule
 
 If the request already names a delivery surface, route by artifact kind first.

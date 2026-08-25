@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `agent-runtime-cost-minimal-linework-01.png`
+## `agent-runtime-cost-minimal-linework-01.webp`
+
+![Agent runtime cost minimal linework reference](agent-runtime-cost-minimal-linework-01.webp)
 
 Source run:
 

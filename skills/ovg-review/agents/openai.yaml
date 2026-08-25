@@ -1,0 +1,4 @@
+interface:
+  display_name: "OVG 视觉审查"
+  short_description: "定位视觉命题、风格保真或运行时问题"
+  default_prompt: "Use $ovg-review to diagnose why this visual passed or failed and name one root correction."

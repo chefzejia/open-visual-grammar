@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `token-economics-journal-infographic-01.png`
+## `token-economics-journal-infographic-01.webp`
+
+![Token economics journal infographic reference](token-economics-journal-infographic-01.webp)
 
 Source run:
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "OVG 视觉创作"
+  short_description: "把内容主张编译成可验收的视觉资产"
+  default_prompt: "Use $ovg-create to turn this source into a visual argument and a pattern-faithful asset."

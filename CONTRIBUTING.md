@@ -35,7 +35,7 @@ Examples should live inside the pattern they belong to:
 patterns/<slug>/examples/<example-slug>/
 ├── score.md
 ├── critique.md
-└── output.png
+└── accepted.webp
 ```
 
 Include:
@@ -48,6 +48,22 @@ Include:
 - critique and follow-up.
 
 Do not add raw prompt attempts without analysis.
+
+## Update the showcase
+
+Every directory with a valid `patterns/<slug>/PATTERN.md` is registered in the
+root showcase. Lossless WebP files under `refs/` and `examples/` are discovered
+automatically; filenames beginning with `accepted` and `rejected` receive those
+labels in the UI.
+
+After adding or changing pattern metadata or WebP files, run:
+
+```bash
+node scripts/build-showcase.mjs
+node scripts/build-showcase.mjs --check
+```
+
+Commit the regenerated `showcase-data.js`, but never edit it directly.
 
 ## Add an eval case
 

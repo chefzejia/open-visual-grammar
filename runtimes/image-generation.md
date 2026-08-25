@@ -13,10 +13,13 @@ Output:
 Audience:
 Visual job:
 Pattern:
+Pattern fidelity anchors:
 First read:
 Tension:
 Main subject:
-Composition:
+Concrete evidence:
+Composition family:
+Composition instance:
 Action or relationship:
 Scene:
 Style:
@@ -24,6 +27,7 @@ Lighting:
 Information density:
 Emotional temperature:
 Text handling:
+Reference handling:
 Forbidden:
 ```
 
@@ -47,5 +51,9 @@ If a framework has references, use them to understand:
 - density;
 - emotional temperature;
 - material treatment.
+
+When a pattern defines composition families or a fidelity gate, compile those
+constraints before surface material. A candidate that matches color and texture
+but loses the pattern's information structure is not pattern-faithful.
 
 Do not ask the model to reproduce another image.

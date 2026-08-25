@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `codex-history-whimsical-journal-01.png`
+## `codex-history-whimsical-journal-01.webp`
+
+![Codex history whimsical journal reference](codex-history-whimsical-journal-01.webp)
 
 Source run:
 

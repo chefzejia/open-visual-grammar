@@ -35,6 +35,7 @@ Open Visual Grammar starts earlier:
 ## Repository Map
 
 ```text
+index.html   Human-facing visual showcase; opens directly in a browser.
 CATALOG.md   Agent entry point and route selector.
 registry/    Artifact-kind routing. Agents open one registry before one pattern.
 grammar/     Cross-pattern visual language. Read only when a decision needs it.
@@ -45,6 +46,23 @@ skills/      Reusable agent workflows for extracting or maintaining visual gramm
 docs/        Protocols and operating notes.
 decisions/   Architecture notes and project decisions.
 ```
+
+## Visual Showcase
+
+Open [`index.html`](index.html) to browse every registered pattern and its
+reviewed WebP references. The page works as a local static file and needs no
+server.
+
+Patterns self-register from `patterns/*/PATTERN.md`; reference, accepted, and
+rejected images are discovered under pattern-local `refs/` and `examples/`.
+Rebuild the deterministic data file after either source changes:
+
+```bash
+node scripts/build-showcase.mjs
+node scripts/build-showcase.mjs --check
+```
+
+Do not edit `showcase-data.js` directly.
 
 Examples live inside the pattern they belong to. One-off production prompts do
 not belong in this repository.
@@ -70,6 +88,21 @@ Use progressive disclosure:
 
 Do not load the whole repository into context.
 
+## Three Skill Entry Points
+
+- `ovg-style-reverse`: extract style signatures, composition families, transfer boundaries, and a meta-prompt from references.
+- `ovg-create`: turn a source or brief into a visual argument, select a pattern and composition family, and create an acceptable asset.
+- `ovg-review`: diagnose whether a candidate failed at the visual argument, pattern fidelity, or runtime layer.
+
+Skills are split by task intent. Patterns remain the source of truth for visual methods; do not create one skill per style.
+
+## Reference Assets
+
+Operator-selected pattern references and reviewed examples use lossless WebP by
+default. Each image must teach a reusable method or boundary; patterns without
+approved production output remain image-free. Platform delivery formats stay in
+the consuming project and are not governed by this convention.
+
 ## Current Stable Pattern
 
 | Pattern | Status | Invariants |
@@ -88,7 +121,7 @@ Do not load the whole repository into context.
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
 | `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
-| `retro-pixel-halftone-tech-editorial` | seed | One quickly legible technical narrative, one-bit pixel and halftone material, one controlled signal color. |
+| `retro-pixel-halftone-tech-editorial` | seed | Framed technical editorial plate, integrated headline and mechanism, one-bit halftone material, one signal color. |
 
 Candidate patterns stay in `patterns/` when they have enough structure to guide
 future extraction. Promote only after references, boundaries, and production

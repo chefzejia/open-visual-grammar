@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `token-economics-eastern-texture-01.png`
+## `token-economics-eastern-texture-01.webp`
+
+![Token economics eastern texture reference](token-economics-eastern-texture-01.webp)
 
 Source run:
 
@@ -27,7 +29,9 @@ Why it belongs:
 - 隐喻由空间和材料承载；
 - 反思型慢内容气质成立。
 
-## `codex-history-eastern-texture-02.png`
+## `codex-history-eastern-texture-02.webp`
+
+![Codex history eastern texture reference](codex-history-eastern-texture-02.webp)
 
 Source run:
 

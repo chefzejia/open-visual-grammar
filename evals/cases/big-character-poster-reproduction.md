@@ -22,8 +22,8 @@ are boundary material only if they are needed for factual accuracy.
 Use the existing pattern references as method references:
 
 ```text
-patterns/big-character-poster/refs/agent-runtime-cost-x-cover.png
-patterns/big-character-poster/refs/context-token-economics-x-cover.png
+patterns/big-character-poster/refs/agent-runtime-cost-x-cover.webp
+patterns/big-character-poster/refs/context-token-economics-x-cover.webp
 ```
 
 The reference images teach structure, not copying.

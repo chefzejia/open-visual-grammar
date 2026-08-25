@@ -10,8 +10,10 @@ public source lineages.
 Current GanFan threadball calibration:
 
 ```text
-context-carrying-threadball-01.png
+context-carrying-threadball-01.webp
 ```
+
+![Context carrying threadball reference](context-carrying-threadball-01.webp)
 
 Source run:
 

@@ -5,7 +5,9 @@ identity, not a fixed prompt recipe.
 
 这些图片是经过人工评选的范式参考图。它们说明视觉气质，不是固定 prompt。
 
-## `agent-runtime-cost-x-cover.png`
+## `agent-runtime-cost-x-cover.webp`
+
+![Agent runtime cost cover](agent-runtime-cost-x-cover.webp)
 
 Why it belongs:
 
@@ -21,7 +23,9 @@ Why it belongs:
 - 有具体成本和 runtime 证据物件；
 - 粗粝海报感和态度成立。
 
-## `context-token-economics-x-cover.png`
+## `context-token-economics-x-cover.webp`
+
+![Context token economics cover](context-token-economics-x-cover.webp)
 
 Why it belongs:
 

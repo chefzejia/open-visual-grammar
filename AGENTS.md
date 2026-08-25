@@ -18,6 +18,8 @@ CATALOG.md
 
 Then open exactly one registry route. Do not read every pattern by default.
 
+`index.html` is the human-facing showcase. It is not an agent routing source.
+
 ## Operating principles
 
 - Visual taste is subjective, but generation needs constraints.
@@ -95,6 +97,28 @@ folder unless they become reviewed pattern-local examples.
 
 Do not store one-off prompts here.
 
+Pattern-local reference and reviewed-example images use lossless WebP by
+default. Preserve their original pixel dimensions. This is a repository
+calibration format, not a delivery requirement for consuming projects.
+
+Do not create empty `refs/` or `examples/` folders, and do not generate filler
+images to make every pattern look complete. A pattern receives an image only
+after an operator has approved a public-safe result and can explain what it
+teaches.
+
 Store a generated prompt only when it is part of a reviewed pattern-local
 example that explains why it worked or failed. Otherwise, temporary prompts
 belong in the consuming project's work folder.
+
+## Showcase
+
+`PATTERN.md` metadata and pattern-local WebP files self-register into the root
+showcase. After changing either source, run:
+
+```bash
+node scripts/build-showcase.mjs
+node scripts/build-showcase.mjs --check
+```
+
+`showcase-data.js` is a compiled artifact. Do not edit it by hand or add a
+parallel showcase manifest.

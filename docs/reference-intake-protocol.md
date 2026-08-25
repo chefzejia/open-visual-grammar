@@ -50,6 +50,21 @@ The note may live in the private intake workspace. If it becomes a public
 example or eval record, remove private details and keep only the method-level
 learning.
 
+## Image Asset Convention
+
+Local images promoted into `refs/` or reviewed `examples/` use lossless WebP by
+default and keep the source pixel dimensions. WebP is the OVG calibration
+format; consuming projects keep the delivery format required by their channel.
+
+Do not vendor a third-party image merely to satisfy this convention. Keep the
+public URL and method-level learning when rights are unclear. Do not create an
+image for a pattern that has no operator-approved production result.
+
+An accepted production result may become a reference or reviewed example. A
+rejected result belongs here only when it exposes a stable failure mode and is
+paired with a critique or accepted comparison. Promotion is an explicit review
+decision, never an automatic consequence of a successful generation.
+
 ## Promotion Targets
 
 ### Pattern Reference
@@ -86,6 +101,10 @@ patterns/<slug>/examples/<example-slug>/
 
 Include score, critique, and output only when the material is public-safe and the
 example explains why the method worked or failed.
+
+Use a short pattern-local README to state what the image demonstrates, what it
+does not prove, and why a rejected comparison failed. Do not preserve the full
+production run when those facts are enough.
 
 Do not store one-off runtime prompts unless they are necessary to understand the
 reviewed example.

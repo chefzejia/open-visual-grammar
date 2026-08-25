@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Open Visual Grammar 的 Pattern 与人审视觉案例索引。"
+    >
+    <title>Open Visual Grammar · Specimen Index</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --canvas: oklch(97.5% 0.005 220);
+        --surface: oklch(100% 0 0);
+        --ink: oklch(18% 0.015 250);
+        --muted: oklch(48% 0.018 250);
+        --line: oklch(84% 0.012 245);
+        --line-strong: oklch(30% 0.018 250);
+        --blue: oklch(52% 0.21 258);
+        --yellow: oklch(88% 0.17 96);
+        --orange: oklch(67% 0.19 45);
+        --red: oklch(54% 0.2 29);
+        --radius-sm: 2px;
+        --radius-md: 4px;
+        --page: 1440px;
+        --sans: "Avenir Next", "SF Pro Text", -apple-system, "PingFang SC",
+          "Noto Sans SC", sans-serif;
+        --serif: "Iowan Old Style", "Songti SC", "Noto Serif CJK SC", serif;
+        --mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+        letter-spacing: 0;
+      }
+
+      html {
+        background: var(--canvas);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        color: var(--ink);
+        background: var(--canvas);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      button,
+      a {
+        touch-action: manipulation;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 20;
+        padding: 8px 12px;
+        color: var(--surface);
+        background: var(--ink);
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .masthead {
+        border-bottom: 1px solid var(--line-strong);
+        background: var(--surface);
+      }
+
+      .masthead-inner {
+        width: min(100%, var(--page));
+        margin: 0 auto;
+        padding: 38px 32px 46px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+        gap: 64px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        margin: 0 0 22px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 12px;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .eyebrow-mark {
+        display: inline-flex;
+        min-width: 42px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        color: var(--ink);
+        background: var(--yellow);
+        font-weight: 800;
+      }
+
+      h1 {
+        max-width: 920px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 0.98;
+        text-wrap: balance;
+      }
+
+      .intro {
+        max-width: 720px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.75;
+        text-wrap: pretty;
+      }
+
+      .stats {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid var(--line-strong);
+        border-bottom: 1px solid var(--line-strong);
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 18px 12px 16px;
+      }
+
+      .stat + .stat {
+        border-left: 1px solid var(--line);
+      }
+
+      .stat dt {
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 11px;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .stat dd {
+        margin: 7px 0 0;
+        font-family: var(--serif);
+        font-size: 32px;
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+      }
+
+      .toolbar-shell {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line-strong);
+        background: color-mix(in oklch, var(--canvas) 94%, var(--surface));
+      }
+
+      .toolbar {
+        width: min(100%, var(--page));
+        min-height: 66px;
+        margin: 0 auto;
+        padding: 12px 32px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .search {
+        width: 240px;
+        height: 42px;
+        padding: 0 13px;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius-sm);
+        color: var(--ink);
+        background: var(--surface);
+      }
+
+      .search::placeholder {
+        color: var(--muted);
+      }
+
+      .segments {
+        display: flex;
+        min-width: 0;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .segments::-webkit-scrollbar {
+        display: none;
+      }
+
+      .segment {
+        flex: 0 0 auto;
+        min-width: 42px;
+        min-height: 42px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        color: var(--muted);
+        background: var(--surface);
+        white-space: nowrap;
+        cursor: pointer;
+        transition-property: transform, color, background-color, border-color;
+        transition-duration: 140ms;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .segment[aria-pressed="true"] {
+        border-color: var(--ink);
+        color: var(--surface);
+        background: var(--ink);
+      }
+
+      .segment:active,
+      .specimen:active,
+      .close-dialog:active {
+        transform: scale(0.97);
+      }
+
+      .search:focus-visible,
+      .segment:focus-visible,
+      .specimen:focus-visible,
+      .close-dialog:focus-visible,
+      .pattern-link:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 2px;
+      }
+
+      main {
+        width: min(100%, var(--page));
+        margin: 0 auto;
+        padding: 0 32px 80px;
+      }
+
+      .result-line {
+        min-height: 54px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .pattern-list {
+        border-bottom: 1px solid var(--line-strong);
+      }
+
+      .pattern-record {
+        padding: 34px 0 40px;
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 42px;
+        border-top: 1px solid var(--line-strong);
+      }
+
+      .pattern-head {
+        min-width: 0;
+      }
+
+      .pattern-number {
+        margin: 0 0 20px;
+        color: var(--blue);
+        font-family: var(--mono);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .pattern-title {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.1;
+        text-wrap: balance;
+      }
+
+      .pattern-id {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 12px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+      }
+
+      .meta-line {
+        margin: 18px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .tag {
+        min-height: 24px;
+        padding: 3px 8px;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        background: var(--surface);
+        font-family: var(--mono);
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      .tag[data-status="canonical"] {
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+
+      .tag[data-status="candidate"] {
+        border-color: var(--orange);
+        color: oklch(46% 0.17 45);
+      }
+
+      .fit {
+        margin: 22px 0 0;
+      }
+
+      .fit dt {
+        margin: 0 0 5px;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 10px;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+
+      .fit dd {
+        margin: 0;
+        color: var(--ink);
+        font-size: 13px;
+        line-height: 1.65;
+        text-wrap: pretty;
+      }
+
+      .fit dd + dt {
+        margin-top: 14px;
+      }
+
+      .pattern-link {
+        min-height: 40px;
+        margin-top: 20px;
+        display: inline-flex;
+        align-items: center;
+        color: var(--ink);
+        font-family: var(--mono);
+        font-size: 12px;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+
+      .gallery {
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+        gap: 14px;
+        align-content: start;
+      }
+
+      .specimen {
+        min-width: 0;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        color: var(--ink);
+        background: var(--surface);
+        text-align: left;
+        overflow: hidden;
+        cursor: zoom-in;
+        transition-property: transform, border-color, box-shadow;
+        transition-duration: 160ms;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .specimen-image {
+        width: 100%;
+        height: auto;
+        max-height: 520px;
+        display: block;
+        object-fit: contain;
+        background: oklch(94% 0.007 220);
+        outline: 1px solid rgba(0, 0, 0, 0.08);
+        outline-offset: -1px;
+      }
+
+      .specimen-meta {
+        min-height: 48px;
+        padding: 9px 11px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .specimen-name {
+        min-width: 0;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 10px;
+        overflow-wrap: anywhere;
+      }
+
+      .specimen-kind {
+        flex: 0 0 auto;
+        padding: 3px 6px;
+        border-radius: var(--radius-sm);
+        color: var(--surface);
+        background: var(--blue);
+        font-family: var(--mono);
+        font-size: 9px;
+        line-height: 1.2;
+      }
+
+      .specimen[data-kind="accepted"] .specimen-kind {
+        color: var(--ink);
+        background: var(--yellow);
+      }
+
+      .specimen[data-kind="rejected"] {
+        border-color: color-mix(in oklch, var(--red) 45%, var(--line));
+      }
+
+      .specimen[data-kind="rejected"] .specimen-kind {
+        background: var(--red);
+      }
+
+      .empty-gallery {
+        min-height: 224px;
+        padding: 28px;
+        display: grid;
+        place-items: center;
+        border-top: 1px dashed var(--line-strong);
+        border-bottom: 1px dashed var(--line-strong);
+        color: var(--muted);
+        background: var(--surface);
+        text-align: center;
+      }
+
+      .empty-gallery p {
+        max-width: 430px;
+        margin: 0;
+        text-wrap: pretty;
+      }
+
+      .empty-result {
+        min-height: 260px;
+        display: grid;
+        place-items: center;
+        border-top: 1px solid var(--line-strong);
+        border-bottom: 1px solid var(--line-strong);
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .page-footer {
+        width: min(100%, var(--page));
+        margin: 0 auto;
+        padding: 22px 32px 32px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 11px;
+      }
+
+      dialog {
+        width: min(1120px, calc(100vw - 40px));
+        max-height: calc(100vh - 40px);
+        padding: 0;
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius-md);
+        color: var(--ink);
+        background: var(--surface);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+        overflow: auto;
+        overscroll-behavior: contain;
+      }
+
+      dialog::backdrop {
+        background: rgba(10, 12, 16, 0.78);
+      }
+
+      .dialog-bar {
+        min-height: 54px;
+        padding: 7px 9px 7px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .dialog-title {
+        margin: 0;
+        font-family: var(--mono);
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+
+      .close-dialog {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        color: var(--ink);
+        background: var(--surface);
+        font-size: 25px;
+        line-height: 1;
+        cursor: pointer;
+        transition-property: transform, background-color;
+        transition-duration: 120ms;
+      }
+
+      .dialog-image {
+        width: 100%;
+        max-height: calc(100vh - 136px);
+        display: block;
+        object-fit: contain;
+        background: oklch(93% 0.006 220);
+      }
+
+      @media (hover: hover) {
+        .segment:hover {
+          border-color: var(--line-strong);
+          color: var(--ink);
+        }
+
+        .specimen:hover {
+          border-color: var(--line-strong);
+          box-shadow: 0 9px 24px rgba(18, 22, 28, 0.1);
+          transform: translateY(-2px);
+        }
+
+        .pattern-link:hover {
+          color: var(--blue);
+        }
+
+        .close-dialog:hover {
+          background: var(--canvas);
+        }
+      }
+
+      @media (max-width: 960px) {
+        .masthead-inner {
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .stats {
+          max-width: 520px;
+        }
+
+        .pattern-record {
+          grid-template-columns: 240px minmax(0, 1fr);
+          gap: 28px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .masthead-inner {
+          padding: 28px 20px 34px;
+        }
+
+        h1 {
+          font-size: 42px;
+          line-height: 1.02;
+        }
+
+        .intro {
+          font-size: 16px;
+        }
+
+        .toolbar {
+          padding: 10px 20px;
+          flex-wrap: wrap;
+        }
+
+        .search {
+          width: 100%;
+        }
+
+        .segments {
+          width: 100%;
+          gap: 2px;
+        }
+
+        .segment {
+          padding-right: 5px;
+          padding-left: 5px;
+          font-size: 14px;
+        }
+
+        main {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+
+        .pattern-record {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+
+        .fit {
+          display: grid;
+          grid-template-columns: 48px minmax(0, 1fr);
+          gap: 8px 12px;
+        }
+
+        .fit dd + dt {
+          margin-top: 0;
+        }
+
+        .page-footer {
+          padding-right: 20px;
+          padding-left: 20px;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .stat {
+          padding-right: 7px;
+          padding-left: 7px;
+        }
+
+        .stat dt {
+          font-size: 9px;
+        }
+
+        .stat dd {
+          font-size: 28px;
+        }
+
+        .gallery {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <div>
+          <p class="eyebrow">
+            <span class="eyebrow-mark">OVG</span>
+            <span>Specimen index · 视觉样本索引</span>
+          </p>
+          <h1>Open Visual Grammar</h1>
+          <p class="intro">
+            视觉方法不是提示词。这里展示每个 Pattern 的不变量、边界，以及真正经过人审的参考和案例。
+          </p>
+        </div>
+
+        <dl class="stats" aria-label="橱窗统计">
+          <div class="stat">
+            <dt>Patterns</dt>
+            <dd id="pattern-count">0</dd>
+          </div>
+          <div class="stat">
+            <dt>With images</dt>
+            <dd id="reviewed-pattern-count">0</dd>
+          </div>
+          <div class="stat">
+            <dt>WebP assets</dt>
+            <dd id="image-count">0</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="toolbar-shell">
+      <div class="toolbar" aria-label="橱窗筛选">
+        <label>
+          <span class="visually-hidden">搜索 Pattern</span>
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="搜索 Pattern"
+            autocomplete="off"
+          >
+        </label>
+        <div
+          id="artifact-filters"
+          class="segments"
+          role="group"
+          aria-label="按交付类型筛选"
+        ></div>
+        <div
+          id="status-filters"
+          class="segments"
+          role="group"
+          aria-label="按成熟度筛选"
+        ></div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <p id="result-line" class="result-line" aria-live="polite"></p>
+      <section
+        id="pattern-list"
+        class="pattern-list"
+        aria-label="视觉 Pattern"
+      ></section>
+      <noscript>
+        <p class="empty-result">这个橱窗需要浏览器启用 JavaScript。</p>
+      </noscript>
+    </main>
+
+    <footer class="page-footer">
+      <span>Pattern 是方法真源，WebP 是人审校准资产。</span>
+      <span>Open Visual Grammar</span>
+    </footer>
+
+    <dialog id="image-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-bar">
+        <p id="dialog-title" class="dialog-title"></p>
+        <button
+          id="close-dialog"
+          class="close-dialog"
+          type="button"
+          aria-label="关闭图片"
+          title="关闭"
+        >×</button>
+      </div>
+      <img id="dialog-image" class="dialog-image" alt="">
+    </dialog>
+
+    <script src="./showcase-data.js"></script>
+    <script>
+      (function () {
+        'use strict';
+
+        var data = window.OVG_SHOWCASE;
+        var patternList = document.getElementById('pattern-list');
+        var resultLine = document.getElementById('result-line');
+        var search = document.getElementById('search');
+        var artifactFilters = document.getElementById('artifact-filters');
+        var statusFilters = document.getElementById('status-filters');
+        var dialog = document.getElementById('image-dialog');
+        var dialogImage = document.getElementById('dialog-image');
+        var dialogTitle = document.getElementById('dialog-title');
+        var closeDialog = document.getElementById('close-dialog');
+        var activeArtifact = 'all';
+        var activeStatus = 'all';
+
+        var artifactLabels = {
+          all: '全部类型',
+          'image-cover': '图片封面',
+          'deterministic-layout': '确定性版式',
+          'motion-video': '动态视频',
+          'shader-effect': 'Shader',
+        };
+
+        var statusLabels = {
+          all: '全部状态',
+          canonical: 'Canonical',
+          candidate: 'Candidate',
+          seed: 'Seed',
+        };
+
+        var kindLabels = {
+          accepted: '正例',
+          reference: '参考',
+          example: '案例',
+          rejected: '反例',
+        };
+
+        function element(tag, className, text) {
+          var node = document.createElement(tag);
+          if (className) node.className = className;
+          if (text !== undefined) node.textContent = text;
+          return node;
+        }
+
+        function createFilter(value, label, group, onSelect) {
+          var button = element('button', 'segment', label);
+          button.type = 'button';
+          button.dataset.value = value;
+          button.setAttribute('aria-pressed', value === 'all' ? 'true' : 'false');
+          button.addEventListener('click', function () {
+            group.querySelectorAll('.segment').forEach(function (item) {
+              item.setAttribute(
+                'aria-pressed',
+                item === button ? 'true' : 'false',
+              );
+            });
+            onSelect(value);
+            render();
+          });
+          group.appendChild(button);
+        }
+
+        function setupFilters() {
+          var artifacts = Array.from(
+            new Set(
+              data.patterns.flatMap(function (pattern) {
+                return pattern.artifactKinds;
+              }),
+            ),
+          ).sort();
+          var statusRank = ['canonical', 'candidate', 'seed'];
+          var statuses = Array.from(
+            new Set(
+              data.patterns.map(function (pattern) {
+                return pattern.status;
+              }),
+            ),
+          ).sort(function (a, b) {
+            return statusRank.indexOf(a) - statusRank.indexOf(b);
+          });
+
+          createFilter(
+            'all',
+            artifactLabels.all,
+            artifactFilters,
+            function (value) {
+              activeArtifact = value;
+            },
+          );
+          artifacts.forEach(function (value) {
+            createFilter(
+              value,
+              artifactLabels[value] || value,
+              artifactFilters,
+              function (selected) {
+                activeArtifact = selected;
+              },
+            );
+          });
+
+          createFilter(
+            'all',
+            statusLabels.all,
+            statusFilters,
+            function (value) {
+              activeStatus = value;
+            },
+          );
+          statuses.forEach(function (value) {
+            createFilter(
+              value,
+              statusLabels[value] || value,
+              statusFilters,
+              function (selected) {
+                activeStatus = selected;
+              },
+            );
+          });
+        }
+
+        function createTag(text, status) {
+          var tag = element('span', 'tag', text);
+          if (status) tag.dataset.status = status;
+          return tag;
+        }
+
+        function createFitList(pattern) {
+          var list = element('dl', 'fit');
+          var useTerm = element('dt', '', '适用');
+          var useValue = element('dd', '', pattern.whenToUse || '未定义');
+          var avoidTerm = element('dt', '', '避免');
+          var avoidValue = element('dd', '', pattern.avoidWhen || '未定义');
+          list.append(useTerm, useValue, avoidTerm, avoidValue);
+          return list;
+        }
+
+        function openImage(pattern, image) {
+          dialogTitle.textContent =
+            pattern.zhName + ' · ' + kindLabels[image.kind] + ' · ' + image.label;
+          dialogImage.src = image.path;
+          dialogImage.width = image.width;
+          dialogImage.height = image.height;
+          dialogImage.alt = pattern.zhName + '，' + kindLabels[image.kind];
+          dialog.showModal();
+        }
+
+        function createSpecimen(pattern, image) {
+          var button = element('button', 'specimen');
+          button.type = 'button';
+          button.dataset.kind = image.kind;
+          button.setAttribute(
+            'aria-label',
+            '查看 ' + pattern.zhName + ' 的' + kindLabels[image.kind],
+          );
+
+          var picture = document.createElement('img');
+          picture.className = 'specimen-image';
+          picture.src = image.path;
+          picture.alt = pattern.zhName + '，' + kindLabels[image.kind];
+          picture.width = image.width;
+          picture.height = image.height;
+          picture.loading = 'lazy';
+          picture.decoding = 'async';
+
+          var meta = element('span', 'specimen-meta');
+          var name = element('span', 'specimen-name', image.label);
+          var kind = element(
+            'span',
+            'specimen-kind',
+            kindLabels[image.kind] || image.kind,
+          );
+          meta.append(name, kind);
+          button.append(picture, meta);
+          button.addEventListener('click', function () {
+            openImage(pattern, image);
+          });
+          return button;
+        }
+
+        function createPattern(pattern, index) {
+          var article = element('article', 'pattern-record');
+          article.id = pattern.id;
+
+          var head = element('div', 'pattern-head');
+          var number = element(
+            'p',
+            'pattern-number',
+            String(index + 1).padStart(2, '0'),
+          );
+          var title = element('h2', 'pattern-title', pattern.zhName);
+          var id = element(
+            'p',
+            'pattern-id',
+            pattern.enName + ' / ' + pattern.id,
+          );
+          var meta = element('div', 'meta-line');
+          meta.appendChild(
+            createTag(statusLabels[pattern.status] || pattern.status, pattern.status),
+          );
+          pattern.artifactKinds.forEach(function (kind) {
+            meta.appendChild(createTag(artifactLabels[kind] || kind));
+          });
+
+          var link = element('a', 'pattern-link', '查看 PATTERN.md ↗');
+          link.href = pattern.patternPath;
+          link.target = '_blank';
+          link.rel = 'noreferrer';
+
+          head.append(number, title, id, meta, createFitList(pattern), link);
+
+          var gallery;
+          if (pattern.images.length) {
+            gallery = element('div', 'gallery');
+            pattern.images.forEach(function (image) {
+              gallery.appendChild(createSpecimen(pattern, image));
+            });
+          } else {
+            gallery = element('div', 'empty-gallery');
+            gallery.appendChild(
+              element(
+                'p',
+                '',
+                '这个 Pattern 已完成注册，但还没有经过人审的 WebP。它会保留真实的完成度，不使用占位图。',
+              ),
+            );
+          }
+
+          article.append(head, gallery);
+          return article;
+        }
+
+        function currentPatterns() {
+          var query = search.value.trim().toLocaleLowerCase('zh-CN');
+          return data.patterns.filter(function (pattern) {
+            var matchesArtifact =
+              activeArtifact === 'all' ||
+              pattern.artifactKinds.includes(activeArtifact);
+            var matchesStatus =
+              activeStatus === 'all' || pattern.status === activeStatus;
+            var haystack = [
+              pattern.id,
+              pattern.zhName,
+              pattern.enName,
+              pattern.whenToUse,
+              pattern.avoidWhen,
+            ]
+              .join(' ')
+              .toLocaleLowerCase('zh-CN');
+            return matchesArtifact && matchesStatus && haystack.includes(query);
+          });
+        }
+
+        function render() {
+          var patterns = currentPatterns();
+          patternList.replaceChildren();
+          resultLine.textContent =
+            '显示 ' + patterns.length + ' / ' + data.patterns.length + ' 个 Pattern';
+
+          if (!patterns.length) {
+            patternList.appendChild(
+              element('p', 'empty-result', '没有符合当前筛选条件的 Pattern。'),
+            );
+            return;
+          }
+
+          patterns.forEach(function (pattern, index) {
+            patternList.appendChild(createPattern(pattern, index));
+          });
+        }
+
+        if (!data || !Array.isArray(data.patterns)) {
+          resultLine.textContent =
+            '无法读取 showcase-data.js，请重新运行橱窗构建脚本。';
+          return;
+        }
+
+        var imageCount = data.patterns.reduce(function (sum, pattern) {
+          return sum + pattern.images.length;
+        }, 0);
+        var patternsWithImages = data.patterns.filter(function (pattern) {
+          return pattern.images.some(function (image) {
+            return image.kind !== 'rejected';
+          });
+        }).length;
+
+        document.getElementById('pattern-count').textContent =
+          String(data.patterns.length);
+        document.getElementById('reviewed-pattern-count').textContent =
+          String(patternsWithImages);
+        document.getElementById('image-count').textContent = String(imageCount);
+
+        setupFilters();
+        render();
+
+        search.addEventListener('input', render);
+        closeDialog.addEventListener('click', function () {
+          dialog.close();
+        });
+        dialog.addEventListener('click', function (event) {
+          if (event.target === dialog) dialog.close();
+        });
+      })();
+    </script>
+  </body>
+</html>

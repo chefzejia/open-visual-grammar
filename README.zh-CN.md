@@ -35,6 +35,7 @@ Open Visual Grammar 的顺序更靠前：
 ## 仓库结构
 
 ```text
+index.html   面向人的视觉橱窗，可直接在浏览器打开。
 CATALOG.md   Agent 入口和路由选择。
 registry/    按交付类型路由。Agent 先打开一个 registry，再进入一个 pattern。
 grammar/     跨 pattern 的视觉语法。只有具体决策需要时再读。
@@ -44,6 +45,21 @@ evals/       测试 pattern 稳定复现能力的用例和判断标准。
 docs/        协议和操作说明。
 decisions/   架构说明和项目决策记录。
 ```
+
+## 视觉橱窗
+
+直接打开 [`index.html`](index.html)，可以浏览全部已注册 Pattern 及其人审
+WebP 参考图，不需要启动服务器。
+
+Pattern 从 `patterns/*/PATTERN.md` 自动注册；橱窗自动发现 Pattern 内
+`refs/` 与 `examples/` 下的参考、正例和反例。修改这些真源后执行：
+
+```bash
+node scripts/build-showcase.mjs
+node scripts/build-showcase.mjs --check
+```
+
+`showcase-data.js` 是可再生编译产物，不要手工修改。
 
 案例跟随对应 pattern 存放。一次性生产 prompt 不进入这个仓库。
 
@@ -62,6 +78,18 @@ Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链
 6. 需要时再读它点名的参考图、adapter、反例、grammar 或 runtime contract。
 7. 写出本次任务的 visual score。
 8. 按目标 runtime 编译成 prompt / shader spec / layout spec。
+
+## 三个 Skill 入口
+
+- `ovg-style-reverse`：从参考组提取风格签名、构图家族、迁移边界和元提示词。
+- `ovg-create`：从正文或简报完成视觉论证，选择 Pattern 与构图家族并生成可验收资产。
+- `ovg-review`：从候选图反查视觉命题、Pattern 保真或 Runtime 执行问题。
+
+Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每种风格建立一个 Skill。
+
+## 参考资产
+
+经过人工选择的 Pattern 参考图和已审案例默认使用无损 WebP。每张图都必须能说明可复用方法或边界；尚无真实人审产出的 Pattern 保持无图，不补占位图。平台交付格式继续由消费项目决定，不受这条约定影响。
 
 ## 当前稳定范式
 
@@ -84,6 +112,7 @@ Pattern slug 使用英文 kebab-case，保证路径、工具调用和 GitHub 链
 | `flowing-gaze-minimal-cover` | seed | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
 | `minimal-handdrawn-linework` | seed | 干净线稿、克制反差、低饱和、高级克制。 |
 | `whiteboard-operator-sketch` | seed | 白底 GanFan 线团小工、手绘技术解释、少量中文标注。 |
+| `retro-pixel-halftone-tech-editorial` | seed | 带框技术编辑图版、标题与机制一体化、像素网点、单一信号色。 |
 
 ## Evals / 评测
 
