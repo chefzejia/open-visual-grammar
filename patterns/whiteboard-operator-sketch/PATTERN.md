@@ -12,6 +12,7 @@ avoid_when: Strong feed covers, serious risk arguments, exact UI proof, polished
 load_next:
   references: refs/README.md
   example: examples/context-carrying-threadball/
+  style-calibration-box-operator: adapters/youmind-box-operator-sketch.md
 ```
 
 中文名：白板线团小工草图

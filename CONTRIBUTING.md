@@ -110,6 +110,12 @@ Do not commit raw collections. Promote only the public-safe learning that
 improves a pattern, example, anti-pattern, eval, grammar file, runtime contract,
 or decision record.
 
+For the current YouMind style study, run the read-only atlas check after editing:
+
+```bash
+node scripts/check-youmind-style-atlas.mjs
+```
+
 ## Public-safety rules
 
 Do not commit:

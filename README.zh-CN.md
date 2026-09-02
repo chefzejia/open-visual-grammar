@@ -111,8 +111,14 @@ Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每
 | `whimsical-journal-sketch` | seed | 水彩速写、马克笔、拼贴、轻松温暖。 |
 | `flowing-gaze-minimal-cover` | seed | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
 | `minimal-handdrawn-linework` | seed | 干净线稿、克制反差、低饱和、高级克制。 |
+| `limited-color-print-editorial` | seed | 暖纸面、一种主墨色、一个大结构色面、局部印压、共享图文轴线。 |
+| `frosted-silhouette-editorial` | seed | 区域化磨砂显隐、几何剪影、受控留白、安静的编辑距离感。 |
+| `paper-sculpture-collage-editorial` | seed | 剪纸叠层、语义遮挡、哑光浅层深度、源自主体配色、安静的编辑温度。 |
+| `soft-2-5d-icon` | seed | 一个方形剪影、一个功能线索、柔和浅层深度、小尺寸可读性。 |
 | `whiteboard-operator-sketch` | seed | 白底 GanFan 线团小工、手绘技术解释、少量中文标注。 |
 | `retro-pixel-halftone-tech-editorial` | seed | 带框技术编辑图版、标题与机制一体化、像素网点、单一信号色。 |
+| `interwoven-portrait-type-cover` | seed | 可辨人像、一个短标题、明确遮挡图、共享透视、受保护的面部与移动端安全区。 |
+| `restrained-editorial-slide-system` | seed | 每页一个阅读任务、共享编辑网格、准确字体层级、受控证据和克制墨色。 |
 
 ## Evals / 评测
 

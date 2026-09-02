@@ -5,7 +5,7 @@ description: 从文章、脚本、产品说明或视觉简报创建 OVG 视觉�
 
 # OVG Create
 
-把内容主张编译成可验收的视觉资产。先决定画面要证明什么，再选择 Pattern；Pattern 选定后，尊重它真正拥有的构图家族、密度、字体和材质边界。
+把内容主张编译成可验收的视觉资产。先决定画面要证明什么，再选择 Pattern；Pattern 选定后，尊重它真正拥有的版式路由、密度、字体和材质边界。
 
 ## 入口
 
@@ -21,9 +21,21 @@ description: 从文章、脚本、产品说明或视觉简报创建 OVG 视觉�
 - `Primary source` 是当前图片真正服务的最小正文、段落、脚本或简报。
 - 额外材料只有在改变受众、事实边界、视觉主张、交付规格或复用目标时才进入输入。
 - 文章主张、视觉动作、主体和具体证据由内容决定，不能由 Pattern 发明。
-- Pattern 可以约束构图家族、密度范围、标题与场景关系、材质和情绪温度。
+- Pattern 拥有版式路由、密度范围、标题与场景关系、材质和情绪温度。
 
 若 Pattern 的高保真边界与渠道要求冲突，改选 Pattern。不要保留风格名称，再删掉它的风格签名。
+
+## 视觉权责门
+
+编译前把决定分成三类：
+
+- 内容拥有：第一眼信息、修正、视觉动作、主体与具体证据；
+- Pattern 拥有：版式路由、尺度节奏、密度范围、配色、物体画法、透视、字体层级、材质和情绪温度；
+- Runtime 拥有：画幅、文字生成或后排策略、输入方式和导出约束。
+
+Runtime prompt 只能编译这些决定，不能补写第二套美术方向。凡是改变配色、透视、物体构造、
+版式、材质或温度的词，都必须能追溯到所选 Pattern；凡是新增的叙事物件，都必须能追溯到
+正文证据或已经确认的视觉动作。无法归属的词删除，不用更多禁用词与它对冲。
 
 ## 工作流
 
@@ -32,8 +44,8 @@ description: 从文章、脚本、产品说明或视觉简报创建 OVG 视觉�
 3. 视觉动作必须是可见关系或物理动词。只能说明宽泛主题时停止，不生成。
 4. 选择能承载该论证的 Pattern。读取它的风格签名、适用边界和失败方式。
    需要视觉校准时，先读 Pattern 的 `refs/README.md`，再实际查看其中点名的 WebP；不能只凭文字摘要想象参考图。
-5. 从 Pattern 支持的构图家族中选择一种，再根据动作、主体、证据与画幅形成构图实例。上游不预先锁死任意构图，Pattern 也不得改写文章主张。
-6. 写出 visual score，编译一次性 runtime prompt。Prompt 是编译产物，不是视觉方法真源。
+5. 按 Pattern 自己的路由规则选择构图，再根据动作、主体、证据与画幅形成实例。构图属于 Pattern，不是上游或 runtime 的自由发挥；Pattern 也不得改写文章主张。
+6. 写出 visual score，执行视觉权责门，再编译一次性 runtime prompt。Prompt 是编译产物，不是视觉方法真源。
 7. 用户要求生成时，一次生成一个候选。计费或请求状态不明时不自动重试。
 8. 按语义一致性、Pattern 保真度和 runtime 完成度依次验收。没有通过时只修正最高层根因。
 
@@ -56,14 +68,14 @@ Why it bites:
 Main subject:
 Concrete evidence:
 Pattern:
-Composition family:
-Composition instance:
+Pattern layout route:
+Layout instance:
 Pattern fidelity anchors:
-Density:
+Pattern density:
 Text handling:
-Reference handling:
-Temperature:
-Forbidden:
+Pattern reference handling:
+Pattern temperature:
+Topic-specific forbidden:
 ```
 
 ## 交付边界

@@ -12,6 +12,7 @@ avoid_when: Neutral documentation heroes, exact UI proof, calm premium pages, or
 load_next:
   image-generation: adapters/image-generation.md
   references: refs/README.md
+  style-calibration-torn-paper: adapters/youmind-torn-paper-thumbnail.md
 ```
 
 中文名：大字报

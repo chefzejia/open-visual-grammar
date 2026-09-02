@@ -11,6 +11,9 @@ when_to_use: Horizontal concept posters where a short exact text must become the
 avoid_when: Exact UI proof, dense infographics, long text layouts, decorative illustration, brand/product pages, or covers that can be solved by a concrete evidence object alone.
 load_next:
   image-generation: ../../runtimes/image-generation.md
+  style-calibration-mist-blue-metaphor: adapters/youmind-mist-blue-metaphor.md
+  style-calibration-emotional-metaphor: adapters/youmind-emotional-metaphor-editorial.md
+  style-calibration-spatial-word: adapters/youmind-spatial-word-poster.md
 ```
 
 中文名：语义概念海报

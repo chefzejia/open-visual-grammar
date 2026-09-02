@@ -19,6 +19,14 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/big-character-poster/PATTERN.md",
       "images": [
         {
+          "path": "patterns/big-character-poster/examples/side-batch-torn-paper/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Torn Paper",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 808514
+        },
+        {
           "path": "patterns/big-character-poster/refs/agent-runtime-cost-x-cover.webp",
           "kind": "reference",
           "label": "Agent Runtime Cost X Cover",
@@ -81,6 +89,14 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/eastern-texture-handdrawn/PATTERN.md",
       "images": [
         {
+          "path": "patterns/eastern-texture-handdrawn/examples/side-batch-colorful-ink/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Colorful Ink",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 707608
+        },
+        {
           "path": "patterns/eastern-texture-handdrawn/refs/codex-history-eastern-texture-02.webp",
           "kind": "reference",
           "label": "Codex History Eastern Texture 02",
@@ -125,6 +141,110 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "frosted-silhouette-editorial",
+      "slug": "frosted-silhouette-editorial",
+      "zhName": "磨砂剪影编辑封面",
+      "enName": "Frosted Silhouette Editorial",
+      "status": "seed",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Quiet editorial covers where one recognizable silhouette or relation can be organized through regional frosted windows, clean geometry, and controlled negative space.",
+      "avoidWhen": "Exact UI proof, dense tutorials, photographic evidence, playful game logic, or topics that need full-frame blur, glossy glass, or long text.",
+      "patternPath": "patterns/frosted-silhouette-editorial/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-01.webp",
+          "kind": "reference",
+          "label": "Youmind Frosted Silhouette 01",
+          "width": 800,
+          "height": 1200,
+          "bytes": 301760
+        },
+        {
+          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-02.webp",
+          "kind": "reference",
+          "label": "Youmind Frosted Silhouette 02",
+          "width": 800,
+          "height": 1200,
+          "bytes": 316860
+        },
+        {
+          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-03.webp",
+          "kind": "reference",
+          "label": "Youmind Frosted Silhouette 03",
+          "width": 800,
+          "height": 1200,
+          "bytes": 336164
+        },
+        {
+          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-04.webp",
+          "kind": "reference",
+          "label": "Youmind Frosted Silhouette 04",
+          "width": 800,
+          "height": 1200,
+          "bytes": 352440
+        }
+      ]
+    },
+    {
+      "id": "interwoven-portrait-type-cover",
+      "slug": "interwoven-portrait-type-cover",
+      "zhName": "人物文字景深交织封面",
+      "enName": "Interwoven Portrait Type Cover",
+      "status": "seed",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Portrait-led social covers where a short title must share depth, perspective, and occlusion with a recognizable person while remaining legible on mobile.",
+      "avoidWhen": "Anonymous stock portraits, long copy, identity-unsafe edits, exact UI proof, group scenes, or covers where type can remain a detached overlay.",
+      "patternPath": "patterns/interwoven-portrait-type-cover/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/interwoven-portrait-type-cover/examples/side-batch-portrait-band/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Portrait Band",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 621610
+        }
+      ]
+    },
+    {
+      "id": "limited-color-print-editorial",
+      "slug": "limited-color-print-editorial",
+      "zhName": "限色印刷编辑图版",
+      "enName": "Limited Color Print Editorial",
+      "status": "seed",
+      "artifactKinds": [
+        "image-cover",
+        "deterministic-layout"
+      ],
+      "runtimes": [
+        "image-generation",
+        "deterministic-layout"
+      ],
+      "whenToUse": "Editorial covers or slide-like pages that need one strong silhouette, a strict two-or-three-ink palette, modernist geometry, and visible print pressure.",
+      "avoidWhen": "Photographic proof, glossy depth, dense dashboards, unrestricted brand palettes, exact diagrams, or narratives that need several competing scenes.",
+      "patternPath": "patterns/limited-color-print-editorial/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/limited-color-print-editorial/examples/side-batch-geometric-key/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Geometric Key",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 758922
+        }
+      ]
+    },
+    {
       "id": "minimal-handdrawn-linework",
       "slug": "minimal-handdrawn-linework",
       "zhName": "简约手绘线稿",
@@ -140,6 +260,14 @@ window.OVG_SHOWCASE = {
       "avoidWhen": "Strong public conflict, high-density explainers, realistic proof, or scenes needing heavy emotional force.",
       "patternPath": "patterns/minimal-handdrawn-linework/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/minimal-handdrawn-linework/examples/side-batch-colored-pencil/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Colored Pencil",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 371740
+        },
         {
           "path": "patterns/minimal-handdrawn-linework/refs/agent-runtime-cost-minimal-linework-01.webp",
           "kind": "reference",
@@ -177,6 +305,56 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "paper-sculpture-collage-editorial",
+      "slug": "paper-sculpture-collage-editorial",
+      "zhName": "纸雕拼贴编辑封面",
+      "enName": "Paper Sculpture Collage Editorial",
+      "status": "seed",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Editorial covers where one recognizable subject or relation can be rebuilt as a small set of layered cut-paper planes with matte depth and a calm page field.",
+      "avoidWhen": "Exact UI proof, dense tutorials, photographic evidence, long copy, playful sticker sheets, or topics that require glossy 3D or realistic material physics.",
+      "patternPath": "patterns/paper-sculpture-collage-editorial/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-01.webp",
+          "kind": "reference",
+          "label": "Youmind Paper Sculpture 01",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 1773052
+        },
+        {
+          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-02.webp",
+          "kind": "reference",
+          "label": "Youmind Paper Sculpture 02",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 1854170
+        },
+        {
+          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-03.webp",
+          "kind": "reference",
+          "label": "Youmind Paper Sculpture 03",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 1426496
+        },
+        {
+          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-04.webp",
+          "kind": "reference",
+          "label": "Youmind Paper Sculpture 04",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 2143382
+        }
+      ]
+    },
+    {
       "id": "pixel-retro",
       "slug": "pixel-retro",
       "zhName": "像素复古风",
@@ -209,6 +387,23 @@ window.OVG_SHOWCASE = {
           "bytes": 1471684
         }
       ]
+    },
+    {
+      "id": "restrained-editorial-slide-system",
+      "slug": "restrained-editorial-slide-system",
+      "zhName": "克制编辑式幻灯片系统",
+      "enName": "Restrained Editorial Slide System",
+      "status": "seed",
+      "artifactKinds": [
+        "deterministic-layout"
+      ],
+      "runtimes": [
+        "deterministic-layout"
+      ],
+      "whenToUse": "Slide-like pages that need magazine hierarchy, calm authority, exact text, bounded photography or line art, and a small reusable family of evidence layouts.",
+      "avoidWhen": "Decorative keynote spectacle, playful illustration decks, dense spreadsheet reporting, cinematic full-bleed storytelling, or content without a stable hierarchy.",
+      "patternPath": "patterns/restrained-editorial-slide-system/PATTERN.md",
+      "images": []
     },
     {
       "id": "retro-pixel-halftone-tech-editorial",
@@ -271,6 +466,98 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "soft-2-5d-icon",
+      "slug": "soft-2-5d-icon",
+      "zhName": "柔和 2.5D 图标",
+      "enName": "Soft 2.5D Icon",
+      "status": "seed",
+      "artifactKinds": [
+        "app-icon"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Compact app or product icons where one recognizable silhouette and one functional cue must remain legible at small size through controlled shallow depth.",
+      "avoidWhen": "Long text, multi-object scenes, exact UI screenshots, dense illustration, photographic evidence, or icons that need realistic material physics.",
+      "patternPath": "patterns/soft-2-5d-icon/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-01.webp",
+          "kind": "reference",
+          "label": "Youmind Soft 2 5d Icon 01",
+          "width": 800,
+          "height": 600,
+          "bytes": 122632
+        },
+        {
+          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-02.webp",
+          "kind": "reference",
+          "label": "Youmind Soft 2 5d Icon 02",
+          "width": 800,
+          "height": 600,
+          "bytes": 114206
+        },
+        {
+          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-03.webp",
+          "kind": "reference",
+          "label": "Youmind Soft 2 5d Icon 03",
+          "width": 800,
+          "height": 600,
+          "bytes": 108034
+        },
+        {
+          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-04.webp",
+          "kind": "reference",
+          "label": "Youmind Soft 2 5d Icon 04",
+          "width": 800,
+          "height": 600,
+          "bytes": 117222
+        }
+      ]
+    },
+    {
+      "id": "thermal-receipt-poster",
+      "slug": "thermal-receipt-poster",
+      "zhName": "热敏小票记录海报",
+      "enName": "Thermal Receipt Poster",
+      "status": "seed",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Vertical social posters that turn verified daily facts into a receipt-like record with thermal-paper material, fixed fields, and dry human humor.",
+      "avoidWhen": "Dense data, long copy, fake measurements, exact UI proof, multi-scene illustration, or topics that need decorative nostalgia rather than a record.",
+      "patternPath": "patterns/thermal-receipt-poster/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/thermal-receipt-poster/examples/side-batch-quiet-stub/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Quiet Stub",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 217760
+        },
+        {
+          "path": "patterns/thermal-receipt-poster/refs/youmind-thermal-receipt-01.webp",
+          "kind": "reference",
+          "label": "Youmind Thermal Receipt 01",
+          "width": 2304,
+          "height": 1728,
+          "bytes": 1792128
+        },
+        {
+          "path": "patterns/thermal-receipt-poster/refs/youmind-thermal-receipt-02.webp",
+          "kind": "reference",
+          "label": "Youmind Thermal Receipt 02",
+          "width": 1728,
+          "height": 2304,
+          "bytes": 2962068
+        }
+      ]
+    },
+    {
       "id": "whimsical-journal-sketch",
       "slug": "whimsical-journal-sketch",
       "zhName": "奇思妙想手账画师",
@@ -286,6 +573,14 @@ window.OVG_SHOWCASE = {
       "avoidWhen": "Serious financial warnings, strong public arguments, product proof, or strict technical tutorials.",
       "patternPath": "patterns/whimsical-journal-sketch/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/whimsical-journal-sketch/examples/side-batch-naive-doodle/accepted.webp",
+          "kind": "accepted",
+          "label": "Side Batch Naive Doodle",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 326302
+        },
         {
           "path": "patterns/whimsical-journal-sketch/refs/codex-history-whimsical-journal-01.webp",
           "kind": "reference",

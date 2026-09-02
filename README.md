@@ -120,8 +120,14 @@ the consuming project and are not governed by this convention.
 | `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
 | `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
+| `limited-color-print-editorial` | seed | Warm paper, one dominant ink, one large structural plane, local print pressure, shared type-image axes. |
+| `frosted-silhouette-editorial` | seed | Regional frosted reveal, geometric silhouette, controlled negative space, quiet editorial distance. |
+| `paper-sculpture-collage-editorial` | seed | Layered cut-paper planes, meaningful occlusion, matte depth, source-aware color, quiet editorial warmth. |
+| `soft-2-5d-icon` | seed | One square silhouette, one functional cue, shallow soft depth, small-size legibility. |
 | `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
 | `retro-pixel-halftone-tech-editorial` | seed | Framed technical editorial plate, integrated headline and mechanism, one-bit halftone material, one signal color. |
+| `interwoven-portrait-type-cover` | seed | Recognizable portrait, one short title, explicit occlusion map, shared perspective, protected face and mobile safe zones. |
+| `restrained-editorial-slide-system` | seed | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
 
 Candidate patterns stay in `patterns/` when they have enough structure to guide
 future extraction. Promote only after references, boundaries, and production

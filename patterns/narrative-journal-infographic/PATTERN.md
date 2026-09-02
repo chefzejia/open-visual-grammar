@@ -11,6 +11,10 @@ when_to_use: Handdrawn timelines, workflows, comparisons, system maps, and expla
 avoid_when: Pure mood images, hard proof screenshots, strong debate posters, or exact charts.
 load_next:
   references: refs/README.md
+  style-calibration: adapters/youmind-comic-memory-card.md
+  style-calibration-multi-page: adapters/youmind-multi-page-handdrawn-explainer.md
+  style-calibration-contrast-card: adapters/youmind-cognitive-contrast-card.md
+  style-calibration-picture-book: adapters/source-picture-book-sequence.md
 ```
 
 中文名：叙事手账·信息可视化

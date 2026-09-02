@@ -20,6 +20,7 @@ Do not browse the repository. Route first, then load one pattern capsule.
 | Artifact kind | Registry | Use when |
 | --- | --- | --- |
 | `image-cover` | `registry/image-cover.md` | X covers, article cards, docs hero images, generated posters |
+| `app-icon` | `registry/app-icon.md` | App icons, product symbols, compact mascot marks |
 | `deterministic-layout` | `registry/deterministic-layout.md` | HTML/CSS, Typst, PDF, print-ready or customer-facing fixed layouts |
 | `shader-effect` | `registry/shader-effect.md` | WebGL/GLSL-style fields, light, material, motion, invisible systems |
 | `motion-video` | `registry/motion-video.md` | Video compositions, animated covers, motion explainers |
@@ -32,6 +33,19 @@ or extract a reusable meta-prompt, read:
 ```text
 skills/ovg-style-reverse/SKILL.md
 ```
+
+The current public-safe YouMind intake study is documented in
+`docs/youmind-style-atlas.md`. Use it as a routing aid after reading the skill;
+it records cluster evidence and promotion status, not one-off prompts or raw
+third-party images.
+
+For source discovery beyond YouMind, use `docs/style-discovery-sources.md`. It
+maps high-signal archives to the visual evidence they can teach and keeps raw
+inspiration separate from OVG promotion.
+
+The first bounded implementation is recorded in
+`docs/style-discovery-batch-2026-09.md`; load it when a source-discovery task
+needs current evidence, promotion decisions, or the latest stop condition.
 
 The skill separates stable visual grammar from content-specific variables, then
 routes the result into an existing pattern or a new seed pattern. It does not
@@ -47,7 +61,7 @@ skills/ovg-create/SKILL.md
 ```
 
 The skill owns the end-to-end compilation path from primary source to visual
-argument, pattern, composition family, runtime prompt, and acceptance check.
+argument, Pattern-owned layout route, runtime prompt, and acceptance check.
 
 ## Review A Visual Asset
 

@@ -18,8 +18,8 @@ First read:
 Tension:
 Main subject:
 Concrete evidence:
-Composition family:
-Composition instance:
+Pattern layout route:
+Layout instance:
 Action or relationship:
 Scene:
 Style:
@@ -52,7 +52,7 @@ If a framework has references, use them to understand:
 - emotional temperature;
 - material treatment.
 
-When a pattern defines composition families or a fidelity gate, compile those
+When a Pattern defines layout routes or a fidelity gate, compile those
 constraints before surface material. A candidate that matches color and texture
 but loses the pattern's information structure is not pattern-faithful.
 

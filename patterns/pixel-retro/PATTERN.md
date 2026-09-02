@@ -11,6 +11,8 @@ when_to_use: Playful technical systems, tool paths, runtime cost, and choices th
 avoid_when: Premium corporate documents, fine emotional essays, realistic product proof, or calm institutional docs.
 load_next:
   references: refs/README.md
+  style-calibration: adapters/youmind-pixel-mask.md
+  style-calibration-pastoral-character: adapters/youmind-pastoral-pixel-character.md
 ```
 
 中文名：像素复古风

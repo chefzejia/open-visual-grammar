@@ -11,6 +11,8 @@ when_to_use: Slow editorial images that need paper texture, loose ink line, whit
 avoid_when: Step-by-step tutorials, hard technical proof, urgent feed warnings, or dense information diagrams.
 load_next:
   references: refs/README.md
+  style-calibration: adapters/youmind-eastern-restraint.md
+  style-calibration-colorful-ink: adapters/youmind-colorful-ink-outline.md
 ```
 
 中文名：东方肌理手绘
