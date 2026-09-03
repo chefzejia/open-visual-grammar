@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f5f2ea"/>
+  <g fill="none" stroke="#1d2830" stroke-width="2">
+    <rect x="52" y="50" width="1496" height="800"/>
+    <line x1="92" y1="176" x2="1508" y2="176" stroke="#a8b0ad"/>
+    <line x1="92" y1="744" x2="1508" y2="744" stroke="#a8b0ad"/>
+    <line x1="560" y1="210" x2="560" y2="700" stroke="#c7ccc7"/>
+    <line x1="1100" y1="210" x2="1100" y2="700" stroke="#c7ccc7"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" fill="#647176" font-size="16" letter-spacing="2">
+    <text x="92" y="105">RESEARCH BRIEF / OPERATING NOTES</text>
+    <text x="1420" y="105" text-anchor="end">01 / 04</text>
+    <text x="92" y="155">A SMALLER CLAIM, A CLEARER DECISION</text>
+  </g>
+
+  <g fill="#1d2830" font-family="Georgia, Times New Roman, serif">
+    <text x="92" y="270" font-size="74" font-weight="700">A DECISION</text>
+    <text x="92" y="350" font-size="74" font-weight="700">NEEDS ITS</text>
+    <text x="92" y="430" font-size="74" font-weight="700">CONTEXT.</text>
+  </g>
+  <g fill="#b64e3d" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2">
+    <text x="96" y="486">THE FIRST SIGNAL IS NEVER THE WHOLE STORY</text>
+  </g>
+  <g fill="#647176" font-family="Arial, Helvetica, sans-serif" font-size="18">
+    <text x="92" y="550">A compact evidence spread for one reading task.</text>
+    <text x="92" y="580">Read the signal, add the missing frame, choose the next move.</text>
+  </g>
+  <g fill="none" stroke="#1d2830" stroke-width="3">
+    <path d="M92 640 H390"/>
+    <path d="M390 640 l-18 -12 M390 640 l-18 12"/>
+  </g>
+  <g fill="#647176" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1">
+    <text x="92" y="678">SOURCE LABEL: SYNTHETIC BRIEF / NO EXTERNAL CLAIMS</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="610" y="230" width="430" height="176" fill="#e3e8e4" stroke="#1d2830" stroke-width="2"/>
+    <rect x="640" y="260" width="92" height="92" fill="#5e7480"/>
+    <path d="M660 325 l20 -28 16 16 15 -20 21 32" fill="none" stroke="#f5f2ea" stroke-width="5"/>
+    <text x="762" y="282" fill="#1d2830" font-size="16" letter-spacing="2">01 / SIGNAL</text>
+    <text x="762" y="316" fill="#1d2830" font-size="28" font-weight="700">What is visible?</text>
+    <text x="762" y="350" fill="#647176" font-size="16">Name the observation before</text>
+    <text x="762" y="374" fill="#647176" font-size="16">you explain its cause.</text>
+
+    <rect x="660" y="450" width="380" height="154" fill="#f5f2ea" stroke="#1d2830" stroke-width="2"/>
+    <path d="M694 490 H992 M694 522 H942 M694 554 H970" stroke="#647176" stroke-width="8"/>
+    <path d="M694 582 H862" stroke="#b64e3d" stroke-width="8"/>
+    <text x="694" y="638" fill="#1d2830" font-size="16" letter-spacing="2">02 / CONTEXT</text>
+
+    <path d="M855 407 V450" stroke="#b64e3d" stroke-width="3"/>
+    <path d="M855 450 l-10 -14 M855 450 l10 -14" stroke="#b64e3d" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(1150 230)">
+    <rect width="300" height="370" fill="#1d2830"/>
+    <rect x="28" y="28" width="244" height="314" fill="#dfe5e2"/>
+    <path d="M54 84 H242 M54 120 H218 M54 156 H232" stroke="#647176" stroke-width="8"/>
+    <path d="M54 214 H190" stroke="#b64e3d" stroke-width="16"/>
+    <path d="M54 258 H236" stroke="#647176" stroke-width="8"/>
+    <path d="M54 294 H170" stroke="#647176" stroke-width="8"/>
+    <circle cx="218" cy="214" r="22" fill="#b64e3d"/>
+    <path d="M218 202 V226 M206 214 H230" stroke="#f5f2ea" stroke-width="4"/>
+    <text x="28" y="358" fill="#f5f2ea" font-size="16" letter-spacing="2">EVIDENCE CROP / BOUNDED</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="92" y="776" width="420" height="42" fill="#1d2830"/>
+    <text x="114" y="804" fill="#f5f2ea" font-size="16" letter-spacing="2">03 / CHOOSE THE NEXT MOVE</text>
+    <text x="610" y="802" fill="#647176" font-size="17">One grid. Three roles. No decorative filler.</text>
+    <text x="1508" y="802" text-anchor="end" fill="#647176" font-size="15" letter-spacing="1">OVG / RESTRAINED EDITORIAL</text>
+  </g>
+</svg>

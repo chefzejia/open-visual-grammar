@@ -383,7 +383,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Slide-like pages that need magazine hierarchy, calm authority, exact text, bounded photography or line art, and a small reusable family of evidence layouts.",
       "avoidWhen": "Decorative keynote spectacle, playful illustration decks, dense spreadsheet reporting, cinematic full-bleed storytelling, or content without a stable hierarchy.",
       "patternPath": "patterns/restrained-editorial-slide-system/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/restrained-editorial-slide-system/examples/research-brief-spread/example.webp",
+          "kind": "example",
+          "label": "Example",
+          "width": 1600,
+          "height": 900,
+          "bytes": 77218
+        }
+      ]
     },
     {
       "id": "retro-pixel-halftone-tech-editorial",
