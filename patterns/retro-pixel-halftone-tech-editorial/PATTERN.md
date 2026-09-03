@@ -287,7 +287,7 @@ For image generation, load `adapters/image-generation.md`. Exact paragraphs, UI 
 
 ## Fidelity Gate / 保真门
 
-Before accepting a candidate, check in order:
+Before approving an output, check in order:
 
 1. **Ownership trace**: Can every style decision in the score and prompt be traced to this Pattern rather than invented by the article adapter or runtime?
 2. **Editorial structure**: Can the paper-dominant frame and scale hierarchy be recognized before inspecting texture?
@@ -295,7 +295,7 @@ Before accepting a candidate, check in order:
 4. **Material**: Are flat one-bit contours, halftone, print grain, and safety orange present without becoming costume?
 5. **Typography**: Is the title structurally integrated and are exact words verified or typeset deterministically?
 
-任一候选先依次检查：
+任一输出先依次检查：
 
 1. **权责追踪**：score 与 prompt 中的每一项风格决定能否追溯到本 Pattern，而不是由文章 adapter 或 runtime 发明？
 2. **编辑结构**：不看材质细节，是否已经能认出纸白占主导的框架和尺度层级？

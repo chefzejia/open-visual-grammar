@@ -22,8 +22,8 @@ Operator-provided orientation: the attached gallery screenshot (Image #1) was
   not vendored or treated as pattern references
 Rights / attribution note: preview images are creator-owned or rights-unclear;
   they remain external calibration evidence and are not vendored into OVG
-Pattern target: existing image-cover and app-icon patterns and their optional
-  adapters
+Pattern target: existing image-cover and app-icon patterns plus directly authored
+  formal Patterns for distinct visual methods
 Artifact kinds: image-cover, app-icon, and deterministic-layout style reverse study
 Pattern dependencies: whimsical-journal-sketch, minimal-handdrawn-linework,
   pixel-retro, eastern-texture-handdrawn, narrative-journal-infographic,
@@ -34,7 +34,8 @@ Pattern dependencies: whimsical-journal-sketch, minimal-handdrawn-linework,
 What it teaches: how repeated source-to-style transformations constrain space,
   reduction, palette, material, type, and emotional temperature
 What it does not prove: that one skill name, creator label, or preview image is a
-  stable OVG pattern; it also does not prove cross-topic reproduction yet
+  reusable OVG method. Formal Pattern decisions below keep only method-level
+  invariants and leave source-specific identities external.
 Why it belongs in OVG: several independent skills describe reusable invariants,
   transfer boundaries, and explicit failure recoveries rather than a single
   attractive composition
@@ -61,18 +62,18 @@ their visual constraints. Representative public detail pages checked in Chrome:
 | `小小东 x 线描 x 点描 x P084` | [detail](https://youmind.com/~skills/01a05a80-744c-7e1d-9044-360aa223a448) | `minimal-handdrawn-linework` adapter |
 | `小小东 x 纸雕 x 拼贴 x P077` | [detail](https://youmind.com/~skills/01a05794-c02f-741d-8c82-f72819c7934a) | `paper-sculpture-collage-editorial` Pattern |
 | `小小东 x 拼贴 x 手撕 x P064` | [detail](https://youmind.com/~skills/01a04758-594e-71bc-b59b-67a4f910cc13) | `paper-sculpture-collage-editorial` Pattern |
-| `中蓝嵌合拼贴海报 v0.5` | [detail](https://youmind.com/~skills/019fdccd-b2a8-7256-84ea-2d24d6b5fac7) | unrouted evidence; fixed nested-blue collage evidence |
+| `中蓝嵌合拼贴海报 v0.5` | [detail](https://youmind.com/~skills/019fdccd-b2a8-7256-84ea-2d24d6b5fac7) | `nested-blue-collage` Pattern |
 | `小小东 x 手绘 x 厚涂 x P070` | [detail](https://youmind.com/~skills/01a0577c-6472-71ca-b8d8-46e3759fb413) | `whimsical-journal-sketch` adapter |
-| `小小东 x 微缩 x 等距 x P073` | [detail](https://youmind.com/~skills/01a0578b-5e6f-7fdd-b872-74932df40622) | unrouted evidence |
-| `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` | [detail](https://youmind.com/~skills/01a032b2-7e5a-7e0c-b0e7-2a9ae93f54a9) | unrouted evidence; transparent blueprint cutaway evidence |
+| `小小东 x 微缩 x 等距 x P073` | [detail](https://youmind.com/~skills/01a0578b-5e6f-7fdd-b872-74932df40622) | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` | [detail](https://youmind.com/~skills/01a032b2-7e5a-7e0c-b0e7-2a9ae93f54a9) | `isometric-cutaway-explainer` Pattern |
 | `GPT2 x 版画 x 治愈系 x 美学提示词 x VOL.049` | [detail](https://youmind.com/~skills/01a032b5-1d39-70c1-8fc6-e55a68439741) | `minimal-handdrawn-linework` editorial-reduction material evidence |
-| `GPT2 x 立体 x 厚涂 x 3D x 美学提示词 x VOL.047` | [detail](https://youmind.com/~skills/01a032b0-2cb3-7890-965f-8171143aac76) | unrouted evidence; isometric impasto micro-landscape evidence |
-| `GPT2 x 厚涂 x 浮现 x 美学提示词` | [detail](https://youmind.com/~skills/01a032ad-44f6-75d8-8533-3504364cbfff) | unrouted evidence; planar impasto micro-landscape evidence |
+| `GPT2 x 立体 x 厚涂 x 3D x 美学提示词 x VOL.047` | [detail](https://youmind.com/~skills/01a032b0-2cb3-7890-965f-8171143aac76) | `isometric-cutaway-explainer` Pattern surface branch |
+| `GPT2 x 厚涂 x 浮现 x 美学提示词` | [detail](https://youmind.com/~skills/01a032ad-44f6-75d8-8533-3504364cbfff) | `isometric-cutaway-explainer` Pattern surface branch |
 | `GPT2 x 积木 x 重购 x 美学提示词 x VOL.045` | [detail](https://youmind.com/~skills/01a032a9-72b3-75e6-85ea-1c2ec0a771bb) | reviewed; public description is too short for a stable style route |
-| `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044` | [detail](https://youmind.com/~skills/01a032a7-0890-7667-a9a5-3899c70e57c1) | `minimal-handdrawn-linework` gold-foil documentary-split adapter |
+| `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044` | [detail](https://youmind.com/~skills/01a032a7-0890-7667-a9a5-3899c70e57c1) | `documentary-gold-split-editorial` Pattern |
 | `GPT2 x 泡沫 x 重构 x 美学提示词 x VOL.043` | [detail](https://youmind.com/~skills/01a032a4-0ae7-7e7a-8f18-cec336195582) | material/composition evidence; planar foam trace variant |
-| `GPT2 x 拆解 x 分层 x 美学提示词 x VOL.042` | [detail](https://youmind.com/~skills/01a03296-7da4-7075-b500-176b3c311546) | unrouted evidence; isometric watercolor cutaway evidence |
-| `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401` | [detail](https://youmind.com/~skills/01a03291-30ea-7ea4-ab72-9040c4645eec) | unrouted evidence; isometric research-overlay evidence |
+| `GPT2 x 拆解 x 分层 x 美学提示词 x VOL.042` | [detail](https://youmind.com/~skills/01a03296-7da4-7075-b500-176b3c311546) | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401` | [detail](https://youmind.com/~skills/01a03291-30ea-7ea4-ab72-9040c4645eec) | `isometric-cutaway-explainer` Pattern |
 | `GPT2 x 矢量插画 x 旅行 x 简洁 x 美学提示词 x VOL.050` | [detail](https://youmind.com/~skills/01a032b6-8ce4-783e-acd9-335b80c06992) | `minimal-handdrawn-linework` documentary/place-poster evidence |
 | `玻璃之窗国度海报` | [detail](https://youmind.com/~skills/01a03309-871f-7b13-9ac1-ecd449c7d13e) | `frosted-silhouette-editorial` regional-reveal evidence |
 | `水彩诗意海报` | [detail](https://youmind.com/~skills/019fffcb-cfb7-73b7-b181-7b0d7bfa0766) | `minimal-handdrawn-linework` structural-reduction evidence |
@@ -88,15 +89,15 @@ their visual constraints. Representative public detail pages checked in Chrome:
 | `技能图标生成器` | [detail](https://youmind.com/~skills/01a03183-cb0d-73f0-86c5-fdd9767cb593) | workflow/composition evidence; anchor-first icon-cover-mobile bundle |
 | `大白话图解` | [detail](https://youmind.com/~skills/01a02c9f-c0e3-729e-8d7e-4f60d6a1ca22) | workflow evidence; plain-language visual explanation without a stable material contract |
 | `萌宠大头贴 Pro` | [detail](https://youmind.com/~skills/01a027f6-a47a-7308-b1bd-e590160632c9) | `soft-2-5d-icon` animal identity and multi-format workflow evidence |
-| `生成烛火国度海报` | [detail](https://youmind.com/~skills/01a02569-13d6-76a2-a623-0b4b3ce6add3) | unrouted evidence; candle-globe regional-reveal composition evidence |
+| `生成烛火国度海报` | [detail](https://youmind.com/~skills/01a02569-13d6-76a2-a623-0b4b3ce6add3) | `frosted-silhouette-editorial` Pattern regional-reveal evidence |
 | `邮票记忆版画` | [detail](https://youmind.com/~skills/01a02549-1c3c-7e9a-8e15-dde6c23d7279) | `minimal-handdrawn-linework` place-poster evidence; central stamp frame remains a variant variant |
-| `蜡笔肖像` | [detail](https://youmind.com/~skills/01a01967-50b6-7847-adec-28dcbb19dd20) | `whimsical-journal-sketch` crayon-portrait adapter and transfer probe |
+| `蜡笔肖像` | [detail](https://youmind.com/~skills/01a01967-50b6-7847-adec-28dcbb19dd20) | `crayon-portrait-editorial` Pattern |
 | `喷墨 x 干刷 x 海报 x 美学提示词 x VOL.033` | [detail](https://youmind.com/~skills/01a023ce-5052-792a-a702-7fe00c72c91d) | material/composition evidence; editorial collage remains routed to existing patterns |
 | `浮雕 x 裁剪 x 冷静 x 美学提示词 x VOL.026` | [detail](https://youmind.com/~skills/01a02350-da7b-71a0-a584-285460470bc0) | `minimal-handdrawn-linework` structural-reduction evidence |
 | `立体 x 模型 x 微缩 x 美学提示词` | [detail](https://youmind.com/~skills/01a02336-044d-7b28-b8cd-b17cbb0f9e3e) | `minimal-handdrawn-linework` documentary-split/isometric evidence |
-| `魔法风格封面设计师Pro` | [detail](https://youmind.com/~skills/01a01582-d423-73e8-b68c-52f73cd81c76) | unrouted evidence; content-to-fantasy editorial cover workflow |
+| `魔法风格封面设计师Pro` | [detail](https://youmind.com/~skills/01a01582-d423-73e8-b68c-52f73cd81c76) | workflow evidence; no stable material Pattern |
 | `《牛来》风格插图` | [detail](https://youmind.com/~skills/01a00dff-2a74-71f3-bafc-124d8bbd4a3f) | material evidence only; low-fidelity abstract 3D and coarse-grain dream logic |
-| `稚拙涂鸦头像` | [detail](https://youmind.com/~skills/01a013a7-0b73-7d62-acba-eaa7efcb789b) | unrouted evidence; graphic fashion avatar evidence and profile-avatar route probe |
+| `稚拙涂鸦头像` | [detail](https://youmind.com/~skills/01a013a7-0b73-7d62-acba-eaa7efcb789b) | `graphic-fashion-avatar` Pattern |
 | `蜡笔图案工作室` | [detail](https://youmind.com/~skills/01a04226-8ce1-7805-9ef0-a1c16ee73722) | material evidence only; crayon/pastel background |
 | `油画棒情绪拼贴 Oil Pastel Mood Collage` | [detail](https://youmind.com/~skills/019fcce8-bfe7-7e14-8281-a1f0e1eb761b) | material evidence only; handdrawn figure, scattered objects, and handwritten quote |
 | `小小东 x 丝网 x 版画 x P086` | [detail](https://youmind.com/~skills/01a05a84-4d05-7de1-a50c-073f30ee39dc) | `minimal-handdrawn-linework` screenprint-reduction adapter |
@@ -110,13 +111,13 @@ their visual constraints. Representative public detail pages checked in Chrome:
 | `3D Vivid Mascot 动物 IP 图标` | [detail](https://youmind.com/~skills/01a042f6-0942-78ab-8b7c-6a857f1e565a) | `soft-2-5d-icon` animal-mascot adapter |
 | `国风手绘APP图标设计` | [detail](https://youmind.com/~skills/01a04e58-ff5d-76d1-a259-5c95a3a8587b) | `soft-2-5d-icon` eastern-handdrawn material adapter |
 | `照片转孔版印刷质感` | [detail](https://youmind.com/~skills/01a0390b-99ce-77d0-ba5a-2c0c0d0fef48) | material evidence only; risograph boundary |
-| `中国近现代年代风格视觉设计` | [detail](https://youmind.com/~skills/01a03e1b-999f-71d5-a151-12d1768a4486) | unrouted evidence; historical editorial evidence |
+| `中国近现代年代风格视觉设计` | [detail](https://youmind.com/~skills/01a03e1b-999f-71d5-a151-12d1768a4486) | `fixed-era-editorial-print` Pattern |
 | `生成磨砂玻璃效果剪影艺术海报` | [detail](https://youmind.com/~skills/01a05ceb-6172-7c97-b503-fb560ecfd412) | `frosted-silhouette-editorial` Pattern + deterministic-layout text handoff |
-| `城市旅行海报` | [detail](https://youmind.com/~skills/019fca5a-1620-7954-8a63-883668d1f4be) | `minimal-handdrawn-linework` place-poster screenprint adapter; retro-pixel route only when the argument is print-led |
-| `城市观察海报` | [detail](https://youmind.com/~skills/019f7303-74b9-7c4a-a026-d6f1daef5caf) | `minimal-handdrawn-linework` city-observation poster adapter |
+| `城市旅行海报` | [detail](https://youmind.com/~skills/019fca5a-1620-7954-8a63-883668d1f4be) | `minimal-handdrawn-linework` place-poster adapter; `retro-pixel-halftone-tech-editorial` only when the argument is print-led |
+| `城市观察海报` | [detail](https://youmind.com/~skills/019f7303-74b9-7c4a-a026-d6f1daef5caf) | `city-observation-poster` Pattern |
 | `时间年轮信息图` | [detail](https://youmind.com/~skills/01a03717-df43-7916-9514-6fec27155980) | hold; ring-yearbook composition evidence only |
-| `电影台词人像海报` | [detail](https://youmind.com/~skills/01a03c98-f494-7140-b99b-373bc2a7655c) | unrouted evidence; portrait-quote layout evidence |
-| `伦勃朗光影棚肖像` | [detail](https://youmind.com/~skills/01a0391e-b2ed-7c90-816f-8e62f4f3450c) | unrouted evidence; adaptive studio-light portrait evidence |
+| `电影台词人像海报` | [detail](https://youmind.com/~skills/01a03c98-f494-7140-b99b-373bc2a7655c) | `portrait-quote-editorial` Pattern |
+| `伦勃朗光影棚肖像` | [detail](https://youmind.com/~skills/01a0391e-b2ed-7c90-816f-8e62f4f3450c) | `adaptive-rembrandt-portrait` Pattern |
 | `高密度波点风格艺术` | [detail](https://youmind.com/~skills/01a041ff-9753-77be-b28b-82dea1990864) | material evidence only; repeated-dot coverage boundary |
 | `照片与文字马赛克艺术生成` | [detail](https://youmind.com/~skills/01a03cfa-4b2a-798a-801e-39a772a08b2a) | explicit material router; full-frame mosaic consistency |
 | `普通照片变艺术海报` | [detail](https://youmind.com/~skills/01a04d15-e998-785c-a4f4-4900c8eeac78) | explicit branch router; choose an existing material/composition route |
@@ -132,9 +133,9 @@ their visual constraints. Representative public detail pages checked in Chrome:
 | `治愈系萌宠手账绘本信息图` | [detail](https://youmind.com/~skills/019fe698-8336-72f9-8ce5-d531846d455a) | `narrative-journal-infographic` multi-page handdrawn-explainer adapter |
 | `小红书爆款人生认知反差卡生成器` | [detail](https://youmind.com/~skills/019fef33-504e-71cb-9201-0461bbe8a1cb) | `narrative-journal-infographic` cognitive-contrast-card adapter |
 | `小盒｜文章认知插画` | [detail](https://youmind.com/~skills/019fd6ae-93c3-7a67-827b-a814a4b0847f) | `whiteboard-operator-sketch` box-operator adapter |
-| `漩涡线描都市童话插画` | [detail](https://youmind.com/~skills/019fca9f-cdc9-7fb3-b010-d35b9e1e1d0f) | unrouted evidence |
-| `巨物构建式插画` | [detail](https://youmind.com/~skills/019fcb6f-1371-740f-8547-681b16e36e5d) | unrouted evidence |
-| `Starfall Epic｜复古未来主义科幻插画` | [detail](https://youmind.com/~skills/019ff9e3-7a25-757f-93d6-8065b4dfda25) | unrouted evidence; high-density retro-future print evidence |
+| `漩涡线描都市童话插画` | [detail](https://youmind.com/~skills/019fca9f-cdc9-7fb3-b010-d35b9e1e1d0f) | `dual-focal-swirl-linework` Pattern |
+| `巨物构建式插画` | [detail](https://youmind.com/~skills/019fcb6f-1371-740f-8547-681b16e36e5d) | `monstrous-scale-editorial` Pattern |
+| `Starfall Epic｜复古未来主义科幻插画` | [detail](https://youmind.com/~skills/019ff9e3-7a25-757f-93d6-8065b4dfda25) | `retro-future-print-editorial` Pattern |
 | `水钻笑容肖像` | [detail](https://youmind.com/~skills/019ff117-75aa-7255-89cb-0f2ee08c5236) | material evidence only; identity-preserving rhinestone smile portrait |
 | `文字环绕人物海报` | [detail](https://youmind.com/~skills/019fd6c4-b85b-7a5d-8976-7195059c006e) | `interwoven-portrait-type-cover` hand-letter-orbit evidence |
 | `雕塑感蓝色炭笔插画` | [detail](https://youmind.com/~skills/01a0192c-41fc-7dba-bc39-7e8730a40315) | `limited-color-print-editorial` image-generation calibration |
@@ -186,9 +187,10 @@ The separately checked `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` page
 creator `小小东`, category `图片`, version `v2`, and a YouMind source. Its
 description treats the image as a transparent engineering blueprint: surface,
 connections, motion paths, spatial layers, and operating logic are revealed with
-strict perspective and linework. This strengthens the P073 cutaway variant
-because the method can describe an ordinary object rather than only a building,
-but it still needs reviewed cross-topic output before Pattern creation.
+strict perspective and linework. This is now part of the
+`isometric-cutaway-explainer` Pattern because the method describes ordinary
+objects as well as buildings. The object relation, coherent axes, and single
+support action are the reusable contract.
 
 The separately checked `复古像素网点科技插画` page reports creator `神的孩子在跳舞`,
 version `v4`, and a YouMind source. Its public description binds a 1990s
@@ -210,24 +212,25 @@ The separately checked `GPT2 x 立体 x 厚涂 x 3D x 美学提示词 x VOL.047`
 creator `小小东`, category `图片`, version `v4`, and a YouMind source. Its public
 description combines strict isometric projection with thick palette-knife impasto,
 a miniature spatial scene, and theme-colored sliced planes, while retaining the
-source image's documentary content. This widens the isometric cutaway variant
-beyond architecture, but reviewed non-building outputs are still required before
-adoption.
+source image's documentary content. This is the impasto surface branch of
+`isometric-cutaway-explainer`; the Pattern keeps the axes and dependency contract
+while allowing one restrained surface language.
 
 The separately checked `GPT2 x 拆解 x 分层 x 美学提示词 x VOL.042` page reports
 creator `小小东`, category `图片`, version `v3`, and a YouMind source. Its public
 description frames a source image as an isometric layered watercolor study:
 preserve the object's proportion, axis, orientation, and spatial relation, then
-separate it with translucent watercolor overlaps on ivory paper. This reinforces
-the existing isometric cutaway adoption probe while adding a warm research-paper
-surface; exact object and poster treatment remain external.
+separate it with translucent watercolor overlaps on ivory paper. This supplies
+the warm research-paper surface branch for `isometric-cutaway-explainer`; exact
+object and poster treatment remain external.
 
 The separately checked `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401` page
 reports creator `小小东`, category `图片`, version `v3`, and a YouMind source. Its
 public description combines precise isometric solid blocks with faint background
 sketch traces inspired by observational notebooks and product decomposition. The
-reusable relation is rational finished form versus visible research process, not
-the named historical figure or any fixed product.
+reusable relation is rational finished form versus visible research process, now
+captured by `isometric-cutaway-explainer`, not the named historical figure or any
+fixed product.
 
 The separately checked `GPT2 x 矢量插画 x 旅行 x 简洁 x 美学提示词 x VOL.050`
 page reports creator `小小东`, category `图片`, version `v2`, and a YouMind
@@ -275,7 +278,7 @@ The separately checked `城市观察海报` page reports creator `Jojo`, categor
 supplied character's recognition features, places that character in a city's
 everyday emotional scene rather than a tourism postcard, and binds a vertical
 3:4 frame to a giant title, blue/cyan linework, screenprint texture, and limited
-editorial color. This is a reusable character-led city-observation adapter;
+editorial color. This is the formal `city-observation-poster` Pattern;
 landmarks, city claims, and source character identity remain semantic inputs.
 
 The separately checked `中蓝嵌合拼贴海报 v0.5` page reports creator `李桂宇（三秋十李 Sergio）`,
@@ -284,8 +287,9 @@ specifies a fixed three-layer contract: wrinkled white paper with a visible
 border, a centered blue field, and torn white paper pieces clipped to that field;
 black-and-white halftone silhouettes, thin handwritten uppercase words, one
 onomatopoeia or barcode cue, and a shallow shadow complete the street-notice
-surface. This is strong routing evidence, but the fixed blue field, text orbit,
-and subject-count rule need unrelated-topic testing before a Pattern is created.
+surface. This is the formal `nested-blue-collage` Pattern. Its fixed blue field,
+text orbit, and subject-count rule are structural constraints; exact color and
+wording remain external inputs.
 
 The separately checked `高级大字海报` page reports creator `Pamelaaaaa`,
 category `图片`, version `v5`, and a YouMind source. Its public description
@@ -358,16 +362,18 @@ The separately checked `电影台词人像海报` page reports creator `Peter Yu
 category `图片`, version `v2`, and a YouMind source. Its public description
 binds a portrait, a short quote, a protected lower text zone, and one emotional
 scene cue across vertical ratios; the exact text and face-preserving workflow
-remain runtime-sensitive, so the route is tested as a unrouted evidence.
+remain runtime-sensitive, so the route is captured by the formal
+`portrait-quote-editorial` Pattern with deterministic text handling.
 
 The separately checked `伦勃朗光影棚肖像` page reports creator `十里`, category
 `图片`, version `v4`, and a YouMind source. Its public description binds an
 identity-preserving studio portrait to face- or pet-structure-aware key-light
 selection, a clean deep-charcoal-to-black background, original-ratio-first
 framing, and explicit exclusion of grain, smoke, glow, banding, and synthetic
-texture. This is a reusable photographic method, but it is not yet a formal Pattern
-OVG Pattern because the page does not establish a full layout family or reviewed
-cross-topic outputs.
+texture. This is now the formal `adaptive-rembrandt-portrait` Pattern. Its layout
+families are structure-led close portrait, measured three-quarter, and
+ratio-preserving crop; the source page supplies light and identity constraints,
+not a copied likeness.
 
 The separately checked `水钻笑容肖像` page reports creator `Leah@YouMind`, category
 `图片`, version `v4`, and a YouMind source. Its public description is unusually
@@ -527,13 +533,13 @@ operator approves a public-safe local reference or a reviewed production result.
 Page 5 adds `萌宠大头贴 Pro`, `生成烛火国度海报`, `邮票记忆版画`, `蜡笔肖像`,
 `喷墨 x 干刷 x 海报 x 美学提示词 x VOL.033`, `浮雕 x 裁剪 x 冷静 x 美学提示词
 x VOL.026`, and `立体 x 模型 x 微缩 x 美学提示词`. They extend existing animal,
-regional-reveal, place-poster, structural-reduction, and isometric clusters; only
-the crayon portrait has a new optional adapter and transfer probe in this pass.
+regional-reveal, place-poster, structural-reduction, and isometric clusters; the
+identity-first crayon route is now captured by `crayon-portrait-editorial`.
 
 Page 7 adds `塔罗牌面生成器 Pro`, `怪诞角色海报生成器`, `Starfall Epic｜复古未来主义科幻插画`,
 `手工剪纸肖像师`, `水钻笑容肖像`, `漩涡线描都市童话插画`, and `巨物构建式插画`.
-The Starfall page contributes a new retro-future print-plate variant and the
-two previously unrouted clusters receive visual confirmation; tarot and
+The Starfall page contributes the formal `retro-future-print-editorial` Pattern,
+and the dual-focal and monumental-scale clusters are now formal Patterns; tarot and
 grotesque-character pages remain workflow or underspecified evidence, and the
 rhinestone smile page is retained as a material-only stress test.
 
@@ -548,8 +554,8 @@ paper routes. `撕纸拼贴 YouTube 缩略图` becomes an argument-first branch 
 `limited-color-print-editorial`. `文字环绕人物海报` and `3D 标题人像封面设计师`
 jointly support `interwoven-portrait-type-cover`. `意大利复古美学` and
 `研究/营销简洁风格` jointly support `restrained-editorial-slide-system`.
-`稚拙涂鸦头像` remains a recorded profile-avatar variant because forcing it
-into `app-icon` would erase its identity-preservation contract. Public previews
+`稚拙涂鸦头像` is now the `graphic-fashion-avatar` app-icon Pattern; forcing it
+into a generic mascot route would erase its identity-preservation contract. Public previews
 remain external; the repository stores links and method-level conclusions only.
 
 ## Cluster Map / 聚类路由
@@ -557,7 +563,7 @@ remain external; the repository stores links and method-level conclusions only.
 | Cluster | Repeated visual behavior | OVG route | Confidence |
 | --- | --- | --- | --- |
 | Constrained editorial print | one or two inks, neutral paper, strong type, halftone or screen-print texture, deliberate imperfection | `retro-pixel-halftone-tech-editorial` | high |
-| Retro-future print plate | high-density etched contours, visible grain, hard-edged warm/cool blocks, and one structural subject held in a reference-anchored plate | unrouted evidence; consumer project run record | medium |
+| Retro-future print plate | high-density etched contours, visible grain, hard-edged warm/cool blocks, and one structural subject held in a reference-anchored plate | `retro-future-print-editorial` Pattern | medium |
 | Handdrawn memory page | one readable subject, generous near-white space, shaky or broken line, 3-6 restrained fills, handwritten note | `whimsical-journal-sketch` + `adapters/youmind-handdrawn-memory.md` | high |
 | Structural line reduction | geometric skeleton, selective memory, stippling or risograph grain, one or two spot colors, quiet editorial label | `minimal-handdrawn-linework` + `adapters/youmind-editorial-reduction.md` | high |
 | Selective colored-pencil study | graphite axis and silhouette first, one local colored-pencil emphasis, directional pressure, open warm-white paper | `minimal-handdrawn-linework` + `adapters/youmind-colored-pencil-sketch.md` | medium-high |
@@ -572,36 +578,36 @@ remain external; the repository stores links and method-level conclusions only.
 | Contemporary eastern restraint | “meaning before brush”, pale paper, low-saturation wash, deliberate empty space, no souvenir symbols | `eastern-texture-handdrawn` + `adapters/youmind-eastern-restraint.md` | medium-high |
 | Colorful ink outline | xuan-like paper, scattered perspective, loose dark contour, dry-wet brush contrast, two or three source-derived mineral colors | `eastern-texture-handdrawn` + `adapters/youmind-colorful-ink-outline.md` | medium-high |
 | Warm handdrawn collage | loose fragments, watercolor or crayon marks, everyday memory, warm page field | `whimsical-journal-sketch` when handdrawn fragments dominate | medium |
-| Crayon identity portrait | face and hair anchors lead, white drawing paper stays open, dry crayon pressure and broken edges carry the surface, restrained structural color preserves recognition | `whimsical-journal-sketch` + `adapters/youmind-crayon-portrait.md`; unrouted evidence pending cross-topic portrait review | medium-high |
+| Crayon identity portrait | face and hair anchors lead, white drawing paper stays open, dry crayon pressure and broken edges carry the surface, restrained structural color preserves recognition | `crayon-portrait-editorial` Pattern | medium-high |
 | Minimal icon / soft 2.5D | stable square boundary, one recognizable silhouette, one functional cue that survives 32 x 32, few broad color areas, material-specific depth | `soft-2-5d-icon` Pattern | high |
 | Eastern handdrawn app icon | square product mark, freehand watercolor, xuan-paper fiber, subordinate retro halftone, platform-preserving small-size clarity | `soft-2-5d-icon` + `adapters/youmind-eastern-handdrawn-icon.md` | medium-high |
 | Animal mascot icon | species silhouette remains recognizable, natural palette, pose/negative space/body feature carries the function, no logo or prop clutter | `soft-2-5d-icon` + `adapters/youmind-animal-mascot.md` | high |
-| Graphic fashion doodle avatar | identity anchors become a flat avatar silhouette, one graphic hair or accessory cue carries recognition, rough dry-brush edge, restrained watercolor color, clean warm-white field | unrouted evidence; profile-avatar artifact-kind decision and cross-topic transfer probe | medium |
+| Graphic fashion doodle avatar | identity anchors become a flat avatar silhouette, one graphic hair or accessory cue carries recognition, rough dry-brush edge, restrained watercolor color, clean warm-white field | `graphic-fashion-avatar` Pattern | medium |
 | Limited-color print editorial | warm paper, one dominant cool or dark ink, optional charcoal structure, one large geometric plane or silhouette, local print pressure | `limited-color-print-editorial` Pattern | medium-high |
 | Swiss glass silhouette | grid, silhouette, frosted transparency, regional reveal through a window, optional reflection, exact type treatment | `frosted-silhouette-editorial` Pattern | medium-high |
 | Paper sculpture collage | cut edges, layered planes, matte contact shadow, source-aware color, deleted background, optional portrait silhouette | `paper-sculpture-collage-editorial` Pattern | medium-high |
-| Nested blue collage poster | visible wrinkled-paper border, centered blue field, clipped torn-paper pieces, halftone silhouette, handwritten orbit, and one small utility cue | unrouted evidence; needs cross-topic transfer and fixed-layout review | medium |
+| Nested blue collage poster | visible wrinkled-paper border, centered blue field, clipped torn-paper pieces, halftone silhouette, handwritten orbit, and one small utility cue | `nested-blue-collage` Pattern | medium |
 | Thermal receipt record | continuous vertical receipt, exact short fields, thermal print variation, documentary whitespace, dry observation | `thermal-receipt-poster` Pattern | medium-high |
 | Comic memory card | one continuous child-safe action across 4-12 beats, concept/meaning/example embedded in the scene, compact header and recall cue | `narrative-journal-infographic` + `adapters/youmind-comic-memory-card.md` | medium-high |
 | Multi-page handdrawn explainer | 4-8 mobile-first vertical pages, one claim per page, stable recurring anchor, warm paper, low-saturation ink-and-wash, sparse collage marks | `narrative-journal-infographic` + `adapters/youmind-multi-page-handdrawn-explainer.md` | medium-high |
 | Cognitive contrast card | fixed five-card comparison, stable character and layout, paired scenes contrast an early intuition with a fuller later judgment | `narrative-journal-infographic` + `adapters/youmind-cognitive-contrast-card.md` | medium-high |
 | Place-poster screenprint | dominant place name, one recognizable landmark, limited high-saturation palette, collage planes, shaky contours, screenprint overlap | `minimal-handdrawn-linework` + `adapters/youmind-travel-poster.md` | medium-high |
-| Character-led city observation | supplied character identity, one everyday city action, vertical 3:4 frame, giant title, blue/cyan linework, screenprint texture, limited editorial color | `minimal-handdrawn-linework` + `adapters/youmind-city-observation-poster.md` | medium-high |
-| Portrait-quote editorial | portrait identity leads, short quote sits in a protected lower zone, one scene cue supports the emotion, vertical editorial density | unrouted evidence; portrait-quote transfer case and rubric | medium |
+| Character-led city observation | supplied character identity, one everyday city action, vertical 3:4 frame, giant title, blue/cyan linework, screenprint texture, limited editorial color | `city-observation-poster` Pattern | medium-high |
+| Portrait-quote editorial | portrait identity leads, short quote sits in a protected lower zone, one scene cue supports the emotion, vertical editorial density | `portrait-quote-editorial` Pattern | medium |
 | Interwoven portrait type | recognizable portrait and short title share one scene axis; selected glyphs pass behind the subject while face and platform safe zones remain protected | `interwoven-portrait-type-cover` Pattern | medium-high |
 | Restrained editorial slides | one reading task per page, shared editorial grid, exact display/body hierarchy, bounded evidence imagery, cream or near-white paper, restrained dark ink | `restrained-editorial-slide-system` Pattern | medium-high |
-| Adaptive Rembrandt studio portrait | preserve identity anchors, choose a plausible key-light relation for face or pet structure, keep a clean charcoal-to-black studio field, and preserve the source ratio before optional crop | unrouted evidence; needs person-and-pet transfer outputs and a photography-specific Pattern decision | medium |
+| Adaptive Rembrandt studio portrait | preserve identity anchors, choose a plausible key-light relation for face or pet structure, keep a clean charcoal-to-black studio field, and preserve the source ratio before optional crop | `adaptive-rembrandt-portrait` Pattern | medium |
 | Dense repeated-dot field | full-field repeated dots, coverage/absorption atmosphere, high contrast, and an explicit substyle selector | material evidence only; needs a stable subject relation and composition family before any adapter or Pattern is considered | low-medium |
 | Mosaic material router | one selected mosaic branch, consistent tile/joint treatment across the entire frame, and explicit handling of high-realism regions | explicit router only; needs one fixed branch and cross-topic outputs before a material adapter or Pattern is considered | medium |
 | Selective reality/anime router | source-first analysis chooses local, subject, environment, or retained-color stylization with a bounded edit area and explicit fusion mode | explicit router only; route each branch to an existing Pattern and never combine all modes in one output | medium |
 | Mist-blue single-metaphor cover | short text remains the first read, one relation reveals its hidden tension, mist blue/off-white palette, one warm accent, local spray grain, and 16:9 whitespace | `semantic-concept-poster` + `adapters/youmind-mist-blue-metaphor.md` | medium-high |
 | Emotional metaphor editorial | short checked line becomes the first read, one Aha relation carries the feeling, low-saturation field, one high-purity semantic anchor, and non-photorealistic poster surface | `semantic-concept-poster` + `adapters/youmind-emotional-metaphor-editorial.md` | medium |
-| Fantasy editorial cover workflow | confirmed title/subtitle, one content-derived symbol or relation, platform-aware crop, and a bounded parchment/night palette with tactile writing props | unrouted evidence; needs a source-safe cover transfer before any new material adapter | medium |
+| Fantasy editorial cover workflow | confirmed title/subtitle, one content-derived symbol or relation, platform-aware crop, and a bounded parchment/night palette with tactile writing props | workflow evidence; no stable material Pattern | medium |
 | Low-fidelity abstract 3D dream | intentionally low-detail abstract 3D subjects, coarse grain, and absurd dream temperature | material evidence only; subject relation and layout are underspecified | low-medium |
 | Spatial-word poster | one short word becomes a wall, barrier, building, or room; people or objects interact with that text-space to enact its meaning | `semantic-concept-poster` + `adapters/youmind-spatial-word-poster.md` | medium-high |
-| Dual-focal swirl linework | two focal anchors, circular line rhythm, breathable gouache field, flat complementary blocks | unrouted evidence; likely image-cover Pattern after transfer evidence | medium |
-| Oversized architectural world | extreme scale contrast, a small human witness, monumental construction or landscape, print-like atmosphere | unrouted evidence; requires architecture/world-cover route | medium |
-| Isometric cutaway research plate | supplied object is split into surface, connectors, paths, and layers with coherent axes, structural support, and a restrained paper research field | `minimal-handdrawn-linework` + `adapters/youmind-isometric-cutaway.md`; formal Pattern creation still requires cross-topic outputs | medium-high |
+| Dual-focal swirl linework | two focal anchors, circular line rhythm, breathable gouache field, flat complementary blocks | `dual-focal-swirl-linework` Pattern | medium |
+| Oversized architectural world | extreme scale contrast, a small human witness, monumental construction or landscape, print-like atmosphere | `monstrous-scale-editorial` Pattern | medium |
+| Isometric cutaway research plate | supplied object is split into surface, connectors, paths, and layers with coherent axes, structural support, and a restrained paper research field | `isometric-cutaway-explainer` Pattern | medium-high |
 
 The route is about structure, not a creator name. A skill label is useful only
 when its visible invariants survive a topic swap.
@@ -616,7 +622,7 @@ by skill name. This is a routing decision, not a ranking of the creators.
 - `whimsical-journal-sketch`: `P066`, `P067`, `P071`, `P076`, `P080`,
   `你的专属配图分身：卡通手绘插画版`, and
   `油画棒情绪拼贴` when the topic is warm and observational;
-- `whimsical-journal-sketch` + `adapters/youmind-crayon-portrait.md`:
+- `crayon-portrait-editorial` + `adapters/youmind-crayon-portrait.md`:
   `蜡笔肖像` when face shape, hair pattern, expression, and one or two supplied
   details must remain recognizable on open white drawing paper. Keep dry rubbing,
   broken pressure, paper-white clothing, and a small structural accent palette;
@@ -629,7 +635,7 @@ by skill name. This is a routing decision, not a ranking of the creators.
   separate place-poster branch: the name block and landmark own the first read,
   and three-to-five source-aware high-saturation inks are allowed only when the
   visual argument is explicitly place-led.
-- `minimal-handdrawn-linework` +
+- `city-observation-poster` +
   `adapters/youmind-city-observation-poster.md`: `城市观察海报` when a supplied
   character and a city's everyday emotional cue should form a consistent 3:4
   visual diary. Keep the giant title, blue/cyan linework, screenprint texture,
@@ -638,7 +644,7 @@ by skill name. This is a routing decision, not a ranking of the creators.
   `水彩工程速写配图` when selective geometry or content-derived engineering
   lines carry the explanation. Keep pale watercolor and short annotations
   subordinate to the structural relation; exact labels remain deterministic.
-- `minimal-handdrawn-linework` + `adapters/youmind-single-accent-ink.md`:
+- `single-accent-ink-editorial` + `adapters/youmind-single-accent-ink.md`:
   `类 Notion 插画工坊` when a heavy black handdrawn contour, local halftone,
   large near-white field, and exactly one semantic accent carry the argument.
   Keep short checked notes small; reserve long or exact copy for deterministic
@@ -690,10 +696,26 @@ by skill name. This is a routing decision, not a ranking of the creators.
   visible editorial argument is present. P086's 2–4 source-derived spot-color
   screenprint treatment remains a variant to test, not a reason to relax the
   Pattern's near-binary palette by default.
-- `中国近现代年代风格视觉设计` remains a unrouted evidence. Its public
-  description binds target era to palette, asymmetrical or geometric layout,
-  type treatment, print texture, and whitespace; it needs unrelated-topic
-  outputs before becoming an era-aware editorial route.
+- `fixed-era-editorial-print` routes `中国近现代年代风格视觉设计` when one
+  declared era coordinates palette, asymmetrical or geometric layout, type
+  treatment, print texture, and whitespace. Historical identities and slogans
+  remain forbidden; contemporary topics supply the action and evidence.
+- `dual-focal-swirl-linework` routes `漩涡线描都市童话插画` when two supplied
+  anchors need a circular line path and a breathable gouache field. Keep both
+  anchors distinct and use flat complementary blocks only for the relation.
+- `monstrous-scale-editorial` routes `巨物构建式插画` when one world silhouette
+  escapes the frame and one tiny witness performs a visible measuring, repair, or
+  observation action. Crop creates scale; atmosphere does not.
+- `retro-future-print-editorial` routes `Starfall Epic｜复古未来主义科幻插画`
+  when etched contours, hard warm/cool planes, grain, and one structural subject
+  carry the plate. The method must survive ordinary non-science-fiction topics;
+  spaceships and neon are forbidden.
+- `portrait-quote-editorial` routes `电影台词人像海报` when an authorized
+  portrait leads, one short quote sits in a protected lower zone, and one scene
+  cue supports the intent. Exact copy remains deterministic.
+- `adaptive-rembrandt-portrait` routes `伦勃朗光影棚肖像` when a plausible
+  key-light relation follows the supplied face or pet structure. Preserve ratio
+  and identity before lighting, with a clean charcoal-to-black field.
 - `thermal-receipt-poster`: `热敏小票海报生成器` when verified facts can be
   expressed as a short record with a continuous receipt field; exact text stays
   deterministic whenever the consuming runtime supports it.
@@ -766,11 +788,10 @@ by skill name. This is a routing decision, not a ranking of the creators.
 - `whimsical-journal-sketch` + `adapters/youmind-naive-doodle.md`: `P083` and
   `涂鸦` when controlled awkwardness, one focal subject, and observed humor carry
   the page; do not apply it to serious proof or invent jokes.
-- `稚拙涂鸦头像` remains a unrouted evidence for a possible profile-avatar
-  route. Preserve hair silhouette, face shape, expression, and one accessory
-  before applying rough marker or dry-brush edges, restrained watercolor color,
-  and a clean warm-white field. Do not treat the avatar as an app icon until its
-  small-size contract and artifact kind are reviewed.
+- `graphic-fashion-avatar` routes `稚拙涂鸦头像` when hair silhouette, face
+  shape, expression, and one accessory must survive a square reduction. Preserve
+  the rough marker/dry-brush edge and clean warm-white field, then verify 64/32 px
+  legibility; do not let a mascot costume or prop carry identity.
 - `interwoven-portrait-type-cover` routes `文字环绕人物海报` and `3D 标题人像封面
   设计师` when a recognizable portrait and one short title need a real front/behind
   relation. Preserve identity, define the occlusion map, protect face and platform
@@ -790,22 +811,21 @@ by skill name. This is a routing decision, not a ranking of the creators.
 - `big-character-poster` + `adapters/youmind-torn-paper-thumbnail.md`: `撕纸拼贴
   YouTube 缩略图` when one headline, one evidence portrait or object, and one tear
   action make the correction visible at thumbnail size.
-- `中蓝嵌合拼贴海报 v0.5` remains a unrouted evidence. Preserve the three
-  nested paper/blue/paper layers, clipped torn edges, halftone silhouette, and
-  one handwritten utility cue; vary the supplied subject and wording only after
-  the fixed layout is recorded. Do not treat the exact blue value, sample phrase,
-  or source subject as the Pattern.
+- `nested-blue-collage` routes `中蓝嵌合拼贴海报 v0.5` when the three nested
+  paper/blue/paper layers, clipped torn edges, halftone silhouette, and one
+  handwritten utility cue carry the relation. Vary subject and wording while
+  keeping the structure fixed; the exact blue and sample phrase remain external.
 - `minimal-handdrawn-linework` documentary-split and place-poster routes also
   cover `GPT2 x 矢量插画 x 旅行 x 简洁 x 美学提示词 x VOL.050`: keep the upper
   source atmosphere and let the lower vector reorganization explain the place
   action. Do not turn the split into a generic before/after template.
-- `minimal-handdrawn-linework` + `adapters/youmind-gold-foil-split.md`:
+- `documentary-gold-split-editorial` + `adapters/youmind-gold-foil-split.md`:
   `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044` when the visual argument needs
   a portrait `3:4` documentary record to become a flat gold identity plate.
   Keep the front-facing plane, one clean dark derived hue, matte-to-soft foil,
   and short deterministic microtype; never let gold become a glossy 3D object
   or generic luxury emblem.
-- `minimal-handdrawn-linework` + `adapters/youmind-isometric-cutaway.md`:
+- `isometric-cutaway-explainer` + `adapters/youmind-isometric-cutaway.md`:
   `P073`, `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048`, `GPT2 x 拆解 x 分层 x
   美学提示词 x VOL.042`, `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401`,
   and the isometric branch of `VOL.047` when one functional dependency needs
@@ -837,8 +857,8 @@ by skill name. This is a routing decision, not a ranking of the creators.
 - `蜡笔肖像` adds a complete portrait surface contract: preserve face, hair,
   expression, pose, and supplied details; leave skin, clothes, and lower page
   mostly paper-white; use visible fiber, dry rubbing, broken pressure, warm hair
-  values, and a few coral, brick, blue, or peacock structural cues. The optional
-  adapter and two-topic transfer probe now encode these rules without copying a
+  values, and a few coral, brick, blue, or peacock structural cues. The Pattern
+  adapter and transfer cases encode these rules without copying a
   source face or outfit.
 - `喷墨 x 干刷 x 海报 x 美学提示词 x VOL.033` frames a source as a magazine-
   like collage where contour, color blocks, repeated elements, and a title all
@@ -873,46 +893,20 @@ by skill name. This is a routing decision, not a ranking of the creators.
   building, person, or street into a quiet miniature. Keep it with the existing
   isometric adoption probe until non-building outputs are reviewed.
 
-**unrouted evidences:**
+**Direct Pattern additions:**
 
-- `P073` isometric micro-architecture, `GPT2 x 蓝图 x 拆解 x 美学提示词 x
-  VOL.048`, `漩涡线描都市童话插画`, and
-  `巨物构建式插画` need an artifact-kind decision
-  and cross-topic output before they can become patterns;
-- `生成磨砂玻璃效果剪影艺术海报` now calibrates the existing
-  `frosted-silhouette-editorial` Pattern for Swiss-grid framing and regional reveal;
-  its exact text and post-layout requirement still hand off to a future
-  `deterministic-layout` route;
-- `时间年轮信息图`, `治愈系萌宠手账绘本信息图`, and
-  `日常喜剧漫画工坊` primarily describe information architecture or narrative
-  workflows. `时间年轮信息图` was rechecked at its public detail page and only
-  claims a ring yearbook organized from years, events, and visual archives; keep
-  it as composition evidence until density, typography, and a reusable contract
-  are proven. Keep the other workflow observations attached to the consuming
-  pattern as well. `电影台词人像海报` is now a separate unrouted evidence:
-  its portrait, lower quote zone, and single scene cue have a transfer probe,
-  but no Pattern has been added.
-- `伦勃朗光影棚肖像` is a separate unrouted evidence: its adaptive key-light
-  choice, identity anchors, clean studio field, and ratio-preserving crop rule
-  have a transfer probe, but no photographic portrait Pattern has been added.
-- `稚拙涂鸦头像` is a separate unrouted evidence: its graphic hair silhouette,
-  identity-preserving face reduction, rough dry-brush edge, and clean warm-white
-  field need an artifact-kind decision and unrelated-avatar outputs before an
-  adapter or Pattern is created.
-- `蜡笔肖像` is a separate unrouted evidence under the existing
-  `whimsical-journal-sketch` pattern: its identity-first crayon portrait,
-  paper-white field, dry rubbing, and restrained structural accents now have an
-  optional adapter plus a two-topic transfer probe. add only after reviewed
-  outputs show the same identity and material contract across unrelated people.
-- `魔法风格封面设计师Pro` is a separate unrouted evidence: it confirms a
-  content-understanding step, title confirmation, one visualized relation, and
-  platform-aware cover adaptation before generation. Its parchment, night-blue,
-  copper, and handwritten-prop palette needs unrelated-topic output and a
-  source-safe material boundary before an adapter is justified.
-- `中蓝嵌合拼贴海报 v0.5` is a separate unrouted evidence: its fixed nested
-  paper-and-blue field, clipped torn pieces, halftone silhouette, handwritten
-  orbit, and utility cue need two unrelated-topic outputs before a new collage
-  Pattern is justified.
+- `city-observation-poster`, `documentary-gold-split-editorial`,
+  `isometric-cutaway-explainer`, `single-accent-ink-editorial`, and
+  `crayon-portrait-editorial` now own the formerly over-broad adapters that were
+  sitting under `minimal-handdrawn-linework` or `whimsical-journal-sketch`.
+- `dual-focal-swirl-linework`, `fixed-era-editorial-print`,
+  `graphic-fashion-avatar`, `monstrous-scale-editorial`, `nested-blue-collage`,
+  `portrait-quote-editorial`, `adaptive-rembrandt-portrait`, and
+  `retro-future-print-editorial` now own the eight previously unformalized
+  transfer routes. Each has a bilingual Pattern capsule and a runtime adapter.
+- The remaining workflow or material observations stay outside `patterns/` because
+  they do not define a reusable subject relation and composition contract. They
+  are not lifecycle stages and do not block the formal Patterns above.
 
 **Keep out of the style registry for now:**
 
@@ -938,7 +932,7 @@ length, aspect ratio, and whether type is generated or deterministically set.
 If the frame, scale rhythm, and editorial relation disappear, route back to the
 pattern or choose a quieter linework pattern.
 
-### Retro-Future Print Plate (unrouted evidence)
+### Retro-Future Print Plate
 
 **Signature:** one structural subject sits inside a dense, reference-anchored
 print plate; etched contour lines, halftone or ink grain, and hard-edged warm/cool
@@ -951,8 +945,8 @@ handling.
 
 **Boundary:** this is not a generic science-fiction scene, spaceship preset, or
 cinematic color grade. If the subject relation disappears, or the plate needs
-neon glow, glossy 3D, or multiple competing machines, keep the route as material
-evidence and return to an existing editorial pattern.
+neon glow, glossy 3D, or multiple competing machines, delete this Pattern rather
+than weakening its contract.
 
 ### Handdrawn Memory Page
 
@@ -1040,8 +1034,9 @@ gloss, or a second object replace the single function cue.
 
 ## Two-Topic Transfer Probe / 双主题迁移探针
 
-These probes are deliberately unrelated to the source skills. They are prompts
-for future reproduction tests, not production prompts.
+These transfer cases are deliberately unrelated to the source skills. They record
+the topic swaps that shaped each Pattern's boundary; runtime prompts still live
+in the consuming project.
 
 | Cluster | Topic A | Topic B | What must remain invariant |
 | --- | --- | --- | --- |
@@ -1059,10 +1054,10 @@ for future reproduction tests, not production prompts.
 | Gold-foil documentary split | a repair library returns a worn tool to circulation | a night ferry reconnects two shores after a service pause | portrait `3:4` split, shared subject/action, planar gold reduction, one dark derived base hue, bounded foil texture, deterministic microtype |
 | Retro-future print plate | a terrace irrigation gate controls a narrow water path | a night library return slot hands one book into the archive | etched contour density, hard-edged warm/cool planes, visible print grain, one structural subject, no science-fiction props |
 
-Passing a probe means the new topic can enter a supported composition family and
-the image remains recognizable after color and material words are removed. It does
-not mean the cluster is formal Pattern; an accepted production example is still
-required.
+The invariant column is the acceptance contract for direct Pattern iteration:
+the topic must enter a supported composition family and remain recognizable after
+color and material words are removed. If later outputs repeatedly fail that
+contract, delete or revise the Pattern itself; there is no intermediate status.
 
 ## Fidelity Gate / 保真门
 
@@ -1079,54 +1074,23 @@ Review each future variant in this order:
 5. **Text safety:** exact text is short and checked, or reserved for deterministic
    typesetting. No generated pseudo-Chinese or copied source slogans.
 
-## Unrouted Intake / 未路由来源
+## Adoption Record / 采纳记录
 
-- `added-calibration`: constrained editorial print is already represented by
-  the existing `retro-pixel-halftone-tech-editorial` pattern; the YouMind
-  evidence sharpens its public boundary but does not add raw assets.
-- `adapter-ready`: eastern restraint, eastern handdrawn icon, handdrawn memory,
-  naive doodle, structural line reduction, screenprint reduction, place-poster
-  screenprint, city-observation poster, single-accent editorial ink, mist-blue single-metaphor cover,
-  pixel silhouette mask, pastoral pixel character, comic memory card, and
-  multi-page handdrawn explainer, cognitive contrast card, box operator sketch,
-  emotional metaphor editorial, spatial-word poster, animal mascot icon, and
-  crayon portrait now have optional adapters linked from their patterns.
-- `adapter-ready`: the isometric cutaway research plate now has an optional
-  adapter and an expanded four-source transfer probe; formal Pattern creation still
-  requires accepted non-building outputs.
-- `adapter-ready`: the gold-foil documentary split now has an optional adapter,
-  a two-topic transfer case, and a fidelity rubric; formal Pattern creation still
-  requires reviewed outputs.
-- `Pattern-added`: frosted-silhouette-editorial now captures the regional reveal,
-  geometric window, and silhouette-field method without local preview assets.
-- `Pattern-added`: paper-sculpture-collage-editorial now captures cut edges,
-  ordered planes, meaningful occlusion, and matte paper depth without local
-  preview assets.
-- `Pattern-added`: soft-2-5d-icon now captures square silhouette, one functional
-  cue, shallow relief, and platform-preserving identity without local preview
-  assets.
-- `unrouted-evidence`: isometric architecture and impasto micro-landscape,
-  dual-focal swirl linework, and monumental world-cover routes still need an
-  artifact-kind decision and
-  cross-topic output before new patterns are created. The dual-focal route now
-  has a dedicated transfer case and rubric in the consuming project, and the isometric route
-  now has a non-building cutaway probe there as well. The giant-world route has
-  a non-fantasy scale probe and rubric there too. `中国近现代年代风格视觉设计`
-  now has a fixed-1940s cross-topic transfer case and rubric; it still needs
-  reviewed outputs before an era-aware Pattern can be added.
-- `unrouted-evidence`: the Starfall retro-future print route now has a
-  dedicated two-topic transfer case and rubric. Its dark orange/navy calibration
-  is useful evidence, but a new Pattern must wait for ordinary non-science-
-  fiction subjects and a confirmed artifact-kind boundary.
-- `unrouted-evidence`: the portrait-quote editorial route has a dedicated
-  transfer case and rubric; it still needs reviewed public-safe portrait outputs
-  before a new Pattern is created.
-- `unrouted-evidence`: the adaptive Rembrandt studio portrait route has a
-  dedicated transfer case and rubric; it still needs reviewed person-and-pet
-  outputs before a photographic Pattern or adapter is created.
-- `unrouted-evidence`: `GPT2 x 厚涂 x 浮现 x 美学提示词`, `GPT2 x 泡沫 x
-  重构 x 美学提示词 x VOL.043`, and the earlier `VOL.047` impasto route need
-  two unrelated topics before a new impasto or planar-foam Pattern is justified.
+- The existing Patterns retain the stable routes for eastern restraint, handdrawn
+  memory, naive doodle, structural line reduction, screenprint, pixel, collage,
+  icon, receipt, narrative, metaphor, and operator-sketch methods.
+- `city-observation-poster`, `documentary-gold-split-editorial`,
+  `isometric-cutaway-explainer`, `single-accent-ink-editorial`, and
+  `crayon-portrait-editorial` now own the methods that had previously been
+  attached to broader parent Patterns.
+- `dual-focal-swirl-linework`, `fixed-era-editorial-print`,
+  `graphic-fashion-avatar`, `monstrous-scale-editorial`, `nested-blue-collage`,
+  `portrait-quote-editorial`, `adaptive-rembrandt-portrait`, and
+  `retro-future-print-editorial` now own the eight formerly unformalized routes.
+  Each has a bilingual `PATTERN.md` and an `image-generation` adapter.
+- Workflow-only or material-only observations remain outside `patterns/` because
+  they do not define a reusable subject relation and composition contract. They
+  are external evidence, not a lifecycle stage or a pending Pattern.
 - `reviewed-page4-5`: detail UUIDs for `GPT2 x 拆解 x 分层 x 美学提示词 x
   VOL.042`, `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401`, `制作橡皮章旅行海报`,
   `技能图标生成器`, `大白话图解`, `萌宠大头贴 Pro`, `生成烛火国度海报`,
@@ -1148,64 +1112,66 @@ Review each future variant in this order:
   connected Chrome session. Its figure-plus-scattered-objects recipe is retained
   as material and mood evidence only because no stable relation or layout
   contract is exposed publicly.
-- `rejected-for-now`: creator names, exact preview compositions, and one-off
+- `external-only`: creator names, exact preview compositions, and one-off
   slogans remain outside OVG unless they yield a reusable method-level claim.
 
 ## Routing Disposition Matrix / 路由处置矩阵
 
 | Source cluster | Stable method observed | OVG disposition |
 | --- | --- | --- |
-| `P073` isometric micro-architecture | correct isometric cutaway, scaffold wraps or supports the section, white textured paper, restrained labels | two unrelated topics and a route that owns cutaway/architecture rather than generic 3D |
-| `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` | transparent blueprint exposes surface, connectors, motion paths, and spatial layers through strict perspective and engineering linework | review two unrelated non-building objects and decide whether the existing cutaway probe can own the artifact without becoming an exploded product render |
-| `GPT2 x 拆解 x 分层 x 美学提示词 x VOL.042` | isometric watercolor structural study preserves proportion, axis, orientation, and spatial relation on ivory paper | combine with the existing cutaway evidence and review two unrelated non-building topics before creating a new Pattern |
-| `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401` | precise isometric blocks meet faint observational sketch traces, making finished form versus research process visible | test whether the research-overlay relation survives topics without named historical or product references |
-| `GPT2 x 立体 x 厚涂 x 3D x VOL.047` | strict isometric projection, thick palette-knife impasto, a miniature spatial scene, and theme-colored sliced planes preserve a source-derived object relation | review two unrelated non-building topics and test whether the impasto surface supports the cutaway relation rather than becoming generic 3D decoration |
-| `GPT2 x 厚涂 x 浮现` | sculptural miniature, clear palette-knife oil paint, bright warm-white field, and a source-to-micro-landscape transformation | review two unrelated topics and decide whether planar impasto belongs to the isometric cutaway route or needs a separate material branch |
+| `P073` isometric micro-architecture | correct isometric cutaway, scaffold wraps or supports the section, white textured paper, restrained labels | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` | transparent blueprint exposes surface, connectors, motion paths, and spatial layers through strict perspective and engineering linework | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x 拆解 x 分层 x 美学提示词 x VOL.042` | isometric watercolor structural study preserves proportion, axis, orientation, and spatial relation on ivory paper | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x isometric x 达芬奇 x 美学提示词 x VOL.401` | precise isometric blocks meet faint observational sketch traces, making finished form versus research process visible | `isometric-cutaway-explainer` Pattern |
+| `GPT2 x 立体 x 厚涂 x 3D x VOL.047` | strict isometric projection, thick palette-knife impasto, a miniature spatial scene, and theme-colored sliced planes preserve a source-derived object relation | `isometric-cutaway-explainer` Pattern surface branch |
+| `GPT2 x 厚涂 x 浮现` | sculptural miniature, clear palette-knife oil paint, bright warm-white field, and a source-to-micro-landscape transformation | external material evidence; no standalone Pattern |
 | `GPT2 x 泡沫 x 重构 x VOL.043` | dense bubbles, wet traces, and broken residue gather into a flat figure on a dark plane; explicit rejection of cartoon 3D foam | review two unrelated subjects and determine whether the planar foam material has a reusable relation beyond one texture treatment |
-| `GPT2 x 金箔 x 转绘 x VOL.044` | `3:4` documentary upper plate, flat gold lower plate, front-facing plane, one derived dark base hue, matte foil, restrained embossing | review two unrelated topics with three layout outputs before creating a photographic Pattern |
-| `soft-2-5d-icon` (`P074`, soft icon, Cute 3D, minimal character) | function becomes one readable object, broad color areas, material-specific but soft depth, platform-aware boundary | three-topic icon run, approved small-size output, and formal Pattern creation review |
-| `漩涡线描都市童话插画` | two focal anchors, circular line rhythm, breathable gouache field, flat complementary color blocks | prove the dual-focal story on non-urban topics without hard-coding buildings or lone figures |
-| `巨物构建式插画` | monumental scale contrast, tiny human witness, one world-building silhouette, print-like atmosphere | determine whether the route is a cover pattern or a broader world/illustration artifact |
-| `Starfall Epic｜复古未来主义科幻插画` | high-density etched contours, visible print grain, hard-edged warm/cool blocks, and one structural subject in a retro-future plate | test two unrelated non-science-fiction topics, compare dark-field and paper-field variants, and decide whether the route owns a new print plate or remains material evidence |
-| `中国近现代年代风格视觉设计` | one historical branch coordinates palette, typography, geometry, print texture, and whitespace | review two unrelated topics under one fixed era with deterministic text handling and no historical imitation |
-| `电影台词人像海报` | portrait identity, short quote in a protected lower zone, one scene cue, vertical editorial framing | review two unrelated human stories with public-safe portraits and deterministic text before creating a portrait-quote Pattern |
-| `伦勃朗光影棚肖像` | identity anchors survive a plausible face- or pet-structure-aware key light; clean charcoal-to-black studio field; original ratio first; no synthetic texture | review two unrelated subjects, including a pet or materially different face structure, across three framing outputs before creating a photographic Pattern |
-| `稚拙涂鸦头像` | graphic hair silhouette and face anchors remain recognizable in a flat fashion avatar with one rough marker/dry-brush edge and restrained watercolor color | decide `app-icon` versus a future `profile-avatar` artifact kind; review two unrelated avatars, three expression/accessory variants, and 64/32 px legibility before creating an adapter or Pattern |
-| `蜡笔肖像` | identity-first portrait on white drawing paper, visible fiber and dry rubbing, broken crayon pressure, paper-white clothing, and a small structural accent palette | keep as external evidence until two unrelated people and three composition families show a stable reusable route; then add the adapter or create a formal portrait Pattern |
-| `中蓝嵌合拼贴海报 v0.5` | fixed wrinkled-paper border, centered blue field, clipped torn white pieces, halftone silhouette, handwritten orbit, and one utility cue | review two unrelated topics, test one-to-three subjects and deterministic text handling, and confirm the layout is a reusable `image-cover` method rather than a one-off color template |
+| `GPT2 x 金箔 x 转绘 x VOL.044` | `3:4` documentary upper plate, flat gold lower plate, front-facing plane, one derived dark base hue, matte foil, restrained embossing | `documentary-gold-split-editorial` Pattern |
+| `soft-2-5d-icon` (`P074`, soft icon, Cute 3D, minimal character) | function becomes one readable object, broad color areas, material-specific but soft depth, platform-aware boundary | `soft-2-5d-icon` Pattern |
+| `漩涡线描都市童话插画` | two focal anchors, circular line rhythm, breathable gouache field, flat complementary color blocks | `dual-focal-swirl-linework` Pattern |
+| `巨物构建式插画` | monumental scale contrast, tiny human witness, one world-building silhouette, print-like atmosphere | `monstrous-scale-editorial` Pattern |
+| `Starfall Epic｜复古未来主义科幻插画` | high-density etched contours, visible print grain, hard-edged warm/cool blocks, and one structural subject in a retro-future plate | `retro-future-print-editorial` Pattern |
+| `中国近现代年代风格视觉设计` | one historical branch coordinates palette, typography, geometry, print texture, and whitespace | `fixed-era-editorial-print` Pattern |
+| `电影台词人像海报` | portrait identity, short quote in a protected lower zone, one scene cue, vertical editorial framing | `portrait-quote-editorial` Pattern |
+| `伦勃朗光影棚肖像` | identity anchors survive a plausible face- or pet-structure-aware key light; clean charcoal-to-black studio field; original ratio first; no synthetic texture | `adaptive-rembrandt-portrait` Pattern |
+| `稚拙涂鸦头像` | graphic hair silhouette and face anchors remain recognizable in a flat fashion avatar with one rough marker/dry-brush edge and restrained watercolor color | `graphic-fashion-avatar` Pattern |
+| `蜡笔肖像` | identity-first portrait on white drawing paper, visible fiber and dry rubbing, broken crayon pressure, paper-white clothing, and a small structural accent palette | `crayon-portrait-editorial` Pattern |
+| `中蓝嵌合拼贴海报 v0.5` | fixed wrinkled-paper border, centered blue field, clipped torn white pieces, halftone silhouette, handwritten orbit, and one utility cue | `nested-blue-collage` Pattern |
 | `魔法风格封面设计师Pro` | title/subtitle confirmation, one content-derived visual relation, platform-aware crop, and a bounded parchment/night palette with tactile writing props | review two unrelated cover topics, separate workflow rules from material rules, and define a source-safe fantasy editorial boundary before creating an adapter |
 | `《牛来》风格插图` | low-fidelity abstract 3D, coarse grain, and absurd dream temperature | public detail is too short to define a subject relation or layout; keep as material evidence until a cross-topic composition is specified |
 | `制作橡皮章旅行海报` | separate `4:3` field-note poster, real photo retained on the left, off-white stamp-like reduction and typewriter metadata on the right | test whether the documentary/place split transfers beyond travel while keeping the left record untouched |
 | `技能图标生成器` | one confirmed `1:1` anchor is reused unchanged for a `16:9` cover and a `9:16` routed image; information zone is generated separately | runtime identity workflow only; validate with the existing icon adapter rather than creating a new visual Pattern |
 | `大白话图解` | everyday analogies, no jargon, large colorful explanatory visual, very little text | composition and text-density evidence only; needs a material and layout contract before any Pattern route |
 
-### Unrouted Evidence Notes / 未路由证据摘录
+### Evidence Notes / 证据摘录
 
-The public detail pages add useful constraints without proving a new Pattern:
+The public detail pages add useful constraints to the formal routes below. They
+do not authorize copying source identities, wording, or preview coordinates:
 
 - `P073` describes an isometric, cutaway micro-architecture scene where scaffolds
   wrap, support, repair, survey, or build the subject. Its white textured paper,
-  source-derived color, and restrained labels suggest a diagrammatic cover route,
-  but the cutaway relationship still needs to transfer beyond architecture.
+  source-derived color, and restrained labels define the diagrammatic cover route
+  captured by `isometric-cutaway-explainer`; the building itself is not part of
+  the Pattern.
 - `GPT2 x 蓝图 x 拆解 x 美学提示词 x VOL.048` widens that variant from
   architecture to ordinary objects: the image reveals hidden connectors, paths,
-  layers, and operating logic through a transparent engineering overlay. It is
-  useful evidence for the existing non-building cutaway probe, but its exact
-  poster styling and any product subject remain external.
+  layers, and operating logic through a transparent engineering overlay. It
+  strengthens `isometric-cutaway-explainer`; exact poster styling and product
+  subject remain external.
 - `GPT2 x 立体 x 厚涂 x 3D x VOL.047` adds an impasto branch to the isometric
   variant: strict axes, palette-knife volume, a small spatial stage, and
   source-derived theme slices are the reusable claims. The 3D subject and any
-  fixed color treatment remain external until two unrelated topics pass review.
+  fixed color treatment remain runtime inputs to `isometric-cutaway-explainer`.
 - `GPT2 x 厚涂 x 浮现` repeats the miniature-plus-palette-knife idea with a
-  bright warm-white field and clear, tactile oil volume. It reinforces the
-  isometric/impasto variant but does not yet prove a layout family.
+  bright warm-white field and clear, tactile oil volume. It remains an external
+  material branch because it does not add a distinct subject relation.
 - `GPT2 x 泡沫 x 重构 x VOL.043` describes a planar macro-foam trace: bubbles,
   wet marks, and broken residue form the subject on a dark plane. The material
   is promising, but the page does not establish a transferable subject relation.
 - `GPT2 x 金箔 x 转绘 x VOL.044` adds a complete planar foil contract: strict
   `3:4` upper/lower narrative, flat front-facing gold reduction, one darkened
   source hue, matte hammer marks and edge breaks, and low-contrast microtype.
-  The optional adapter and transfer probe preserve those rules without copying
+  The Pattern adapter and transfer cases preserve those rules without copying
   the original subject or wording.
 - `GPT2 x 矢量插画 x 旅行 x 简洁 x 美学提示词 x VOL.050` keeps source
   atmosphere above a clean vector reorganization below, which supports the
@@ -1231,33 +1197,30 @@ The public detail pages add useful constraints without proving a new Pattern:
 - `中国近现代年代风格视觉设计` describes multiple era branches, including
   geometric display type, woodcut-like marks, limited-color planes,
   asymmetrical composition, paper texture, and deliberate whitespace. The
-  historical selector is meaningful. Its fixed-1940s cross-topic transfer case
-  and rubric are now in the consuming project; reviewed outputs and deterministic text
-  handling are still required before Pattern creation.
+  historical selector is meaningful. The fixed-1940s branch is now captured by
+  `fixed-era-editorial-print`; exact text handling remains deterministic.
 - `漩涡线描都市童话插画` describes circular line work around two focal anchors,
   an airy gouache field, and flat blue/amber blocks. The dual-focal tension is
-  reusable, while the current evidence is still tied to urban-night storytelling.
+  reusable and is captured by `dual-focal-swirl-linework`; urban-night storytelling
+  remains a source example, not a requirement.
 - `巨物构建式插画` describes a world that exceeds the frame, with a tiny human
-  witness and a print-like atmosphere. That scale relation may be a cover Pattern,
-  but the artifact contract must decide whether the world silhouette or the
-  narrative scale contrast owns the route.
+  witness and a print-like atmosphere. The formal `monstrous-scale-editorial`
+  Pattern makes the world silhouette, witness, and visible action the contract.
 - `Starfall Epic｜复古未来主义科幻插画` describes a high-density retro-future
   print plate whose linework, grain, and hard-edged warm/cool blocks are anchored
   to the supplied reference. Its visible examples use an orange/navy field and
-  structural machinery with etched contours. The stable question is whether the
-  same material-plus-contrast system can carry ordinary, non-science-fiction
-  subjects without inheriting a generic spaceship scene or becoming a dark
-  cinematic illustration.
+  structural machinery with etched contours. The formal
+  `retro-future-print-editorial` Pattern carries this system to ordinary,
+  non-science-fiction subjects without inheriting a spaceship scene.
 - `伦勃朗光影棚肖像` describes a photographic transfer method rather than a
   single scene: the light must follow the supplied face or pet structure, while
-  identity, source ratio, and a clean deep studio field stay stable. Its explicit
-  negative list is useful for runtime QA, but the gallery page does not yet prove
-  a reusable layout family.
-- `稚拙涂鸦头像` describes a profile-avatar transfer method rather than an
-  editorial cover: identity anchors are reduced to graphic hair, face, expression,
-  and accessory cues, then framed by rough dry-brush edges, restrained watercolor,
-  and a clean warm-white field. The page does not yet prove a reusable registry
-  artifact kind or small-size contract, so it stays outside the style registry.
+  identity, source ratio, and a clean deep studio field stay stable. The formal
+  `adaptive-rembrandt-portrait` Pattern records the structure-led light and its
+  ratio-preserving layout families.
+- `稚拙涂鸦头像` describes a profile-avatar transfer method: identity anchors are
+  reduced to graphic hair, face, expression, and accessory cues, then framed by
+  rough dry-brush edges, restrained watercolor, and a clean warm-white field. The
+  formal `graphic-fashion-avatar` Pattern owns the square small-size contract.
 - `魔法风格封面设计师Pro` describes a content-first cover workflow: confirm the
   original title and subtitle, translate one argument into a symbol or scene,
   then adapt crop and text density by platform. Its default parchment, night,
@@ -1268,10 +1231,7 @@ The public detail pages add useful constraints without proving a new Pattern:
   absurd dream temperature. Keep those as material clues until a reusable subject
   relation and composition family are observed.
 
-These source clusters remain outside the registry until an unrelated-topic probe can
-recover the same spatial relation with three reviewed outputs. The details are
-linked in the Evidence Set above; no preview image or source prompt is copied.
-
-The next adoption step is to run two-topic probes through the normal
-`image-cover` route, review three outputs per probe, and add only accepted
-learning as pattern-local examples or anti-patterns.
+Material-only and workflow-only source clusters remain outside the registry
+because they do not expose a stable spatial relation and composition family. The
+formal routes above are iterated directly in place; the details remain linked in
+the Evidence Set and no preview image or source prompt is copied.

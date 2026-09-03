@@ -1,12 +1,12 @@
 # YouMind Isometric Cutaway Calibration / YouMind 等距剖切校准
 
-This optional adapter distills the public YouMind P073, transparent-blueprint,
+This Pattern adapter distills the public YouMind P073, transparent-blueprint,
 watercolor-layered, impasto-isometric, and notebook-overlay descriptions into a
 source-safe functional cutaway method. It keeps the object relation, coherent
 axes, and research-paper atmosphere without copying a building, scaffold, named
 historical figure, or product.
 
-这份可选 adapter 将公开 YouMind P073、透明蓝图、水彩分层、厚涂等距和手稿叠层描述提炼为不依赖来源的功能剖切方法。
+这份 Pattern adapter 将公开 YouMind P073、透明蓝图、水彩分层、厚涂等距和手稿叠层描述提炼为不依赖来源的功能剖切方法。
 它只保留物件关系、统一等距轴和研究纸面气质，不复制建筑、脚手架、历史人物或产品。
 
 ## Style Signature / 风格签名
@@ -49,7 +49,7 @@ The upstream visual argument is authoritative:
 - Concrete evidence: {{CONCRETE_EVIDENCE}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Minimal Handdrawn Linework Pattern with the YouMind isometric-cutaway
+Use the Isometric Cutaway Explainer Pattern with the YouMind isometric-cutaway
 calibration. Choose Working Cutaway, Survey Plate, or Research Overlay only when
 the supplied argument names one relation that needs to be opened, separated,
 measured, supported, or reconnected.

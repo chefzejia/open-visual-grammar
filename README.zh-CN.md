@@ -111,12 +111,25 @@ Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每
 | `thermal-receipt-poster` | 连续小票轮廓、准确短字段、热敏纸材质、冷幽默观察。 |
 | `interwoven-portrait-type-cover` | 可辨人像、一个短标题、明确遮挡图、共享透视、受保护的面部与移动端安全区。 |
 | `restrained-editorial-slide-system` | 每页一个阅读任务、共享编辑网格、准确字体层级、受控证据和克制墨色。 |
+| `adaptive-rembrandt-portrait` | 结构感知主光、身份优先棚拍肖像、干净炭黑场、保留原始画幅。 |
+| `city-observation-poster` | 日常城市动作、授权主体、巨型地点标记、蓝青孔版观察笔记。 |
+| `crayon-portrait-editorial` | 身份优先肖像、开放素描纸、干擦蜡笔笔压、克制结构色。 |
+| `documentary-gold-split-editorial` | 纪实到平面金色转化、严格分屏、单一深色提取底、克制箔面。 |
+| `dual-focal-swirl-linework` | 两个独立锚点、结构性圆弧线、透气水粉场域、限量色块。 |
+| `fixed-era-editorial-print` | 一个固定年代分支统一字体、几何、配色、印压和留白。 |
+| `graphic-fashion-avatar` | 剪影优先方形身份标记、一个配饰线索、粗粝边缘、小尺寸可读。 |
+| `isometric-cutaway-explainer` | 统一等距轴、一个功能剖切、结构支撑动作、安静研究纸面。 |
+| `monstrous-scale-editorial` | 世界轮廓越出画面、小见证者执行动作、版画式尺度论证。 |
+| `nested-blue-collage` | 皱纸外框、中蓝场域、撕纸内层、半调主体、稀疏功能线索。 |
+| `portrait-quote-editorial` | 授权人像先读、短引语进入受保护下区、一个次要场景线索。 |
+| `retro-future-print-editorial` | 蚀刻轮廓、硬边冷暖平面、可见印刷颗粒、一个结构主体。 |
+| `single-accent-ink-editorial` | 粗黑轮廓、局部半调、恰好一种语义强调色、主动留白。 |
 
 每个 `patterns/` 目录从第一次提交起就是正式 Pattern。后续只编辑或删除
-这个 Pattern，不设置 candidate、seed 或 promotion 中间态。尚未形成稳定方法的
-外部来源只留在 intake 记录中，不进入 Pattern 目录。
+这个 Pattern，不设置 candidate、seed、promotion 或 evaluation 中间态。被接受的
+来源学习一次性写入 Pattern；被拒绝的材料留在公共语法之外，不创建次级 Pattern。
 
-生成候选图和 runtime prompt 留在调用方项目的工作目录。只有经过复盘的
+生成图和 runtime prompt 留在调用方项目的工作目录。只有经过复盘的
 稳定经验，才回流到本仓库，成为 anti-pattern、adapter 或 pattern 内案例。
 
 ## 什么应该进入这个仓库

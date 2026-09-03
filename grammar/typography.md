@@ -59,7 +59,7 @@ Pattern-local typography should define:
 
 - which roles the pattern needs;
 - how those roles express the pattern's visual identity;
-- candidate families when production has proven them useful;
+- variant families when production has proven them useful;
 - role-specific failure modes.
 
 Pattern-local typography should not define general packaging rules for every

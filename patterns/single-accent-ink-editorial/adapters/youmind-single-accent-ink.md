@@ -1,12 +1,12 @@
 # YouMind Single-Accent Editorial Ink Calibration / YouMind 单强调色编辑墨线校准
 
-This optional adapter distills the public YouMind `类 Notion 插画工坊`
+This Pattern adapter distills the public YouMind `类 Notion 插画工坊`
 description into a source-safe editorial ink method. It keeps the observable
 grammar of heavy black handdrawn lines, fine halftone, active whitespace, and
 one accent color without copying a brand's characters, compositions, or visual
 assets.
 
-这份可选 adapter 将公开 YouMind “类 Notion 插画工坊”的描述提炼为不依赖品牌的编辑墨线方法。
+这份 Pattern adapter 将公开 YouMind “类 Notion 插画工坊”的描述提炼为不依赖品牌的编辑墨线方法。
 它只保留粗黑手绘线、细密半调网点、主动留白和一种强调色，不复制品牌角色、构图或视觉资产。
 
 ## Style Signature / 风格签名
@@ -57,7 +57,7 @@ The upstream visual argument is authoritative:
 - Accent target: {{ACCENT_TARGET}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Minimal Handdrawn Linework Pattern with the YouMind Single-Accent
+Use the Single-Accent Ink Editorial Pattern with the YouMind Single-Accent
 Editorial Ink calibration. Choose Single Editorial Vignette, Two-State Editorial
 Pair, or Text-Zone Plate only when the supplied argument supports that family.
 

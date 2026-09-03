@@ -45,9 +45,9 @@ asset. It should give the model enough visual material to design with:
 The agent may choose concise phrasing, descriptive phrasing, bilingual phrasing,
 or reference-led phrasing. The pattern does not require one wording shape.
 
-## Candidate Direction
+## Variation Direction
 
-When making multiple candidates, vary the visual idea, not just the labels.
+When making multiple variations, vary the visual idea, not just the labels.
 
 Useful axes:
 
@@ -58,8 +58,8 @@ Useful axes:
   print, editorial magazine;
 - metaphor distance: literal evidence, near metaphor, more editorial metaphor.
 
-Keep the same article argument across candidates, but allow the agent to choose
-which visual language best carries it. Three candidates do not need to map to a
+Keep the same article argument across variations, but allow the agent to choose
+which visual language best carries it. Three variations do not need to map to a
 fixed list of composition models.
 
 ## Review After Generation

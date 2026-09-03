@@ -1,11 +1,11 @@
 # YouMind Gold-Foil Documentary Split Calibration / YouMind 纯金压印纪实分屏校准
 
-This optional adapter distills the public YouMind `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044`
+This Pattern adapter distills the public YouMind `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044`
 description into a source-safe editorial split. It keeps the documentary-to-flat-gold
 transformation, front-facing plane, deep derived base, and restrained foil texture
 without copying a source subject, slogan, or exact coordinates.
 
-这份可选 adapter 将公开 YouMind `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044` 的描述提炼为不依赖来源的编辑分屏方法。
+这份 Pattern adapter 将公开 YouMind `GPT2 x 金箔 x 转绘 x 美学提示词 x VOL.044` 的描述提炼为不依赖来源的编辑分屏方法。
 它只保留纪实到平面纯金的转化、平视承载面、深色提取底和克制金属肌理，不复制来源主体、口号或精确坐标。
 
 ## Style Signature / 风格签名
@@ -48,7 +48,7 @@ The upstream visual argument is authoritative:
 - Concrete evidence: {{CONCRETE_EVIDENCE}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Minimal Handdrawn Linework Pattern with the YouMind gold-foil
+Use the Documentary Gold Split Editorial Pattern with the YouMind gold-foil
 documentary-split calibration. Build a portrait 3:4 page with a strict
 documentary-to-gold transformation. Keep the upper plate as a lightly adjusted,
 magazine-like source record or concrete evidence. In the lower plate, reduce the

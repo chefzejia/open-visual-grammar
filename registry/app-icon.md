@@ -20,6 +20,7 @@ legibility contract that a cover does not own.
 | Pattern | Best fit | Avoid when |
 | --- | --- | --- |
 | `soft-2-5d-icon` | compact app or product icons with one clear silhouette, one functional cue, and controlled shallow depth | long text, multi-object scenes, exact UI screenshots, dense illustration, or photoreal evidence |
+| `graphic-fashion-avatar` | square identity marks where hair, face shape, expression, and one accessory survive graphic reduction | anonymous stock portraits, detailed scenes, long text, or non-human product symbols |
 
 ## Required Output
 

@@ -14,16 +14,16 @@ const expectedDetails = 99;
 const duplicateDetails = detailLinks.filter((url, index) => detailLinks.indexOf(url) !== index);
 const linkedAdapters = [
   "patterns/whimsical-journal-sketch/adapters/youmind-handdrawn-memory.md",
-  "patterns/whimsical-journal-sketch/adapters/youmind-crayon-portrait.md",
+  "patterns/crayon-portrait-editorial/adapters/youmind-crayon-portrait.md",
   "patterns/minimal-handdrawn-linework/adapters/youmind-editorial-reduction.md",
   "patterns/minimal-handdrawn-linework/adapters/youmind-screenprint-reduction.md",
   "patterns/minimal-handdrawn-linework/adapters/youmind-travel-poster.md",
-  "patterns/minimal-handdrawn-linework/adapters/youmind-city-observation-poster.md",
+  "patterns/city-observation-poster/adapters/youmind-city-observation-poster.md",
   "patterns/minimal-handdrawn-linework/adapters/youmind-two-color-overprint.md",
   "patterns/minimal-handdrawn-linework/adapters/youmind-documentary-split.md",
-  "patterns/minimal-handdrawn-linework/adapters/youmind-single-accent-ink.md",
-  "patterns/minimal-handdrawn-linework/adapters/youmind-gold-foil-split.md",
-  "patterns/minimal-handdrawn-linework/adapters/youmind-isometric-cutaway.md",
+  "patterns/single-accent-ink-editorial/adapters/youmind-single-accent-ink.md",
+  "patterns/documentary-gold-split-editorial/adapters/youmind-gold-foil-split.md",
+  "patterns/isometric-cutaway-explainer/adapters/youmind-isometric-cutaway.md",
   "patterns/semantic-concept-poster/adapters/youmind-mist-blue-metaphor.md",
   "patterns/semantic-concept-poster/adapters/youmind-emotional-metaphor-editorial.md",
   "patterns/semantic-concept-poster/adapters/youmind-spatial-word-poster.md",
@@ -48,6 +48,14 @@ const linkedAdapters = [
   "patterns/limited-color-print-editorial/adapters/deterministic-layout.md",
   "patterns/interwoven-portrait-type-cover/adapters/image-generation.md",
   "patterns/restrained-editorial-slide-system/adapters/deterministic-layout.md",
+  "patterns/dual-focal-swirl-linework/adapters/image-generation.md",
+  "patterns/fixed-era-editorial-print/adapters/image-generation.md",
+  "patterns/graphic-fashion-avatar/adapters/image-generation.md",
+  "patterns/monstrous-scale-editorial/adapters/image-generation.md",
+  "patterns/nested-blue-collage/adapters/image-generation.md",
+  "patterns/portrait-quote-editorial/adapters/image-generation.md",
+  "patterns/adaptive-rembrandt-portrait/adapters/image-generation.md",
+  "patterns/retro-future-print-editorial/adapters/image-generation.md",
 ];
 
 const missingAdapters = linkedAdapters.filter((relativePath) =>

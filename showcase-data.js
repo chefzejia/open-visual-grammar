@@ -3,6 +3,31 @@ window.OVG_SHOWCASE = {
   "source": "patterns/*/PATTERN.md + patterns/*/{refs,examples}/**/*.webp",
   "patterns": [
     {
+      "id": "adaptive-rembrandt-portrait",
+      "slug": "adaptive-rembrandt-portrait",
+      "zhName": "自适应伦勃朗棚拍肖像",
+      "enName": "Adaptive Rembrandt Portrait",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Identity-first studio portraits where one plausible key-light relation follows the supplied face or animal structure.",
+      "avoidWhen": "Stock portrait mood, forced facial triangles, scenic portraiture, or identity-unsafe editing.",
+      "patternPath": "patterns/adaptive-rembrandt-portrait/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/adaptive-rembrandt-portrait/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1444990
+        }
+      ]
+    },
+    {
       "id": "big-character-poster",
       "slug": "big-character-poster",
       "zhName": "大字报",
@@ -32,6 +57,106 @@ window.OVG_SHOWCASE = {
           "width": 1500,
           "height": 600,
           "bytes": 1033800
+        }
+      ]
+    },
+    {
+      "id": "city-observation-poster",
+      "slug": "city-observation-poster",
+      "zhName": "城市观察海报",
+      "enName": "City Observation Poster",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Vertical visual diaries where an authorized subject, a short place marker, and one ordinary city action form a screenprint poster.",
+      "avoidWhen": "Landmark postcards, travel brochures, maps, realistic city photography, or covers without a daily-life cue.",
+      "patternPath": "patterns/city-observation-poster/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/city-observation-poster/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 2339902
+        }
+      ]
+    },
+    {
+      "id": "crayon-portrait-editorial",
+      "slug": "crayon-portrait-editorial",
+      "zhName": "蜡笔肖像编辑图",
+      "enName": "Crayon Portrait Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Identity-first `3:4` portrait studies on open white drawing paper with visible dry crayon pressure and a restrained structural accent.",
+      "avoidWhen": "Generic crayon filters, anonymous fashion portraits, busy scenes, or photorealistic proof.",
+      "patternPath": "patterns/crayon-portrait-editorial/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/crayon-portrait-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 2035540
+        }
+      ]
+    },
+    {
+      "id": "documentary-gold-split-editorial",
+      "slug": "documentary-gold-split-editorial",
+      "zhName": "纪实金箔分屏编辑封面",
+      "enName": "Documentary Gold Split Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Portrait `3:4` covers where one documentary record transforms into a flat gold-foil identity plane through a strict split.",
+      "avoidWhen": "Glossy gold objects, luxury decoration, unrelated upper and lower scenes, or long text.",
+      "patternPath": "patterns/documentary-gold-split-editorial/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/documentary-gold-split-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1679458
+        }
+      ]
+    },
+    {
+      "id": "dual-focal-swirl-linework",
+      "slug": "dual-focal-swirl-linework",
+      "zhName": "双焦点漩涡线描",
+      "enName": "Dual-Focal Swirl Linework",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Covers where two supplied anchors must remain distinct while a circular line path makes their relationship the first read.",
+      "avoidWhen": "Single-subject covers, dense factual diagrams, or topics that need a literal scene or exact UI proof.",
+      "patternPath": "patterns/dual-focal-swirl-linework/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/dual-focal-swirl-linework/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 1837402
         }
       ]
     },
@@ -73,6 +198,31 @@ window.OVG_SHOWCASE = {
           "width": 1536,
           "height": 1024,
           "bytes": 1927264
+        }
+      ]
+    },
+    {
+      "id": "fixed-era-editorial-print",
+      "slug": "fixed-era-editorial-print",
+      "zhName": "固定年代编辑印刷",
+      "enName": "Fixed-Era Editorial Print",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Editorial covers where one declared historical branch must control typography, geometry, palette, print pressure, and whitespace.",
+      "avoidWhen": "Generic nostalgia, historical reconstruction, unrestricted brand color, or exact photographic proof.",
+      "patternPath": "patterns/fixed-era-editorial-print/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/fixed-era-editorial-print/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 2668290
         }
       ]
     },
@@ -151,6 +301,22 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "graphic-fashion-avatar",
+      "slug": "graphic-fashion-avatar",
+      "zhName": "时尚稚拙头像",
+      "enName": "Graphic Fashion Avatar",
+      "artifactKinds": [
+        "app-icon"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Square profile or identity marks where hair, face shape, expression, and one accessory must survive graphic reduction.",
+      "avoidWhen": "Anonymous stock portraits, detailed character scenes, long text, or app icons whose function is carried by a non-human symbol.",
+      "patternPath": "patterns/graphic-fashion-avatar/PATTERN.md",
+      "images": []
+    },
+    {
       "id": "interwoven-portrait-type-cover",
       "slug": "interwoven-portrait-type-cover",
       "zhName": "人物文字景深交织封面",
@@ -174,6 +340,22 @@ window.OVG_SHOWCASE = {
           "bytes": 621610
         }
       ]
+    },
+    {
+      "id": "isometric-cutaway-explainer",
+      "slug": "isometric-cutaway-explainer",
+      "zhName": "等距功能剖切解释图",
+      "enName": "Isometric Cutaway Explainer",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Functional covers where coherent isometric axes and one cutaway reveal a dependency, path, connection, or operating relation.",
+      "avoidWhen": "Decorative exploded views, generic 3D renders, dense dashboards, or scenes whose meaning depends on realism.",
+      "patternPath": "patterns/isometric-cutaway-explainer/PATTERN.md",
+      "images": []
     },
     {
       "id": "limited-color-print-editorial",
@@ -236,6 +418,22 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "monstrous-scale-editorial",
+      "slug": "monstrous-scale-editorial",
+      "zhName": "巨物尺度编辑插画",
+      "enName": "Monstrous-Scale Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Covers where one world-building silhouette must exceed the frame and a tiny witness makes the scale and action legible.",
+      "avoidWhen": "Complete miniature scenes, ordinary portraits, multiple landmarks, or scale that depends only on cinematic effects.",
+      "patternPath": "patterns/monstrous-scale-editorial/PATTERN.md",
+      "images": []
+    },
+    {
       "id": "narrative-journal-infographic",
       "slug": "narrative-journal-infographic",
       "zhName": "叙事手账·信息可视化",
@@ -259,6 +457,22 @@ window.OVG_SHOWCASE = {
           "bytes": 1783842
         }
       ]
+    },
+    {
+      "id": "nested-blue-collage",
+      "slug": "nested-blue-collage",
+      "zhName": "中蓝嵌合拼贴",
+      "enName": "Nested Blue Collage",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Square or near-square covers where a three-layer paper/blue/paper field makes one subject and short line feel physically embedded.",
+      "avoidWhen": "Full-bleed scenes, glossy 3D collage, dense scrapbook pages, or topics needing exact UI proof.",
+      "patternPath": "patterns/nested-blue-collage/PATTERN.md",
+      "images": []
     },
     {
       "id": "paper-sculpture-collage-editorial",
@@ -343,6 +557,22 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "portrait-quote-editorial",
+      "slug": "portrait-quote-editorial",
+      "zhName": "人像台词编辑海报",
+      "enName": "Portrait-Quote Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Vertical editorial covers where an authorized portrait, one short verified quote, and one restrained scene cue share a clear reading order.",
+      "avoidWhen": "Anonymous stock portraits, long copy, quote cards without identity, or cinematic wallpaper.",
+      "patternPath": "patterns/portrait-quote-editorial/PATTERN.md",
+      "images": []
+    },
+    {
       "id": "print-menu-layout",
       "slug": "print-menu-layout",
       "zhName": "印刷菜单版式",
@@ -393,6 +623,22 @@ window.OVG_SHOWCASE = {
           "bytes": 77218
         }
       ]
+    },
+    {
+      "id": "retro-future-print-editorial",
+      "slug": "retro-future-print-editorial",
+      "zhName": "复古未来印刷编辑图版",
+      "enName": "Retro-Future Print Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Dense print plates where etched contour, hard warm/cool planes, and one structural subject make a non-cinematic future-facing editorial argument.",
+      "avoidWhen": "Generic sci-fi scenes, smooth 3D, multiple competing subjects, or photographic proof.",
+      "patternPath": "patterns/retro-future-print-editorial/PATTERN.md",
+      "images": []
     },
     {
       "id": "retro-pixel-halftone-tech-editorial",
@@ -451,6 +697,22 @@ window.OVG_SHOWCASE = {
           "bytes": 1452996
         }
       ]
+    },
+    {
+      "id": "single-accent-ink-editorial",
+      "slug": "single-accent-ink-editorial",
+      "zhName": "单强调色编辑墨线",
+      "enName": "Single-Accent Ink Editorial",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Editorial covers where heavy black contour and local halftone make one action legible with exactly one semantic accent.",
+      "avoidWhen": "Multi-color decoration, full-frame noise, soft watercolor mood, or exact photographic proof.",
+      "patternPath": "patterns/single-accent-ink-editorial/PATTERN.md",
+      "images": []
     },
     {
       "id": "soft-2-5d-icon",

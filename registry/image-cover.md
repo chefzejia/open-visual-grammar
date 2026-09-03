@@ -44,6 +44,17 @@ signature, select another pattern instead of keeping only its material words.
 | `retro-pixel-halftone-tech-editorial` | technical editorials where one conflict or human-system relation should become a framed, information-rich pixel-halftone plate | sparse spot illustration, photographic proof, exact UI, multi-step tutorials, mood-only covers |
 | `whiteboard-operator-sketch` | white-background GanFan threadball sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, full PPT-style decks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
 | `interwoven-portrait-type-cover` | portrait-led social covers where one short title shares perspective and occlusion with an authorized recognizable person | long copy, identity-unsafe edits, group scenes, exact UI proof, detached text overlays |
+| `city-observation-poster` | vertical city diaries where one ordinary action, an authorized subject, and a short place marker form a screenprint note | landmarks, maps, travel brochures, realistic city photography |
+| `crayon-portrait-editorial` | identity-first portrait studies on open drawing paper with dry crayon pressure and restrained structural color | generic crayon filters, busy scenes, photoreal proof |
+| `documentary-gold-split-editorial` | portrait covers where one documentary record transforms into a flat gold identity plane | glossy gold objects, luxury decoration, unrelated split scenes |
+| `dual-focal-swirl-linework` | two supplied anchors connected by a structural circular line path in a breathable gouache field | single-subject covers, dense diagrams, literal scenes |
+| `fixed-era-editorial-print` | contemporary editorial covers whose typography, geometry, palette, and print pressure are governed by one declared era branch | generic nostalgia, historical reconstruction, unrestricted color |
+| `isometric-cutaway-explainer` | coherent isometric cutaways that expose one functional dependency, path, or connection | decorative exploded views, generic 3D, dense dashboards |
+| `monstrous-scale-editorial` | one world silhouette escaping the frame with a tiny witness whose action makes scale legible | complete miniature scenes, ordinary portraits, cinematic scale effects |
+| `nested-blue-collage` | three-layer paper/blue/paper constructions embedding one subject silhouette and sparse utility cue | full-bleed scenes, glossy collage, dense scrapbook pages |
+| `portrait-quote-editorial` | authorized portrait, one short verified quote, and one subordinate scene cue in a vertical editorial frame | anonymous portraits, long copy, quote-only cards |
+| `retro-future-print-editorial` | dense etched print plates with hard warm/cool planes and one structural subject | generic sci-fi, smooth 3D, photographic proof |
+| `single-accent-ink-editorial` | heavy black contour, local halftone, and exactly one semantic accent carrying one editorial action | multi-color decoration, full-frame noise, soft watercolor mood |
 
 ## Required Output
 

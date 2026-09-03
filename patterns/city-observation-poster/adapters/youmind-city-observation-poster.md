@@ -1,13 +1,13 @@
 # YouMind City-Observation Poster Calibration / YouMind 城市观察海报校准
 
-This optional adapter distills the public YouMind `城市观察海报` method into a
-character-led place variant of Minimal Handdrawn Linework. It preserves a
+This Pattern adapter distills the public YouMind `城市观察海报` method into a
+character-led place route. It preserves a
 supplied character's identity while translating one city's ordinary scene and
 emotional cue into a consistent vertical visual diary. The city name, landmark
 claims, source character, and any exact copy remain semantic or deterministic
 inputs, not style instructions.
 
-这份可选 adapter 将公开 YouMind“城市观察海报”提炼为简约手绘线稿的角色主导地点变体。
+这份 Pattern adapter 将公开 YouMind“城市观察海报”提炼为角色主导地点变体。
 它保留上游角色身份，把一座城市的日常场景和情绪线索转译为统一的竖版视觉日记。城市名、地标事实、来源角色和准确文案仍是语义或确定性输入，不是风格指令。
 
 ## Style Signature / 风格签名
@@ -55,8 +55,8 @@ The upstream place argument is authoritative:
 - First read: {{FIRST_READ}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Minimal Handdrawn Linework Pattern with the YouMind city-observation
-poster calibration. Preserve {{MAIN_SUBJECT}} identity through {{IDENTITY_ANCHORS}}
+Use the City Observation Poster Pattern with the YouMind city-observation
+calibration. Preserve {{MAIN_SUBJECT}} identity through {{IDENTITY_ANCHORS}}
 and place it in one ordinary city action: {{DAILY_CUE}}. Let one giant short
 title or city marker share the frame with the character and the cue; do not
 illustrate a tourism checklist or invent a landmark.

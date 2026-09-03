@@ -26,8 +26,8 @@ channel.
 
 Historical transfer checks that remain useful are distilled into
 Pattern-local `iteration.md` files. The complete migration map is in
-`docs/pattern-iteration-index.md`; it is a record of durable learning, not a
-second lifecycle or evaluation surface.
+`docs/pattern-iteration-index.md`; it records durable learning without creating
+a second routing or lifecycle surface.
 
 Pattern slugs and directories use English kebab-case. Each `PATTERN.md` should
 be bilingual in one file, with Chinese and English names, definition,
@@ -59,6 +59,19 @@ load-next hints.
 | `whiteboard-operator-sketch` | White-background GanFan threadball worker, sparse Chinese labels, one low-tech physical action. |
 | `interwoven-portrait-type-cover` | Recognizable portrait, one short title, explicit occlusion map, shared perspective, protected face and mobile safe zones. |
 | `restrained-editorial-slide-system` | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
+| `adaptive-rembrandt-portrait` | Structure-aware key light, identity-first studio portrait, clean charcoal field, ratio preservation. |
+| `city-observation-poster` | Ordinary city action, authorized subject, giant place marker, blue/cyan screenprint note. |
+| `crayon-portrait-editorial` | Identity-first portrait, open drawing paper, dry crayon pressure, restrained structural color. |
+| `documentary-gold-split-editorial` | Documentary-to-flat-gold transformation, strict split, one dark derived base hue, restrained foil. |
+| `dual-focal-swirl-linework` | Two distinct anchors, structural circular line path, breathable gouache field, limited blocks. |
+| `fixed-era-editorial-print` | One fixed historical branch coordinating type, geometry, palette, print pressure, and whitespace. |
+| `graphic-fashion-avatar` | Silhouette-first square identity mark, one accessory cue, rough edge, small-size legibility. |
+| `isometric-cutaway-explainer` | Coherent isometric axes, one functional cutaway, structural support action, calm research paper. |
+| `monstrous-scale-editorial` | World silhouette exits the frame, tiny witness performs one action, print-like scale argument. |
+| `nested-blue-collage` | Wrinkled paper border, centered blue field, clipped inner paper, halftone subject, sparse utility cue. |
+| `portrait-quote-editorial` | Authorized portrait leads, short quote occupies protected lower zone, one subordinate scene cue. |
+| `retro-future-print-editorial` | Etched contours, hard warm/cool planes, visible print grain, one structural subject. |
+| `single-accent-ink-editorial` | Heavy black contour, local halftone, exactly one semantic accent, active whitespace. |
 
 Every entry here is a formal Pattern. Add one when the method is clear enough
 to implement, then iterate it in place or delete it when the method fails.

@@ -53,7 +53,7 @@ If a framework has references, use them to understand:
 - material treatment.
 
 When a Pattern defines layout routes or a fidelity gate, compile those
-constraints before surface material. A candidate that matches color and texture
+constraints before surface material. An output that matches color and texture
 but loses the pattern's information structure is not pattern-faithful.
 
 Do not ask the model to reproduce another image.

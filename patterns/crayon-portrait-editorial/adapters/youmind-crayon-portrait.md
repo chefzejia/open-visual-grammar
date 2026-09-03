@@ -1,11 +1,11 @@
 # YouMind Crayon Portrait Calibration / YouMind 蜡笔肖像校准
 
-This optional adapter distills the public YouMind `蜡笔肖像` description into a
+This Pattern adapter distills the public YouMind `蜡笔肖像` description into a
 source-safe, identity-preserving portrait method. It keeps the live-drawing
 paper, dry crayon pressure, restrained structural color, and open whitespace
 without copying a source face, outfit, or creator-specific treatment.
 
-这份可选 adapter 将公开 YouMind `蜡笔肖像` 的描述提炼为不依赖来源的身份保留肖像方法。
+这份 Pattern adapter 将公开 YouMind `蜡笔肖像` 的描述提炼为不依赖来源的身份保留肖像方法。
 它只保留现场绘画纸面、干擦蜡笔笔压、克制结构色和开放留白，不复制来源脸部、服装或创作者的特定处理。
 
 ## Style Signature / 风格签名
@@ -46,7 +46,7 @@ The upstream visual argument is authoritative:
 - Concrete evidence: {{CONCRETE_EVIDENCE}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Whimsical Journal Sketch grammar with the YouMind crayon-portrait
+Use the Crayon Portrait Editorial Pattern with the YouMind crayon-portrait
 calibration. Preserve the supplied person's face shape, hair pattern,
 expression, pose, and one or two identity details before stylizing. The portrait
 must be recognizable without a name, title, or accessory label.

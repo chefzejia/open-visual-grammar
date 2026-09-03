@@ -12,7 +12,6 @@ load_next:
   references: refs/README.md
   style-calibration: adapters/youmind-handdrawn-memory.md
   style-calibration-naive-doodle: adapters/youmind-naive-doodle.md
-  style-calibration-crayon-portrait: adapters/youmind-crayon-portrait.md
 ```
 
 中文名：奇思妙想手账画师

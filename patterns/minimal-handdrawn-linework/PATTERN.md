@@ -14,12 +14,8 @@ load_next:
   style-calibration-colored-pencil: adapters/youmind-colored-pencil-sketch.md
   style-calibration-screenprint: adapters/youmind-screenprint-reduction.md
   style-calibration-travel-poster: adapters/youmind-travel-poster.md
-  style-calibration-city-observation: adapters/youmind-city-observation-poster.md
   style-calibration-overprint: adapters/youmind-two-color-overprint.md
   style-calibration-documentary-split: adapters/youmind-documentary-split.md
-  style-calibration-single-accent-ink: adapters/youmind-single-accent-ink.md
-  style-calibration-gold-foil-split: adapters/youmind-gold-foil-split.md
-  style-calibration-isometric-cutaway: adapters/youmind-isometric-cutaway.md
 ```
 
 中文名：简约手绘线稿

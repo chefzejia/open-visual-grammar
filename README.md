@@ -90,7 +90,7 @@ Do not load the whole repository into context.
 
 - `ovg-style-reverse`: extract style signatures, composition families, transfer boundaries, and a meta-prompt from references.
 - `ovg-create`: turn a source or brief into a visual argument, select a pattern and composition family, and create an acceptable asset.
-- `ovg-review`: diagnose whether a candidate failed at the visual argument, pattern fidelity, or runtime layer.
+- `ovg-review`: diagnose whether a generated asset failed at the visual argument, pattern fidelity, or runtime layer.
 
 Skills are split by task intent. Patterns remain the source of truth for visual methods; do not create one skill per style.
 
@@ -124,13 +124,27 @@ governed by this convention.
 | `thermal-receipt-poster` | Continuous receipt silhouette, exact short record fields, thermal-paper print texture, dry human observation. |
 | `interwoven-portrait-type-cover` | Recognizable portrait, one short title, explicit occlusion map, shared perspective, protected face and mobile safe zones. |
 | `restrained-editorial-slide-system` | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
+| `adaptive-rembrandt-portrait` | Structure-aware key light, identity-first studio portrait, clean charcoal field, ratio preservation. |
+| `city-observation-poster` | Ordinary city action, authorized subject, giant place marker, blue/cyan screenprint note. |
+| `crayon-portrait-editorial` | Identity-first portrait, open drawing paper, dry crayon pressure, restrained structural color. |
+| `documentary-gold-split-editorial` | Documentary-to-flat-gold transformation, strict split, one dark derived base hue, restrained foil. |
+| `dual-focal-swirl-linework` | Two distinct anchors, structural circular line path, breathable gouache field, limited blocks. |
+| `fixed-era-editorial-print` | One fixed historical branch coordinating type, geometry, palette, print pressure, and whitespace. |
+| `graphic-fashion-avatar` | Silhouette-first square identity mark, one accessory cue, rough edge, small-size legibility. |
+| `isometric-cutaway-explainer` | Coherent isometric axes, one functional cutaway, structural support action, calm research paper. |
+| `monstrous-scale-editorial` | World silhouette exits the frame, tiny witness performs one action, print-like scale argument. |
+| `nested-blue-collage` | Wrinkled paper border, centered blue field, clipped inner paper, halftone subject, sparse utility cue. |
+| `portrait-quote-editorial` | Authorized portrait leads, short quote occupies protected lower zone, one subordinate scene cue. |
+| `retro-future-print-editorial` | Etched contours, hard warm/cool planes, visible print grain, one structural subject. |
+| `single-accent-ink-editorial` | Heavy black contour, local halftone, exactly one semantic accent, active whitespace. |
 
 Every directory under `patterns/` is a formal Pattern from its first commit.
-Iteration happens by editing or deleting that Pattern; there is no candidate or
-promotion state in the repository. Unrouted source evidence stays in intake
-notes until it is strong enough to become a Pattern in one step.
+Iteration happens by editing or deleting that Pattern; there is no candidate,
+promotion, or evaluation state in the repository. Accepted source learning is
+written into a Pattern in one step; rejected material stays outside the public
+grammar rather than becoming a second-class Pattern.
 
-Generated candidates and runtime prompts belong in the consuming project's work
+Generated images and runtime prompts belong in the consuming project's work
 folder. Only reviewed learning should flow back into this repository as
 anti-patterns, adapters, or pattern-local examples.
 
