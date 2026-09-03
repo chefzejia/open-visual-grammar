@@ -131,6 +131,7 @@ governed by this convention.
 | `restrained-editorial-slide-system` | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
 | `adaptive-rembrandt-portrait` | Structure-aware key light, identity-first studio portrait, clean charcoal field, ratio preservation. |
 | `city-observation-poster` | Ordinary city action, authorized subject, giant place marker, blue/cyan screenprint note. |
+| `source-grounded-place-poster` | Real place-photo identity, four-domain art direction, integrated subject/type relation, and factual boundaries. |
 | `crayon-portrait-editorial` | Identity-first portrait, open drawing paper, dry crayon pressure, restrained structural color. |
 | `documentary-gold-split-editorial` | Documentary-to-flat-gold transformation, strict split, one dark derived base hue, restrained foil. |
 | `dual-focal-swirl-linework` | Two distinct anchors, structural circular line path, breathable gouache field, limited blocks. |

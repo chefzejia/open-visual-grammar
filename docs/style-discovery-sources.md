@@ -27,6 +27,18 @@ when it teaches a transferable relation or boundary.
 
 这些信号是检索轴，不是永久品味标签。只有能说明可迁移关系或边界的来源才值得进入 OVG。
 
+## Method And Skill Repositories / 方法与 Skill 仓库
+
+Public agent-skill repositories can expose an executable decision order in
+addition to a visual surface. Treat their code, recipes, and bundled images as
+external evidence; adopt only a public-safe method after a transfer test.
+
+公开 Agent Skill 仓库除了视觉表面，也可能暴露可执行的决策顺序。它们的代码、Recipe 和随附图片都作为外部证据处理，只有通过迁移测试后才吸收公开安全的方法。
+
+| Source | Best evidence | Intake caution |
+| --- | --- | --- |
+| [guizang-yingzao-skill](https://github.com/op7418/guizang-yingzao-skill) | source-photo identity protection, four-domain art direction, primary-reference selection, sparse typeset guide, integrated place montage, factual boundaries | public metadata does not declare a license; keep source assets and scripts external, and do not reduce the workflow to an “ancient Chinese” filter |
+
 ## High-Signal Source Tiers / 高信号来源分层
 
 ### 1. Applied Design Archives / 真实应用设计档案
@@ -131,8 +143,14 @@ The sampled Met woodcut records calibrate the existing
 formal `picture-book-sequence` Pattern, but no generic “children's style”,
 “woodcut style”, or named typeface Pattern was created.
 
+The public Yingzao skill was reviewed separately and became the formal
+`source-grounded-place-poster` Pattern; its source-specific recipes, images, and
+scripts remain external.
+
 第一轮有限采样记录在
 [`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md)。本轮覆盖应用字体档案、儿童绘本评选、开放木刻馆藏和地区字体奖项，最终把绘本序列和多字族排版分别沉淀为正式 Pattern 路由。Met 木刻对象用于校准已有的 `limited-color-print-editorial` 分支，仍没有新增泛化的“儿童风格”“木刻风格”或以字族命名的 Pattern。
+
+公开 Yingzao Skill 另行完成审阅，并沉淀为正式的 `source-grounded-place-poster` Pattern；来源专有的 Recipe、图片和脚本继续留在外部。
 
 ## Intake Packet / 入库包
 

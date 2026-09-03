@@ -117,6 +117,7 @@ Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每
 | `restrained-editorial-slide-system` | 每页一个阅读任务、共享编辑网格、准确字体层级、受控证据和克制墨色。 |
 | `adaptive-rembrandt-portrait` | 结构感知主光、身份优先棚拍肖像、干净炭黑场、保留原始画幅。 |
 | `city-observation-poster` | 日常城市动作、授权主体、巨型地点标记、蓝青孔版观察笔记。 |
+| `source-grounded-place-poster` | 真实地点照片身份、四域艺术指导、主体与文字一体化关系，以及事实边界。 |
 | `crayon-portrait-editorial` | 身份优先肖像、开放素描纸、干擦蜡笔笔压、克制结构色。 |
 | `documentary-gold-split-editorial` | 纪实到平面金色转化、严格分屏、单一深色提取底、克制箔面。 |
 | `dual-focal-swirl-linework` | 两个独立锚点、结构性圆弧线、透气水粉场域、限量色块。 |

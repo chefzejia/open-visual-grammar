@@ -27,6 +27,7 @@ iteration notes, not a candidate, promotion, or evaluation lifecycle.
 | `youmind-multi-page-handdrawn-transfer` | `picture-book-sequence` | `patterns/picture-book-sequence/PATTERN.md` and `adapters/youmind-multi-page-handdrawn-explainer.md` |
 | `youmind-pastoral-pixel-character-transfer` | `pixel-retro` | `patterns/pixel-retro/adapters/youmind-pastoral-pixel-character.md` and `iteration.md` |
 | `youmind-thermal-receipt-transfer` | `thermal-receipt-poster` | `patterns/thermal-receipt-poster/iteration.md` |
+| `guizang-yingzao-source-grounded-poster` | `source-grounded-place-poster` | `patterns/source-grounded-place-poster/PATTERN.md` and `adapters/guizang-yingzao.md` |
 | `youmind-style-transfer` | several existing Patterns | `docs/youmind-style-atlas.md` for intake routing, plus the Pattern-local iteration notes for adopted clusters |
 
 The broad style-transfer case contributes method-level checks to

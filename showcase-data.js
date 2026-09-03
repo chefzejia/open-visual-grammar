@@ -845,6 +845,22 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "source-grounded-place-poster",
+      "slug": "source-grounded-place-poster",
+      "zhName": "来源锚定在地编辑海报",
+      "enName": "Source-Grounded Place Poster",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "runtimes": [
+        "image-generation"
+      ],
+      "whenToUse": "Art-directed editorial posters built from real architecture, streets, cultural places, shops, objects, food, or travel photographs whose identity must survive transformation.",
+      "avoidWhen": "Routine retouching, invented places, generic advertising, exact documentary proof, equal-weight photo grids, or a style that can work without a source subject.",
+      "patternPath": "patterns/source-grounded-place-poster/PATTERN.md",
+      "images": []
+    },
+    {
       "id": "thermal-receipt-poster",
       "slug": "thermal-receipt-poster",
       "zhName": "热敏小票记录海报",
