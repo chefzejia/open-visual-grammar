@@ -101,6 +101,7 @@ Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每
 | `eastern-texture-handdrawn` | 宣纸肌理、松弛手绘线条、低饱和、隐喻和留白。 |
 | `pixel-retro` | 像素块、复古游戏逻辑、清晰轮廓、极客工具气质。 |
 | `narrative-journal-infographic` | 手绘时间线、对比、流程、注释、可读结构。 |
+| `picture-book-sequence` | 儿童安全的翻页叙事、重复锚点、每页一个节拍，以及受控的材质分支。 |
 | `whimsical-journal-sketch` | 水彩速写、马克笔、拼贴、轻松温暖。 |
 | `flowing-gaze-minimal-cover` | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
 | `minimal-handdrawn-linework` | 干净线稿、克制反差、低饱和、高级克制。 |

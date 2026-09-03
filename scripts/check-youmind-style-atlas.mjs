@@ -38,7 +38,7 @@ const linkedAdapters = [
   "patterns/soft-2-5d-icon/adapters/youmind-animal-mascot.md",
   "patterns/thermal-receipt-poster/adapters/image-generation.md",
   "patterns/narrative-journal-infographic/adapters/youmind-comic-memory-card.md",
-  "patterns/narrative-journal-infographic/adapters/youmind-multi-page-handdrawn-explainer.md",
+  "patterns/picture-book-sequence/adapters/youmind-multi-page-handdrawn-explainer.md",
   "patterns/narrative-journal-infographic/adapters/youmind-cognitive-contrast-card.md",
   "patterns/whiteboard-operator-sketch/adapters/youmind-box-operator-sketch.md",
   "patterns/big-character-poster/adapters/youmind-torn-paper-thumbnail.md",

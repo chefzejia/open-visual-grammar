@@ -120,18 +120,19 @@ The first bounded implementation is recorded in
 It samples applied typography, picture-book selection, an open woodcut
 collection, and a regional type award. Two method-level routes were adopted:
 
-- `narrative-journal-infographic` + `adapters/source-picture-book-sequence.md`
+- `picture-book-sequence` + `adapters/source-picture-book-sequence.md`
   for child-safe page order, recurring anchors, and one beat per spread;
 - `restrained-editorial-slide-system` +
   `adapters/source-multiscript-type-system.md` for role-based mixed-script
   typography and deterministic export QA.
 
 The sampled Met woodcut records calibrate the existing
-`limited-color-print-editorial` branch. No new generic “children's style”,
+`limited-color-print-editorial` branch. The picture-book evidence became the
+formal `picture-book-sequence` Pattern, but no generic “children's style”,
 “woodcut style”, or named typeface Pattern was created.
 
 第一轮有限采样记录在
-[`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md)。本轮覆盖应用字体档案、儿童绘本评选、开放木刻馆藏和地区字体奖项，最终只采纳两条方法路线。Met 木刻对象用于校准已有的 `limited-color-print-editorial` 分支，没有新增泛化的“儿童风格”“木刻风格”或以字族命名的 Pattern。
+[`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md)。本轮覆盖应用字体档案、儿童绘本评选、开放木刻馆藏和地区字体奖项，最终把绘本序列和多字族排版分别沉淀为正式 Pattern 路由。Met 木刻对象用于校准已有的 `limited-color-print-editorial` 分支，仍没有新增泛化的“儿童风格”“木刻风格”或以字族命名的 Pattern。
 
 ## Intake Packet / 入库包
 

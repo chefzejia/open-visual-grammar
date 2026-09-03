@@ -1,19 +1,19 @@
 # Source Picture-Book Sequence Calibration / 来源绘本跨页序列校准
 
-This optional adapter distills the sequence evidence exposed by the public
+This adapter defines the source-safe sequence route exposed by the public
 [dPICTUS](https://dpictus.com/), [The Original Art](https://societyillustrators.org/awards/the-original-art/),
 and [Bologna Children's Book Fair](https://www.bolognachildrensbookfair.com/)
 selection programs. Those sources prove that a whole book or spread sequence is
 the useful evidence unit; they do not prove one universal picture-book surface.
 
-这份可选 adapter 提炼公开 dPICTUS、《The Original Art》和 Bologna Children's Book Fair 评选入口中可见的序列证据。
+这份 adapter 提炼公开 dPICTUS、《The Original Art》和 Bologna Children's Book Fair 评选入口中可见的序列证据。
 这些来源能证明整本书或跨页序列才是有效证据单位，但不能证明所有儿童绘本共享一种表面画法。
 
-The quiet-to-busy rhythm and recurring-anchor rules below are transfer
-hypotheses to validate in reviewed outputs. They are not claims that every
-selected title uses the same pacing or character treatment.
+The quiet-to-busy rhythm and recurring-anchor rules below are the transferable
+sequence contract. They describe what the selection sources make comparable,
+not a claim that every selected title uses the same pacing or character treatment.
 
-下面的“安静到繁忙”节奏和重复锚点规则是等待人审输出验证的迁移假设，不是断言所有入选绘本都使用同样的节奏或角色处理。
+下面的“安静到繁忙”节奏和重复锚点规则是可迁移的序列契约，说明评选来源可以比较什么，并不宣称所有入选绘本使用同样的节奏或角色处理。
 
 Do not copy a selected book's characters, lettering, palette, publisher marks,
 or creator-specific material. Choose the material branch from the upstream brief
@@ -60,8 +60,8 @@ The upstream narrative argument is authoritative:
 - Page beats: {{PAGE_BEATS}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Narrative Journal Infographic grammar with the source picture-book
-sequence calibration. Choose one supported family: progression spread,
+Use the Picture-Book Sequence grammar with this source sequence calibration.
+Choose one supported family: progression spread,
 quiet-to-busy reveal, anchor comparison, or path/return. Give every page exactly
 one child-safe beat and make the reading direction obvious. Keep
 {{RECURRING_ANCHOR}} stable in role, silhouette, direction, and one small color

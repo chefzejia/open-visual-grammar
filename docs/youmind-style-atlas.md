@@ -130,7 +130,7 @@ their visual constraints. Representative public detail pages checked in Chrome:
 | `热敏小票海报生成器` | [detail](https://youmind.com/~skills/01a04867-1831-70f1-a60d-99a50cf3be0c) | `thermal-receipt-poster` Pattern |
 | `搞怪背单词` | [detail](https://youmind.com/~skills/01a038b4-474d-7456-8263-58845f84c46f) | `narrative-journal-infographic` comic-memory-card adapter |
 | `极简百科信息卡` | [detail](https://youmind.com/~skills/01a038ae-7eb4-7dbd-a45c-a8df1eb16b5c) | reviewed; adaptive information-architecture evidence, no stable visual grammar beyond a card surface |
-| `治愈系萌宠手账绘本信息图` | [detail](https://youmind.com/~skills/019fe698-8336-72f9-8ce5-d531846d455a) | `narrative-journal-infographic` multi-page handdrawn-explainer adapter |
+| `治愈系萌宠手账绘本信息图` | [detail](https://youmind.com/~skills/019fe698-8336-72f9-8ce5-d531846d455a) | `picture-book-sequence` YouMind multi-page handdrawn-explainer adapter |
 | `小红书爆款人生认知反差卡生成器` | [detail](https://youmind.com/~skills/019fef33-504e-71cb-9201-0461bbe8a1cb) | `narrative-journal-infographic` cognitive-contrast-card adapter |
 | `小盒｜文章认知插画` | [detail](https://youmind.com/~skills/019fd6ae-93c3-7a67-827b-a814a4b0847f) | `whiteboard-operator-sketch` box-operator adapter |
 | `漩涡线描都市童话插画` | [detail](https://youmind.com/~skills/019fca9f-cdc9-7fb3-b010-d35b9e1e1d0f) | `dual-focal-swirl-linework` Pattern |
@@ -462,8 +462,9 @@ binds a flexible four-to-eight-page (default about six pages) `9:16` sequence to
 one claim per page, a stable recurring character, warm near-white paper,
 low-saturation watercolor or colored-pencil marks, handdrawn ink, sparse collage
 accents, and mobile-first text hierarchy. The atlas compiles those constraints
-into a brand-neutral multi-page handdrawn-explainer adapter; the source cats,
-clothing, props, and copy remain external evidence only.
+into the formal `picture-book-sequence` Pattern and its brand-neutral
+multi-page handdrawn-explainer adapter; the source cats, clothing, props, and
+copy remain external evidence only.
 
 The separately checked `小小东 x 剪纸 x 水粉 x P061` page reports creator `小小东`,
 category `图片`, version `v4`, and a YouMind source. Its public description
@@ -589,7 +590,7 @@ remain external; the repository stores links and method-level conclusions only.
 | Nested blue collage poster | visible wrinkled-paper border, centered blue field, clipped torn-paper pieces, halftone silhouette, handwritten orbit, and one small utility cue | `nested-blue-collage` Pattern | medium |
 | Thermal receipt record | continuous vertical receipt, exact short fields, thermal print variation, documentary whitespace, dry observation | `thermal-receipt-poster` Pattern | medium-high |
 | Comic memory card | one continuous child-safe action across 4-12 beats, concept/meaning/example embedded in the scene, compact header and recall cue | `narrative-journal-infographic` + `adapters/youmind-comic-memory-card.md` | medium-high |
-| Multi-page handdrawn explainer | 4-8 mobile-first vertical pages, one claim per page, stable recurring anchor, warm paper, low-saturation ink-and-wash, sparse collage marks | `narrative-journal-infographic` + `adapters/youmind-multi-page-handdrawn-explainer.md` | medium-high |
+| Multi-page handdrawn explainer | 4-8 mobile-first vertical pages, one claim per page, stable recurring anchor, warm paper, low-saturation ink-and-wash, sparse collage marks | `picture-book-sequence` + `adapters/youmind-multi-page-handdrawn-explainer.md` | medium-high |
 | Cognitive contrast card | fixed five-card comparison, stable character and layout, paired scenes contrast an early intuition with a fuller later judgment | `narrative-journal-infographic` + `adapters/youmind-cognitive-contrast-card.md` | medium-high |
 | Place-poster screenprint | dominant place name, one recognizable landmark, limited high-saturation palette, collage planes, shaky contours, screenprint overlap | `minimal-handdrawn-linework` + `adapters/youmind-travel-poster.md` | medium-high |
 | Character-led city observation | supplied character identity, one everyday city action, vertical 3:4 frame, giant title, blue/cyan linework, screenprint texture, limited editorial color | `city-observation-poster` Pattern | medium-high |
@@ -741,7 +742,7 @@ by skill name. This is a routing decision, not a ranking of the creators.
   `搞怪背单词` when a supplied concept can become one continuous, child-safe
   four-to-twelve-beat action; keep the lesson inside the scene and reserve only
   a compact header and recall cue outside it.
-- `narrative-journal-infographic` +
+- `picture-book-sequence` +
   `adapters/youmind-multi-page-handdrawn-explainer.md`:
   `治愈系萌宠手账绘本信息图` when an argument benefits from four to eight
   mobile-first pages, one claim per page, and a stable recurring actor, object,

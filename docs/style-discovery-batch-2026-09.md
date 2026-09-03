@@ -29,7 +29,7 @@ actually prove, and stops before collecting a gallery-sized inspiration dump.
 | Source lane | Public evidence sampled | What it can prove | OVG decision |
 | --- | --- | --- | --- |
 | Applied typography | [Fonts In Use](https://www.fontsinuse.com/) homepage and Graphic Design topic index | typography should be compared in real artifact contexts; the archive is indexed by typeface, format, and topic and reports 34,431 uses | keep as a discovery and type-role verification source; feed type roles into deterministic routes, not a standalone style |
-| Picture-book selection | [dPICTUS](https://dpictus.com/) selected-title page, [The Original Art](https://societyillustrators.org/awards/the-original-art/), and [Bologna Children's Book Fair](https://www.bolognachildrensbookfair.com/) homepage | the unit of evidence is the book or spread sequence, with recurring anchors, page turns, and audience/age context; dPICTUS exposes selected titles and two-spread previews, while The Original Art requires the whole book in spread view | add a source-safe `picture-book-sequence` adapter under `narrative-journal-infographic`; do not name a picture-book surface Pattern yet |
+| Picture-book selection | [dPICTUS](https://dpictus.com/) selected-title page, [The Original Art](https://societyillustrators.org/awards/the-original-art/), and [Bologna Children's Book Fair](https://www.bolognachildrensbookfair.com/) homepage | the unit of evidence is the book or spread sequence, with recurring anchors, page turns, and audience/age context; dPICTUS exposes selected titles and two-spread previews, while The Original Art requires the whole book in spread view | create the formal `picture-book-sequence` Pattern for the sequence contract; keep children's surface material variable and do not create a generic children's-style Pattern |
 | Open collection | [Met Open Access API search](https://collectionapi.metmuseum.org/public/collection/v1/search?q=woodcut&hasImages=true) and three object records: [Hypnerotomachia Poliphili](https://www.metmuseum.org/art/collection/search/365313), [Hercules chasing Avarice](https://www.metmuseum.org/art/collection/search/337700), [Embroidery Pattern](https://www.metmuseum.org/art/collection/search/388376) | block-based print, contour-first reduction, repeatable ornament, and public-domain item-level rights can be checked in metadata; all three sampled records are marked public domain | calibrate existing `limited-color-print-editorial`; no new Pattern or image asset in this batch |
 | Regional type/design award | [Tokyo TDC 2026 Grand Prize](https://tokyotypedirectorsclub.org/en/award/2026_grandprize/) | a type family can be treated as a system across scripts, weights, obliques, optical sizes, and deployment contexts; the page identifies Futura 100 Multiscript and six weights with matching obliques and optical-size variations | add a `multiscript-type-system` adapter under `restrained-editorial-slide-system`; keep the family name and award imagery as source metadata |
 
@@ -74,18 +74,19 @@ What appears accidental:
 Two unrelated transfer topics:
 - an emergency-kit replenishment sequence; a team handoff that preserves one note
 Existing Pattern fit:
-- `narrative-journal-infographic`
+- no existing Pattern owns page-turn narrative as its primary contract;
+  `narrative-journal-infographic` remains the neighboring explanation route
 Pattern decision:
-- add the sequence contract to `adapters/source-picture-book-sequence.md`;
-  keep the surface branch variable and do not create a new Pattern
+- create the formal `picture-book-sequence` Pattern directly;
+  keep the surface branch variable and do not create a generic children's-style Pattern
 ```
 
 The pages prove that sequence and audience are the useful extraction units, not
-that every selected book shares a single drawing style. The adapter therefore
-adds a child-safe sequence route while leaving material choice to the upstream
-brief and the base Pattern.
+that every selected book shares a single drawing style. The formal Pattern
+therefore owns the child-safe sequence contract while leaving material choice to
+the upstream brief; it does not claim a universal children's surface.
 
-公开页面能证明的是“序列”和“受众”是有效的提取单位，并不能证明所有入选绘本共享同一种画法。因此 adapter 只增加儿童安全的序列路由，材质仍由上游简报和基础 Pattern 决定。
+公开页面能证明的是“序列”和“受众”是有效的提取单位，并不能证明所有入选绘本共享同一种画法。因此正式 Pattern 只负责儿童安全的序列契约，材质仍由上游简报决定，不把“儿童画风”泛化成单独 Pattern。
 
 ### B. Archive Print Reduction / 馆藏版画减法
 
@@ -175,7 +176,7 @@ Pattern decision:
 
 | Source cluster | Evidence | Transfer test | Decision |
 | --- | --- | --- | --- |
-| Child-safe picture-book sequence | dPICTUS selected titles, The Original Art whole-book spread requirement, Bologna illustration and awards program | emergency-kit progression; team-handoff comparison | adapter added under `narrative-journal-infographic`; no new Pattern |
+| Child-safe picture-book sequence | dPICTUS selected titles, The Original Art whole-book spread requirement, Bologna illustration and awards program | emergency-kit progression; team-handoff comparison | formal `picture-book-sequence` Pattern created; no generic children's surface Pattern |
 | Woodcut block reduction | three public-domain Met records with woodcut/block metadata | museum catalog; dependency-chain research plate | absorbed by `limited-color-print-editorial`; no new files |
 | Multiscript type system | Tokyo TDC family description plus Fonts In Use contextual archive | bilingual research deck; museum guide | adapter added under `restrained-editorial-slide-system`; exact typography stays deterministic |
 | Generic “children's illustration” surface | heterogeneous selected books and unknown material branches | fails because material and composition are not stable across titles | rejected |
@@ -184,8 +185,9 @@ Pattern decision:
 ## Review Result / 审查结果
 
 The map now has an executable first pass: source lanes, bounded evidence, rights
-handling, transfer probes, and two concrete adapters. Continue by iterating those
-Patterns in production. Until a source is strong enough for a formal Pattern,
-keep it in `interesting` or `clustered` intake state outside this repository.
+handling, transfer probes, one formal Pattern, and one deterministic-layout
+adapter. Continue by iterating those routes in production. Evidence that does
+not earn a formal Pattern remains outside OVG or is rejected; it is not kept as
+a Pattern lifecycle state.
 
-这张地图现在已经能执行第一轮：有来源分层、有限证据、权利处理、迁移测试，以及两个具体 adapter。后续直接在消费项目中迭代这些 Pattern；如果来源仍不足以形成清晰方法，就继续留在 `interesting` 或 `clustered` 状态，或直接拒绝，不在 OVG 保留中间 Pattern。
+这张地图现在已经能执行第一轮：有来源分层、有限证据、权利处理、迁移测试、一个正式 Pattern 和一个确定性排版 adapter。后续直接在消费项目中迭代这些路由；如果来源仍不足以形成清晰方法，就留在 OVG 之外或直接拒绝，不在 OVG 保留 Pattern 生命周期中间态。

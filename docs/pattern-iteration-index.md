@@ -13,7 +13,7 @@ iteration notes, not a candidate, promotion, or evaluation lifecycle.
 | --- | --- | --- |
 | `big-character-poster-reproduction` | `big-character-poster` | `patterns/big-character-poster/iteration.md` and `anti-patterns.md` |
 | `retro-pixel-style-ownership` | `retro-pixel-halftone-tech-editorial` | `patterns/retro-pixel-halftone-tech-editorial/iteration.md` |
-| `source-picture-book-sequence-transfer` | `narrative-journal-infographic` | `patterns/narrative-journal-infographic/adapters/source-picture-book-sequence.md` and `iteration.md` |
+| `source-picture-book-sequence-transfer` | `picture-book-sequence` | `patterns/picture-book-sequence/PATTERN.md`, `adapters/source-picture-book-sequence.md`, and `adapters/deterministic-layout.md` |
 | `youmind-animal-mascot-transfer`, `youmind-icon-transfer` | `soft-2-5d-icon` | `patterns/soft-2-5d-icon/adapters/youmind-animal-mascot.md`, `youmind-eastern-handdrawn-icon.md`, and `iteration.md` |
 | `youmind-box-operator-transfer` | `whiteboard-operator-sketch` | `patterns/whiteboard-operator-sketch/adapters/youmind-box-operator-sketch.md` and `iteration.md` |
 | `youmind-city-observation-poster-transfer` | `city-observation-poster` | `patterns/city-observation-poster/` |
@@ -23,7 +23,8 @@ iteration notes, not a candidate, promotion, or evaluation lifecycle.
 | `youmind-single-accent-ink-transfer` | `single-accent-ink-editorial` | `patterns/single-accent-ink-editorial/` |
 | `youmind-crayon-portrait-transfer` | `crayon-portrait-editorial` | `patterns/crayon-portrait-editorial/` |
 | `youmind-emotional-metaphor-transfer`, `youmind-mist-blue-metaphor-transfer`, `youmind-spatial-word-poster-transfer` | `semantic-concept-poster` | the named adapters under `patterns/semantic-concept-poster/` and `iteration.md` |
-| `youmind-cognitive-contrast-card-transfer`, `youmind-multi-page-handdrawn-transfer` | `narrative-journal-infographic` | the named adapters under `patterns/narrative-journal-infographic/` and `iteration.md` |
+| `youmind-cognitive-contrast-card-transfer` | `narrative-journal-infographic` | `patterns/narrative-journal-infographic/adapters/youmind-cognitive-contrast-card.md` and `iteration.md` |
+| `youmind-multi-page-handdrawn-transfer` | `picture-book-sequence` | `patterns/picture-book-sequence/PATTERN.md` and `adapters/youmind-multi-page-handdrawn-explainer.md` |
 | `youmind-pastoral-pixel-character-transfer` | `pixel-retro` | `patterns/pixel-retro/adapters/youmind-pastoral-pixel-character.md` and `iteration.md` |
 | `youmind-thermal-receipt-transfer` | `thermal-receipt-poster` | `patterns/thermal-receipt-poster/iteration.md` |
 | `youmind-style-transfer` | several existing Patterns | `docs/youmind-style-atlas.md` for intake routing, plus the Pattern-local iteration notes for adopted clusters |

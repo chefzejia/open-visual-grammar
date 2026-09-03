@@ -560,6 +560,24 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "picture-book-sequence",
+      "slug": "picture-book-sequence",
+      "zhName": "绘本跨页叙事",
+      "enName": "Picture-Book Sequence",
+      "artifactKinds": [
+        "image-cover",
+        "deterministic-layout"
+      ],
+      "runtimes": [
+        "image-generation",
+        "deterministic-layout"
+      ],
+      "whenToUse": "Child-safe multi-page picture-book sequences and visual stories where page turns carry one clear change at a time.",
+      "avoidWhen": "Single hero illustrations, dashboards, sticker sheets, dense tutorials, or stories that need unsafe or frightening imagery.",
+      "patternPath": "patterns/picture-book-sequence/PATTERN.md",
+      "images": []
+    },
+    {
       "id": "pixel-retro",
       "slug": "pixel-retro",
       "zhName": "像素复古风",

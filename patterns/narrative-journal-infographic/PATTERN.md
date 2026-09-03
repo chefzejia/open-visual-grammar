@@ -11,9 +11,8 @@ avoid_when: Pure mood images, hard proof screenshots, strong debate posters, or 
 load_next:
   references: refs/README.md
   style-calibration: adapters/youmind-comic-memory-card.md
-  style-calibration-multi-page: adapters/youmind-multi-page-handdrawn-explainer.md
   style-calibration-contrast-card: adapters/youmind-cognitive-contrast-card.md
-  style-calibration-picture-book: adapters/source-picture-book-sequence.md
+  picture-book-sequence: ../picture-book-sequence/PATTERN.md
 ```
 
 中文名：叙事手账·信息可视化
@@ -27,6 +26,14 @@ pattern for explaining timelines, comparisons, workflows, and system maps with
 a human, manually reasoned texture.
 
 CN: 叙事手账·信息可视化是一种手绘信息可视化范式，用手账式结构解释时间线、对比、流程和系统关系，让复杂内容显得像被人认真推演过。
+
+The child-safe picture-book sequence route is a separate formal Pattern. Use
+[`picture-book-sequence`](../picture-book-sequence/PATTERN.md) when page turns,
+recurring anchors, and story beats are the primary contract; this Pattern stays
+focused on explanation and comparison rather than narrative illustration.
+
+儿童安全的绘本跨页路线已经独立成为正式 Pattern。当翻页、重复锚点和故事节拍是主要契约时，使用
+[`picture-book-sequence`](../picture-book-sequence/PATTERN.md)；本 Pattern 继续负责解释和对比，不把叙事插画混在一起。
 
 ## Invariants / 不变量
 

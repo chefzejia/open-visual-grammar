@@ -1,12 +1,12 @@
 # YouMind Multi-Page Handdrawn Explainer Calibration / YouMind 多页手绘解释器校准
 
-This optional adapter distills the public YouMind `治愈系萌宠手账绘本信息图`
+This adapter distills the public YouMind `治愈系萌宠手账绘本信息图`
 description into a brand-neutral sequence grammar. It keeps the useful method
 claims—mobile-first vertical pages, one argument per page, a recurring anchor,
 and a paper-and-ink handdrawn surface—while removing the source skill's cats,
 clothes, props, and wording.
 
-这份可选 adapter 将公开 YouMind“治愈系萌宠手账绘本信息图”的方法抽象成品牌中立的连续页面语法。
+这份 adapter 将公开 YouMind“治愈系萌宠手账绘本信息图”的方法抽象成品牌中立的连续页面语法。
 它保留移动端竖屏、每页一个论点、跨页重复锚点和纸墨手绘表面，去掉来源技能的猫咪、服装、道具与原文措辞。
 
 ## Style Signature / 风格签名
@@ -44,7 +44,7 @@ The upstream narrative argument is authoritative:
 - Page beats: {{PAGE_BEATS}}
 - Text handling: {{TEXT_HANDLING}}
 
-Use the Narrative Journal Infographic grammar with the YouMind multi-page
+Use the Picture-Book Sequence grammar with the YouMind multi-page
 handdrawn-explainer calibration. Build a mobile-first vertical sequence. Give
 each page one concrete claim or transition, and make the reading order obvious
 from page one to the last page. Keep {{RECURRING_ANCHOR}} stable in role,

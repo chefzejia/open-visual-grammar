@@ -25,6 +25,7 @@ content structure, output contract, and font roles.
 | `print-menu-layout` | single-page restaurant menu delivered as print-ready PNG/PDF or deterministic HTML/Typst | `patterns/print-menu-layout/adapters/deterministic-layout.md` |
 | `limited-color-print-editorial` | fixed editorial pages or slides using warm paper, one dominant ink, one large print plane, and local woodcut or charcoal pressure | `patterns/limited-color-print-editorial/adapters/deterministic-layout.md` |
 | `restrained-editorial-slide-system` | research, marketing, cultural, or brand slides with one reading task per page, exact typography, bounded evidence, and a shared editorial grid | `patterns/restrained-editorial-slide-system/adapters/deterministic-layout.md` |
+| `picture-book-sequence` | fixed-format child-safe picture-book spreads or mobile page sequences where page order carries the narrative | `patterns/picture-book-sequence/adapters/deterministic-layout.md` |
 
 ## Required Output
 

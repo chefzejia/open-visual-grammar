@@ -46,6 +46,7 @@ load-next hints.
 | `eastern-texture-handdrawn` | Chinese paper texture, loose handdrawn line, low saturation, metaphor and whitespace. |
 | `pixel-retro` | Pixel blocks, retro game logic, clear silhouette, geek/tool atmosphere. |
 | `narrative-journal-infographic` | Handdrawn timeline, comparison, workflow, notes, readable structure. |
+| `picture-book-sequence` | Child-safe page-turn storytelling, recurring anchors, one beat per page, controlled material branches. |
 | `whimsical-journal-sketch` | Watercolor sketch, marker texture, collage, casual warmth. |
 | `flowing-gaze-minimal-cover` | One subject, negative space, unusual viewpoint, pen/etching texture. |
 | `minimal-handdrawn-linework` | Clean linework, controlled contrast, low saturation, premium restraint. |

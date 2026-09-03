@@ -31,6 +31,7 @@ signature, select another pattern instead of keeping only its material words.
 | --- | --- | --- |
 | `big-character-poster` | public feed covers with a sharp correction, strong first read, and concrete evidence object | neutral docs hero, calm premium page, exact UI proof |
 | `narrative-journal-infographic` | handdrawn timelines, workflows, comparisons, system maps | pure mood image, exact data chart |
+| `picture-book-sequence` | child-safe multi-page stories where page turns carry one clear change and a recurring anchor keeps orientation | single hero illustration, dashboard, sticker sheet, dense tutorial |
 | `flowing-gaze-minimal-cover` | quiet reflective covers with one subject and large negative space | urgent tutorial, high-density checklist |
 | `pixel-retro` | playful technical systems, tool paths, runtime cost, game-like logic | premium corporate document, realistic proof |
 | `eastern-texture-handdrawn` | slow editorial metaphor, paper texture, restraint | hard technical proof, dense explainer |
