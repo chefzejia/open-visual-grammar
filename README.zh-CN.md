@@ -49,6 +49,9 @@ decisions/   架构说明和项目决策记录。
 直接打开 [`index.html`](index.html)，可以浏览全部已注册 Pattern 及其人审
 WebP 参考图，不需要启动服务器。
 
+静态文件就是正式交付入口。只有自动化浏览器禁止访问 `file://` 时，才临时
+启动 HTTP 静态服务做验证；localhost 不是 OVG 的运行依赖，也不是正式入口。
+
 Pattern 从 `patterns/*/PATTERN.md` 自动注册；橱窗自动发现 Pattern 内
 `refs/` 与 `examples/` 下的参考、正例和反例。修改这些真源后执行：
 

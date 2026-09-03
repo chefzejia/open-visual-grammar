@@ -314,7 +314,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Square profile or identity marks where hair, face shape, expression, and one accessory must survive graphic reduction.",
       "avoidWhen": "Anonymous stock portraits, detailed character scenes, long text, or app icons whose function is carried by a non-human symbol.",
       "patternPath": "patterns/graphic-fashion-avatar/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/graphic-fashion-avatar/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 825552
+        }
+      ]
     },
     {
       "id": "interwoven-portrait-type-cover",
@@ -355,7 +364,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Functional covers where coherent isometric axes and one cutaway reveal a dependency, path, connection, or operating relation.",
       "avoidWhen": "Decorative exploded views, generic 3D renders, dense dashboards, or scenes whose meaning depends on realism.",
       "patternPath": "patterns/isometric-cutaway-explainer/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/isometric-cutaway-explainer/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 1726800
+        }
+      ]
     },
     {
       "id": "limited-color-print-editorial",
@@ -431,7 +449,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Covers where one world-building silhouette must exceed the frame and a tiny witness makes the scale and action legible.",
       "avoidWhen": "Complete miniature scenes, ordinary portraits, multiple landmarks, or scale that depends only on cinematic effects.",
       "patternPath": "patterns/monstrous-scale-editorial/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/monstrous-scale-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 1660832
+        }
+      ]
     },
     {
       "id": "narrative-journal-infographic",
@@ -472,7 +499,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Square or near-square covers where a three-layer paper/blue/paper field makes one subject and short line feel physically embedded.",
       "avoidWhen": "Full-bleed scenes, glossy 3D collage, dense scrapbook pages, or topics needing exact UI proof.",
       "patternPath": "patterns/nested-blue-collage/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/nested-blue-collage/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 1561350
+        }
+      ]
     },
     {
       "id": "paper-sculpture-collage-editorial",
@@ -570,7 +606,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Vertical editorial covers where an authorized portrait, one short verified quote, and one restrained scene cue share a clear reading order.",
       "avoidWhen": "Anonymous stock portraits, long copy, quote cards without identity, or cinematic wallpaper.",
       "patternPath": "patterns/portrait-quote-editorial/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/portrait-quote-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1553358
+        }
+      ]
     },
     {
       "id": "print-menu-layout",
@@ -638,7 +683,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Dense print plates where etched contour, hard warm/cool planes, and one structural subject make a non-cinematic future-facing editorial argument.",
       "avoidWhen": "Generic sci-fi scenes, smooth 3D, multiple competing subjects, or photographic proof.",
       "patternPath": "patterns/retro-future-print-editorial/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/retro-future-print-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 3029752
+        }
+      ]
     },
     {
       "id": "retro-pixel-halftone-tech-editorial",
@@ -712,7 +766,16 @@ window.OVG_SHOWCASE = {
       "whenToUse": "Editorial covers where heavy black contour and local halftone make one action legible with exactly one semantic accent.",
       "avoidWhen": "Multi-color decoration, full-frame noise, soft watercolor mood, or exact photographic proof.",
       "patternPath": "patterns/single-accent-ink-editorial/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/single-accent-ink-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 968920
+        }
+      ]
     },
     {
       "id": "soft-2-5d-icon",

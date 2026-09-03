@@ -51,6 +51,10 @@ Open [`index.html`](index.html) to browse every registered pattern and its
 reviewed WebP references. The page works as a local static file and needs no
 server.
 
+The static file is the canonical delivery surface. A temporary HTTP server is
+only a browser-automation fallback for environments that block `file://` URLs;
+it is not an OVG runtime dependency.
+
 Patterns self-register from `patterns/*/PATTERN.md`; reference, accepted, and
 rejected images are discovered under pattern-local `refs/` and `examples/`.
 Rebuild the deterministic data file after either source changes:

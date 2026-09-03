@@ -119,3 +119,8 @@ node scripts/build-showcase.mjs --check
 
 `showcase-data.js` is a compiled artifact. Do not edit it by hand or add a
 parallel showcase manifest.
+
+The canonical delivery surface is the static `index.html` file opened directly
+in a browser. OVG does not require a local HTTP server at runtime. A temporary
+static server is allowed only when a browser automation surface blocks `file://`
+URLs; never make its localhost URL a project dependency or public entry point.
