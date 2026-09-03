@@ -131,5 +131,5 @@ Cooper Black, while production substitutes unrelated fonts.
 
 **Correction:** Package the selected open-source fonts and load them from an
 explicit runtime font path. Treat missing primary fonts as a QA failure. Do not
-promote a menu direction until local and production PNG/PDF output use the same
+approve a menu direction until local and production PNG/PDF output use the same
 font files.

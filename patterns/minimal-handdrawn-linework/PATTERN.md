@@ -2,7 +2,6 @@
 
 ```yaml
 id: minimal-handdrawn-linework
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -26,7 +25,6 @@ load_next:
 中文名：简约手绘线稿
 English name: Minimal Handdrawn Linework
 
-Status: seed
 
 ## Definition / 定义
 

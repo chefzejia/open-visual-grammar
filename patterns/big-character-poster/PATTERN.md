@@ -2,7 +2,6 @@
 
 ```yaml
 id: big-character-poster
-status: canonical
 artifact_kinds:
   - image-cover
 runtimes:
@@ -18,7 +17,6 @@ load_next:
 中文名：大字报
 English name: Big Character Poster
 
-Status: canonical
 
 ## Definition / 定义
 

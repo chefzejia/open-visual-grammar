@@ -15,11 +15,11 @@ Do not route an icon request through `image-cover` just because both outputs are
 images. An icon has a square boundary, a semantic silhouette, and a small-size
 legibility contract that a cover does not own.
 
-## Candidate Patterns
+## Patterns
 
-| Pattern | Status | Best fit | Avoid when |
-| --- | --- | --- | --- |
-| `soft-2-5d-icon` | seed | compact app or product icons with one clear silhouette, one functional cue, and controlled shallow depth | long text, multi-object scenes, exact UI screenshots, dense illustration, or photoreal evidence |
+| Pattern | Best fit | Avoid when |
+| --- | --- | --- |
+| `soft-2-5d-icon` | compact app or product icons with one clear silhouette, one functional cue, and controlled shallow depth | long text, multi-object scenes, exact UI screenshots, dense illustration, or photoreal evidence |
 
 ## Required Output
 

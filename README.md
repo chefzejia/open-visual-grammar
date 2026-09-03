@@ -28,7 +28,6 @@ Open Visual Grammar starts earlier:
 | --- | --- |
 | Grammar | Shared visual language: tension, hierarchy, density, metaphor, rhythm, temperature. |
 | Pattern | A reusable visual abstraction with stable invariants, transfer boundaries, references, adapters, and examples. |
-| Canonical | A maturity state for a tested pattern. It is not a top-level directory. |
 | Score | A task-specific visual plan that can compile into a prompt, shader spec, deck layout, or scene brief. |
 | Runtime | The execution surface: image model, HTML/CSS, slide deck, shader, video, game engine. |
 
@@ -41,7 +40,6 @@ registry/    Artifact-kind routing. Agents open one registry before one pattern.
 grammar/     Cross-pattern visual language. Read only when a decision needs it.
 patterns/    Stable visual patterns. Load one pattern at a time.
 runtimes/    Cross-pattern execution constraints.
-evals/       Reproduction cases and rubrics for testing pattern stability.
 skills/      Reusable agent workflows for extracting or maintaining visual grammar.
 docs/        Protocols and operating notes.
 decisions/   Architecture notes and project decisions.
@@ -99,49 +97,38 @@ Skills are split by task intent. Patterns remain the source of truth for visual 
 ## Reference Assets
 
 Operator-selected pattern references and reviewed examples use lossless WebP by
-default. Each image must teach a reusable method or boundary; patterns without
-approved production output remain image-free. Platform delivery formats stay in
-the consuming project and are not governed by this convention.
+default. Each image must teach a reusable method or boundary. A Pattern may
+remain image-free when no public-safe example exists; the showcase never adds
+filler art. Platform delivery formats stay in the consuming project and are not
+governed by this convention.
 
-## Current Stable Pattern
+## Patterns
 
-| Pattern | Status | Invariants |
-| --- | --- | --- |
-| `big-character-poster` | canonical | Dominant headline, public attitude, concrete evidence, rough print energy, strong first read. |
+| Pattern | Invariants |
+| --- | --- |
+| `big-character-poster` | Dominant headline, public attitude, concrete evidence, rough print energy, strong first read. |
+| `print-menu-layout` | Print-ready hierarchy, menu sections, price scanning, hospitality print tone. |
+| `eastern-texture-handdrawn` | Chinese paper texture, loose handdrawn line, low saturation, metaphor and whitespace. |
+| `pixel-retro` | Pixel blocks, retro game logic, clear silhouette, geek/tool atmosphere. |
+| `narrative-journal-infographic` | Handdrawn timeline, comparison, workflow, notes, readable structure. |
+| `whimsical-journal-sketch` | Watercolor sketch, marker texture, collage, casual warmth. |
+| `flowing-gaze-minimal-cover` | One subject, negative space, unusual viewpoint, pen/etching texture. |
+| `minimal-handdrawn-linework` | Clean linework, controlled contrast, low saturation, premium restraint. |
+| `limited-color-print-editorial` | Warm paper, one dominant ink, one large structural plane, local print pressure, shared type-image axes. |
+| `frosted-silhouette-editorial` | Regional frosted reveal, geometric silhouette, controlled negative space, quiet editorial distance. |
+| `paper-sculpture-collage-editorial` | Layered cut-paper planes, meaningful occlusion, matte depth, source-aware color, quiet editorial warmth. |
+| `soft-2-5d-icon` | One square silhouette, one functional cue, shallow soft depth, small-size legibility. |
+| `whiteboard-operator-sketch` | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
+| `retro-pixel-halftone-tech-editorial` | Framed technical editorial plate, integrated headline and mechanism, one-bit halftone material, one signal color. |
+| `semantic-concept-poster` | Short exact text as the visual object, one precise metaphor relation, premium editorial restraint. |
+| `thermal-receipt-poster` | Continuous receipt silhouette, exact short record fields, thermal-paper print texture, dry human observation. |
+| `interwoven-portrait-type-cover` | Recognizable portrait, one short title, explicit occlusion map, shared perspective, protected face and mobile safe zones. |
+| `restrained-editorial-slide-system` | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
 
-## Candidate Patterns
-
-| Pattern | Status | Invariants |
-| --- | --- | --- |
-| `print-menu-layout` | candidate | Print-ready hierarchy, menu sections, price scanning, hospitality print tone. |
-| `eastern-texture-handdrawn` | seed | Chinese paper texture, loose handdrawn line, low saturation, metaphor and whitespace. |
-| `pixel-retro` | seed | Pixel blocks, retro game logic, clear silhouette, geek/tool atmosphere. |
-| `narrative-journal-infographic` | seed | Handdrawn timeline, comparison, workflow, notes, readable structure. |
-| `whimsical-journal-sketch` | seed | Watercolor sketch, marker texture, collage, casual warmth. |
-| `flowing-gaze-minimal-cover` | seed | One subject, negative space, unusual viewpoint, pen/etching texture. |
-| `minimal-handdrawn-linework` | seed | Clean linework, controlled contrast, low saturation, premium restraint. |
-| `limited-color-print-editorial` | seed | Warm paper, one dominant ink, one large structural plane, local print pressure, shared type-image axes. |
-| `frosted-silhouette-editorial` | seed | Regional frosted reveal, geometric silhouette, controlled negative space, quiet editorial distance. |
-| `paper-sculpture-collage-editorial` | seed | Layered cut-paper planes, meaningful occlusion, matte depth, source-aware color, quiet editorial warmth. |
-| `soft-2-5d-icon` | seed | One square silhouette, one functional cue, shallow soft depth, small-size legibility. |
-| `whiteboard-operator-sketch` | seed | White-background GanFan threadball worker, handdrawn technical explanation, sparse Chinese labels. |
-| `retro-pixel-halftone-tech-editorial` | seed | Framed technical editorial plate, integrated headline and mechanism, one-bit halftone material, one signal color. |
-| `interwoven-portrait-type-cover` | seed | Recognizable portrait, one short title, explicit occlusion map, shared perspective, protected face and mobile safe zones. |
-| `restrained-editorial-slide-system` | seed | One reading task per page, shared editorial grid, exact type hierarchy, bounded evidence, restrained ink roles. |
-
-Candidate patterns stay in `patterns/` when they have enough structure to guide
-future extraction. Promote only after references, boundaries, and production
-examples are reviewed.
-
-## Evals
-
-Use `docs/evaluation-protocol.md` and `evals/` to test whether a pattern can be
-reproduced across topics.
-
-Evals are not image rankings and not general model capability tests. They check
-whether a visual method has stable invariants, whether another agent can apply
-it without private context, and whether three generated candidates are three
-structural solutions under the same grammar.
+Every directory under `patterns/` is a formal Pattern from its first commit.
+Iteration happens by editing or deleting that Pattern; there is no candidate or
+promotion state in the repository. Unrouted source evidence stays in intake
+notes until it is strong enough to become a Pattern in one step.
 
 Generated candidates and runtime prompts belong in the consuming project's work
 folder. Only reviewed learning should flow back into this repository as
@@ -150,12 +137,12 @@ anti-patterns, adapters, or pattern-local examples.
 ## Reference Intake
 
 External references may inform OVG, but raw collections do not belong here. Use
-`docs/reference-intake-protocol.md` when promoting learning from X bookmarks,
+`docs/reference-intake-protocol.md` when adopting learning from X bookmarks,
 websites, image collections, or private source-intake workflows.
 
 The public repository accepts reviewed method-level learning only: references
-that calibrate a pattern, examples with critique, anti-patterns, eval cases,
-rubrics, grammar changes, or runtime constraints.
+that calibrate a pattern, examples with critique, anti-patterns, grammar
+changes, or runtime constraints.
 
 ## What Belongs Here
 
@@ -164,7 +151,6 @@ rubrics, grammar changes, or runtime constraints.
 - Anti-patterns and failure modes.
 - Runtime adapters and compile rules.
 - Pattern-local examples that teach the grammar.
-- Evaluation cases and rubrics that test method stability.
 
 ## What Does Not Belong Here
 

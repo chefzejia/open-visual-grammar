@@ -1,6 +1,6 @@
 # Style Discovery Batch 2026-09 / 2026-09 风格发现采样批次
 
-Status: `promotion-candidate`
+Status: `intake record`
 
 This is the first bounded implementation of
 [`docs/style-discovery-sources.md`](style-discovery-sources.md). It samples one
@@ -18,9 +18,9 @@ actually prove, and stops before collecting a gallery-sized inspiration dump.
   open collection, and regional type/design award.
 - No third-party preview images were vendored. Public links and method-level
   notes are the only durable source evidence.
-- The batch stops after two concrete OVG routes and three non-new-Pattern
-  dispositions. A new Pattern requires reviewed cross-topic outputs, not more
-  bookmarks.
+- The batch stops after two concrete OVG routes and three external dispositions.
+  A Pattern is created directly when its method is clear; otherwise the source
+  remains outside OVG or is rejected.
 - No image-generation request was made and no paid or uncertain external action
   was triggered.
 
@@ -29,9 +29,9 @@ actually prove, and stops before collecting a gallery-sized inspiration dump.
 | Source lane | Public evidence sampled | What it can prove | OVG decision |
 | --- | --- | --- | --- |
 | Applied typography | [Fonts In Use](https://www.fontsinuse.com/) homepage and Graphic Design topic index | typography should be compared in real artifact contexts; the archive is indexed by typeface, format, and topic and reports 34,431 uses | keep as a discovery and type-role verification source; feed type roles into deterministic routes, not a standalone style |
-| Picture-book selection | [dPICTUS](https://dpictus.com/) selected-title page, [The Original Art](https://societyillustrators.org/awards/the-original-art/), and [Bologna Children's Book Fair](https://www.bolognachildrensbookfair.com/) homepage | the unit of evidence is the book or spread sequence, with recurring anchors, page turns, and audience/age context; dPICTUS exposes selected titles and two-spread previews, while The Original Art requires the whole book in spread view | promote a source-safe `picture-book-sequence` adapter under `narrative-journal-infographic`; do not name a picture-book surface Pattern yet |
+| Picture-book selection | [dPICTUS](https://dpictus.com/) selected-title page, [The Original Art](https://societyillustrators.org/awards/the-original-art/), and [Bologna Children's Book Fair](https://www.bolognachildrensbookfair.com/) homepage | the unit of evidence is the book or spread sequence, with recurring anchors, page turns, and audience/age context; dPICTUS exposes selected titles and two-spread previews, while The Original Art requires the whole book in spread view | add a source-safe `picture-book-sequence` adapter under `narrative-journal-infographic`; do not name a picture-book surface Pattern yet |
 | Open collection | [Met Open Access API search](https://collectionapi.metmuseum.org/public/collection/v1/search?q=woodcut&hasImages=true) and three object records: [Hypnerotomachia Poliphili](https://www.metmuseum.org/art/collection/search/365313), [Hercules chasing Avarice](https://www.metmuseum.org/art/collection/search/337700), [Embroidery Pattern](https://www.metmuseum.org/art/collection/search/388376) | block-based print, contour-first reduction, repeatable ornament, and public-domain item-level rights can be checked in metadata; all three sampled records are marked public domain | calibrate existing `limited-color-print-editorial`; no new Pattern or image asset in this batch |
-| Regional type/design award | [Tokyo TDC 2026 Grand Prize](https://tokyotypedirectorsclub.org/en/award/2026_grandprize/) | a type family can be treated as a system across scripts, weights, obliques, optical sizes, and deployment contexts; the page identifies Futura 100 Multiscript and six weights with matching obliques and optical-size variations | promote a `multiscript-type-system` adapter under `restrained-editorial-slide-system`; keep the family name and award imagery as source metadata |
+| Regional type/design award | [Tokyo TDC 2026 Grand Prize](https://tokyotypedirectorsclub.org/en/award/2026_grandprize/) | a type family can be treated as a system across scripts, weights, obliques, optical sizes, and deployment contexts; the page identifies Futura 100 Multiscript and six weights with matching obliques and optical-size variations | add a `multiscript-type-system` adapter under `restrained-editorial-slide-system`; keep the family name and award imagery as source metadata |
 
 ## Intake Packets / 入库包
 
@@ -75,8 +75,8 @@ Two unrelated transfer topics:
 - an emergency-kit replenishment sequence; a team handoff that preserves one note
 Existing Pattern fit:
 - `narrative-journal-infographic`
-Promotion decision:
-- promote the sequence contract to `adapters/source-picture-book-sequence.md`;
+Pattern decision:
+- add the sequence contract to `adapters/source-picture-book-sequence.md`;
   keep the surface branch variable and do not create a new Pattern
 ```
 
@@ -127,7 +127,7 @@ Two unrelated transfer topics:
 - a museum catalog cover; a research slide explaining a dependency chain
 Existing Pattern fit:
 - `limited-color-print-editorial`
-Promotion decision:
+Pattern decision:
 - calibrate the existing Pattern's woodcut branch; no new adapter or vendored image
 ```
 
@@ -166,26 +166,26 @@ Two unrelated transfer topics:
 - a bilingual research deck; a museum exhibit guide with CJK/Latin labels
 Existing Pattern fit:
 - `restrained-editorial-slide-system`
-Promotion decision:
-- promote a multiscript type-system adapter; keep exact type choice and copy in the
+Pattern decision:
+- add a multiscript type-system adapter; keep exact type choice and copy in the
   consuming deterministic layout
 ```
 
-## Candidate Matrix / 候选矩阵
+## Routing Matrix / 路由矩阵
 
-| Candidate | Evidence | Transfer test | Decision |
+| Source cluster | Evidence | Transfer test | Decision |
 | --- | --- | --- | --- |
-| Child-safe picture-book sequence | dPICTUS selected titles, The Original Art whole-book spread requirement, Bologna illustration and awards program | emergency-kit progression; team-handoff comparison | adapter promoted; Pattern remains `seed` |
+| Child-safe picture-book sequence | dPICTUS selected titles, The Original Art whole-book spread requirement, Bologna illustration and awards program | emergency-kit progression; team-handoff comparison | adapter added under `narrative-journal-infographic`; no new Pattern |
 | Woodcut block reduction | three public-domain Met records with woodcut/block metadata | museum catalog; dependency-chain research plate | absorbed by `limited-color-print-editorial`; no new files |
-| Multiscript type system | Tokyo TDC family description plus Fonts In Use contextual archive | bilingual research deck; museum guide | adapter promoted; exact typography stays deterministic |
+| Multiscript type system | Tokyo TDC family description plus Fonts In Use contextual archive | bilingual research deck; museum guide | adapter added under `restrained-editorial-slide-system`; exact typography stays deterministic |
 | Generic “children's illustration” surface | heterogeneous selected books and unknown material branches | fails because material and composition are not stable across titles | rejected |
 | Named Futura or award style | one type family and one award page | fails because the label is not a transferable visual invariant | rejected |
 
 ## Review Result / 审查结果
 
 The map now has an executable first pass: source lanes, bounded evidence, rights
-handling, transfer probes, and two concrete adapters. The next stop condition is
-operator-reviewed output for the two adapters. Until those runs exist, additional
-source collection should remain in `interesting` or `clustered` intake state.
+handling, transfer probes, and two concrete adapters. Continue by iterating those
+Patterns in production. Until a source is strong enough for a formal Pattern,
+keep it in `interesting` or `clustered` intake state outside this repository.
 
-这张地图现在已经能执行第一轮：有来源分层、有限证据、权利处理、迁移测试，以及两个具体 adapter。下一停止条件是对这两个 adapter 进行人工审查的输出。在那之前，继续搜集来源的材料最多保留在 `interesting` 或 `clustered` 状态，不再直接扩充公开 Pattern。
+这张地图现在已经能执行第一轮：有来源分层、有限证据、权利处理、迁移测试，以及两个具体 adapter。后续直接在消费项目中迭代这些 Pattern；如果来源仍不足以形成清晰方法，就继续留在 `interesting` 或 `clustered` 状态，或直接拒绝，不在 OVG 保留中间 Pattern。

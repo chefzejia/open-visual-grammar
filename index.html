@@ -19,7 +19,6 @@
         --line-strong: oklch(30% 0.018 250);
         --blue: oklch(52% 0.21 258);
         --yellow: oklch(88% 0.17 96);
-        --orange: oklch(67% 0.19 45);
         --red: oklch(54% 0.2 29);
         --radius-sm: 2px;
         --radius-md: 4px;
@@ -340,16 +339,6 @@
         line-height: 1;
       }
 
-      .tag[data-status="canonical"] {
-        border-color: var(--blue);
-        color: var(--blue);
-      }
-
-      .tag[data-status="candidate"] {
-        border-color: var(--orange);
-        color: oklch(46% 0.17 45);
-      }
-
       .fit {
         margin: 22px 0 0;
       }
@@ -460,24 +449,6 @@
 
       .specimen[data-kind="rejected"] .specimen-kind {
         background: var(--red);
-      }
-
-      .empty-gallery {
-        min-height: 224px;
-        padding: 28px;
-        display: grid;
-        place-items: center;
-        border-top: 1px dashed var(--line-strong);
-        border-bottom: 1px dashed var(--line-strong);
-        color: var(--muted);
-        background: var(--surface);
-        text-align: center;
-      }
-
-      .empty-gallery p {
-        max-width: 430px;
-        margin: 0;
-        text-wrap: pretty;
       }
 
       .empty-result {
@@ -715,8 +686,8 @@
             <dd id="pattern-count">0</dd>
           </div>
           <div class="stat">
-            <dt>With images</dt>
-            <dd id="reviewed-pattern-count">0</dd>
+            <dt>With WebP</dt>
+            <dd id="pattern-image-count">0</dd>
           </div>
           <div class="stat">
             <dt>WebP assets</dt>
@@ -743,12 +714,6 @@
           class="segments"
           role="group"
           aria-label="按交付类型筛选"
-        ></div>
-        <div
-          id="status-filters"
-          class="segments"
-          role="group"
-          aria-label="按成熟度筛选"
         ></div>
       </div>
     </div>
@@ -784,7 +749,7 @@
       <img id="dialog-image" class="dialog-image" alt="">
     </dialog>
 
-    <script src="./showcase-data.js?rev=20260902-4"></script>
+    <script src="./showcase-data.js?rev=20260903-direct-patterns"></script>
     <script>
       (function () {
         'use strict';
@@ -794,13 +759,11 @@
         var resultLine = document.getElementById('result-line');
         var search = document.getElementById('search');
         var artifactFilters = document.getElementById('artifact-filters');
-        var statusFilters = document.getElementById('status-filters');
         var dialog = document.getElementById('image-dialog');
         var dialogImage = document.getElementById('dialog-image');
         var dialogTitle = document.getElementById('dialog-title');
         var closeDialog = document.getElementById('close-dialog');
         var activeArtifact = 'all';
-        var activeStatus = 'all';
 
         var artifactLabels = {
           all: '全部类型',
@@ -808,13 +771,6 @@
           'deterministic-layout': '确定性版式',
           'motion-video': '动态视频',
           'shader-effect': 'Shader',
-        };
-
-        var statusLabels = {
-          all: '全部状态',
-          canonical: 'Canonical',
-          candidate: 'Candidate',
-          seed: 'Seed',
         };
 
         var kindLabels = {
@@ -857,17 +813,6 @@
               }),
             ),
           ).sort();
-          var statusRank = ['canonical', 'candidate', 'seed'];
-          var statuses = Array.from(
-            new Set(
-              data.patterns.map(function (pattern) {
-                return pattern.status;
-              }),
-            ),
-          ).sort(function (a, b) {
-            return statusRank.indexOf(a) - statusRank.indexOf(b);
-          });
-
           createFilter(
             'all',
             artifactLabels.all,
@@ -887,29 +832,10 @@
             );
           });
 
-          createFilter(
-            'all',
-            statusLabels.all,
-            statusFilters,
-            function (value) {
-              activeStatus = value;
-            },
-          );
-          statuses.forEach(function (value) {
-            createFilter(
-              value,
-              statusLabels[value] || value,
-              statusFilters,
-              function (selected) {
-                activeStatus = selected;
-              },
-            );
-          });
         }
 
-        function createTag(text, status) {
+        function createTag(text) {
           var tag = element('span', 'tag', text);
-          if (status) tag.dataset.status = status;
           return tag;
         }
 
@@ -983,9 +909,6 @@
             pattern.enName + ' / ' + pattern.id,
           );
           var meta = element('div', 'meta-line');
-          meta.appendChild(
-            createTag(statusLabels[pattern.status] || pattern.status, pattern.status),
-          );
           pattern.artifactKinds.forEach(function (kind) {
             meta.appendChild(createTag(artifactLabels[kind] || kind));
           });
@@ -997,24 +920,15 @@
 
           head.append(number, title, id, meta, createFitList(pattern), link);
 
-          var gallery;
           if (pattern.images.length) {
-            gallery = element('div', 'gallery');
+            var gallery = element('div', 'gallery');
             pattern.images.forEach(function (image) {
               gallery.appendChild(createSpecimen(pattern, image));
             });
+            article.append(head, gallery);
           } else {
-            gallery = element('div', 'empty-gallery');
-            gallery.appendChild(
-              element(
-                'p',
-                '',
-                '这个 Pattern 已完成注册，但还没有经过人审的 WebP。它会保留真实的完成度，不使用占位图。',
-              ),
-            );
+            article.append(head);
           }
-
-          article.append(head, gallery);
           return article;
         }
 
@@ -1024,8 +938,6 @@
             var matchesArtifact =
               activeArtifact === 'all' ||
               pattern.artifactKinds.includes(activeArtifact);
-            var matchesStatus =
-              activeStatus === 'all' || pattern.status === activeStatus;
             var haystack = [
               pattern.id,
               pattern.zhName,
@@ -1035,7 +947,7 @@
             ]
               .join(' ')
               .toLocaleLowerCase('zh-CN');
-            return matchesArtifact && matchesStatus && haystack.includes(query);
+            return matchesArtifact && haystack.includes(query);
           });
         }
 
@@ -1067,14 +979,12 @@
           return sum + pattern.images.length;
         }, 0);
         var patternsWithImages = data.patterns.filter(function (pattern) {
-          return pattern.images.some(function (image) {
-            return image.kind !== 'rejected';
-          });
+          return pattern.images.length > 0;
         }).length;
 
         document.getElementById('pattern-count').textContent =
           String(data.patterns.length);
-        document.getElementById('reviewed-pattern-count').textContent =
+        document.getElementById('pattern-image-count').textContent =
           String(patternsWithImages);
         document.getElementById('image-count').textContent = String(imageCount);
 

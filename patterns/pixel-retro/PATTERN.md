@@ -2,7 +2,6 @@
 
 ```yaml
 id: pixel-retro
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -18,7 +17,6 @@ load_next:
 中文名：像素复古风
 English name: Pixel Retro
 
-Status: seed
 
 ## Definition / 定义
 

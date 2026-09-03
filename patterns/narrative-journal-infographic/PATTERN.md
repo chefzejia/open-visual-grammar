@@ -2,7 +2,6 @@
 
 ```yaml
 id: narrative-journal-infographic
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -20,7 +19,6 @@ load_next:
 中文名：叙事手账·信息可视化
 English name: Narrative Journal Infographic
 
-Status: seed
 
 ## Definition / 定义
 

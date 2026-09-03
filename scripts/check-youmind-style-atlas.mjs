@@ -55,12 +55,12 @@ const missingAdapters = linkedAdapters.filter((relativePath) =>
 );
 const containsPreviewCdn = /https:\/\/cdn\.(youmindassets|gooo)\.ai\//.test(atlas);
 const requiredSections = [
-  "## Promotion Note / 入库说明",
+  "## Intake Note / 入库说明",
   "## Evidence Set / 证据组",
   "## Cluster Map / 聚类路由",
   "## Two-Topic Transfer Probe / 双主题迁移探针",
   "## Fidelity Gate / 保真门",
-  "## Promotion Candidate Matrix / 晋级候选矩阵",
+  "## Routing Disposition Matrix / 路由处置矩阵",
 ];
 const missingSections = requiredSections.filter((section) => !atlas.includes(section));
 

@@ -2,7 +2,6 @@
 
 ```yaml
 id: retro-pixel-halftone-tech-editorial
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -17,7 +16,6 @@ load_next:
 中文名：复古像素网点科技编辑插画
 English name: Retro Pixel Halftone Tech Editorial
 
-Status: seed
 
 ## Definition / 定义
 

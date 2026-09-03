@@ -94,7 +94,7 @@ For deterministic deliverables, a consuming project should:
    operator review proves the choice useful.
 4. Generic `script-fallback` exists now; deeper CJK/RTL rules can be added when
    real patterns need them.
-5. Deterministic render parity with packaged fonts is a promotion gate for
+5. Deterministic render parity with packaged fonts is a production gate for
    fixed-format paid-output patterns.
 
 ## Consuming Project Gate

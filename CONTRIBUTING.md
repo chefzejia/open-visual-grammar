@@ -13,7 +13,7 @@ patterns/<slug>/
 ├── refs/              optional after operator-approved output
 ├── adapters/          optional when a runtime needs special guidance
 ├── examples/          optional for reviewed learning
-└── anti-patterns.md   required only for canonical patterns or repeated failures
+└── anti-patterns.md   optional; use it only to explain repeated failures
 ```
 
 Before opening a pull request, make sure the pattern answers:
@@ -24,8 +24,8 @@ Before opening a pull request, make sure the pattern answers:
 - What does it refuse to do?
 - Which runtimes can execute it?
 
-Do not add structure just to satisfy a template. A seed pattern can start with
-only `PATTERN.md` when its invariants and transfer boundaries are clear.
+Do not add structure just to satisfy a template. A formal Pattern can start
+with only `PATTERN.md` when its invariants and transfer boundaries are clear.
 
 ## Add an example
 
@@ -65,50 +65,19 @@ node scripts/build-showcase.mjs --check
 
 Commit the regenerated `showcase-data.js`, but never edit it directly.
 
-## Add an eval case
+## Add a formal Pattern from external evidence
 
-Create:
-
-```text
-evals/cases/<case-slug>.md
-```
-
-An eval case should define:
-
-- the visual job;
-- the typical pattern, if one exists;
-- the scenario;
-- required score fields;
-- runtime target;
-- the three-candidate requirement;
-- pass and fail signals.
-
-Eval cases should be reusable and public-safe. Do not store runtime prompts or
-generated candidates in the case file.
-
-## Add a rubric
-
-Create:
-
-```text
-evals/rubrics/<rubric-slug>.md
-```
-
-A rubric should help an operator judge outputs consistently. It should include
-strong signals, weak signals, and review questions.
-
-## Promote an external reference
-
-Before promoting material from X, a bookmark folder, a website, or any private
-intake workflow, follow:
+Before importing method-level learning from X, a bookmark folder, a website, or
+any private intake workflow, follow:
 
 ```text
 docs/reference-intake-protocol.md
 ```
 
-Do not commit raw collections. Promote only the public-safe learning that
-improves a pattern, example, anti-pattern, eval, grammar file, runtime contract,
-or decision record.
+Do not commit raw collections. Import only public-safe learning that directly
+defines or improves a Pattern, example, anti-pattern, grammar file, runtime
+contract, or decision record. If it is not strong enough for that, keep it in
+the external intake workspace.
 
 For the current YouMind style study, run the read-only atlas check after editing:
 

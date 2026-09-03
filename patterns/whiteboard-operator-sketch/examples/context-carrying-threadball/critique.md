@@ -19,7 +19,7 @@ Known caveat:
 - the generated source image returned `1536x1024`, not final 16:9. Use it as a
   visual calibration reference, not as a channel-ready delivery asset.
 
-Promotion decision:
+OVG decision:
 
 Keep this as a pattern-local example and reference. It records the recovered
 transition from upstream handdrawn/Xiaohei visual DNA to GanFan's own threadball

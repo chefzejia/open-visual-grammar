@@ -21,14 +21,14 @@ description: 从一组视觉参考中逆向稳定语法、可变槽位和可复�
 4. 单独检查构图证据。若边框、栏目、底部条带、标题占比、主场景位置或证据模块在多张参考中以相同功能反复出现，把它们归为风格签名或构图家族；只有坐标相同、功能不稳定的细节才视为偶然位置。
 5. 用两个与原图题材无关的假想主题做迁移检查。新主题应能进入至少一个受支持构图家族，同时不再依赖原图的具体机器、人物或标题文案。不要用“必须适配任意构图”作为迁移成功标准。
 6. 生成风格签名、构图家族、变量槽位、保真验收规则和 meta-prompt。内容意图、第一眼信息、视觉动作与主体作为上游输入；Pattern 决定自己的构图适配边界、密度范围和版式语法。
-7. 用户要求入库时，先遵守 `docs/reference-intake-protocol.md`。来源或版权不清的原图不复制进公开仓库，只提升方法级结论。
+7. 用户要求入库时，先遵守 `docs/reference-intake-protocol.md`。来源或版权不清的原图不复制进公开仓库，只采纳方法级结论。
 
 ## 入库决策
 
 - 已有 pattern 可以解释参考组时，更新它的边界或 adapter，不新建近义 pattern。
-- 参考组表现出新的稳定视觉语法时，创建 seed pattern，并把 meta-prompt 放在 `patterns/<slug>/adapters/`。
+- 参考组表现出新的可执行视觉语法时，直接创建正式 Pattern，并把 meta-prompt 放在 `patterns/<slug>/adapters/`。
 - 跨多个 pattern 的共同规律才进入 `grammar/` 或 `runtimes/`。
-- 只有吸引力、没有可迁移方法时，不入库。
+- 只有吸引力、没有可迁移方法时，不创建 Pattern。
 - 本地参考图和已审案例默认保存为保持原尺寸的无损 WebP；没有人工确认素材的 Pattern 不补空示例。
 
 新增 pattern 时保持双语 `PATTERN.md`，写清 style signature、composition families、invariants、variables、transfer boundaries、material、density、temperature、runtime slots、fidelity gate 和 failure modes。只在路由确实改变时更新 registry 与 catalog。

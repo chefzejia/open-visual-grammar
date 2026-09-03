@@ -2,7 +2,6 @@
 
 ```yaml
 id: interwoven-portrait-type-cover
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -16,7 +15,6 @@ load_next:
 中文名：人物文字景深交织封面
 English name: Interwoven Portrait Type Cover
 
-Status: seed
 
 ## Definition / 定义
 
@@ -29,12 +27,12 @@ does not.
 CN：人物文字景深交织封面把可辨识人像与短标题当成同一个景深构图。部分字形进入人物之后，
 其他笔画留在前景或贴着剪影。透视、遮挡、面部安全区和移动端可读性共同构成身份，普通叠字不算。
 
-This seed is calibrated from the public YouMind skills
+This Pattern is calibrated from the public YouMind skills
 [`文字环绕人物海报`](https://youmind.com/~skills/019fd6c4-b85b-7a5d-8976-7195059c006e)
 and [`3D标题人像封面设计师`](https://youmind.com/~skills/019fda36-331c-7f78-8f2f-d2352dd0237e).
 Their portraits, wording, and preview compositions remain external evidence.
 
-本 seed 参考公开 YouMind 技能“文字环绕人物海报”和“3D 标题人像封面设计师”。来源人物、文案和预览构图
+本 Pattern 参考公开 YouMind 技能“文字环绕人物海报”和“3D 标题人像封面设计师”。来源人物、文案和预览构图
 只作外部证据，不进入 OVG 的可复用内容。
 
 ## Invariants / 不变量

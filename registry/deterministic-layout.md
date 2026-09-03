@@ -18,13 +18,13 @@ layout must be repeatable.
 Do not start from colors, CSS, or renderer defaults. Start from hierarchy,
 content structure, output contract, and font roles.
 
-## Candidate Patterns
+## Patterns
 
-| Pattern | Status | Best fit | Required adapter |
-| --- | --- | --- | --- |
-| `print-menu-layout` | candidate | single-page restaurant menu delivered as print-ready PNG/PDF or deterministic HTML/Typst | `patterns/print-menu-layout/adapters/deterministic-layout.md` |
-| `limited-color-print-editorial` | seed | fixed editorial pages or slides using warm paper, one dominant ink, one large print plane, and local woodcut or charcoal pressure | `patterns/limited-color-print-editorial/adapters/deterministic-layout.md` |
-| `restrained-editorial-slide-system` | seed | research, marketing, cultural, or brand slides with one reading task per page, exact typography, bounded evidence, and a shared editorial grid | `patterns/restrained-editorial-slide-system/adapters/deterministic-layout.md` |
+| Pattern | Best fit | Required adapter |
+| --- | --- | --- |
+| `print-menu-layout` | single-page restaurant menu delivered as print-ready PNG/PDF or deterministic HTML/Typst | `patterns/print-menu-layout/adapters/deterministic-layout.md` |
+| `limited-color-print-editorial` | fixed editorial pages or slides using warm paper, one dominant ink, one large print plane, and local woodcut or charcoal pressure | `patterns/limited-color-print-editorial/adapters/deterministic-layout.md` |
+| `restrained-editorial-slide-system` | research, marketing, cultural, or brand slides with one reading task per page, exact typography, bounded evidence, and a shared editorial grid | `patterns/restrained-editorial-slide-system/adapters/deterministic-layout.md` |
 
 ## Required Output
 

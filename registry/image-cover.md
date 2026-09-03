@@ -25,25 +25,25 @@ emotional temperature; it must not choose the article's claim, visual action,
 main subject, or evidence. If a channel constraint removes the pattern's style
 signature, select another pattern instead of keeping only its material words.
 
-## Candidate Patterns
+## Patterns
 
-| Pattern | Status | Best fit | Avoid when |
-| --- | --- | --- | --- |
-| `big-character-poster` | canonical | public feed covers with a sharp correction, strong first read, and concrete evidence object | neutral docs hero, calm premium page, exact UI proof |
-| `narrative-journal-infographic` | seed | handdrawn timelines, workflows, comparisons, system maps | pure mood image, exact data chart |
-| `flowing-gaze-minimal-cover` | seed | quiet reflective covers with one subject and large negative space | urgent tutorial, high-density checklist |
-| `pixel-retro` | seed | playful technical systems, tool paths, runtime cost, game-like logic | premium corporate document, realistic proof |
-| `eastern-texture-handdrawn` | seed | slow editorial metaphor, paper texture, restraint | hard technical proof, dense explainer |
-| `whimsical-journal-sketch` | seed | warm approachable journal-collage, creative notes, lighter technical entry | serious financial warning, strict product proof |
-| `minimal-handdrawn-linework` | seed | quiet concept illustration with one clear relation | strong public conflict, high-density explainer |
-| `limited-color-print-editorial` | seed | tactile editorial covers with one large silhouette or plane, warm paper, one dominant ink, and local charcoal or print pressure | full-color photography, glossy depth, dense diagrams, unrestricted palettes |
-| `frosted-silhouette-editorial` | seed | quiet geometric covers using regional reveal levels, silhouettes, and controlled negative space | exact UI proof, dense tutorials, uniform blur, glossy glass effects |
-| `paper-sculpture-collage-editorial` | seed | tactile editorial covers rebuilt from layered cut-paper planes, meaningful occlusion, and source-aware color | exact UI proof, dense tutorials, photographic evidence, glossy 3D, long copy |
-| `thermal-receipt-poster` | seed | vertical social records with verified short fields, a continuous receipt silhouette, thermal-paper material, and dry human observation | dense data, long copy, fake measurements, exact UI proof, or scene-led illustration |
-| `semantic-concept-poster` | seed | horizontal concept posters where one short sentence must be the main visual object and the image reveals its hidden tension | exact UI proof, dense tutorials, long commands, decorative text-on-background covers |
-| `retro-pixel-halftone-tech-editorial` | seed | technical editorials where one conflict or human-system relation should become a framed, information-rich pixel-halftone plate | sparse spot illustration, photographic proof, exact UI, multi-step tutorials, mood-only covers |
-| `whiteboard-operator-sketch` | seed | white-background GanFan threadball sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, full PPT-style decks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
-| `interwoven-portrait-type-cover` | seed | portrait-led social covers where one short title shares perspective and occlusion with an authorized recognizable person | long copy, identity-unsafe edits, group scenes, exact UI proof, detached text overlays |
+| Pattern | Best fit | Avoid when |
+| --- | --- | --- |
+| `big-character-poster` | public feed covers with a sharp correction, strong first read, and concrete evidence object | neutral docs hero, calm premium page, exact UI proof |
+| `narrative-journal-infographic` | handdrawn timelines, workflows, comparisons, system maps | pure mood image, exact data chart |
+| `flowing-gaze-minimal-cover` | quiet reflective covers with one subject and large negative space | urgent tutorial, high-density checklist |
+| `pixel-retro` | playful technical systems, tool paths, runtime cost, game-like logic | premium corporate document, realistic proof |
+| `eastern-texture-handdrawn` | slow editorial metaphor, paper texture, restraint | hard technical proof, dense explainer |
+| `whimsical-journal-sketch` | warm approachable journal-collage, creative notes, lighter technical entry | serious financial warning, strict product proof |
+| `minimal-handdrawn-linework` | quiet concept illustration with one clear relation | strong public conflict, high-density explainer |
+| `limited-color-print-editorial` | tactile editorial covers with one large silhouette or plane, warm paper, one dominant ink, and local charcoal or print pressure | full-color photography, glossy depth, dense diagrams, unrestricted palettes |
+| `frosted-silhouette-editorial` | quiet geometric covers using regional reveal levels, silhouettes, and controlled negative space | exact UI proof, dense tutorials, uniform blur, glossy glass effects |
+| `paper-sculpture-collage-editorial` | tactile editorial covers rebuilt from layered cut-paper planes, meaningful occlusion, and source-aware color | exact UI proof, dense tutorials, photographic evidence, glossy 3D, long copy |
+| `thermal-receipt-poster` | vertical social records with verified short fields, a continuous receipt silhouette, thermal-paper material, and dry human observation | dense data, long copy, fake measurements, exact UI proof, or scene-led illustration |
+| `semantic-concept-poster` | horizontal concept posters where one short sentence must be the main visual object and the image reveals its hidden tension | exact UI proof, dense tutorials, long commands, decorative text-on-background covers |
+| `retro-pixel-halftone-tech-editorial` | technical editorials where one conflict or human-system relation should become a framed, information-rich pixel-halftone plate | sparse spot illustration, photographic proof, exact UI, multi-step tutorials, mood-only covers |
+| `whiteboard-operator-sketch` | white-background GanFan threadball sketches for docs body images, WeChat inline teaching images, agent workflows, token/context metaphors | strong X hooks, full PPT-style decks, serious risk arguments, exact UI proof, polished product hero, formal diagrams |
+| `interwoven-portrait-type-cover` | portrait-led social covers where one short title shares perspective and occlusion with an authorized recognizable person | long copy, identity-unsafe edits, group scenes, exact UI proof, detached text overlays |
 
 ## Required Output
 

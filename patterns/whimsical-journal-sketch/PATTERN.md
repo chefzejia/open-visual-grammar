@@ -2,7 +2,6 @@
 
 ```yaml
 id: whimsical-journal-sketch
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -19,7 +18,6 @@ load_next:
 中文名：奇思妙想手账画师
 English name: Whimsical Journal Sketch
 
-Status: seed
 
 ## Definition / 定义
 

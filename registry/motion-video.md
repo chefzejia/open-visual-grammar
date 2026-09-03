@@ -15,7 +15,7 @@ explainers, title cards, and short visual sequences.
 
 ## Current Status
 
-No motion-video pattern is canonical yet.
+No motion-video Pattern is registered yet.
 
 Do not convert image-cover patterns into video by simply adding camera moves.
 Motion needs a visual event, not a moving still.

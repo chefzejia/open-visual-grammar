@@ -14,7 +14,7 @@ visible.
 
 ## Current Status
 
-No shader-specific pattern is canonical yet.
+No shader-specific Pattern is registered yet.
 
 Existing patterns may inspire a shader direction, but do not force them into
 shader work unless the artifact needs that visual identity.

@@ -3,10 +3,10 @@
 This document routes external inspiration into OVG's reverse-engineering
 workflow. It is not a bookmark dump and it does not grant reuse rights for any
 image. Start with `skills/ovg-style-reverse/SKILL.md`, collect a small coherent
-reference group, and promote only method-level learning.
+reference group, and adopt only method-level learning.
 
 本文把外部灵感来源接入 OVG 的逆向流程。它不是书签堆，也不代表自动获得图片使用权。先阅读
-`skills/ovg-style-reverse/SKILL.md`，再收集一组小而一致的参考，最后只提升方法级结论。
+`skills/ovg-style-reverse/SKILL.md`，再收集一组小而一致的参考，最后只采纳方法级结论。
 
 ## Current Taste Signals / 当前偏好信号
 
@@ -83,7 +83,7 @@ Use these to reduce a Western-only bias and to study script-aware typography.
 [Are.na](https://www.are.na/), [Behance](https://www.behance.net/), and
 [Savee](https://savee.it/) are useful for finding clusters and creators. Treat
 them as leads, not final evidence. Follow each item to the original portfolio,
-publisher, studio, award page, or collection record before promotion.
+publisher, studio, award page, or collection record before adoption.
 
 Are.na、Behance 和 Savee 适合发现聚类与创作者，但只能作为线索。正式入库前，应回到原始作品集、出版社、
 工作室、奖项页面或馆藏记录。
@@ -118,7 +118,7 @@ the original subject.
 The first bounded implementation is recorded in
 [`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md).
 It samples applied typography, picture-book selection, an open woodcut
-collection, and a regional type award. Two method-level routes were promoted:
+collection, and a regional type award. Two method-level routes were adopted:
 
 - `narrative-journal-infographic` + `adapters/source-picture-book-sequence.md`
   for child-safe page order, recurring anchors, and one beat per spread;
@@ -131,11 +131,11 @@ The sampled Met woodcut records calibrate the existing
 “woodcut style”, or named typeface Pattern was created.
 
 第一轮有限采样记录在
-[`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md)。本轮覆盖应用字体档案、儿童绘本评选、开放木刻馆藏和地区字体奖项，最终只提升两条方法路线。Met 木刻对象用于校准已有的 `limited-color-print-editorial` 分支，没有新增泛化的“儿童风格”“木刻风格”或以字族命名的 Pattern。
+[`docs/style-discovery-batch-2026-09.md`](style-discovery-batch-2026-09.md)。本轮覆盖应用字体档案、儿童绘本评选、开放木刻馆藏和地区字体奖项，最终只采纳两条方法路线。Met 木刻对象用于校准已有的 `limited-color-print-editorial` 分支，没有新增泛化的“儿童风格”“木刻风格”或以字族命名的 Pattern。
 
 ## Intake Packet / 入库包
 
-For each candidate cluster, record:
+For each source cluster, record:
 
 ```text
 Source URLs:
@@ -152,7 +152,7 @@ Variables:
 What appears accidental:
 Two unrelated transfer topics:
 Existing Pattern fit:
-Promotion decision:
+OVG disposition:
 ```
 
 A useful cluster usually contains three to eight related works and at least one

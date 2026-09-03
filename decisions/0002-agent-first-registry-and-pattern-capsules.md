@@ -2,6 +2,9 @@
 
 Date: 2026-05-16
 
+The lifecycle guidance in this decision is superseded by
+[0005: Direct Pattern Iteration](0005-direct-pattern-iteration.md).
+
 ## Decision
 
 Use an agent-first harness:
@@ -13,9 +16,8 @@ CATALOG.md -> registry/<artifact-kind>.md -> patterns/<pattern>/PATTERN.md -> ad
 Agents should not browse the repository. They should route first, then load one
 pattern capsule.
 
-If a registry explicitly states that no pattern is canonical for an artifact
-kind, the agent may take a no-pattern route and load only the named grammar and
-runtime contracts.
+If a registry has no suitable Pattern for an artifact kind, the agent may take a
+no-pattern route and load only the named grammar and runtime contracts.
 
 ## Rationale
 
@@ -74,7 +76,7 @@ motion-video
 Each registry is a small route card that tells the agent:
 
 - when to use that route;
-- which patterns are candidates;
+- which Patterns are available;
 - whether a no-pattern route is acceptable;
 - what to load next;
 - what score fields are required;
@@ -88,7 +90,6 @@ Keep it minimal:
 
 ```yaml
 id:
-status:
 artifact_kinds:
 runtimes:
 when_to_use:
@@ -132,5 +133,5 @@ licenses, versions, hashes, and deployment paths.
 - `registry/` routes agents by artifact kind.
 - `patterns/` stays flat and pattern-centered.
 - `grammar/` and `runtimes/` are dependencies, not entry points.
-- Anti-pattern files are not mandatory for every seed. They are required when a
-  pattern is canonical or has repeated failure modes.
+- Anti-pattern files are optional and belong only when they explain repeated
+  failure modes.

@@ -1,9 +1,9 @@
 # References / 参考
 
-This seed pattern has one recovered GanFan threadball calibration output and
+This Pattern has one recovered GanFan threadball calibration output and
 public source lineages.
 
-这个 seed 范式目前有一个已恢复的 GanFan 线团小工校准输出，以及公开来源谱系。
+这个 Pattern目前有一个已恢复的 GanFan 线团小工校准输出，以及公开来源谱系。
 
 ## Local Calibration / 本地校准
 

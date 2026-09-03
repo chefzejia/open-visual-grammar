@@ -28,7 +28,6 @@ Open Visual Grammar 的顺序更靠前：
 | --- | --- |
 | Grammar / 语法 | 跨 pattern 的底层视觉语言：张力、层级、密度、隐喻、节奏、温度。 |
 | Pattern / 范式 | 可复用视觉抽象，内部持有稳定不变量、迁移边界、参考图、adapter 和案例。 |
-| Canonical / 正典状态 | 一个 pattern 的成熟度状态，不作为顶层目录。 |
 | Score / 谱面 | 单次任务的视觉计划，可以编译成 prompt、shader spec、deck layout 或 scene brief。 |
 | Runtime / 执行器 | 生成落地的媒介：图像模型、HTML/CSS、PPT、shader、视频、游戏引擎。 |
 
@@ -41,7 +40,6 @@ registry/    按交付类型路由。Agent 先打开一个 registry，再进入�
 grammar/     跨 pattern 的视觉语法。只有具体决策需要时再读。
 patterns/    稳定视觉范式。一次只加载一个。
 runtimes/    跨 pattern 的执行约束。
-evals/       测试 pattern 稳定复现能力的用例和判断标准。
 docs/        协议和操作说明。
 decisions/   架构说明和项目决策记录。
 ```
@@ -91,43 +89,32 @@ Skill 按任务意图拆分，Pattern 仍然是视觉方法真源。不要为每
 
 经过人工选择的 Pattern 参考图和已审案例默认使用无损 WebP。每张图都必须能说明可复用方法或边界；尚无真实人审产出的 Pattern 保持无图，不补占位图。平台交付格式继续由消费项目决定，不受这条约定影响。
 
-## 当前稳定范式
+## 正式 Pattern
 
-| Pattern | 状态 | 不变量 |
-| --- | --- | --- |
-| `big-character-poster` | canonical | 大标题、公共态度、具体证据、粗粝印刷感、强第一眼。 |
+| Pattern | 不变量 |
+| --- | --- |
+| `big-character-poster` | 大标题、公共态度、具体证据、粗粝印刷感、强第一眼。 |
+| `print-menu-layout` | 可打印层级、菜单章节、价格扫读、餐饮印刷气质。 |
+| `eastern-texture-handdrawn` | 宣纸肌理、松弛手绘线条、低饱和、隐喻和留白。 |
+| `pixel-retro` | 像素块、复古游戏逻辑、清晰轮廓、极客工具气质。 |
+| `narrative-journal-infographic` | 手绘时间线、对比、流程、注释、可读结构。 |
+| `whimsical-journal-sketch` | 水彩速写、马克笔、拼贴、轻松温暖。 |
+| `flowing-gaze-minimal-cover` | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
+| `minimal-handdrawn-linework` | 干净线稿、克制反差、低饱和、高级克制。 |
+| `limited-color-print-editorial` | 暖纸面、一种主墨色、一个大结构色面、局部印压、共享图文轴线。 |
+| `frosted-silhouette-editorial` | 区域化磨砂显隐、几何剪影、受控留白、安静的编辑距离感。 |
+| `paper-sculpture-collage-editorial` | 剪纸叠层、语义遮挡、哑光浅层深度、源自主体配色、安静的编辑温度。 |
+| `soft-2-5d-icon` | 一个方形剪影、一个功能线索、柔和浅层深度、小尺寸可读性。 |
+| `whiteboard-operator-sketch` | 白底 GanFan 线团小工、手绘技术解释、少量中文标注。 |
+| `retro-pixel-halftone-tech-editorial` | 带框技术编辑图版、标题与机制一体化、像素网点、单一信号色。 |
+| `semantic-concept-poster` | 短句文字作为视觉主体，一个精确隐喻关系，克制编辑气质。 |
+| `thermal-receipt-poster` | 连续小票轮廓、准确短字段、热敏纸材质、冷幽默观察。 |
+| `interwoven-portrait-type-cover` | 可辨人像、一个短标题、明确遮挡图、共享透视、受保护的面部与移动端安全区。 |
+| `restrained-editorial-slide-system` | 每页一个阅读任务、共享编辑网格、准确字体层级、受控证据和克制墨色。 |
 
-候选范式可以留在 `patterns/` 里。只有拥有参考图、边界和至少一个
-有用生产案例后，才进入 canonical 状态。
-
-当前候选：
-
-| Pattern | 状态 | 不变量 |
-| --- | --- | --- |
-| `print-menu-layout` | candidate | 可打印层级、菜单章节、价格扫读、餐饮印刷气质。 |
-| `eastern-texture-handdrawn` | seed | 宣纸肌理、松弛手绘线条、低饱和、隐喻和留白。 |
-| `pixel-retro` | seed | 像素块、复古游戏逻辑、清晰轮廓、极客工具气质。 |
-| `narrative-journal-infographic` | seed | 手绘时间线、对比、流程、注释、可读结构。 |
-| `whimsical-journal-sketch` | seed | 水彩速写、马克笔、拼贴、轻松温暖。 |
-| `flowing-gaze-minimal-cover` | seed | 单一主体、负空间、独特视角、钢笔/蚀刻质感。 |
-| `minimal-handdrawn-linework` | seed | 干净线稿、克制反差、低饱和、高级克制。 |
-| `limited-color-print-editorial` | seed | 暖纸面、一种主墨色、一个大结构色面、局部印压、共享图文轴线。 |
-| `frosted-silhouette-editorial` | seed | 区域化磨砂显隐、几何剪影、受控留白、安静的编辑距离感。 |
-| `paper-sculpture-collage-editorial` | seed | 剪纸叠层、语义遮挡、哑光浅层深度、源自主体配色、安静的编辑温度。 |
-| `soft-2-5d-icon` | seed | 一个方形剪影、一个功能线索、柔和浅层深度、小尺寸可读性。 |
-| `whiteboard-operator-sketch` | seed | 白底 GanFan 线团小工、手绘技术解释、少量中文标注。 |
-| `retro-pixel-halftone-tech-editorial` | seed | 带框技术编辑图版、标题与机制一体化、像素网点、单一信号色。 |
-| `interwoven-portrait-type-cover` | seed | 可辨人像、一个短标题、明确遮挡图、共享透视、受保护的面部与移动端安全区。 |
-| `restrained-editorial-slide-system` | seed | 每页一个阅读任务、共享编辑网格、准确字体层级、受控证据和克制墨色。 |
-
-## Evals / 评测
-
-用 `docs/evaluation-protocol.md` 和 `evals/` 测试一个 pattern 能否跨
-主题稳定复现。
-
-Evals 不是图片排行榜，也不是通用模型能力测试。它测试的是视觉方法是否有
-稳定不变量，另一个 agent 能否不靠私有上下文复用，以及三张候选图是否是
-同一语法下的三种结构解法。
+每个 `patterns/` 目录从第一次提交起就是正式 Pattern。后续只编辑或删除
+这个 Pattern，不设置 candidate、seed 或 promotion 中间态。尚未形成稳定方法的
+外部来源只留在 intake 记录中，不进入 Pattern 目录。
 
 生成候选图和 runtime prompt 留在调用方项目的工作目录。只有经过复盘的
 稳定经验，才回流到本仓库，成为 anti-pattern、adapter 或 pattern 内案例。
@@ -139,7 +126,6 @@ Evals 不是图片排行榜，也不是通用模型能力测试。它测试的�
 - 反例和失败模式；
 - runtime adapter 和编译规则；
 - 能讲清楚方法的 pattern 内案例；
-- 能测试方法稳定性的评测用例和判断标准。
 
 ## 什么不应该进入这个仓库
 

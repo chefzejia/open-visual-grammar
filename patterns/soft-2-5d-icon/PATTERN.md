@@ -2,7 +2,6 @@
 
 ```yaml
 id: soft-2-5d-icon
-status: seed
 artifact_kinds:
   - app-icon
 runtimes:
@@ -18,7 +17,6 @@ load_next:
 中文名：柔和 2.5D 图标
 English name: Soft 2.5D Icon
 
-Status: seed
 
 ## Definition / 定义
 
@@ -30,12 +28,12 @@ a toy render or a miniature interface.
 CN：柔和 2.5D 图标把应用或产品功能压缩成一个方形标记。识别度来自明确剪影和一个有意义的关键
 特征；浅层遮挡、浮雕和柔和光线增加材质深度，但不把图标变成玩具渲染或缩小版界面。
 
-This seed was calibrated against public YouMind descriptions for matte 2.5D
+This Pattern was calibrated against public YouMind descriptions for matte 2.5D
 sculpture, soft-material app icons, rounded 3D icons, and minimal character IP
 marks. Their names and preview images are external evidence only; this Pattern
 keeps the method-level icon contract and does not copy a brand or character.
 
-本 seed 参考了 YouMind 公开的哑光 2.5D 雕塑、软拟物 App 图标、圆润 3D 图标和极简角色 IP 描述。
+本 Pattern 参考了 YouMind 公开的哑光 2.5D 雕塑、软拟物 App 图标、圆润 3D 图标和极简角色 IP 描述。
 相关名称与预览图只作外部证据；本 Pattern 只保留方法级图标契约，不复制品牌或角色。
 
 ## Invariants / 不变量

@@ -2,7 +2,6 @@
 
 ```yaml
 id: semantic-concept-poster
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -19,7 +18,6 @@ load_next:
 中文名：语义概念海报
 English name: Semantic Concept Poster
 
-Status: seed
 
 ## Definition / 定义
 

@@ -34,7 +34,7 @@ These public references calibrate the method. They are not repository instructio
 
 ## Runtime Use / 运行时使用
 
-This seed Pattern includes one reviewed accepted example. Inspect it before
+This Pattern includes one reviewed accepted example. Inspect it before
 compiling the Pattern. When the runtime supports image input, pass that
 Pattern-owned example as style calibration for the paper-dominant frame, scale
 rhythm, density, flat object language, and print material. This is OVG
@@ -42,7 +42,7 @@ calibration, not continuity with a previous article. The prompt must still
 supply a new article argument. Do not request reproduction of reference text,
 subjects, or exact layout.
 
-本 seed Pattern 已包含一张通过审核的正例。编译 Pattern 前必须实际查看；Runtime 支持图片输入时，
+本 Pattern 已包含一张通过审核的正例。编译 Pattern 前必须实际查看；Runtime 支持图片输入时，
 把这张由 Pattern 自己拥有的正例用于校准纸白占主导的框架、尺度节奏、密度、扁平物体语言和
 印刷材质。这是 OVG 校准，不是延续上一篇文章。Prompt 仍必须提供新的文章主张，且不得要求
 复刻参考文字、主体或精确版面。

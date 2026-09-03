@@ -1,5 +1,5 @@
 window.OVG_SHOWCASE = {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "source": "patterns/*/PATTERN.md + patterns/*/{refs,examples}/**/*.webp",
   "patterns": [
     {
@@ -7,7 +7,6 @@ window.OVG_SHOWCASE = {
       "slug": "big-character-poster",
       "zhName": "大字报",
       "enName": "Big Character Poster",
-      "status": "canonical",
       "artifactKinds": [
         "image-cover"
       ],
@@ -18,14 +17,6 @@ window.OVG_SHOWCASE = {
       "avoidWhen": "Neutral documentation heroes, exact UI proof, calm premium pages, or layouts that need deterministic text rendering.",
       "patternPath": "patterns/big-character-poster/PATTERN.md",
       "images": [
-        {
-          "path": "patterns/big-character-poster/examples/side-batch-torn-paper/accepted.webp",
-          "kind": "accepted",
-          "label": "Side Batch Torn Paper",
-          "width": 1536,
-          "height": 1024,
-          "bytes": 808514
-        },
         {
           "path": "patterns/big-character-poster/refs/agent-runtime-cost-x-cover.webp",
           "kind": "reference",
@@ -45,39 +36,10 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
-      "id": "print-menu-layout",
-      "slug": "print-menu-layout",
-      "zhName": "印刷菜单版式",
-      "enName": "Print Menu Layout",
-      "status": "candidate",
-      "artifactKinds": [
-        "deterministic-layout"
-      ],
-      "runtimes": [
-        "html-css",
-        "typst",
-        "pdf"
-      ],
-      "whenToUse": "Single-page restaurant menus that must become print-ready fixed-format output.",
-      "avoidWhen": "Multi-page brochures, digital-only screen menus, unpriced posters, or editable customer templates.",
-      "patternPath": "patterns/print-menu-layout/PATTERN.md",
-      "images": [
-        {
-          "path": "patterns/print-menu-layout/refs/warm-cafe-signature.webp",
-          "kind": "reference",
-          "label": "Warm Cafe Signature",
-          "width": 2550,
-          "height": 3300,
-          "bytes": 96164
-        }
-      ]
-    },
-    {
       "id": "eastern-texture-handdrawn",
       "slug": "eastern-texture-handdrawn",
       "zhName": "东方肌理手绘",
       "enName": "Eastern Texture Handdrawn",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -119,7 +81,6 @@ window.OVG_SHOWCASE = {
       "slug": "flowing-gaze-minimal-cover",
       "zhName": "流动的凝视·极简封面",
       "enName": "Flowing Gaze Minimal Cover",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -145,7 +106,6 @@ window.OVG_SHOWCASE = {
       "slug": "frosted-silhouette-editorial",
       "zhName": "磨砂剪影编辑封面",
       "enName": "Frosted Silhouette Editorial",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -195,7 +155,6 @@ window.OVG_SHOWCASE = {
       "slug": "interwoven-portrait-type-cover",
       "zhName": "人物文字景深交织封面",
       "enName": "Interwoven Portrait Type Cover",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -221,7 +180,6 @@ window.OVG_SHOWCASE = {
       "slug": "limited-color-print-editorial",
       "zhName": "限色印刷编辑图版",
       "enName": "Limited Color Print Editorial",
-      "status": "seed",
       "artifactKinds": [
         "image-cover",
         "deterministic-layout"
@@ -249,7 +207,6 @@ window.OVG_SHOWCASE = {
       "slug": "minimal-handdrawn-linework",
       "zhName": "简约手绘线稿",
       "enName": "Minimal Handdrawn Linework",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -283,7 +240,6 @@ window.OVG_SHOWCASE = {
       "slug": "narrative-journal-infographic",
       "zhName": "叙事手账·信息可视化",
       "enName": "Narrative Journal Infographic",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -309,7 +265,6 @@ window.OVG_SHOWCASE = {
       "slug": "paper-sculpture-collage-editorial",
       "zhName": "纸雕拼贴编辑封面",
       "enName": "Paper Sculpture Collage Editorial",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -359,7 +314,6 @@ window.OVG_SHOWCASE = {
       "slug": "pixel-retro",
       "zhName": "像素复古风",
       "enName": "Pixel Retro",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -389,11 +343,37 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "print-menu-layout",
+      "slug": "print-menu-layout",
+      "zhName": "印刷菜单版式",
+      "enName": "Print Menu Layout",
+      "artifactKinds": [
+        "deterministic-layout"
+      ],
+      "runtimes": [
+        "html-css",
+        "typst",
+        "pdf"
+      ],
+      "whenToUse": "Single-page restaurant menus that must become print-ready fixed-format output.",
+      "avoidWhen": "Multi-page brochures, digital-only screen menus, unpriced posters, or editable customer templates.",
+      "patternPath": "patterns/print-menu-layout/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/print-menu-layout/refs/warm-cafe-signature.webp",
+          "kind": "reference",
+          "label": "Warm Cafe Signature",
+          "width": 2550,
+          "height": 3300,
+          "bytes": 96164
+        }
+      ]
+    },
+    {
       "id": "restrained-editorial-slide-system",
       "slug": "restrained-editorial-slide-system",
       "zhName": "克制编辑式幻灯片系统",
       "enName": "Restrained Editorial Slide System",
-      "status": "seed",
       "artifactKinds": [
         "deterministic-layout"
       ],
@@ -410,7 +390,6 @@ window.OVG_SHOWCASE = {
       "slug": "retro-pixel-halftone-tech-editorial",
       "zhName": "复古像素网点科技编辑插画",
       "enName": "Retro Pixel Halftone Tech Editorial",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -444,7 +423,6 @@ window.OVG_SHOWCASE = {
       "slug": "semantic-concept-poster",
       "zhName": "语义概念海报",
       "enName": "Semantic Concept Poster",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -470,7 +448,6 @@ window.OVG_SHOWCASE = {
       "slug": "soft-2-5d-icon",
       "zhName": "柔和 2.5D 图标",
       "enName": "Soft 2.5D Icon",
-      "status": "seed",
       "artifactKinds": [
         "app-icon"
       ],
@@ -520,7 +497,6 @@ window.OVG_SHOWCASE = {
       "slug": "thermal-receipt-poster",
       "zhName": "热敏小票记录海报",
       "enName": "Thermal Receipt Poster",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -531,14 +507,6 @@ window.OVG_SHOWCASE = {
       "avoidWhen": "Dense data, long copy, fake measurements, exact UI proof, multi-scene illustration, or topics that need decorative nostalgia rather than a record.",
       "patternPath": "patterns/thermal-receipt-poster/PATTERN.md",
       "images": [
-        {
-          "path": "patterns/thermal-receipt-poster/examples/side-batch-quiet-stub/accepted.webp",
-          "kind": "accepted",
-          "label": "Side Batch Quiet Stub",
-          "width": 1024,
-          "height": 1536,
-          "bytes": 217760
-        },
         {
           "path": "patterns/thermal-receipt-poster/refs/youmind-thermal-receipt-01.webp",
           "kind": "reference",
@@ -562,7 +530,6 @@ window.OVG_SHOWCASE = {
       "slug": "whimsical-journal-sketch",
       "zhName": "奇思妙想手账画师",
       "enName": "Whimsical Journal Sketch",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],
@@ -596,7 +563,6 @@ window.OVG_SHOWCASE = {
       "slug": "whiteboard-operator-sketch",
       "zhName": "白板线团小工草图",
       "enName": "Whiteboard Tiny Worker Sketch",
-      "status": "seed",
       "artifactKinds": [
         "image-cover"
       ],

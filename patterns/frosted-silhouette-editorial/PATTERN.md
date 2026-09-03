@@ -2,7 +2,6 @@
 
 ```yaml
 id: frosted-silhouette-editorial
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -16,7 +15,6 @@ load_next:
 中文名：磨砂剪影编辑封面
 English name: Frosted Silhouette Editorial
 
-Status: seed
 
 ## Definition / 定义
 
@@ -30,12 +28,12 @@ CN：磨砂剪影编辑封面把主体最有辨识度的轮廓、结构、姿态
 再用区域化磨砂视窗控制清晰、柔焦和透叠。它是一种安静的海报或封面语法，形成的是有设计的
 深度，不是通用玻璃特效，也不是产品 UI 预览图。
 
-This seed was calibrated against public YouMind descriptions for `P072` and
+This Pattern was calibrated against public YouMind descriptions for `P072` and
 [`生成磨砂玻璃效果剪影艺术海报`](https://youmind.com/~skills/01a05ceb-6172-7c97-b503-fb560ecfd412).
 Their names, text, and preview images are external evidence only; this Pattern
 keeps the paraphrased visual method.
 
-本 seed 参考了 YouMind 公开的 `P072` 与“生成磨砂玻璃效果剪影艺术海报”描述进行校准。
+本 Pattern 参考了 YouMind 公开的 `P072` 与“生成磨砂玻璃效果剪影艺术海报”描述进行校准。
 其中的名称、文字和预览图只作外部证据；本 Pattern 只保留转述后的视觉方法。
 
 ## Invariants / 不变量

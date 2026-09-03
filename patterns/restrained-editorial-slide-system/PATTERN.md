@@ -2,7 +2,6 @@
 
 ```yaml
 id: restrained-editorial-slide-system
-status: seed
 artifact_kinds:
   - deterministic-layout
 runtimes:
@@ -17,7 +16,6 @@ load_next:
 中文名：克制编辑式幻灯片系统
 English name: Restrained Editorial Slide System
 
-Status: seed
 
 ## Definition / 定义
 
@@ -29,12 +27,12 @@ ink roles create authority without corporate template noise.
 CN：克制编辑式幻灯片系统把研究、营销、文化或品牌内容组织成一小组杂志式页面。严格网格、展示与正文
 字体反差、暖白纸面、受控图像裁切和克制墨色角色，共同建立可信度，避免企业模板噪声。
 
-This seed is calibrated from the public YouMind skills
+This Pattern is calibrated from the public YouMind skills
 [`意大利复古美学`](https://youmind.com/~skills/019f23b6-b4d8-7feb-befd-45293733e840)
 and [`研究/营销简洁风格`](https://youmind.com/~skills/3c173d07-76b5-4164-ba81-e3813d5e66fc).
 Their sample decks, brands, data, and photography remain external evidence.
 
-本 seed 参考公开 YouMind 技能“意大利复古美学”和“研究/营销简洁风格”。来源 deck、品牌、数据和摄影
+本 Pattern 参考公开 YouMind 技能“意大利复古美学”和“研究/营销简洁风格”。来源 deck、品牌、数据和摄影
 只作外部证据，不进入 OVG 的内容层。
 
 ## Invariants / 不变量

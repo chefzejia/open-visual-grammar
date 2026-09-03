@@ -36,19 +36,19 @@ skills/ovg-style-reverse/SKILL.md
 
 The current public-safe YouMind intake study is documented in
 `docs/youmind-style-atlas.md`. Use it as a routing aid after reading the skill;
-it records cluster evidence and promotion status, not one-off prompts or raw
+it records cluster evidence and routing decisions, not one-off prompts or raw
 third-party images.
 
 For source discovery beyond YouMind, use `docs/style-discovery-sources.md`. It
 maps high-signal archives to the visual evidence they can teach and keeps raw
-inspiration separate from OVG promotion.
+inspiration separate from OVG patterns.
 
 The first bounded implementation is recorded in
 `docs/style-discovery-batch-2026-09.md`; load it when a source-discovery task
-needs current evidence, promotion decisions, or the latest stop condition.
+needs current evidence and the latest routing decision.
 
 The skill separates stable visual grammar from content-specific variables, then
-routes the result into an existing pattern or a new seed pattern. It does not
+routes the result into an existing Pattern or a new formal Pattern. It does not
 store one-off compiled prompts in this repository.
 
 ## Create A Visual Asset
@@ -90,8 +90,9 @@ Examples:
 If the request names only a visual style, route to the pattern only after
 choosing the artifact kind.
 
-If a registry says no pattern is canonical for that artifact kind, do not force
-one. Use the registry's required output fields and runtime contract.
+If a registry has no suitable Pattern for that artifact kind, use its required
+output fields and runtime contract, then either add a formal Pattern or leave
+the source evidence outside this repository.
 
 ## Do Not Load By Default
 

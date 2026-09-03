@@ -2,7 +2,6 @@
 
 ```yaml
 id: thermal-receipt-poster
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -16,7 +15,6 @@ load_next:
 中文名：热敏小票记录海报
 English name: Thermal Receipt Poster
 
-Status: seed
 
 ## Definition / 定义
 

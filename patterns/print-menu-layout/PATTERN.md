@@ -2,7 +2,6 @@
 
 ```yaml
 id: print-menu-layout
-status: candidate
 artifact_kinds:
   - deterministic-layout
 runtimes:
@@ -22,7 +21,6 @@ load_next:
 中文名：印刷菜单版式
 English name: Print Menu Layout
 
-Status: candidate
 
 ## Definition / 定义
 

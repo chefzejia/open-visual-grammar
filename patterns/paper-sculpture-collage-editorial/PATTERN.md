@@ -2,7 +2,6 @@
 
 ```yaml
 id: paper-sculpture-collage-editorial
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -16,7 +15,6 @@ load_next:
 中文名：纸雕拼贴编辑封面
 English name: Paper Sculpture Collage Editorial
 
-Status: seed
 
 ## Definition / 定义
 
@@ -30,12 +28,12 @@ CN：纸雕拼贴编辑封面把上游给出的主体、动作和证据，重建
 切边、浅接触阴影和哑光纸面建立深度；它是编辑性的重新组织，不是把照片贴进画框，也不是塑料
 3D 渲染。
 
-This seed was calibrated against public YouMind descriptions for paper-cut
+This Pattern was calibrated against public YouMind descriptions for paper-cut
 collage, torn-paper archive collage, and hand-drawn paper concept illustration.
 Those names, prompts, and preview images are external evidence only; this
 Pattern keeps the paraphrased visual method and its transfer boundaries.
 
-本 seed 参考了 YouMind 公开的纸雕拼贴、撕纸档案拼贴和手绘纸片概念插画描述。
+本 Pattern 参考了 YouMind 公开的纸雕拼贴、撕纸档案拼贴和手绘纸片概念插画描述。
 相关名称、prompt 和预览图只作外部证据；本 Pattern 只保留转述后的视觉方法与迁移边界。
 
 ## Invariants / 不变量

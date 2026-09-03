@@ -9,12 +9,6 @@ const patternsRoot = path.join(repoRoot, 'patterns');
 const outputPath = path.join(repoRoot, 'showcase-data.js');
 const checkOnly = process.argv.includes('--check');
 
-const statusOrder = new Map([
-  ['canonical', 0],
-  ['candidate', 1],
-  ['seed', 2],
-]);
-
 function cleanScalar(value) {
   const trimmed = value.trim();
   if (
@@ -231,7 +225,6 @@ async function readPattern(directoryName) {
     slug: directoryName,
     zhName: readName(markdown, '中文名') || id,
     enName: readName(markdown, 'English name') || humanizeSlug(id),
-    status: readScalar(metadata, 'status') || 'unknown',
     artifactKinds: readList(metadata, 'artifact_kinds'),
     runtimes: readList(metadata, 'runtimes'),
     whenToUse: readScalar(metadata, 'when_to_use'),
@@ -256,14 +249,10 @@ async function buildShowcaseData() {
     patterns.push(await readPattern(entry.name));
   }
 
-  patterns.sort((a, b) => {
-    const statusDelta =
-      (statusOrder.get(a.status) ?? 99) - (statusOrder.get(b.status) ?? 99);
-    return statusDelta || a.id.localeCompare(b.id);
-  });
+  patterns.sort((a, b) => a.id.localeCompare(b.id));
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     source: 'patterns/*/PATTERN.md + patterns/*/{refs,examples}/**/*.webp',
     patterns,
   };

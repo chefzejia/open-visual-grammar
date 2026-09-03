@@ -12,7 +12,7 @@ intake workflow.
 References are inputs to judgment. They are not grammar by themselves.
 
 A reference enters OVG only when it teaches a reusable visual method, sharpens a
-pattern boundary, exposes a repeated failure mode, or improves an eval or runtime
+Pattern boundary, exposes a repeated failure mode, or improves a runtime
 contract.
 
 ## Intake States
@@ -24,20 +24,19 @@ Use these states in the private intake workspace or review notes:
 | `raw` | Captured but not reviewed. | No action. |
 | `interesting` | Worth revisiting, but no method-level claim yet. | No action. |
 | `clustered` | Similar references suggest a repeated visual behavior. | Review for pattern or grammar fit. |
-| `promotion-candidate` | Operator can explain what it teaches. | Prepare a promotion note. |
-| `promoted` | Public-safe learning has entered OVG. | Link to the OVG artifact. |
+| `adopted` | Public-safe learning has entered a formal Pattern. | Link to the Pattern. |
 | `rejected` | Not useful, not public-safe, or too one-off. | Keep out of OVG. |
 
-## Promotion Note
+## Pattern Intake Note
 
-Before editing OVG, write a short promotion note:
+Before editing OVG, write a short Pattern intake note:
 
 ```text
 Source:
 Source type:
 Public-safety status:
 Rights / attribution note:
-Promotion target:
+Pattern action:
 Artifact kind:
 Pattern or grammar dependency:
 What it teaches:
@@ -46,13 +45,12 @@ Why it belongs in OVG:
 Operator decision:
 ```
 
-The note may live in the private intake workspace. If it becomes a public
-example or eval record, remove private details and keep only the method-level
-learning.
+The note may live in the private intake workspace. When it becomes a Pattern,
+remove private details and keep only the method-level learning.
 
 ## Image Asset Convention
 
-Local images promoted into `refs/` or reviewed `examples/` use lossless WebP by
+Local images adopted into `refs/` or reviewed `examples/` use lossless WebP by
 default and keep the source pixel dimensions. WebP is the OVG calibration
 format; consuming projects keep the delivery format required by their channel.
 
@@ -62,10 +60,10 @@ image for a pattern that has no operator-approved production result.
 
 An accepted production result may become a reference or reviewed example. A
 rejected result belongs here only when it exposes a stable failure mode and is
-paired with a critique or accepted comparison. Promotion is an explicit review
-decision, never an automatic consequence of a successful generation.
+paired with a critique or accepted comparison. Pattern adoption is an explicit
+review decision, never an automatic consequence of a successful generation.
 
-## Promotion Targets
+## Pattern Targets
 
 ### Pattern Reference
 
@@ -123,20 +121,6 @@ patterns/<slug>/anti-patterns.md
 Good anti-patterns name the visual failure, explain why it breaks the pattern,
 and describe how to recover.
 
-### Eval Case Or Rubric
-
-Use when a reference suggests a reusable test scenario or judgment rule.
-
-Targets:
-
-```text
-evals/cases/
-evals/rubrics/
-```
-
-Eval material must be public-safe and reusable. It should not depend on private
-bookmarks, account state, or hidden source context.
-
 ### Grammar Or Runtime Change
 
 Use when multiple references expose vocabulary or execution constraints that
@@ -167,19 +151,19 @@ For each social source, preserve enough private context for review:
 - whether it was user-saved, source-suggested, or discovered by search;
 - why it looked relevant.
 
-When promoting to OVG, prefer method-level paraphrase and attribution over raw
+When adopting into OVG, prefer method-level paraphrase and attribution over raw
 copying. Do not commit logged-in screenshots, private bookmark metadata, account
 details, or third-party media unless the public-safety and rights status are
 clear.
 
 ## Review Questions
 
-Ask these before promotion:
+Ask these before adoption:
 
 - Does this teach a reusable visual invariant?
 - Does it clarify a transfer boundary?
 - Does it expose a repeated failure mode?
-- Does it improve a runtime or eval contract?
+- Does it improve a runtime contract?
 - Can another agent use the learning without private context?
 - Is the public-safety status clear?
 - Would this still matter if the source post disappeared?
@@ -199,13 +183,13 @@ Potential learning:
 - clustering line, color, space, material, and emotional temperature;
 - detecting when artist labels are too broad to become OVG patterns.
 
-Weak promotion:
+Weak adoption:
 
 - importing hundreds of generated images as references;
 - treating artist names as pattern names;
 - copying prompts as source of truth.
 
-Strong promotion:
+Strong adoption:
 
 - adding a review protocol for controlled style studies;
 - using a small public-safe subset to sharpen an existing pattern boundary;

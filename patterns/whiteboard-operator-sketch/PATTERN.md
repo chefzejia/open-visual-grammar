@@ -2,7 +2,6 @@
 
 ```yaml
 id: whiteboard-operator-sketch
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -18,7 +17,6 @@ load_next:
 中文名：白板线团小工草图
 English name: Whiteboard Tiny Worker Sketch
 
-Status: seed
 
 ## Definition / 定义
 

@@ -2,6 +2,9 @@
 
 Date: 2026-05-14
 
+The lifecycle guidance in this decision is superseded by
+[0005: Direct Pattern Iteration](0005-direct-pattern-iteration.md).
+
 ## Decision
 
 Use a pattern-centered architecture.
@@ -34,11 +37,9 @@ constraints.
 ## Consequences
 
 - `canon` is no longer a top-level directory.
-- `canonical` is a maturity state, not a folder name.
 - Examples live inside their pattern.
-- Candidate pattern seeds can live under `patterns/` when they preserve reusable
-  visual invariants.
-- Public canonical patterns should have real references before promotion.
+- Pattern directories are formal from their first commit; references and
+  examples improve a Pattern but do not gate its existence.
 
 ## Bilingual Pattern Documents
 

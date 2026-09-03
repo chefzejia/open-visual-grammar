@@ -43,8 +43,7 @@ Then open exactly one registry route. Do not read every pattern by default.
 5. Read `grammar/*` only when a selected pattern or route names a specific
    grammar dependency.
 6. Read `runtimes/*` only when compiling to that execution surface.
-7. Read `evals/*` only when testing or promoting a pattern.
-8. Avoid loading reference-heavy folders unless the task requires visual comparison.
+7. Avoid loading reference-heavy folders unless the task requires visual comparison.
 
 ## Pattern requirements
 
@@ -59,9 +58,8 @@ Every public pattern must include:
 - `PATTERN.md`
 
 Every pattern should include public-safe refs once it has operator-approved
-production output. `anti-patterns.md` is required only for canonical patterns or
-for patterns with repeated, stable failure modes. Do not create anti-pattern
-files just to satisfy structure.
+production output. `anti-patterns.md` is optional and belongs only when it
+explains a repeated failure mode. Do not create files just to satisfy structure.
 
 Every pattern should define:
 
@@ -85,13 +83,12 @@ GanFan / SorryCode production.
 
 Examples should live inside the pattern they belong to.
 
-## Eval rules
+## Pattern lifecycle
 
-Use `docs/evaluation-protocol.md` for long-term pattern evaluation.
-
-Eval cases and rubrics belong here. Real generated candidates, runtime prompts,
-API diagnostics, and rejected attempts belong in the consuming project's work
-folder unless they become reviewed pattern-local examples.
+Every directory under `patterns/` is a formal Pattern from its first commit.
+Iterate it in place when new evidence improves the method; delete the directory
+when the method fails. There is no candidate, seed, canonical, promotion, or
+evaluation gate in this repository.
 
 ## Storage rules
 

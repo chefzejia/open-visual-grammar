@@ -2,7 +2,6 @@
 
 ```yaml
 id: limited-color-print-editorial
-status: seed
 artifact_kinds:
   - image-cover
   - deterministic-layout
@@ -19,7 +18,6 @@ load_next:
 中文名：限色印刷编辑图版
 English name: Limited Color Print Editorial
 
-Status: seed
 
 ## Definition / 定义
 
@@ -31,13 +29,13 @@ process, but geometry and hierarchy must remain readable before texture.
 CN：限色印刷编辑图版把主体或论点压缩成一个主导剪影、一个建筑感色场，以及暖纸面上的严格墨色预算。
 炭笔、木刻、干刷或不均匀印压可以留下手工过程，但几何结构和信息层级必须先于纹理被读懂。
 
-This seed is calibrated from the public YouMind skills
+This Pattern is calibrated from the public YouMind skills
 [`雕塑感蓝色炭笔插画`](https://youmind.com/~skills/01a0192c-41fc-7dba-bc39-7e8730a40315)
 and [`Clay Minimal`](https://youmind.com/~skills/019f23b5-358e-71b3-8e73-c2fc9cdf0a76).
 Their public descriptions and previews are external evidence only. OVG keeps the
 transferable color, geometry, hierarchy, and print-pressure contract.
 
-本 seed 参考公开 YouMind 技能“雕塑感蓝色炭笔插画”和“Clay Minimal”。公开说明与预览图只作外部证据；
+本 Pattern 参考公开 YouMind 技能“雕塑感蓝色炭笔插画”和“Clay Minimal”。公开说明与预览图只作外部证据；
 OVG 只保留可迁移的限色、几何、层级和印压关系。
 
 ## Invariants / 不变量

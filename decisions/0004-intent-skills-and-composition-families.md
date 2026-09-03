@@ -29,7 +29,7 @@ that made a reference style recognizable.
 
 The three tasks also have different inputs and stopping conditions:
 
-- reversal promotes reusable method from references;
+- reversal adopts reusable method from references;
 - creation compiles one source into one runtime artifact;
 - review diagnoses the highest failed ownership layer before any regeneration.
 

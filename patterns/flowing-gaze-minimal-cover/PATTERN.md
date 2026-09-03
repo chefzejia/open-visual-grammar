@@ -2,7 +2,6 @@
 
 ```yaml
 id: flowing-gaze-minimal-cover
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -16,7 +15,6 @@ load_next:
 中文名：流动的凝视·极简封面
 English name: Flowing Gaze Minimal Cover
 
-Status: seed
 
 ## Definition / 定义
 

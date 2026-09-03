@@ -2,7 +2,7 @@
 
 These are operator-selected public preview images from the YouMind skill
 `生成磨砂玻璃效果剪影艺术海报`. They are external calibration material for
-this Pattern, not OVG-generated cases or canonical outputs.
+this Pattern, not OVG-generated cases or outputs.
 
 这些图片是从 YouMind 公开技能“生成磨砂玻璃效果剪影艺术海报”中人工筛选的预览图。
 它们只作为本 Pattern 的外部校准素材，不是 OVG 生成的案例，也不是范式的唯一标准答案。

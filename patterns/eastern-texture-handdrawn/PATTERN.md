@@ -2,7 +2,6 @@
 
 ```yaml
 id: eastern-texture-handdrawn
-status: seed
 artifact_kinds:
   - image-cover
 runtimes:
@@ -18,7 +17,6 @@ load_next:
 中文名：东方肌理手绘
 English name: Eastern Texture Handdrawn
 
-Status: seed
 
 ## Definition / 定义
 
