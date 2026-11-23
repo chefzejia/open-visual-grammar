@@ -5,14 +5,11 @@ id: limited-color-print-editorial
 artifact_kinds:
   - image-cover
   - deterministic-layout
-runtimes:
+surfaces:
   - image-generation
   - deterministic-layout
 when_to_use: Editorial covers or slide-like pages that need one strong silhouette, a strict two-or-three-ink palette, modernist geometry, and visible print pressure.
 avoid_when: Photographic proof, glossy depth, dense dashboards, unrestricted brand palettes, exact diagrams, or narratives that need several competing scenes.
-load_next:
-  image-generation: adapters/image-generation.md
-  deterministic-layout: adapters/deterministic-layout.md
 ```
 
 中文名：限色印刷编辑图版
@@ -29,13 +26,13 @@ process, but geometry and hierarchy must remain readable before texture.
 CN：限色印刷编辑图版把主体或论点压缩成一个主导剪影、一个建筑感色场，以及暖纸面上的严格墨色预算。
 炭笔、木刻、干刷或不均匀印压可以留下手工过程，但几何结构和信息层级必须先于纹理被读懂。
 
-This Pattern is calibrated from the public YouMind skills
-[`雕塑感蓝色炭笔插画`](https://youmind.com/~skills/01a0192c-41fc-7dba-bc39-7e8730a40315)
-and [`Clay Minimal`](https://youmind.com/~skills/019f23b5-358e-71b3-8e73-c2fc9cdf0a76).
+This Pattern is calibrated from the public skills
+`雕塑感蓝色炭笔插画`
+and `Clay Minimal`.
 Their public descriptions and previews are external evidence only. OVG keeps the
 transferable color, geometry, hierarchy, and print-pressure contract.
 
-本 Pattern 参考公开 YouMind 技能“雕塑感蓝色炭笔插画”和“Clay Minimal”。公开说明与预览图只作外部证据；
+本 Pattern 参考“雕塑感蓝色炭笔插画”和“Clay Minimal”描述。公开说明与预览图只作外部证据；
 OVG 只保留可迁移的限色、几何、层级和印压关系。
 
 ## Invariants / 不变量
@@ -169,3 +166,137 @@ is quiet, modernist, tactile, and self-possessed.
 - **Texture-first:** grain obscures the silhouette. Recover by rebuilding the large plane before reintroducing texture.
 - **Template slide:** type and image occupy unrelated boxes. Recover by choosing one shared axis and one dominant plane.
 - **Source imitation:** classical figures or pottery objects appear without semantic reason. Recover from the upstream subject and evidence.
+
+## Direct Compilation Route: Deterministic Layout / 直接生成路线：Deterministic Layout
+
+# Deterministic Layout Compilation Route / 确定性版式 Compilation Route
+
+Use this compilation route for slide-like pages and fixed editorial layouts. The public
+`Clay Minimal` page provides calibration evidence for a cream-and-cool-
+ink, geometric-sans, woodcut branch. OVG keeps the reusable page system and does
+not copy its sample deck or wording.
+
+这份 compilation route 用于幻灯片式页面和固定编辑版式。`Clay Minimal` 提供暖白纸面、冷色墨、
+几何无衬线和木刻分支的校准证据。OVG 只保留可迁移的页面系统，不复制示例 deck 或文案。
+
+## Layout Contract / 版式契约
+
+- Define paper, dominant ink, structural dark, and rule colors as named tokens.
+- Use one display role, one body role, one accent role, and a script fallback.
+- Reuse only the `geometric print spread`, `type-led plate`, and a quiet evidence page derived from them.
+- Keep one large plane or woodcut illustration per page.
+- Give charts a semantic single-ink treatment; do not invent categorical color.
+- Package fonts and verify every page at delivery size.
+
+- 将纸色、主墨色、结构深色和分隔线颜色定义为命名 token；
+- 使用展示、正文、强调和文字系统 fallback 四种字体角色；
+- 只复用“几何印刷跨页”“字体主导图版”和由它们派生的安静证据页；
+- 每页只保留一个大色面或木刻插图；
+- 图表使用语义明确的单墨色，不凭空增加分类色；
+- 打包字体，并按交付尺寸检查每页。
+
+## Compile Slots / 编译槽位
+
+```text
+Output format:
+Output dimensions:
+Page count:
+Content structure:
+First read per page:
+Dominant ink role:
+Display type role:
+Body type role:
+Script fallback:
+Illustration source:
+Evidence modules:
+Density:
+QA checks:
+Forbidden:
+```
+
+## Token Skeleton / Token 骨架
+
+```text
+color.paper
+color.ink.primary
+color.ink.structural
+color.rule
+space.page
+space.module
+type.display
+type.body
+type.accent
+type.fallback
+line.hairline
+texture.print-pressure
+```
+
+## Fidelity Gate / 保真门
+
+- Every page has one obvious first read and one shared alignment system.
+- The palette stays within paper, one dominant ink, and one structural dark.
+- Illustration texture is local and does not reduce text contrast.
+- Page families feel related without repeating identical coordinates.
+- CJK and Latin content preserve the same hierarchy after font fallback.
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image Generation Compilation Route / 图像生成 Compilation Route
+
+Use this compilation route for the image-generation branch of
+`limited-color-print-editorial`. It is calibrated by the documented `雕塑感蓝色炭笔插画` method, but it does not require a classical figure, cobalt
+blue, or any source composition.
+
+这份 compilation route 用于 `limited-color-print-editorial` 的图像生成分支。它参考“雕塑感蓝色炭笔插画”方法，但不要求古典人物、钴蓝或来源构图。
+
+## Required Inputs / 必填输入
+
+```text
+Artifact kind:
+Audience:
+Aspect ratio:
+First read:
+Visual action:
+Main subject:
+Concrete evidence:
+Dominant ink role:
+Text handling:
+Topic-specific forbidden:
+```
+
+## Model Prompt / 模型生成提示词
+
+```text
+Create {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream visual argument is authoritative:
+- First read: {{FIRST_READ}}
+- Visual action: {{VISUAL_ACTION}}
+- Main subject: {{MAIN_SUBJECT}}
+- Concrete evidence: {{CONCRETE_EVIDENCE}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Limited Color Print Editorial grammar. Begin with a warm paper ground,
+one dominant ink chosen for {{DOMINANT_INK_ROLE}}, and at most one charcoal or
+near-black structural ink. Build a sculptural focal field or type-led plate from
+one large geometric plane and one readable silhouette. Preserve the supplied
+subject, evidence, and action; do not import classical figures, arches, pottery,
+or any source slogan unless the brief requires them.
+
+Apply charcoal grain, dry rubbing, woodcut pressure, or uneven print coverage
+inside established shapes. Keep edges, hierarchy, and negative space readable
+before texture. Align any short title to the same axes as the image. Reserve
+exact copy for deterministic post-layout when spelling matters.
+
+Avoid full-color illustration, decorative vintage distress, gradients, glossy
+3D, cinematic lighting, floating caption boxes, random text, logos, signatures,
+watermarks, and {{TOPIC_SPECIFIC_FORBIDDEN}}.
+```
+
+## Fidelity Gate / 保真门
+
+- One plane or silhouette owns the first read.
+- Paper, dominant ink, and optional structural dark remain the whole palette.
+- Manual pressure reads locally and never becomes full-frame noise.
+- The subject and action remain recognizable without color or texture.
+- Removing the source theme still leaves a transferable editorial structure.

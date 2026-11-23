@@ -1,97 +1,31 @@
-# Contributing
+# Contributing to Open Visual Grammar
 
-This repository accepts visual grammar and validated patterns, not random
-prompts.
+OVG 接受的是可迁移的视觉方法，不是一次性 Prompt 集合。
 
-## Add a pattern
+## 新增或迭代 Pattern
 
-Create:
+1. 先阅读根目录 `AGENTS.md`、`CATALOG.md` 和目标 Pattern。
+2. 只有当新证据不能由已有 Pattern 解释时，才新建 `patterns/<english-kebab-slug>/`。
+3. 在一份双语 `PATTERN.md` 中写清楚不变量、构图、边界、直接生成路线和失败方式。
+4. 真实生成时一次只发起一个请求；确认结果后才把公开安全的 WebP 放入 `examples/`。
+5. 生成日志、Prompt、拒绝稿、私有截图和账号信息留在消费项目或临时目录，不进入 OVG。
+6. 运行 showcase 检查并检查 diff。
 
-```text
-patterns/<slug>/
-├── PATTERN.md
-├── refs/              optional after operator-approved output
-├── adapters/          optional when a runtime needs special guidance
-├── examples/          optional for reviewed learning
-└── anti-patterns.md   optional; use it only to explain repeated failures
-```
+## 不要创建的东西
 
-Before opening a pull request, make sure the pattern answers:
+- candidate、eval、promotion、maturity 或 intake 状态；
+- 只为了路由而存在的 registry；
+- 跨 Pattern 的视觉 grammar 或 runtime 层；
+- Pattern 外的长期 Prompt 模板；
+- 没有说明稳定失败模式的 rejected 图片。
 
-- What visual problem does it solve?
-- What is stable across examples?
-- What references prove the pattern?
-- What does it refuse to do?
-- Which runtimes can execute it?
-
-Do not add structure just to satisfy a template. A formal Pattern can start
-with only `PATTERN.md` when its invariants and transfer boundaries are clear.
-
-## Add an example
-
-Examples should live inside the pattern they belong to:
-
-```text
-patterns/<slug>/examples/<example-slug>/
-├── score.md
-├── critique.md
-└── accepted.webp
-```
-
-Include:
-
-- the source problem;
-- the selected pattern;
-- the score;
-- the runtime;
-- the result;
-- critique and follow-up.
-
-Do not add raw prompt attempts without analysis.
-
-## Update the showcase
-
-Every directory with a valid `patterns/<slug>/PATTERN.md` is registered in the
-root showcase. Lossless WebP files under `refs/` and `examples/` are discovered
-automatically; filenames beginning with `accepted` and `rejected` receive those
-labels in the UI.
-
-After adding or changing pattern metadata or WebP files, run:
+## 验证
 
 ```bash
 node scripts/build-showcase.mjs
 node scripts/build-showcase.mjs --check
+node --check showcase-data.js
+git diff --check
 ```
 
-Commit the regenerated `showcase-data.js`, but never edit it directly.
-
-## Add a formal Pattern from external evidence
-
-Before importing method-level learning from X, a bookmark folder, a website, or
-any private intake workflow, follow:
-
-```text
-docs/reference-intake-protocol.md
-```
-
-Do not commit raw collections. Import only public-safe learning that directly
-defines or improves a Pattern, example, anti-pattern, grammar file, runtime
-contract, or decision record. If it is not strong enough for that, keep it in
-the external intake workspace.
-
-For the current YouMind style study, run the read-only atlas check after editing:
-
-```bash
-node scripts/check-youmind-style-atlas.mjs
-```
-
-## Public-safety rules
-
-Do not commit:
-
-- private screenshots;
-- provider keys or tokens;
-- account cookies;
-- customer data;
-- unreleased business metrics;
-- generated caches or local runtime folders.
+`index.html` 是静态文件，直接打开即可查看汇总。OVG 不要求本地服务。

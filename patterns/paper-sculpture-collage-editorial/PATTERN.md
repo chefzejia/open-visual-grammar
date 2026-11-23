@@ -4,12 +4,10 @@
 id: paper-sculpture-collage-editorial
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Editorial covers where one recognizable subject or relation can be rebuilt as a small set of layered cut-paper planes with matte depth and a calm page field.
 avoid_when: Exact UI proof, dense tutorials, photographic evidence, long copy, playful sticker sheets, or topics that require glossy 3D or realistic material physics.
-load_next:
-  image-generation: adapters/image-generation.md
 ```
 
 中文名：纸雕拼贴编辑封面
@@ -28,12 +26,12 @@ CN：纸雕拼贴编辑封面把上游给出的主体、动作和证据，重建
 切边、浅接触阴影和哑光纸面建立深度；它是编辑性的重新组织，不是把照片贴进画框，也不是塑料
 3D 渲染。
 
-This Pattern was calibrated against public YouMind descriptions for paper-cut
+This Pattern was calibrated against public descriptions for paper-cut
 collage, torn-paper archive collage, and hand-drawn paper concept illustration.
 Those names, prompts, and preview images are external evidence only; this
 Pattern keeps the paraphrased visual method and its transfer boundaries.
 
-本 Pattern 参考了 YouMind 公开的纸雕拼贴、撕纸档案拼贴和手绘纸片概念插画描述。
+本 Pattern 参考了纸雕拼贴、撕纸档案拼贴和手绘纸片概念插画描述。
 相关名称、prompt 和预览图只作外部证据；本 Pattern 只保留转述后的视觉方法与迁移边界。
 
 ## Invariants / 不变量
@@ -85,12 +83,12 @@ The runtime owns aspect ratio, text strategy, and export details.
 上游视觉论证负责第一眼信息、动作、主体与具体证据。本 Pattern 负责层数、遮挡逻辑、剪纸边缘、
 配色克制、文字层级、密度和情绪温度。Runtime 只负责画幅、文字策略与导出细节。
 
-Do not let the topic adapter add unrelated objects to make the collage feel
+Do not let the topic compilation route add unrelated objects to make the collage feel
 rich. Every plane must clarify the supplied action, evidence, or spatial
 relationship. Remove the paper language and the source relation must still be
 recoverable.
 
-主题 adapter 不得为了让拼贴“丰富”而增加无关物件。每一层都必须说明上游动作、证据或空间关系。
+主题 compilation route 不得为了让拼贴“丰富”而增加无关物件。每一层都必须说明上游动作、证据或空间关系。
 即使去掉纸张语言，也必须还能还原来源关系。
 
 ## Internal Layout Routes / 内部版式路由
@@ -190,7 +188,7 @@ rather than childish excitement.
 - 与 `frosted-silhouette-editorial` 不同，深度来自真实纸片叠层，不来自区域透叠或磨砂视窗；
 - 与 `semantic-concept-poster` 不同，短文字是从属元素，叠层关系才承载论点。
 
-## Runtime Adapter Slots / 运行时槽位
+## Runtime Compilation Route Slots / 直接输入槽位
 
 ```text
 ARTIFACT_KIND
@@ -215,7 +213,7 @@ FORBIDDEN
   the supplied subject or evidence.
 - Torn paper, grain, or collage fragments become decoration without explaining
   the relation.
-- The topic adapter imports unrelated props or a second narrative.
+- The topic compilation route imports unrelated props or a second narrative.
 - Text becomes long, pseudo-Chinese, or a generic headline pasted outside the
   collage.
 - The result is a photo-in-frame treatment instead of a reconstructed paper
@@ -226,7 +224,7 @@ FORBIDDEN
 - 阴影和倒角变成光亮塑料、玩具 3D 或电影化光照；
 - 粉彩变成固定糖果色模板，而不是从主体或证据提炼；
 - 撕纸、颗粒和拼贴碎片成为不说明关系的装饰；
-- 主题 adapter 引入无关道具或第二条叙事；
+- 主题 compilation route 引入无关道具或第二条叙事；
 - 文字变成长段、伪中文，或贴在拼贴外部的通用标题；
 - 结果只是照片套进画框，而不是纸片关系的重新构建。
 
@@ -246,3 +244,89 @@ FORBIDDEN
 3. 缩小后页面是否仍然安静、可读，且留白主动参与构图？
 4. 边缘和阴影是否哑光有触感，而不是光亮或体积化？
 5. 去掉配色、纸张和阴影形容词后，叠层论证是否仍然存在？
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image-Generation Meta-Prompt / 图像生成元提示词
+
+This compilation route compiles the `paper-sculpture-collage-editorial` Pattern for image
+generation. It is calibrated by documented method descriptions for paper-cut,
+torn-paper archive, and hand-drawn paper concept work, not by copying their
+prompts, subjects, or preview images.
+
+```text
+Create {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream visual argument is authoritative:
+- First read: {{FIRST_READ}}
+- Visual action: {{VISUAL_ACTION}}
+- Main subject: {{MAIN_SUBJECT}}
+- Concrete evidence: {{CONCRETE_EVIDENCE}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Paper Sculpture Collage Editorial visual grammar. Preserve the supplied
+subject, action, and evidence. First reduce {{MAIN_SUBJECT}} to one recognizable
+silhouette, gesture, structure, or relation. Build a small stack of cut-paper
+planes so the layers support, block, bridge, or reveal the supplied action.
+Choose Layered Stage, Memory Diptych, or Cut-Plane Relation only when that route
+fits the visual argument; do not invent a second narrative.
+
+Build a clean editorial page with active near-white or quiet neutral space.
+Keep two to five ordered planes with clear front, middle, and back relationships.
+Use {{LAYER_TARGETS}} for meaningful occlusion or access. Make cut edges, paper
+fibers, and shallow matte contact shadows explain depth. Keep the source-derived
+contour identifiable before and after the paper treatment.
+
+Derive a restrained color family from the supplied subject or evidence. Pastel
+is allowed only when it emerges from that source; do not apply a fixed candy
+palette. Keep the surface flat or gently modulated, tactile, warm, observant,
+and editorial. Use short checked type or reserve a clean, structurally
+integrated region for deterministic typesetting.
+
+Avoid glossy plastic, chrome, thick extrusion, toy 3D, glassmorphism, cinematic
+lighting, photorealistic cutouts, uniform craft-supply decoration, sticker
+sheets, random props, dense diagrams, long generated text, pseudo-Chinese,
+logos, signatures, and watermarks. Do not copy any reference composition,
+subject, slogan, or exact coordinates. {{FORBIDDEN}}
+```
+
+## Slot Guidance / 槽位说明
+
+- `LAYER_TARGETS`: name one to three semantic parts that should support, block,
+  bridge, or reveal the source action. Describe relationships, not a material
+  shopping list.
+- `TEXT_HANDLING`: use `short checked type`, `blank region for deterministic
+  typesetting`, or a mixed strategy.
+- `FORBIDDEN`: add only topic-specific mistakes. The Pattern's material and
+  density prohibitions already apply.
+
+- `LAYER_TARGETS`：写出一到三个需要承托、遮挡、连接或显露上游动作的语义部位，描述关系，不要写
+  成手工材料清单；
+- `TEXT_HANDLING`：选择“短且经过核对的文字”“为确定性排版留空”或混合策略；
+- `FORBIDDEN`：只补充主题特有错误，Pattern 已有的材质和密度禁区不必重复。
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+This record absorbs the paper-sculpture branch of the former cross-cluster
+style-transfer check.
+
+这份记录吸收已删除的跨聚类风格迁移检查中的纸雕拼贴分支。
+
+## Stable Checks / 稳定检查
+
+- One recognizable contour remains stable across a small stack of matte cut
+  planes. Overlap must explain support, obstruction, or access.
+- Paper edge, fold, shadow, and source-aware color stay subordinate to the
+  argument; the stack is not a sticker sheet, plastic 3D render, or generic
+  craft texture.
+- The same plane logic must transfer from a shared garden tool shelf to a
+  repair manual revealing one hidden dependency without copying source props or
+  lettering.
+
+## Failure Recovery / 失败恢复
+
+If layers become decorative, flatten the stack to one necessary occlusion and
+one evidence relation. If the method repeatedly depends on source-specific
+objects or glossy depth, delete the Pattern.

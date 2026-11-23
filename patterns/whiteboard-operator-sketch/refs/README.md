@@ -72,7 +72,7 @@ Reusable grammar extracted from the source lineages:
   threadball as the default;
 - `composition-patterns`: workflow, system local, before/after, character
   state, concept metaphor, method layers, map route, mini comic;
-- `prompt-template`: converted into OVG adapter slots;
+- `prompt-template`: converted into direct input slots;
 - `qa-checklist`: converted into pass criteria and failure modes.
 
 从来源 skill 抽取的通用语法：
@@ -81,7 +81,7 @@ Reusable grammar extracted from the source lineages:
 - `article-body-focus`：从更大的 21:9 封面 / 16:9 页面图 deck 工作流里抽出正文插图范式；
 - `character-ip`：转成 OVG 的 `Worker species` 插槽，默认使用 GanFan 线团小工；
 - `composition-patterns`：workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线、小漫画分镜；
-- `prompt-template`：转成 OVG adapter slots；
+- `prompt-template`：转成直接输入槽位；
 - `qa-checklist`：转成通过标准和失败模式。
 
 ## License Note / 授权说明

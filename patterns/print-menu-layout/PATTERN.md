@@ -4,18 +4,12 @@
 id: print-menu-layout
 artifact_kinds:
   - deterministic-layout
-runtimes:
+surfaces:
   - html-css
   - typst
   - pdf
 when_to_use: Single-page restaurant menus that must become print-ready fixed-format output.
 avoid_when: Multi-page brochures, digital-only screen menus, unpriced posters, or editable customer templates.
-requires_grammar:
-  - typography
-load_next:
-  deterministic-layout: adapters/deterministic-layout.md
-  typography: typography.md
-  font-packaging: ../../runtimes/font-packaging.md
 ```
 
 中文名：印刷菜单版式
@@ -156,7 +150,7 @@ Descriptions are set smaller and in a muted color.
 
 Typography is part of the visual grammar, not an implementation afterthought.
 For the pattern-local typography roles, see `typography.md`. Runtime font
-packaging rules live in `../../runtimes/font-packaging.md`. The consuming
+packaging rules live in the consuming runtime. The consuming
 project chooses and packages the exact font files for final output.
 
 Recommended print-scale ranges:
@@ -189,7 +183,7 @@ Determined by the style direction, not by the pattern itself.
 ## Style Directions
 
 Each style direction is a named visual tradition. See
-`grammar/design-references.md` for the vocabulary.
+the Pattern-owned style directions for the vocabulary.
 
 A style direction defines:
 
@@ -210,7 +204,7 @@ Reusable hospitality directions:
 | Retro American | Diner energy | Ticket border and star ornaments |
 | Elegant Classic | Print ceremony | Gold hairline and serif hierarchy |
 
-## Runtime Adapter Slots
+## Runtime Compilation Route Slots
 
 When adapting this pattern into a deterministic renderer, the consuming project
 must define:
@@ -250,3 +244,230 @@ Inside a concrete style direction, four variants are generated:
 - Digital-only screen menus with interactive elements.
 - Menus with more than 20 items (layout breaks down).
 - Menus that need photography as the primary visual element.
+
+## Direct Compilation Route: Deterministic Layout / 直接生成路线：Deterministic Layout
+
+# Compilation Route: Deterministic Layout
+
+This compilation route translates a `print-menu-layout` visual brief into the decisions a
+deterministic layout engine must own. HTML/CSS, Typst, PDF, or another fixed
+layout engine can carry the result; none of them is the pattern's source of
+truth.
+
+## Output Contract
+
+```text
+Format:      Fixed-format deliverable such as PNG, PDF, or both
+Dimensions:  Explicit final canvas or page size
+Text:        Exact — no model-generated text in the final output
+```
+
+The consuming project's engine must enforce its chosen output contract.
+
+## Compile Slots
+
+```text
+Output format:
+Output dimensions:
+
+Viewer:
+Job:
+Pattern:           print-menu-layout
+
+First read:        [restaurant name — the dominant element]
+
+Hierarchy:
+  Level 1 (restaurant name):   [size, font, weight, tracking]
+  Level 2 (section labels):    [size, font, weight]
+  Level 3 (item names + prices): [size, font, tabular numerals]
+  Level 4 (descriptions + contact): [size, font, muted color]
+
+Content:
+  Restaurant name:
+  Cuisine type:
+  Tagline:
+  Sections:        [section title → items → name / description / price]
+  Featured items:
+  Contact:
+
+Style direction:   [named hospitality direction]
+  Background:
+  Surface:
+  Text:
+  Muted:
+  Accent:
+  Secondary accent:
+  Rule color:
+  Display role:     [visual voice, size behavior, fallback policy]
+  Body role:        [reading behavior, numeric behavior, fallback policy]
+  Accent role:      [section or ceremonial behavior, fallback policy]
+  Numeric role:     [price alignment behavior]
+
+Typography scale:  [standard | dense — determined by item count]
+  Restaurant name:
+  Section labels:
+  Item names + prices:
+  Descriptions:
+
+Composition model: [rule | column | field | frame]
+Signature detail:  [one named element — brush divider, editorial rule, ticket border, gold hairline]
+
+Density:           [standard (≤12 items) | dense (13–20 items)]
+  Dense behavior:  two-column layout, smaller type scale
+
+Forbidden:
+  - producer, platform, or consuming-project branding unless requested
+  - decorative elements outside the named style direction
+  - web-scale font sizes on a print canvas
+  - centered alignment except where the direction requires it
+  - host system fonts as the intended primary appearance
+  - runtime network font fetching for customer deliverables
+```
+
+## Density Switch Rule
+
+Item count determines layout density. The style direction does not change.
+
+| Item count | Layout | Type scale |
+| --- | --- | --- |
+| ≤ 12 | Single column | Standard |
+| 13–20 | Two columns | Dense |
+
+The engine must apply the dense scale automatically. The operator does not
+choose density manually.
+
+## Price Alignment Rule
+
+All prices must use tabular numerals and align to a consistent right column
+within each section. The gutter between item name and price must be visually
+unambiguous — not just a space character.
+
+## Typography Runtime Rule
+
+The visual brief defines type roles. The consuming project chooses the exact
+font files and packaging strategy.
+
+For production deterministic deliverables, a missing primary font is a QA
+failure. See the consuming runtime for generic packaging and
+parity rules.
+
+## Signature Detail Rule
+
+Each style direction has exactly one signature detail. It must appear in the
+output. It must not be multiplied or varied across variants.
+
+| Direction | Signature detail |
+| --- | --- |
+| Warm Cafe | Brush or hand-marked section divider |
+| Clean Modern | Thin editorial rule system (hairline weight) |
+| Retro American | Ticket border and star or arrow ornaments |
+| Elegant Classic | Gold hairline rules and serif hierarchy |
+
+## Variant Behavior
+
+All four variants of a direction share the same color tokens, font role mapping, and
+signature detail. Variants differ only in spacing, type scale, and decoration
+density.
+
+| Variant | What changes |
+| --- | --- |
+| Signature | Baseline — strongest visual identity |
+| Compact | Tighter spacing, slightly smaller type |
+| Feature | More visual weight on featured items |
+| Quiet | Reduced decoration, calmer overall |
+
+## Pattern Typography Notes / Pattern 字体规则
+
+# Typography: Print Menu Layout
+
+Status: pattern typography brief
+
+This document is the typography brief for the `print-menu-layout` pattern. It
+defines font roles and typography failure modes. It does not approve or package
+specific production font families for any consuming project.
+
+字体是 `print-menu-layout` 的视觉语法，不是渲染器的随机 fallback。这里定义字体的视觉角色、开源边界和运行时约束；具体项目再把字体文件打包进自己的渲染环境。
+
+Architecture note: this file is pattern-local because print menus have specific
+typography pressure: restaurant-name identity, price scanning, dense menu
+readability, and print-scale hierarchy. Generic typography roles and packaging
+rules live in the shared visual rules and
+the consuming runtime.
+
+## Architecture Rule
+
+Use explicit font roles for primary print menu output. Do not let the renderer's
+host fallback decide the visual identity.
+
+Reasons:
+
+- local macOS fonts and Linux production fonts differ;
+- commercial/system faces such as Didot, Hoefler Text, Avenir Next, Cooper
+  Black, and Bodoni 72 cannot be assumed in every runtime;
+- deterministic output should match across local QA, CI, and production;
+- typography is a visible part of the deliverable's taste.
+
+Open-source does not mean visually generic. A consuming project should choose
+faces that carry the named style direction after rendered-output review.
+
+## Role Directions
+
+These are role directions, not a font registry. The consuming project owns exact
+font choices, licenses, files, and renderer wiring.
+
+| Direction | Display role | Body / menu role | Voice |
+| --- | --- | --- | --- |
+| Warm Cafe | warm, tactile display serif or softened display face | clean hospitality reading face | approachable, handmade, not childish |
+| Clean Modern | restrained editorial display face | precise sans or quiet editorial body face | calm, high-trust, easy scanning |
+| Retro American | heavy vernacular display face | sturdy sans with strong numerals | energetic diner print without novelty clutter |
+| Elegant Classic | high-contrast ceremonial display face | formal serif or quiet classic body face | refined, spacious, not wedding-template ornate |
+
+## Role Rules
+
+Display fonts are for the restaurant name and, where appropriate, one accent
+line. They must not be reused everywhere just because they are distinctive.
+
+Body fonts carry section labels, item names, prices, descriptions, and contact
+information. They must stay readable at print scale and at scaled preview size.
+
+Prices must use tabular numerals or an equivalent deterministic price-alignment
+strategy. If a selected body face cannot produce stable numeric alignment in
+the target renderer, the consuming project must change the face or compile a
+numeric sub-role into the score.
+
+Variants inside one direction share the same font role mapping. Variants may
+change spacing, type scale, emphasis, and decoration density; they must not
+change typeface.
+
+## Runtime Packaging
+
+Runtime packaging is intentionally not pattern-local. Use
+the consuming runtime when a consuming project needs deterministic
+font files, license metadata, renderer paths, or local/CI/production parity.
+
+## Visual QA
+
+Inspect each style direction at short and dense menu lengths. Pass criteria:
+
+- the restaurant name keeps the intended voice and does not look like a system
+  fallback;
+- long restaurant names do not clip or force accidental line breaks;
+- prices align cleanly and remain paired with item names;
+- section labels remain subordinate to the restaurant name;
+- descriptions stay readable but visually quiet;
+- the same input produces materially identical line breaks across local and
+  production output;
+- exported PDFs embed or otherwise preserve the intended font appearance.
+
+## Deferred
+
+These are not solved by this pattern typography brief:
+
+- non-Latin scripts and CJK menus;
+- right-to-left scripts;
+- brand-specific custom fonts;
+- generated-image text inside illustrations;
+- editable document formats.
+
+If any of these become product requirements, create a separate visual brief or
+direct model-input route addition before changing the typography brief.

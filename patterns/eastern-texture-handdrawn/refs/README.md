@@ -12,7 +12,7 @@ identity, not a fixed prompt recipe.
 Source run:
 
 ```text
-ganfan-media/articles/2026-05-12-agent-context-token-economics/_work/visual-runs/2026-05-16-pattern-seed-test-eastern-texture-handdrawn/candidate-01/
+ganfan-media/articles/2026-05-12-agent-context-token-economics/_work/visual-runs/2026-05-16-pattern-seed-test-eastern-texture-handdrawn/historical-run-01/
 ```
 
 Why it belongs:
@@ -36,7 +36,7 @@ Why it belongs:
 Source run:
 
 ```text
-ganfan-media/articles/2026-05-10-codex-history-sessions/_work/visual-runs/2026-05-16-random-mechanism-test-eastern-texture-handdrawn/candidate-03/
+ganfan-media/articles/2026-05-10-codex-history-sessions/_work/visual-runs/2026-05-16-random-mechanism-test-eastern-texture-handdrawn/historical-run-03/
 ```
 
 Why it belongs:

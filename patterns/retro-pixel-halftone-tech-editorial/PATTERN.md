@@ -4,13 +4,10 @@
 id: retro-pixel-halftone-tech-editorial
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Technical editorials where one conflict, decision, bottleneck, comparison, or human-system relation should become a framed, information-rich editorial plate.
 avoid_when: Sparse spot illustrations, photographic evidence, exact product UI, multi-step tutorials, quiet mood images, or topics without one visualizable claim.
-load_next:
-  image-generation: adapters/image-generation.md
-  references: refs/README.md
 ```
 
 中文名：复古像素网点科技编辑插画
@@ -23,9 +20,9 @@ EN: Retro Pixel Halftone Tech Editorial turns one technical argument into a fram
 
 CN：复古像素网点科技编辑插画把一个技术判断组织成带框架的编辑图版。它不只是像素和网点材质，还包括标题与解释场景一体化、尺度分明的证据模块、受控的安全橙，以及独立科技大报般直接而有触感的气质。
 
-The pattern was first extracted from operator-provided images, then calibrated against the public skill [复古像素网点科技插画](https://youmind.com/zh-CN/skills/retro-pixel-halftone-tech-illustration-Kmx3XWOrUiKUwq) by 神神的孩子在跳舞. The external prompt and images are references, not repository instructions or vendored assets. This pattern keeps only paraphrased method-level learning.
+The pattern was first extracted from operator-provided images, then calibrated against the documented 复古像素网点科技插画 method by 神神的孩子在跳舞. The external prompt and images are references, not repository instructions or vendored assets. This pattern keeps only paraphrased method-level learning.
 
-本 pattern 最初来自用户提供的参考图，随后用作者“神神的孩子在跳舞”公开的 [复古像素网点科技插画](https://youmind.com/zh-CN/skills/retro-pixel-halftone-tech-illustration-Kmx3XWOrUiKUwq) Skill 进行校准。外部提示词和图片只作为参考，不是仓库指令，也不复制进仓库；此处只保留经过转述的方法级结论。
+本 pattern 最初来自用户提供的参考图，随后用作者“神神的孩子在跳舞”发布的复古像素网点科技插画方法进行校准。外部提示词和图片只作为参考，不是仓库指令，也不复制进仓库；此处只保留经过转述的方法级结论。
 
 ## Invariants / 不变量
 
@@ -111,7 +108,7 @@ The upstream visual argument supplies only semantic inputs:
 - **强调对象**：从动作或决定性证据中提取一到三个有语义的锚点。
 
 Pattern 再根据这些语义选择内部版式路由。版式路由、密度、颜色和物体画法不是上游或
-runtime prompt 的自由变量。画幅和具体坐标可以变化，但不能借适配重新解释文章或改变风格。
+model prompt 的自由变量。画幅和具体坐标可以变化，但不能借编译路线重新解释文章或改变风格。
 
 ## Internal Layout Routes / 内部版式路由
 
@@ -240,7 +237,7 @@ Emotional temperature: engineered, direct, opinionated, tactile, and slightly re
 - 与 `narrative-journal-infographic` 的区别是工业化、一比特化和印刷驱动，而非温暖手写。
 - “系统工程大报”骨架是本 Pattern 必须保留的结构与保真锚点。
 
-## Runtime Adapter Slots / 运行时槽位
+## Runtime Compilation Route Slots / 直接输入槽位
 
 ```text
 ARTIFACT_KIND
@@ -255,30 +252,30 @@ ACCENT_TARGETS
 FORBIDDEN
 ```
 
-For image generation, load `adapters/image-generation.md`. Exact paragraphs, UI copy, and long Chinese labels should default to deterministic typesetting.
+For image generation, load this Pattern’s direct compilation route. Exact paragraphs, UI copy, and long Chinese labels should default to deterministic typesetting.
 
-图像生成时读取 `adapters/image-generation.md`。精确段落、界面文案和较长中文标签默认交给确定性排版。
+图像生成时读取 this Pattern’s direct compilation route。精确段落、界面文案和较长中文标签默认交给确定性排版。
 
 ## Failure Modes / 失败方式
 
-- The adapter replaces the supplied subject or action with a familiar machine, pipeline, console, or mascot.
+- The compilation route replaces the supplied subject or action with a familiar machine, pipeline, console, or mascot.
 - Retro material appears, but the supplied first read and action are no longer recoverable.
 - Supporting details become a uniform dashboard and flatten the visual hierarchy.
 - Safety orange spreads beyond its semantic anchors and becomes decoration.
 - The scene falls back to a generic AI brain, robot, chip, code rain, or neon interface.
-- The runtime prompt introduces a palette, perspective, object-construction language, density, or emotional temperature not owned by this Pattern.
+- The model prompt introduces a palette, perspective, object-construction language, density, or emotional temperature not owned by this Pattern.
 - The image uses an unrelated volumetric or futuristic object language even though the source supplied only an abstract relation.
 - Smooth vectors, glossy 3D, gradients, or soft shadows erase the one-bit print material.
 - Generated text errors remain in the final delivery instead of being replaced deterministically.
 - The result becomes a single etched object on a mostly empty field with a clean modern title beside it.
 - Color and halftone resemble the references, but the frame, scale rhythm, title-scene integration, and evidence modules disappear.
 
-- adapter 用熟悉的机器、管道、控制台或吉祥物替换了上游给出的主体或动作。
+- compilation route 用熟悉的机器、管道、控制台或吉祥物替换了上游给出的主体或动作。
 - 有复古材质，但上游给出的第一眼信息和动作已经无法还原。
 - 辅助细节变成同权仪表盘，抹平了视觉层级。
 - 安全橙超出语义锚点，到处扩散成装饰。
 - 场景退化成泛化的 AI 大脑、机器人、芯片、代码雨或霓虹界面。
-- runtime prompt 引入了本 Pattern 未拥有的配色、透视、物体构造、密度或情绪温度。
+- model prompt 引入了本 Pattern 未拥有的配色、透视、物体构造、密度或情绪温度。
 - 正文只提供抽象关系，画面却擅自使用无关的立体或未来主义物体语言。
 - 平滑矢量、光滑 3D、渐变或软阴影抹掉了一比特印刷材质。
 - 生图文字有误，成品却没有用确定性排版替换。
@@ -289,7 +286,7 @@ For image generation, load `adapters/image-generation.md`. Exact paragraphs, UI 
 
 Before approving an output, check in order:
 
-1. **Ownership trace**: Can every style decision in the score and prompt be traced to this Pattern rather than invented by the article adapter or runtime?
+1. **Ownership trace**: Can every style decision in the score and prompt be traced to this Pattern rather than invented by the article compilation route or runtime?
 2. **Editorial structure**: Can the paper-dominant frame and scale hierarchy be recognized before inspecting texture?
 3. **Argument**: Do the headline, main mechanism, and evidence modules support one correction?
 4. **Material**: Are flat one-bit contours, halftone, print grain, and safety orange present without becoming costume?
@@ -297,10 +294,138 @@ Before approving an output, check in order:
 
 任一输出先依次检查：
 
-1. **权责追踪**：score 与 prompt 中的每一项风格决定能否追溯到本 Pattern，而不是由文章 adapter 或 runtime 发明？
+1. **权责追踪**：score 与 prompt 中的每一项风格决定能否追溯到本 Pattern，而不是由文章 compilation route 或 runtime 发明？
 2. **编辑结构**：不看材质细节，是否已经能认出纸白占主导的框架和尺度层级？
 3. **视觉论证**：标题、核心机制和证据模块是否共同支持一个修正？
 4. **材质**：扁平一比特轮廓、网点、印刷颗粒和安全橙是否存在，又没有沦为表面装扮？
 5. **字体**：标题是否参与结构，精确文字是否经过核对或确定性排版？
 
 结构失败时，不靠增加网点、颗粒或禁用词补救；应返回内部版式路由或 Pattern 选择重新编译。
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image-Generation Meta-Prompt
+
+This is a reusable meta-prompt. Fill the slots from the current visual brief, then compile the result into the consuming project's temporary model prompt. Do not save the compiled prompt in Open Visual Grammar.
+
+这是一份可复用元提示词。先用当前任务的视觉评分填写槽位，再把编译结果保存到消费项目的临时运行目录。不要把编译后的单次 prompt 写回 Open Visual Grammar。
+
+```text
+Create {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream visual argument is authoritative:
+- First read: {{FIRST_READ}}
+- Visual action: {{VISUAL_ACTION}}
+- Main subject: {{MAIN_SUBJECT}}
+- Concrete evidence: {{CONCRETE_EVIDENCE}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Retro Pixel Halftone Tech Editorial visual grammar.
+
+Preserve the supplied claim, action, subject, and evidence. Do not derive a new
+narrative from the article topic or replace the supplied relation with a familiar
+AI mascot, generic control room, or unrelated workflow.
+
+Build the Pattern's systems-broadsheet skeleton: dominant warm paper white, one
+strong outer frame, an integrated block headline, one explanatory relation,
+subordinate proof modules, and a narrow functional rule or conclusion band.
+Route a real before/after action through the transformation route; route a loop,
+gate, burden, bridge, or human-system relation through the mechanism route. The
+route changes placement, not art direction. Make {{MAIN_SUBJECT}} perform or
+receive {{VISUAL_ACTION}} and use {{CONCRETE_EVIDENCE}} as subordinate proof.
+
+Preserve the style signature: one visible editorial frame or rule system; a large
+block headline integrated with the scene; one dominant technical mechanism or
+human-system relation; and a small number of evidence modules organized by sharp
+scale changes. Do not reduce the result to a spot illustration beside an empty
+title field.
+
+When the Pattern's reviewed calibration image is attached, use it only to
+calibrate the paper-dominant editorial architecture, scale rhythm, density,
+flat object language, and print material. Do not reproduce its words, subjects,
+or exact coordinates. The Pattern remains authoritative when no image input is
+available.
+
+Use a near-binary palette of deep black, warm paper white, and halftone grey,
+plus safety orange #F06424 as the only signal color. Keep paper white visibly
+dominant. Apply orange only to {{ACCENT_TARGETS}}, roughly 5-12% of the surface.
+Black may form rules, labels, flat shadows, and a narrow band; do not create a
+giant inverse masthead or a mostly black interface surface.
+
+Material and object language: hard pixel contours, low-resolution stair-step
+edges, 1-bit dithering, Ben-Day or newspaper halftone dots, crosshatching, flat
+shadow blocks, slight registration drift, photocopy grain, and old-print ink
+spread. Keep every object flat, front-facing or orthographic, symbolic, and
+diagrammatic. Do not turn abstract concepts into an unrelated volumetric or
+futuristic object language unless those objects are concrete source evidence.
+Use no smooth gradient, soft shadow, cinematic depth, or realistic lighting.
+
+Typography language: one very heavy condensed, block, or pixel display face for the primary claim; compact sans, mono, or bitmap lettering for annotations; clearly separated large, medium, and small scales. Follow {{TEXT_HANDLING}}. When exact Chinese text matters, render only short checked text or reserve structurally integrated regions for deterministic typesetting. Deterministic type must preserve the pattern's block hierarchy; never overlay a generic modern title on unrelated blank space. Never invent pseudo-Chinese.
+
+Emotional temperature is fixed: engineered, direct, tactile, opinionated,
+slightly rebellious, and print-driven. The result should read as an independent
+technology broadsheet before it reads as retro decoration.
+
+Forbidden: {{FORBIDDEN}}, generic AI brains, neural networks, robots as decoration, chips, code rain, neon cyberpunk, glossy 3D, clay rendering, smooth vector art, SaaS dashboards, realistic photography, cute stickers, anime characters, multi-color competition, random text, logos, signatures, QR codes, and watermarks.
+```
+
+## Slot Guidance / 槽位说明
+
+- `FIRST_READ`: copy the approved first-read phrase or describe the approved text-free claim; do not rewrite it in the compilation route.
+- `VISUAL_ACTION`: copy the physical verb or relationship approved upstream.
+- `MAIN_SUBJECT`: name only the subject already chosen to perform or receive the action.
+- `CONCRETE_EVIDENCE`: copy only evidence already supported by the source or approved visual argument.
+- `TEXT_HANDLING`: choose `short checked title only`, `blank regions for deterministic typesetting`, or a mixed strategy upstream.
+- `ACCENT_TARGETS`: name one to three semantic anchors.
+- `FORBIDDEN`: add topic-specific mistakes; do not repeat the whole pattern.
+
+- `FIRST_READ`：复制上游已确认的第一眼短句，或描述已确认的无字主张；compilation route 不再改写。
+- `VISUAL_ACTION`：复制上游已经确认的物理动作或关系。
+- `MAIN_SUBJECT`：只写已经选定、负责执行或承受动作的主体。
+- `CONCRETE_EVIDENCE`：只复制正文或已确认视觉论证能够支持的证据。
+- `TEXT_HANDLING`：在上游选择“只生成经核对的短标题”“为确定性排版留空”或混合策略。
+- `ACCENT_TARGETS`：明确一到三个有语义的强调对象。
+- `FORBIDDEN`：补充当前主题特有的错误，不重复整份 pattern。
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+This record absorbs the former style-ownership probe for the retro pixel
+editorial Pattern.
+
+这份记录吸收已删除的复古像素编辑图版归属探针。
+
+## Stable Checks / 稳定检查
+
+- Warm paper white dominates. Black supplies frame, rules, labels, and flat
+  shadows; safety orange is the only signal color and stays within a small
+  semantic budget.
+- The first read is a framed technology broadsheet: one headline, one central
+  mechanism or human-system relation, a few proof modules, and an optional
+  narrow conclusion band.
+- Objects stay flat, front-facing, or orthographic. Pixel stair-steps,
+  one-bit dithering, local halftone, crosshatching, and registration drift are
+  surface support, not a substitute for the mechanism.
+- A new topic must alter the semantic scene without copying the accepted
+  example's layout, object set, or wording.
+
+- 暖纸白占主导，黑色负责外框、结构线、标签和块面阴影；安全橙是唯一信号色，并保持小面积语义预算。
+- 第一眼应是一张带框科技大报：一个标题、一个核心机制或人机关系、少量证明模块，以及可选的窄结论条。
+- 物体保持扁平、正视或正投影。像素阶梯、一比特抖动、局部网点、交叉网纹和套印偏移只是表面支持，不能替代机制。
+- 新主题必须更换语义场景，不复制已接受示例的版式、物件组或文案。
+
+## Ownership Question / 归属问题
+
+Hide the title and topic objects. If frame, palette, scale rhythm, flat object
+language, density, material, and temperature are no longer recognizable, reject
+the compilation before generation.
+
+## Failure Recovery / 失败恢复
+
+- Cobalt, neon, cinematic perspective, glossy machinery, cable-heavy panels,
+  or a mostly black interface indicate a second art direction; remove it.
+- If detail spreads into equal-weight dashboard furniture, restore sharp large,
+  medium, and small information scales.
+- If the Pattern repeatedly reads as a different genre after these corrections,
+  delete it rather than preserving a style-only intermediate.

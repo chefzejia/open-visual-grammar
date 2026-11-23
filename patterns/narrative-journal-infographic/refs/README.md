@@ -12,7 +12,7 @@ identity, not a fixed prompt recipe.
 Source run:
 
 ```text
-ganfan-media/articles/2026-05-12-agent-context-token-economics/_work/visual-runs/2026-05-16-pattern-seed-test-narrative-journal-infographic/candidate-03/
+ganfan-media/articles/2026-05-12-agent-context-token-economics/_work/visual-runs/2026-05-16-pattern-seed-test-narrative-journal-infographic/historical-run-03/
 ```
 
 Why it belongs:

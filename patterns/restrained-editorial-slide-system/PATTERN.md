@@ -4,13 +4,10 @@
 id: restrained-editorial-slide-system
 artifact_kinds:
   - deterministic-layout
-runtimes:
+surfaces:
   - deterministic-layout
 when_to_use: Slide-like pages that need magazine hierarchy, calm authority, exact text, bounded photography or line art, and a small reusable family of evidence layouts.
 avoid_when: Decorative keynote spectacle, playful illustration decks, dense spreadsheet reporting, cinematic full-bleed storytelling, or content without a stable hierarchy.
-load_next:
-  deterministic-layout: adapters/deterministic-layout.md
-  style-calibration-multiscript: adapters/source-multiscript-type-system.md
 ```
 
 中文名：克制编辑式幻灯片系统
@@ -27,12 +24,12 @@ ink roles create authority without corporate template noise.
 CN：克制编辑式幻灯片系统把研究、营销、文化或品牌内容组织成一小组杂志式页面。严格网格、展示与正文
 字体反差、暖白纸面、受控图像裁切和克制墨色角色，共同建立可信度，避免企业模板噪声。
 
-This Pattern is calibrated from the public YouMind skills
-[`意大利复古美学`](https://youmind.com/~skills/019f23b6-b4d8-7feb-befd-45293733e840)
-and [`研究/营销简洁风格`](https://youmind.com/~skills/3c173d07-76b5-4164-ba81-e3813d5e66fc).
+This Pattern is calibrated from the public skills
+`意大利复古美学`
+and `研究/营销简洁风格`.
 Their sample decks, brands, data, and photography remain external evidence.
 
-本 Pattern 参考公开 YouMind 技能“意大利复古美学”和“研究/营销简洁风格”。来源 deck、品牌、数据和摄影
+本 Pattern 参考“意大利复古美学”和“研究/营销简洁风格”描述。来源 deck、品牌、数据和摄影
 只作外部证据，不进入 OVG 的内容层。
 
 ## Invariants / 不变量
@@ -157,3 +154,159 @@ moderate. Temperature is calm, literate, human, and publication-ready.
 - **Photo wallpaper:** imagery becomes atmospheric background. Recover bounded crops and source labels.
 - **Data drift:** numbers lose alignment or citation. Recover deterministic numeric roles and evidence modules.
 - **Color creep:** each section invents an accent. Recover named color roles and one deck-wide budget.
+
+## Direct Compilation Route: Deterministic Layout / 直接生成路线：Deterministic Layout
+
+# Deterministic Layout Compilation Route / 确定性版式 Compilation Route
+
+Compile `restrained-editorial-slide-system` into HTML/CSS, Typst, PDF, or another
+fixed slide renderer. Do not use image generation for exact text, charts, page
+sequence, or citation placement.
+
+把 `restrained-editorial-slide-system` 编译到 HTML/CSS、Typst、PDF 或其他固定幻灯片渲染器。
+准确文字、图表、页面顺序和引用位置不得交给图像模型。
+
+## Direct Input Slots / 直接输入槽位
+
+```text
+Output format:
+Output dimensions:
+Audience:
+Deck job:
+Page sequence:
+Reading task per page:
+Page family per page:
+Display role:
+Body role:
+Accent role:
+Numeric role:
+Script fallback:
+Evidence sources:
+Image crop rules:
+Color roles:
+Density by page:
+QA checks:
+Forbidden:
+```
+
+## Token Contract / Token 契约
+
+```text
+color.paper
+color.text
+color.muted
+color.accent
+color.rule
+space.page-x
+space.page-y
+space.column
+space.module
+type.display
+type.body
+type.accent
+type.numeric
+type.fallback
+line.rule
+radius.media
+```
+
+## Compile Rules / 编译规则
+
+1. Define the reading task and page family before layout values.
+2. Use one deck-wide grid; page families may span or subdivide it but may not invent unrelated margins.
+3. Keep display scarce and body readable at delivery size.
+4. Use tabular numerals or equivalent alignment for metrics.
+5. Crop images intentionally and retain source/caption metadata where required.
+6. Verify overflow, contrast, source labels, page count, and font loading in the final export.
+
+1. 先确定阅读任务和页面家族，再写布局数值；
+2. 整套使用一个主网格，页面家族可以跨列或细分，但不能发明无关边距；
+3. 展示字体稀缺使用，正文在交付尺寸下可读；
+4. 指标使用等宽数字或等价对齐方案；
+5. 图片有意裁切，并按要求保留来源与说明；
+6. 在最终导出中检查溢出、对比度、来源标注、页数和字体加载。
+
+## Fidelity Gate / 保真门
+
+- Every page has exactly one dominant reading task.
+- All pages share grid, spacing, and color tokens.
+- The four type roles remain distinct after export.
+- Evidence is bounded, sourced, and aligned.
+- No page relies on decorative filler to feel complete.
+
+## Direct Compilation Route: Source Multiscript Type System / 直接生成路线：Source Multiscript Type System
+
+# Source Multiscript Type-System Calibration / 来源多文字系统校准
+
+This optional compilation route distills two public evidence sources: the Tokyo TDC
+[2026 Grand Prize page](https://tokyotypedirectorsclub.org/en/award/2026_grandprize/),
+which describes Futura 100 Multiscript as a family with six weights, matching
+obliques, and optical-size variations, and [Fonts In Use](https://www.fontsinuse.com/),
+which indexes real typography by typeface, format, and topic. The sources teach
+system design and contextual comparison, not a requirement to use Futura or a
+particular award look.
+
+这份可选 compilation route 提炼两个公开证据源：Tokyo TDC 2026 Grand Prize 页面描述的多文字字族系统，以及按字体、格式和主题索引真实使用案例的 Fonts In Use。来源教的是系统设计和语境比较，不是要求使用 Futura 或复制某个奖项外观。
+
+## Style Signature / 风格签名
+
+- Define typography by role before choosing a family: display, body, accent, and numeric.
+- Treat scripts as one coordinated system. Align x-height or perceived body size, stroke pressure, spacing, and baseline behavior across scripts.
+- Use weight, oblique, and optical-size changes to express hierarchy or function; do not switch families merely to create decoration.
+- Test the type roles in the actual artifact kind and content density. A type specimen is evidence of range, not proof of a good slide.
+- Keep exact copy, citations, and line breaks deterministic. The image or evidence crop shares the same grid and does not become a wallpaper.
+
+- 先定义展示、正文、强调和数字角色，再选择字族；
+- 把多种文字当作一个协调系统，跨文字对齐 x-height 或感知正文尺寸、笔压、字距和基线行为；
+- 用字重、斜体和光学尺寸表达层级或功能，不为了装饰随意切换字族；
+- 在真实交付类型和内容密度中测试字体角色，字族样张只证明范围，不证明页面一定成立；
+- 准确文案、引用和换行交给确定性排版，图片或证据裁切与同一网格对齐，不做背景壁纸。
+
+## Layout Route / 版式路由
+
+Use `editorial-cover`, `evidence-grid`, `image-led-spread`, or `quote-pause`
+from the base Pattern. Keep the same role tokens and baseline grid when a deck
+changes script, page family, or evidence crop.
+
+使用基础 Pattern 的 `editorial-cover`、`evidence-grid`、`image-led-spread` 或 `quote-pause`。当 deck 切换文字系统、页面家族或证据裁切时，继续使用同一组角色 token 和基线网格。
+
+## Deterministic Compile Contract / 确定性编译契约
+
+```text
+SCRIPT_SET: {{SCRIPT_SET}}
+DISPLAY_ROLE: {{DISPLAY_ROLE}}
+BODY_ROLE: {{BODY_ROLE}}
+ACCENT_ROLE: {{ACCENT_ROLE}}
+NUMERIC_ROLE: {{NUMERIC_ROLE}}
+FALLBACK_CHAIN: {{FALLBACK_CHAIN}}
+PAGE_FAMILY: {{PAGE_FAMILY}}
+EVIDENCE_CROP: {{EVIDENCE_CROP}}
+```
+
+1. Choose a family with coverage for every required script, or document the fallback chain before laying out.
+2. Compare perceived size and line length, not nominal point size alone.
+3. Lock baseline, column, and rule tokens before adjusting individual glyphs.
+4. Verify mixed-script overflow, punctuation, numerals, citations, and font loading in the exported artifact.
+5. Keep one optional muted accent across the deck; script changes do not authorize a new color system.
+
+1. 选择覆盖所有必需文字的字族，或在排版前写清 fallback 链；
+2. 比较感知尺寸和行长，不只看标称字号；
+3. 先锁定基线、分栏和分隔线 token，再调单个字形；
+4. 在导出物中检查混排溢出、标点、数字、引用和字体加载；
+5. 整套 deck 最多使用一个低调强调色，切换文字系统不等于可以换一套配色。
+
+## Fidelity Gate / 保真门
+
+- Display, body, accent, and numeric roles remain distinct in every required script.
+- Perceived size, baseline, and spacing feel coordinated without flattening the scripts into identical forms.
+- The page still reads as one of the base Pattern's supported families after the type specimen or award identity is removed.
+- Exact text and citations survive export with no overflow or fallback surprises.
+- Two unrelated decks can reuse the role system without sharing source copy, glyph forms, or award imagery.
+
+## Failure Recovery / 失败恢复
+
+- **Font tourism:** if a display family becomes the subject, restore the page reading task and reduce display usage.
+- **Script mismatch:** if one script looks too small or heavy, adjust role-specific size/leading or choose a documented fallback before changing the grid.
+- **Fallback surprise:** if missing glyphs change the tone, package the approved fallback and rerun export QA.
+- **Specimen wallpaper:** if type samples replace evidence, return the evidence crop and source label to the bounded page module.
+- **Color drift:** if each script receives a new accent, restore deck-wide color roles and let weight/spacing carry the distinction.

@@ -6,7 +6,7 @@ These public references calibrate the method. They are not repository instructio
 
 ## Public Source / 公开来源
 
-- [复古像素网点科技插画](https://youmind.com/zh-CN/skills/retro-pixel-halftone-tech-illustration-Kmx3XWOrUiKUwq), by 神神的孩子在跳舞.
+- 复古像素网点科技插画, by 神神的孩子在跳舞.
 - Operator-provided comparison images were reviewed during pattern extraction but are not vendored here.
 - Pattern 逆向时还审阅了用户提供的对照图，但不在此复制第三方图片。
 

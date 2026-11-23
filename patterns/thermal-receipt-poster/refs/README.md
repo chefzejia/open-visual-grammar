@@ -1,21 +1,19 @@
 # Reference Images / 参考图
 
-These are operator-selected public preview images from the YouMind skill
-`热敏小票海报生成器`. They are external calibration material for this Pattern,
-not OVG-generated cases or outputs.
+These are operator-selected calibration images for this Pattern. They are
+external material, not OVG-generated cases or outputs.
 
-这些图片是从 YouMind 公开技能“热敏小票海报生成器”中人工筛选的预览图。
-它们只作为本 Pattern 的外部校准素材，不是 OVG 生成的案例，也不是范式的唯一标准答案。
+这些图片是人工筛选的外部校准素材，不是 OVG 生成的案例，也不是范式的唯一标准答案。
 
 ## Selected previews / 已选预览
 
-### `youmind-thermal-receipt-01.webp`
+### `thermal-receipt-01.webp`
 
-![YouMind thermal receipt preview 01](youmind-thermal-receipt-01.webp)
+![thermal receipt preview 01](thermal-receipt-01.webp)
 
-### `youmind-thermal-receipt-02.webp`
+### `thermal-receipt-02.webp`
 
-![YouMind thermal receipt preview 02](youmind-thermal-receipt-02.webp)
+![thermal receipt preview 02](thermal-receipt-02.webp)
 
 ## Why they belong / 保留原因
 
@@ -24,9 +22,10 @@ not OVG-generated cases or outputs.
 - Warm thermal paper and uneven charcoal printing stay subordinate to the supplied content.
 - Short observational lines land with dry human restraint instead of advertising copy.
 
-## Source and rights / 来源与权利
+## Usage boundary / 使用边界
 
-- Public detail page: [YouMind skill](https://youmind.com/~skills/01a04867-1831-70f1-a60d-99a50cf3be0c)
-- Listed author: Peter Yuan
-- Retrieved from the publicly visible preview gallery on 2026-09-02.
-- These files are retained as attributed external calibration material. Confirm reuse rights before publishing them outside this repository; do not describe them as OVG-owned or OVG-generated work.
+These files remain external calibration material. Confirm reuse rights before
+publishing them outside this repository; do not describe them as OVG-owned or
+OVG-generated work.
+
+这些文件仅作为外部校准素材。发布到仓库之外前必须确认复用权利，也不要将它们描述为 OVG 所有或 OVG 生成。

@@ -4,14 +4,10 @@
 id: big-character-poster
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Public feed covers where a short title, concrete evidence object, and sharp correction should carry the first read.
 avoid_when: Neutral documentation heroes, exact UI proof, calm premium pages, or layouts that need deterministic text rendering.
-load_next:
-  image-generation: adapters/image-generation.md
-  references: refs/README.md
-  style-calibration-torn-paper: adapters/youmind-torn-paper-thumbnail.md
 ```
 
 中文名：大字报
@@ -311,3 +307,209 @@ the prompt.
 - 它是否像一张完成的编辑海报？
 
 如果答案很弱，先改视觉判断，再改 prompt 措辞。
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image Generation Compilation Route
+
+Use this compilation route when an agent needs to turn `big-character-poster` judgment
+into an image-generation prompt.
+
+This compilation route is a meta-prompt protocol. It does not provide a universal prompt
+template.
+
+## Before Writing The Prompt
+
+The agent should answer, in its own words:
+
+```text
+What is this image for?
+What source is driving the image?
+What should the viewer feel in one second?
+What false belief is being challenged?
+What correction must become visible?
+What concrete evidence object makes the pain real?
+How does the title behave as part of the picture?
+What physical action carries the argument?
+What should be left to the image model's taste?
+What must be checked after generation?
+```
+
+These answers are planning material. They do not need to appear verbatim in the
+final prompt.
+
+## Compile Posture
+
+Write the final prompt for the current article, model, and channel.
+
+The prompt should invite a finished editorial poster, not a neutral background
+asset. It should give the model enough visual material to design with:
+
+- the exact or intended headline;
+- the article-specific pain;
+- one concrete evidence object;
+- one physical action;
+- the desired poster temperament;
+- the visual materials and texture;
+- the channel size or aspect ratio;
+- any real-world details that make the image less generic.
+
+The agent may choose concise phrasing, descriptive phrasing, bilingual phrasing,
+or reference-led phrasing. The pattern does not require one wording shape.
+
+## Variation Direction
+
+When making multiple variations, vary the visual idea, not just the labels.
+
+Useful axes:
+
+- evidence object: bill, receipt, handoff note, command slip, bridge, plug,
+  archive card;
+- title relationship: stamped, crushed, cut open, wrapped, weighed, blocked;
+- visual temperature: rough newspaper, wall poster, receipt collage, propaganda
+  print, editorial magazine;
+- metaphor distance: literal evidence, near metaphor, more editorial metaphor.
+
+Keep the same article argument across variations, but allow the agent to choose
+which visual language best carries it. Three variations do not need to map to a
+fixed list of composition models.
+
+## Review After Generation
+
+Judge the image, not the prompt.
+
+Ask:
+
+- Is this a finished poster?
+- Does the headline have visual force?
+- Is the evidence object specific enough?
+- Does the image make the article's correction visible?
+- Does it avoid generic AI/software banner energy?
+- Would the operator be willing to publish it without explaining the prompt?
+
+If the image fails, revise the visual judgment. Do not keep adding prompt
+clauses just to satisfy a checklist.
+
+## Direct Compilation Route: Torn Paper Thumbnail / 直接生成路线：Torn Paper Thumbnail
+
+# Torn-Paper Thumbnail Calibration / 撕纸缩略图校准
+
+This optional compilation route captures the high-contrast editorial structure described
+by the documented `撕纸拼贴 YouTube 缩略图` method. It belongs under
+`big-character-poster` because the headline, evidence portrait, and rough
+physical action already match that Pattern's argument-first contract.
+
+这份可选 compilation route 提炼“撕纸拼贴 YouTube 缩略图”的高反差编辑结构。它归入
+`big-character-poster`，因为标题、证据人像和粗粝物理动作已经符合该 Pattern 的论点优先契约。
+
+## Style Signature / 风格签名
+
+- One short, oversized headline owns the first read.
+- One authorized portrait or evidence object is cut into a high-contrast silhouette.
+- Torn paper exposes, interrupts, frames, or peels back the argument; it is not random edge decoration.
+- Black, paper white, and one signal color carry the whole thumbnail.
+- The face, evidence, and headline survive mobile thumbnail size.
+
+- 一个短而巨大的标题承担第一眼；
+- 一个获授权的人像或证据物件被压缩成高反差剪影；
+- 撕纸负责暴露、打断、框定或揭开论点，不做随机边缘装饰；
+- 黑色、纸白和一个信号色承担整张缩略图；
+- 面部、证据和标题在手机缩略图下仍成立。
+
+## Composition Families / 构图家族
+
+1. **Torn reveal:** the headline or evidence is exposed by one large peel.
+2. **Cutout confrontation:** a portrait silhouette pushes against or interrupts the headline.
+3. **Paper verdict:** one evidence object sits under a torn headline strip as a visible conclusion.
+
+## Model Prompt / 模型生成提示词
+
+```text
+Create a finished feed or video thumbnail at {{ASPECT_RATIO}}.
+
+The upstream visual argument is authoritative:
+- First read: {{FIRST_READ}}
+- Correction: {{CORRECTION}}
+- Concrete evidence: {{CONCRETE_EVIDENCE}}
+- Visual action: {{VISUAL_ACTION}}
+- Main subject: {{MAIN_SUBJECT}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Big Character Poster grammar with the torn-paper-thumbnail calibration.
+Build one short oversized headline, one authorized high-contrast portrait or
+evidence silhouette, and one meaningful paper action: torn reveal, cutout
+confrontation, or paper verdict. Use black, paper white, and one signal color.
+Let the tear expose, interrupt, frame, or peel back the supplied correction.
+
+Keep the face, evidence, and headline readable at mobile thumbnail size. Reserve
+exact text for deterministic post-layout when necessary. Avoid random scrap
+collage, multiple portraits, decorative tape, tiny labels, glossy 3D, cinematic
+backgrounds, pseudo-text, logos, watermarks, and {{FORBIDDEN}}.
+```
+
+## Fidelity Gate / 保真门
+
+- Headline and evidence remain legible at thumbnail size.
+- The tear performs one semantic action tied to the correction.
+- The palette stays black, paper white, and one signal color.
+- The portrait or object is evidence, not decorative personality imagery.
+- Removing torn texture still leaves a forceful title-evidence relation.
+
+## Failure Recovery / 失败恢复
+
+- **Symbol substitution:** if the model turns an abstract correction into
+  currency marks, arrows, charts, or other icons, replace the semantic symbol
+  with one physical evidence relation such as repeated blank slips. Keep the
+  exact headline for deterministic post-layout.
+- **Mood collage:** if the tear reveals unrelated scraps, return to one large
+  peel, one evidence object, and the black/paper/signal palette.
+
+## 失败恢复
+
+- **符号替代：** 如果模型把抽象论点变成货币符号、箭头、图表或其他图标，用一条物理证据关系（例如重复的空白单据）替代语义符号，准确标题交给确定性后排。
+- **情绪拼贴：** 如果撕口露出互不相关的碎片，回到一处大撕口、一个证据物件和黑/纸白/信号色配色。
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+These notes absorb the former reproduction case and its first-read, visual
+argument, visual-tension, anti-template, and transfer checks.
+
+这份笔记吸收已删除的复现用例，以及第一眼、视觉论证、视觉张力、反模板和迁移检查。
+
+## Stable Checks / 稳定检查
+
+- Start with the smallest primary source that owns the cover job. Record reader
+  pain, false belief, correction, stakes, concrete evidence, and one physical
+  action before writing a model prompt.
+- Make the short Chinese headline a structural object. It may be stamped,
+  bent, weighed down, cut open, peeled back, or exposed by the evidence.
+- Use one specific evidence object such as a bill, receipt, command slip,
+  session record, plugin surface, or handoff note. Generic dashboards and
+  abstract tech symbols fail the method.
+- Keep the public-cover frame rough, warm, and argued. Detail is subordinate to
+  the first read; the result should still work at `1500x600` feed size.
+
+- 先用最小且真正负责封面任务的主来源，记录读者痛点、错误信念、修正、利害关系、具体证据和一个物理动作，再写 model prompt。
+- 让短中文标题成为结构物件，可以被盖章、压弯、压住、切开、揭开或被证据暴露。
+- 使用账单、收据、命令纸条、会话记录、插件表面或交接便签等具体证据物件。泛化仪表盘和抽象科技符号不符合本方法。
+- 公共封面保持粗粝、温暖、有立场。细节退后，画面在 `1500x600` 信息流尺寸仍能工作。
+
+## Transfer Set / 迁移主题组
+
+The method remains coherent for runtime cost, context-token economics, session
+recovery, plugin-state confusion, and one unseen tutorial topic. The argument
+changes by topic; the title-as-force, evidence object, physical action, and
+rough editorial temperature remain invariant.
+
+## Failure Recovery / 失败恢复
+
+- If the title becomes a caption, rebuild the composition around its shape and
+  relationship to the evidence.
+- If the image is attractive but reusable for ten unrelated posts, replace the
+  generic metaphor with the article's actual record or object.
+- If the scene over-explains, keep one public correction and remove secondary
+  lessons, UI panels, and decorative crisis cues.
+- If the method repeatedly needs a different art direction, delete this Pattern
+  instead of retaining an intermediate state.

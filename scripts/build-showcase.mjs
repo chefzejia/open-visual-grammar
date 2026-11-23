@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = fileURLToPath(new URL('../', import.meta.url));
 const patternsRoot = path.join(repoRoot, 'patterns');
 const outputPath = path.join(repoRoot, 'showcase-data.js');
+const indexPath = path.join(repoRoot, 'patterns-index.json');
 const checkOnly = process.argv.includes('--check');
 
 function cleanScalar(value) {
@@ -226,7 +227,7 @@ async function readPattern(directoryName) {
     zhName: readName(markdown, '中文名') || id,
     enName: readName(markdown, 'English name') || humanizeSlug(id),
     artifactKinds: readList(metadata, 'artifact_kinds'),
-    runtimes: readList(metadata, 'runtimes'),
+    surfaces: readList(metadata, 'surfaces'),
     whenToUse: readScalar(metadata, 'when_to_use'),
     avoidWhen: readScalar(metadata, 'avoid_when'),
     patternPath: toPosix(path.relative(repoRoot, patternPath)),
@@ -252,7 +253,7 @@ async function buildShowcaseData() {
   patterns.sort((a, b) => a.id.localeCompare(b.id));
 
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     source: 'patterns/*/PATTERN.md + patterns/*/{refs,examples}/**/*.webp',
     patterns,
   };
@@ -265,6 +266,24 @@ const imageCount = data.patterns.reduce(
 );
 const output =
   'window.OVG_SHOWCASE = ' + JSON.stringify(data, null, 2) + ';\n';
+const indexData = {
+  schemaVersion: 1,
+  source: 'patterns/*/PATTERN.md',
+  patterns: data.patterns.map((pattern) => ({
+    id: pattern.id,
+    slug: pattern.slug,
+    zhName: pattern.zhName,
+    enName: pattern.enName,
+    artifactKinds: pattern.artifactKinds,
+    surfaces: pattern.surfaces,
+    whenToUse: pattern.whenToUse,
+    avoidWhen: pattern.avoidWhen,
+    patternPath: pattern.patternPath,
+    exampleCount: pattern.images.filter((image) => image.kind === 'accepted').length,
+    referenceCount: pattern.images.filter((image) => image.kind === 'reference').length,
+  })),
+};
+const indexOutput = JSON.stringify(indexData, null, 2) + '\n';
 
 let current = '';
 try {
@@ -272,11 +291,17 @@ try {
 } catch (error) {
   if (!error || error.code !== 'ENOENT') throw error;
 }
+let currentIndex = '';
+try {
+  currentIndex = await readFile(indexPath, 'utf8');
+} catch (error) {
+  if (!error || error.code !== 'ENOENT') throw error;
+}
 
 if (checkOnly) {
-  if (current !== output) {
+  if (current !== output || currentIndex !== indexOutput) {
     console.error(
-      'showcase-data.js is stale. Run: node scripts/build-showcase.mjs',
+      'Generated showcase files are stale. Run: node scripts/build-showcase.mjs',
     );
     process.exit(1);
   }
@@ -288,14 +313,20 @@ if (checkOnly) {
       ' images.',
   );
 } else if (current === output) {
-  console.log('showcase-data.js is already current.');
+  if (currentIndex !== indexOutput) {
+    await writeFile(indexPath, indexOutput, 'utf8');
+    console.log('Updated patterns-index.json. showcase-data.js is already current.');
+  } else {
+    console.log('Generated showcase files are already current.');
+  }
 } else {
   await writeFile(outputPath, output, 'utf8');
+  await writeFile(indexPath, indexOutput, 'utf8');
   console.log(
     'Generated showcase-data.js: ' +
       data.patterns.length +
       ' patterns, ' +
       imageCount +
-      ' images.',
+      ' images; patterns-index.json updated.',
   );
 }

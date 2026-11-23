@@ -4,12 +4,10 @@
 id: frosted-silhouette-editorial
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Quiet editorial covers where one recognizable silhouette or relation can be organized through regional frosted windows, clean geometry, and controlled negative space.
 avoid_when: Exact UI proof, dense tutorials, photographic evidence, playful game logic, or topics that need full-frame blur, glossy glass, or long text.
-load_next:
-  image-generation: adapters/image-generation.md
 ```
 
 中文名：磨砂剪影编辑封面
@@ -28,12 +26,12 @@ CN：磨砂剪影编辑封面把主体最有辨识度的轮廓、结构、姿态
 再用区域化磨砂视窗控制清晰、柔焦和透叠。它是一种安静的海报或封面语法，形成的是有设计的
 深度，不是通用玻璃特效，也不是产品 UI 预览图。
 
-This Pattern was calibrated against public YouMind descriptions for `P072` and
-[`生成磨砂玻璃效果剪影艺术海报`](https://youmind.com/~skills/01a05ceb-6172-7c97-b503-fb560ecfd412).
+This Pattern was calibrated against public descriptions for `P072` and
+`生成磨砂玻璃效果剪影艺术海报`.
 Their names, text, and preview images are external evidence only; this Pattern
 keeps the paraphrased visual method.
 
-本 Pattern 参考了 YouMind 公开的 `P072` 与“生成磨砂玻璃效果剪影艺术海报”描述进行校准。
+本 Pattern 参考了 `P072` 与“生成磨砂玻璃效果剪影艺术海报”描述进行校准。
 其中的名称、文字和预览图只作外部证据；本 Pattern 只保留转述后的视觉方法。
 
 ## Invariants / 不变量
@@ -85,11 +83,11 @@ temperature. The runtime owns aspect ratio, text strategy, and export details.
 上游视觉论证负责第一眼信息、视觉动作、主体与具体证据。本 Pattern 负责框架、对齐、磨砂显隐
 层级、克制配色、密度、字体层级和情绪温度。Runtime 只负责画幅、文字策略和导出细节。
 
-Do not let the topic adapter introduce a new glass material, cinematic camera,
+Do not let the topic compilation route introduce a new glass material, cinematic camera,
 or interface system. The source relation must remain visible even when all
 material language is removed.
 
-主题 adapter 不得再发明另一套玻璃材质、电影镜头或界面系统。即使移除所有材质词，来源关系仍
+主题 compilation route 不得再发明另一套玻璃材质、电影镜头或界面系统。即使移除所有材质词，来源关系仍
 必须可见。
 
 ## Internal Layout Routes / 内部版式路由
@@ -183,7 +181,7 @@ slightly distant.
 - 与 `semantic-concept-poster` 不同，短文字不一定是主视觉对象，显隐关系才承载论证；
 - 与玻璃拟态 UI 不同，视窗是编辑证据，不构成按钮、仪表盘或产品界面。
 
-## Runtime Adapter Slots / 运行时槽位
+## Runtime Compilation Route Slots / 直接输入槽位
 
 ```text
 ARTIFACT_KIND
@@ -204,7 +202,7 @@ FORBIDDEN
 - The silhouette becomes an unrecognizable abstract blob.
 - Glass material turns glossy, dark, chrome-like, or cinematic.
 - Windows become a dashboard, UI mockup, or decorative grid.
-- The topic adapter adds unrelated objects instead of clarifying the supplied
+- The topic compilation route adds unrelated objects instead of clarifying the supplied
   action.
 - Text becomes long, pseudo-Chinese, or a generic title pasted in empty space.
 - Negative space disappears under gradients, bloom, or dense decoration.
@@ -213,7 +211,7 @@ FORBIDDEN
 - 剪影变成无法辨认的抽象团块；
 - 玻璃材质变得光亮、深黑、铬金属化或电影化；
 - 视窗退化成仪表盘、UI mockup 或装饰网格；
-- 主题 adapter 添加无关物件，而不是说明上游动作；
+- 主题 compilation route 添加无关物件，而不是说明上游动作；
 - 文字变成长段、伪中文，或贴在空白处的通用标题；
 - 渐变、光晕和密集装饰吞掉留白。
 
@@ -231,3 +229,83 @@ FORBIDDEN
 3. 缩小后外部几何是否仍然稳定？
 4. 材质是否哑光克制，而不是玻璃特效演示？
 5. 去掉配色和透叠词后，显隐结构是否仍然存在？
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image-Generation Meta-Prompt / 图像生成元提示词
+
+This compilation route compiles the `frosted-silhouette-editorial` Pattern for image
+generation. It is calibrated by documented method descriptions for `P072` and the
+frosted-silhouette poster skill, not by copying their prompts or preview images.
+
+```text
+Create {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream visual argument is authoritative:
+- First read: {{FIRST_READ}}
+- Visual action: {{VISUAL_ACTION}}
+- Main subject: {{MAIN_SUBJECT}}
+- Concrete evidence: {{CONCRETE_EVIDENCE}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Frosted Silhouette Editorial visual grammar. Preserve the supplied
+subject, action, and evidence. First reduce {{MAIN_SUBJECT}} to one recognizable
+contour, posture, structure, or relation. Choose Reveal Ladder, Geometric Window,
+or Silhouette Field according to the visual argument; do not invent a second art
+direction.
+
+Build a clean geometric page with stable margins and near-white or neutral space.
+Use two or three regional reveal levels—clear, softened, and translucent—only on
+{{REVEAL_TARGETS}}. Each window must explain hierarchy, distance, obstruction,
+or access. Keep the silhouette recognizable before and after the reveal treatment.
+
+Use matte paper or neutral surfaces, crisp flat edges, fine lines, subtle grain,
+and at most one restrained accent color. Keep density low to medium. Treat short
+text as integrated editorial type or leave a clean region for deterministic
+typesetting. The emotional temperature is quiet, precise, clean, contemplative,
+and slightly distant.
+
+Avoid uniform blur, dark glass panels, chrome, liquid glass, glossy highlights,
+cinematic bloom, gradients, dashboards, buttons, product UI, dense diagrams,
+unrelated objects, long generated text, pseudo-Chinese, logos, signatures, and
+watermarks. Do not copy any reference composition, subject, slogan, or exact
+coordinates. {{FORBIDDEN}}
+```
+
+## Slot Guidance / 槽位说明
+
+- `REVEAL_TARGETS`: name one to three semantic parts that should be clear,
+  softened, or translucent. Do not turn it into a color or blur budget.
+- `TEXT_HANDLING`: use `short checked type`, `blank region for deterministic
+  typesetting`, or a mixed strategy.
+- `FORBIDDEN`: add only topic-specific mistakes; the Pattern's material and UI
+  prohibitions already apply.
+
+- `REVEAL_TARGETS`：写出一到三个需要清晰、柔焦或透叠的语义部位，不要把它写成颜色或模糊预算；
+- `TEXT_HANDLING`：选择“短且经过核对的文字”“为确定性排版留空”或混合策略；
+- `FORBIDDEN`：只补充主题特有错误，Pattern 已有的材质和 UI 禁止项不必重复。
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+This record absorbs the Swiss-glass-silhouette branch of the former
+cross-cluster style-transfer check.
+
+这份记录吸收已删除的跨聚类风格迁移检查中的 Swiss 玻璃剪影分支。
+
+## Stable Checks / 稳定检查
+
+- One recognizable silhouette or relation remains identifiable before frosting.
+- Clear, softened, and translucent regions are semantic reveal levels, not a
+  uniform blur or glossy glassmorphism surface.
+- Stable margins, a small number of geometric windows, active near-white space,
+  and short checked text keep the artifact editorial and quiet.
+- The method must transfer to an archive reveal and a partially obscured public
+  notice without becoming a dashboard, UI mockup, or cinematic glass scene.
+
+## Failure Recovery / 失败恢复
+
+If frosting hides the subject, windows become decorative grids, or gradients and
+bloom consume the field, restore the reveal ladder and delete unsupported
+objects. Repeated loss of the relation is grounds to delete the Pattern.

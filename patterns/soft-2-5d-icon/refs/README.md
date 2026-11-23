@@ -1,29 +1,27 @@
 # Reference Images / 参考图
 
-These are operator-selected public preview images from the YouMind skill
-`轻拟物 App图标设计`. They are external calibration material for this Pattern,
-not OVG-generated cases or outputs.
+These are operator-selected calibration images for this Pattern. They are
+external material, not OVG-generated cases or outputs.
 
-这些图片是从 YouMind 公开技能“轻拟物 App图标设计”中人工筛选的预览图。
-它们只作为本 Pattern 的外部校准素材，不是 OVG 生成的案例，也不是范式的唯一标准答案。
+这些图片是人工筛选的外部校准素材，不是 OVG 生成的案例，也不是范式的唯一标准答案。
 
 ## Selected previews / 已选预览
 
-### `youmind-soft-2-5d-icon-01.webp`
+### `soft-2-5d-icon-01.webp`
 
-![YouMind soft 2.5D icon preview 01](youmind-soft-2-5d-icon-01.webp)
+![soft 2.5D icon preview 01](soft-2-5d-icon-01.webp)
 
-### `youmind-soft-2-5d-icon-02.webp`
+### `soft-2-5d-icon-02.webp`
 
-![YouMind soft 2.5D icon preview 02](youmind-soft-2-5d-icon-02.webp)
+![soft 2.5D icon preview 02](soft-2-5d-icon-02.webp)
 
-### `youmind-soft-2-5d-icon-03.webp`
+### `soft-2-5d-icon-03.webp`
 
-![YouMind soft 2.5D icon preview 03](youmind-soft-2-5d-icon-03.webp)
+![soft 2.5D icon preview 03](soft-2-5d-icon-03.webp)
 
-### `youmind-soft-2-5d-icon-04.webp`
+### `soft-2-5d-icon-04.webp`
 
-![YouMind soft 2.5D icon preview 04](youmind-soft-2-5d-icon-04.webp)
+![soft 2.5D icon preview 04](soft-2-5d-icon-04.webp)
 
 ## Why they belong / 保留原因
 
@@ -32,9 +30,10 @@ not OVG-generated cases or outputs.
 - Broad, restrained color fields and soft light read as a product identity rather than a generic 3D object.
 - The set covers multiple icon subjects while keeping the same low-density 2.5D construction.
 
-## Source and rights / 来源与权利
+## Usage boundary / 使用边界
 
-- Public detail page: [YouMind skill](https://youmind.com/~skills/019fdf3a-1735-7571-a80f-b4265a910d0b)
-- Listed author: 十里
-- Retrieved from the publicly visible preview gallery on 2026-09-02.
-- These files are retained as attributed external calibration material. Confirm reuse rights before publishing them outside this repository; do not describe them as OVG-owned or OVG-generated work.
+These files remain external calibration material. Confirm reuse rights before
+publishing them outside this repository; do not describe them as OVG-owned or
+OVG-generated work.
+
+这些文件仅作为外部校准素材。发布到仓库之外前必须确认复用权利，也不要将它们描述为 OVG 所有或 OVG 生成。

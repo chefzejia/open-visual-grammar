@@ -4,14 +4,10 @@
 id: whiteboard-operator-sketch
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: White-background handdrawn body illustrations for agent workflows, token/context concepts, handoff, setup, and article-body teaching images.
 avoid_when: Strong feed covers, serious risk arguments, exact UI proof, polished product hero images, formal diagrams, or scenes that need exact brand-owned characters.
-load_next:
-  references: refs/README.md
-  example: examples/context-carrying-threadball/
-  style-calibration-box-operator: adapters/youmind-box-operator-sketch.md
 ```
 
 中文名：白板线团小工草图
@@ -58,7 +54,7 @@ Mapped layers:
    default is the threadball worker, not upstream Xiaohei.
 4. `composition-patterns`: workflow, system-local, before/after, character
    state, concept metaphor, method layers, map route, and mini comic.
-5. `prompt-template`: converted into OVG adapter slots.
+5. `prompt-template`: converted into OVG compilation route slots.
 6. `qa-checklist`: converted into failure modes and visual QA.
 
 拆解层：
@@ -67,7 +63,7 @@ Mapped layers:
 2. `article-body-focus`：从更大的 PPT-style 页面图工作流里抽出正文解释图范式。
 3. `character-ip`：转成可替换的 GanFan 小工物种插槽，默认使用线团小工，而不是上游小黑。
 4. `composition-patterns`：workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线、小漫画分镜。
-5. `prompt-template`：转成 OVG adapter slots。
+5. `prompt-template`：转成 OVG compilation route slots。
 6. `qa-checklist`：转成失败模式和视觉 QA。
 
 ## Scope Boundary / 范围边界
@@ -234,7 +230,7 @@ CN:
 - 标注命名物件、警告、路径、状态或结果，不写整句解释。
 - 正文小尺寸下也要看懂。
 
-## Adapter Slots / 运行时适配槽位
+## Compilation Route Slots / 运行时适配槽位
 
 Fill these before compiling an image prompt:
 
@@ -313,3 +309,128 @@ CN:
 - 标注变成整句解释；
 - 生成不可控中文乱码；
 - 一张图塞进太多概念。
+
+## Direct Compilation Route: Box Operator Sketch / 直接生成路线：Box Operator Sketch
+
+# Box-Operator Sketch Calibration / 小盒小工草图校准
+
+This optional compilation route encodes the documented `小盒｜文章认知插画` method
+into a source-safe role-and-action variant of `whiteboard-operator-sketch`. A
+single closed box-like worker performs the one physical action that explains an
+article judgment, workflow, or risk. The source character, wording, and brand
+framing remain external.
+
+这份可选 compilation route 将“小盒｜文章认知插画”提炼为 `whiteboard-operator-sketch` 的来源安全角色—动作变体。
+一个始终合盖的盒状小工执行唯一的物理动作，把文章判断、流程或风险讲清楚。来源角色、文案与品牌框架仍属于外部证据。
+
+## Style Signature / 风格签名
+
+- Keep one closed box-like worker in every scene; its silhouette, orientation,
+  and serious working posture remain stable.
+- Give the worker one concrete verb: collect, filter, sort, repair, connect,
+  pass, or return. The action must change the state of one object or path.
+- Use one low-tech prop or route as the evidence object. Do not add a full
+  system diagram, mascot cast, or decorative environment.
+- Preserve the parent pattern's pure white field, thin black handdrawn line,
+  orange/red/blue annotation budget, and at least 35% blank space.
+- Keep labels short and subordinate to the worker's action; exact wording belongs
+  in a deterministic text zone when required.
+
+- 每个场景只保留一个合盖的盒状小工，剪影、朝向和认真工作的姿态保持稳定。
+- 只给小工一个明确动词：收集、筛选、分拣、修复、连接、交接或归还。动作必须改变一个物件或路径的状态。
+- 使用一个低科技道具或路径作为证据物件，不加完整系统图、小工群像或装饰环境。
+- 保留父范式的纯白底、细黑手绘线、橙红蓝批注预算和至少 35% 空白。
+- 标注保持短小并退后于动作，准确文案需要时交给确定性文字区。
+
+## Composition Modes / 构图模式
+
+1. **Single handoff:** the box worker moves one object from input to output;
+   one line or arrow makes the handoff visible.
+2. **Before/after repair:** the same worker changes one broken or blocked state;
+   keep the before and after close enough to compare.
+3. **Local filter:** the worker selects one item from a small pile or opening;
+   show only the local relation, not the entire system.
+
+## Model Prompt / 模型生成提示词
+
+```text
+Create one {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream article argument is authoritative:
+- Visual job: {{VISUAL_JOB}}
+- First read: {{FIRST_READ}}
+- Main judgment or risk: {{MAIN_ARGUMENT}}
+- Worker action: {{WORKER_ACTION}}
+- Evidence object or path: {{EVIDENCE_OBJECT}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Whiteboard Tiny Worker Sketch Pattern with the box-operator
+calibration. Draw one closed box-like worker with a stable silhouette and
+serious working posture. Give it exactly one visible action—{{WORKER_ACTION}}—that
+changes, moves, or reveals {{EVIDENCE_OBJECT}}. Keep the relation local and
+physical so the abstract judgment becomes readable without a paragraph.
+
+Use a pure white background, thin slightly wobbly black handdrawn lines, one
+low-tech object or path, and at least 35% blank white space. Use orange only for
+the main path or movement, red only for a warning or blocked state, and blue only
+for a secondary note or feedback loop. Keep two to eight short labels and follow
+{{TEXT_HANDLING}} for exact wording.
+
+Avoid a full dashboard, formal architecture diagram, multiple mascots, glossy 3D,
+paper texture, gradients, decorative stickers, long generated copy, pseudo-Chinese,
+logos, signatures, and watermarks. {{FORBIDDEN}}
+```
+
+## Slot Guidance / 槽位说明
+
+- `WORKER_ACTION`: choose one verb and show its before/after consequence.
+- `EVIDENCE_OBJECT`: name one supplied object, path, or small machine; avoid a
+  multi-module system.
+- `TEXT_HANDLING`: use short checked labels or a deterministic text zone.
+- `FORBIDDEN`: add topic-specific omissions without changing the whiteboard
+  material or one-action grammar.
+
+## Fidelity Gate / 保真门
+
+- The same closed worker remains recognizable and role-stable across the frame.
+- One concrete action explains the supplied judgment or risk before labels are
+  read.
+- The evidence object or path changes state visibly; it is not a decorative prop.
+- Pure white space, thin line, and bounded annotation colors remain intact.
+- Removing the source character name, wording, and brand context leaves the same
+  one-worker, one-action method.
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+This record absorbs the former closed-box operator transfer check.
+
+这份记录吸收已删除的合盖盒状小工迁移检查。
+
+## Stable Checks / 稳定检查
+
+- One closed box-like worker keeps a stable silhouette, orientation, and serious
+  working posture on a pure white field.
+- One physical verb changes one evidence object or path: pass a note through a
+  narrow slot, or filter one flagged card from a small tray.
+- Thin black line and bounded orange/red/blue annotations remain subordinate;
+  at least 35% of the field stays blank so the judgment is visible before labels.
+- The route never needs a second worker, a full system diagram, a glossy render,
+  or a decorative scene.
+
+- 一个始终合盖的盒状小工在纯白底上保持稳定剪影、方向和认真工作的姿态。
+- 一个物理动词改变一个证据物件或路径：把便签从窄槽递出，或从小托盘筛出一张标红卡片。
+- 细黑线和受控的橙/红/蓝批注退后，至少 35% 画面留白，让判断先于标签被看见。
+- 路由不需要第二个小工、完整系统图、光泽渲染或装饰场景。
+
+## Transfer Set / 迁移主题组
+
+The one-worker method must explain both context handoff and risk triage while
+preserving the same local composition and annotation budget.
+
+## Failure Recovery / 失败恢复
+
+If the worker only poses, labels carry the judgment, or props multiply, reduce
+the scene to one before/after state and one verb. Repeated dependence on a
+different diagram language is grounds to delete the Pattern.

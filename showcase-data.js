@@ -1,5 +1,5 @@
 window.OVG_SHOWCASE = {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "source": "patterns/*/PATTERN.md + patterns/*/{refs,examples}/**/*.webp",
   "patterns": [
     {
@@ -10,7 +10,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Identity-first studio portraits where one plausible key-light relation follows the supplied face or animal structure.",
@@ -35,7 +35,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Public feed covers where a short title, concrete evidence object, and sharp correction should carry the first read.",
@@ -61,6 +61,56 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "capsule-eye-robot-avatar",
+      "slug": "capsule-eye-robot-avatar",
+      "zhName": "胶囊眼极简机器人头像",
+      "enName": "Capsule-Eye Robot Avatar",
+      "artifactKinds": [
+        "app-icon"
+      ],
+      "surfaces": [
+        "image-generation"
+      ],
+      "whenToUse": "Source-grounded square identity icons that reduce a person or character to a flat robot face with two vertical dark capsule eyes and a deliberate lower-left peek.",
+      "avoidWhen": "Expressions, realistic portraits, full-body mascots, text-bearing marks, 3D icons, or subjects whose identity depends on many small details.",
+      "patternPath": "patterns/capsule-eye-robot-avatar/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/capsule-eye-robot-avatar/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 184190
+        }
+      ]
+    },
+    {
+      "id": "chalkboard-academic-explainer",
+      "slug": "chalkboard-academic-explainer",
+      "zhName": "粉笔板书学术讲解",
+      "enName": "Chalkboard Academic Explainer",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "surfaces": [
+        "image-generation"
+      ],
+      "whenToUse": "Academic explanations, lecture notes, comparisons, diagrams, and research ideas that benefit from a dark chalkboard surface and manually reasoned hierarchy.",
+      "avoidWhen": "Exact documentary proof, dense dashboards, long unstructured prose, polished brand systems, or a visual that only needs a black background.",
+      "patternPath": "patterns/chalkboard-academic-explainer/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/chalkboard-academic-explainer/examples/academic-data-split/accepted.webp",
+          "kind": "accepted",
+          "label": "Academic Data Split",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 425110
+        }
+      ]
+    },
+    {
       "id": "city-observation-poster",
       "slug": "city-observation-poster",
       "zhName": "城市观察海报",
@@ -68,7 +118,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Vertical visual diaries where an authorized subject, a short place marker, and one ordinary city action form a screenprint poster.",
@@ -86,6 +136,31 @@ window.OVG_SHOWCASE = {
       ]
     },
     {
+      "id": "cobalt-codewash-editorial-poster",
+      "slug": "cobalt-codewash-editorial-poster",
+      "zhName": "钴蓝代码洗编辑海报",
+      "enName": "Cobalt Codewash Editorial Poster",
+      "artifactKinds": [
+        "image-cover"
+      ],
+      "surfaces": [
+        "image-generation"
+      ],
+      "whenToUse": "Portrait editorial posters for art, technology, research, architecture, or cultural events that need one dominant cobalt dry-brush field, one restrained line-reconstructed subject, and a directional stream of code-like glyphs.",
+      "avoidWhen": "Exact documentary proof, generic corporate conference graphics, full-color advertising, code that must compile, long unstructured copy, or a composition that can work without the cobalt field and glyph stream.",
+      "patternPath": "patterns/cobalt-codewash-editorial-poster/PATTERN.md",
+      "images": [
+        {
+          "path": "patterns/cobalt-codewash-editorial-poster/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 623760
+        }
+      ]
+    },
+    {
       "id": "crayon-portrait-editorial",
       "slug": "crayon-portrait-editorial",
       "zhName": "蜡笔肖像编辑图",
@@ -93,7 +168,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Identity-first `3:4` portrait studies on open white drawing paper with visible dry crayon pressure and a restrained structural accent.",
@@ -118,7 +193,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Portrait `3:4` covers where one documentary record transforms into a flat gold-foil identity plane through a strict split.",
@@ -143,7 +218,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Covers where two supplied anchors must remain distinct while a circular line path makes their relationship the first read.",
@@ -168,7 +243,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Slow editorial images that need paper texture, loose ink line, whitespace, and reflective metaphor.",
@@ -209,7 +284,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Editorial covers where one declared historical branch must control typography, geometry, palette, print pressure, and whitespace.",
@@ -234,13 +309,21 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Quiet covers where one subject, negative space, and a subtle viewpoint should make the reader pause.",
       "avoidWhen": "Step-by-step tutorials, high-density information, hot public debate, or product launch visuals.",
       "patternPath": "patterns/flowing-gaze-minimal-cover/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/flowing-gaze-minimal-cover/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 554486
+        },
         {
           "path": "patterns/flowing-gaze-minimal-cover/refs/codex-history-flowing-gaze-01.webp",
           "kind": "reference",
@@ -259,7 +342,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Quiet editorial covers where one recognizable silhouette or relation can be organized through regional frosted windows, clean geometry, and controlled negative space.",
@@ -267,33 +350,41 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/frosted-silhouette-editorial/PATTERN.md",
       "images": [
         {
-          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-01.webp",
+          "path": "patterns/frosted-silhouette-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 193040
+        },
+        {
+          "path": "patterns/frosted-silhouette-editorial/refs/frosted-silhouette-01.webp",
           "kind": "reference",
-          "label": "Youmind Frosted Silhouette 01",
+          "label": "Frosted Silhouette 01",
           "width": 800,
           "height": 1200,
           "bytes": 301760
         },
         {
-          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-02.webp",
+          "path": "patterns/frosted-silhouette-editorial/refs/frosted-silhouette-02.webp",
           "kind": "reference",
-          "label": "Youmind Frosted Silhouette 02",
+          "label": "Frosted Silhouette 02",
           "width": 800,
           "height": 1200,
           "bytes": 316860
         },
         {
-          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-03.webp",
+          "path": "patterns/frosted-silhouette-editorial/refs/frosted-silhouette-03.webp",
           "kind": "reference",
-          "label": "Youmind Frosted Silhouette 03",
+          "label": "Frosted Silhouette 03",
           "width": 800,
           "height": 1200,
           "bytes": 336164
         },
         {
-          "path": "patterns/frosted-silhouette-editorial/refs/youmind-frosted-silhouette-04.webp",
+          "path": "patterns/frosted-silhouette-editorial/refs/frosted-silhouette-04.webp",
           "kind": "reference",
-          "label": "Youmind Frosted Silhouette 04",
+          "label": "Frosted Silhouette 04",
           "width": 800,
           "height": 1200,
           "bytes": 352440
@@ -308,7 +399,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "app-icon"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Square profile or identity marks where hair, face shape, expression, and one accessory must survive graphic reduction.",
@@ -333,7 +424,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Portrait-led social covers where a short title must share depth, perspective, and occlusion with a recognizable person while remaining legible on mobile.",
@@ -358,7 +449,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Functional covers where coherent isometric axes and one cutaway reveal a dependency, path, connection, or operating relation.",
@@ -384,7 +475,7 @@ window.OVG_SHOWCASE = {
         "image-cover",
         "deterministic-layout"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation",
         "deterministic-layout"
       ],
@@ -410,7 +501,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Quiet concept illustrations where clean linework and one clear object or relation can carry the idea.",
@@ -443,7 +534,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Covers where one world-building silhouette must exceed the frame and a tiny witness makes the scale and action legible.",
@@ -468,13 +559,21 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Handdrawn timelines, workflows, comparisons, system maps, and explainers that need readable structure.",
       "avoidWhen": "Pure mood images, hard proof screenshots, strong debate posters, or exact charts.",
       "patternPath": "patterns/narrative-journal-infographic/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/narrative-journal-infographic/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 407784
+        },
         {
           "path": "patterns/narrative-journal-infographic/refs/token-economics-journal-infographic-01.webp",
           "kind": "reference",
@@ -493,7 +592,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Square or near-square covers where a three-layer paper/blue/paper field makes one subject and short line feel physically embedded.",
@@ -518,7 +617,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Editorial covers where one recognizable subject or relation can be rebuilt as a small set of layered cut-paper planes with matte depth and a calm page field.",
@@ -526,33 +625,41 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/paper-sculpture-collage-editorial/PATTERN.md",
       "images": [
         {
-          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-01.webp",
+          "path": "patterns/paper-sculpture-collage-editorial/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 515506
+        },
+        {
+          "path": "patterns/paper-sculpture-collage-editorial/refs/paper-sculpture-01.webp",
           "kind": "reference",
-          "label": "Youmind Paper Sculpture 01",
+          "label": "Paper Sculpture 01",
           "width": 1086,
           "height": 1448,
           "bytes": 1773052
         },
         {
-          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-02.webp",
+          "path": "patterns/paper-sculpture-collage-editorial/refs/paper-sculpture-02.webp",
           "kind": "reference",
-          "label": "Youmind Paper Sculpture 02",
+          "label": "Paper Sculpture 02",
           "width": 1086,
           "height": 1448,
           "bytes": 1854170
         },
         {
-          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-03.webp",
+          "path": "patterns/paper-sculpture-collage-editorial/refs/paper-sculpture-03.webp",
           "kind": "reference",
-          "label": "Youmind Paper Sculpture 03",
+          "label": "Paper Sculpture 03",
           "width": 1086,
           "height": 1448,
           "bytes": 1426496
         },
         {
-          "path": "patterns/paper-sculpture-collage-editorial/refs/youmind-paper-sculpture-04.webp",
+          "path": "patterns/paper-sculpture-collage-editorial/refs/paper-sculpture-04.webp",
           "kind": "reference",
-          "label": "Youmind Paper Sculpture 04",
+          "label": "Paper Sculpture 04",
           "width": 1086,
           "height": 1448,
           "bytes": 2143382
@@ -568,14 +675,23 @@ window.OVG_SHOWCASE = {
         "image-cover",
         "deterministic-layout"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation",
         "deterministic-layout"
       ],
       "whenToUse": "Child-safe multi-page picture-book sequences and visual stories where page turns carry one clear change at a time.",
       "avoidWhen": "Single hero illustrations, dashboards, sticker sheets, dense tutorials, or stories that need unsafe or frightening imagery.",
       "patternPath": "patterns/picture-book-sequence/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/picture-book-sequence/examples/stream-paper-boat-opening/accepted.webp",
+          "kind": "accepted",
+          "label": "Stream Paper Boat Opening",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 1945672
+        }
+      ]
     },
     {
       "id": "pixel-retro",
@@ -585,13 +701,21 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Playful technical systems, tool paths, runtime cost, and choices that can become game-system logic.",
       "avoidWhen": "Premium corporate documents, fine emotional essays, realistic product proof, or calm institutional docs.",
       "patternPath": "patterns/pixel-retro/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/pixel-retro/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 369004
+        },
         {
           "path": "patterns/pixel-retro/refs/agent-runtime-cost-pixel-01.webp",
           "kind": "reference",
@@ -618,7 +742,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Vertical editorial covers where an authorized portrait, one short verified quote, and one restrained scene cue share a clear reading order.",
@@ -643,7 +767,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "deterministic-layout"
       ],
-      "runtimes": [
+      "surfaces": [
         "html-css",
         "typst",
         "pdf"
@@ -670,7 +794,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "deterministic-layout"
       ],
-      "runtimes": [
+      "surfaces": [
         "deterministic-layout"
       ],
       "whenToUse": "Slide-like pages that need magazine hierarchy, calm authority, exact text, bounded photography or line art, and a small reusable family of evidence layouts.",
@@ -678,9 +802,9 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/restrained-editorial-slide-system/PATTERN.md",
       "images": [
         {
-          "path": "patterns/restrained-editorial-slide-system/examples/research-brief-spread/example.webp",
-          "kind": "example",
-          "label": "Example",
+          "path": "patterns/restrained-editorial-slide-system/examples/research-brief-spread/accepted.webp",
+          "kind": "accepted",
+          "label": "Research Brief Spread",
           "width": 1600,
           "height": 900,
           "bytes": 77218
@@ -695,7 +819,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Dense print plates where etched contour, hard warm/cool planes, and one structural subject make a non-cinematic future-facing editorial argument.",
@@ -720,7 +844,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Technical editorials where one conflict, decision, bottleneck, comparison, or human-system relation should become a framed, information-rich editorial plate.",
@@ -734,14 +858,6 @@ window.OVG_SHOWCASE = {
           "width": 900,
           "height": 383,
           "bytes": 490102
-        },
-        {
-          "path": "patterns/retro-pixel-halftone-tech-editorial/examples/agent-personal-capacity/rejected-spot-illustration.webp",
-          "kind": "rejected",
-          "label": "Agent Personal Capacity",
-          "width": 900,
-          "height": 383,
-          "bytes": 357680
         }
       ]
     },
@@ -753,13 +869,21 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Horizontal concept posters where a short exact text must become the main visual object and the image must translate the text's metaphor, emotion, and argument into one minimal visual relationship.",
       "avoidWhen": "Exact UI proof, dense infographics, long text layouts, decorative illustration, brand/product pages, or covers that can be solved by a concrete evidence object alone.",
       "patternPath": "patterns/semantic-concept-poster/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/semantic-concept-poster/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 265576
+        },
         {
           "path": "patterns/semantic-concept-poster/refs/boundary-loosening.webp",
           "kind": "reference",
@@ -778,7 +902,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Editorial covers where heavy black contour and local halftone make one action legible with exactly one semantic accent.",
@@ -803,7 +927,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "app-icon"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Compact app or product icons where one recognizable silhouette and one functional cue must remain legible at small size through controlled shallow depth.",
@@ -811,33 +935,33 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/soft-2-5d-icon/PATTERN.md",
       "images": [
         {
-          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-01.webp",
+          "path": "patterns/soft-2-5d-icon/refs/soft-2-5d-icon-01.webp",
           "kind": "reference",
-          "label": "Youmind Soft 2 5d Icon 01",
+          "label": "Soft 2 5d Icon 01",
           "width": 800,
           "height": 600,
           "bytes": 122632
         },
         {
-          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-02.webp",
+          "path": "patterns/soft-2-5d-icon/refs/soft-2-5d-icon-02.webp",
           "kind": "reference",
-          "label": "Youmind Soft 2 5d Icon 02",
+          "label": "Soft 2 5d Icon 02",
           "width": 800,
           "height": 600,
           "bytes": 114206
         },
         {
-          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-03.webp",
+          "path": "patterns/soft-2-5d-icon/refs/soft-2-5d-icon-03.webp",
           "kind": "reference",
-          "label": "Youmind Soft 2 5d Icon 03",
+          "label": "Soft 2 5d Icon 03",
           "width": 800,
           "height": 600,
           "bytes": 108034
         },
         {
-          "path": "patterns/soft-2-5d-icon/refs/youmind-soft-2-5d-icon-04.webp",
+          "path": "patterns/soft-2-5d-icon/refs/soft-2-5d-icon-04.webp",
           "kind": "reference",
-          "label": "Youmind Soft 2 5d Icon 04",
+          "label": "Soft 2 5d Icon 04",
           "width": 800,
           "height": 600,
           "bytes": 117222
@@ -852,13 +976,38 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Art-directed editorial posters built from real architecture, streets, cultural places, shops, objects, food, or travel photographs whose identity must survive transformation.",
       "avoidWhen": "Routine retouching, invented places, generic advertising, exact documentary proof, equal-weight photo grids, or a style that can work without a source subject.",
       "patternPath": "patterns/source-grounded-place-poster/PATTERN.md",
-      "images": []
+      "images": [
+        {
+          "path": "patterns/source-grounded-place-poster/examples/zhenze-water-town-identity-plate/accepted.webp",
+          "kind": "accepted",
+          "label": "Zhenze Water Town Identity Plate",
+          "width": 832,
+          "height": 1248,
+          "bytes": 1444586
+        },
+        {
+          "path": "patterns/source-grounded-place-poster/examples/zhenze-water-town-native-title/accepted.webp",
+          "kind": "accepted",
+          "label": "Zhenze Water Town Native Title",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 574548
+        },
+        {
+          "path": "patterns/source-grounded-place-poster/examples/zhenze-water-town-typeset-guide/accepted.webp",
+          "kind": "accepted",
+          "label": "Zhenze Water Town Typeset Guide",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 473838
+        }
+      ]
     },
     {
       "id": "thermal-receipt-poster",
@@ -868,7 +1017,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Vertical social posters that turn verified daily facts into a receipt-like record with thermal-paper material, fixed fields, and dry human humor.",
@@ -876,17 +1025,25 @@ window.OVG_SHOWCASE = {
       "patternPath": "patterns/thermal-receipt-poster/PATTERN.md",
       "images": [
         {
-          "path": "patterns/thermal-receipt-poster/refs/youmind-thermal-receipt-01.webp",
+          "path": "patterns/thermal-receipt-poster/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 194798
+        },
+        {
+          "path": "patterns/thermal-receipt-poster/refs/thermal-receipt-01.webp",
           "kind": "reference",
-          "label": "Youmind Thermal Receipt 01",
+          "label": "Thermal Receipt 01",
           "width": 2304,
           "height": 1728,
           "bytes": 1792128
         },
         {
-          "path": "patterns/thermal-receipt-poster/refs/youmind-thermal-receipt-02.webp",
+          "path": "patterns/thermal-receipt-poster/refs/thermal-receipt-02.webp",
           "kind": "reference",
-          "label": "Youmind Thermal Receipt 02",
+          "label": "Thermal Receipt 02",
           "width": 1728,
           "height": 2304,
           "bytes": 2962068
@@ -901,7 +1058,7 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "Warm, lightly playful journal-collage images using daily-life fragments to make ideas approachable.",
@@ -934,13 +1091,21 @@ window.OVG_SHOWCASE = {
       "artifactKinds": [
         "image-cover"
       ],
-      "runtimes": [
+      "surfaces": [
         "image-generation"
       ],
       "whenToUse": "White-background handdrawn body illustrations for agent workflows, token/context concepts, handoff, setup, and article-body teaching images.",
       "avoidWhen": "Strong feed covers, serious risk arguments, exact UI proof, polished product hero images, formal diagrams, or scenes that need exact brand-owned characters.",
       "patternPath": "patterns/whiteboard-operator-sketch/PATTERN.md",
       "images": [
+        {
+          "path": "patterns/whiteboard-operator-sketch/examples/accepted.webp",
+          "kind": "accepted",
+          "label": "Examples",
+          "width": 1536,
+          "height": 1024,
+          "bytes": 75820
+        },
         {
           "path": "patterns/whiteboard-operator-sketch/refs/context-carrying-threadball-01.webp",
           "kind": "reference",

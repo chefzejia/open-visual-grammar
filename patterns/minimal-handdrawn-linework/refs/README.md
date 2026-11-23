@@ -12,7 +12,7 @@ identity, not a fixed prompt recipe.
 Source run:
 
 ```text
-ganfan-media/articles/2026-05-11-claude-code-gpt-cost/_work/visual-runs/2026-05-16-pattern-seed-test-minimal-handdrawn-linework/candidate-01/
+ganfan-media/articles/2026-05-11-claude-code-gpt-cost/_work/visual-runs/2026-05-16-pattern-seed-test-minimal-handdrawn-linework/historical-run-01/
 ```
 
 Why it belongs:

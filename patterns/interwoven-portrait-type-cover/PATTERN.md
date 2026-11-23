@@ -4,12 +4,10 @@
 id: interwoven-portrait-type-cover
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Portrait-led social covers where a short title must share depth, perspective, and occlusion with a recognizable person while remaining legible on mobile.
 avoid_when: Anonymous stock portraits, long copy, identity-unsafe edits, exact UI proof, group scenes, or covers where type can remain a detached overlay.
-load_next:
-  image-generation: adapters/image-generation.md
 ```
 
 中文名：人物文字景深交织封面
@@ -27,12 +25,12 @@ does not.
 CN：人物文字景深交织封面把可辨识人像与短标题当成同一个景深构图。部分字形进入人物之后，
 其他笔画留在前景或贴着剪影。透视、遮挡、面部安全区和移动端可读性共同构成身份，普通叠字不算。
 
-This Pattern is calibrated from the public YouMind skills
-[`文字环绕人物海报`](https://youmind.com/~skills/019fd6c4-b85b-7a5d-8976-7195059c006e)
-and [`3D标题人像封面设计师`](https://youmind.com/~skills/019fda36-331c-7f78-8f2f-d2352dd0237e).
+This Pattern is calibrated from the public skills
+`文字环绕人物海报`
+and `3D标题人像封面设计师`.
 Their portraits, wording, and preview compositions remain external evidence.
 
-本 Pattern 参考公开 YouMind 技能“文字环绕人物海报”和“3D 标题人像封面设计师”。来源人物、文案和预览构图
+本 Pattern 参考“文字环绕人物海报”和“3D 标题人像封面设计师”描述。来源人物、文案和预览构图
 只作外部证据，不进入 OVG 的可复用内容。
 
 ## Invariants / 不变量
@@ -152,3 +150,67 @@ feel editorial, direct, and spatial rather than effects-heavy.
 - **Fake depth:** bevels and shadows replace overlap. Recover with scale, crop, and mask relations.
 - **Unreadable hook:** too many words or inconsistent lettering. Recover by shortening the title and preserving one type role.
 - **Identity drift:** the scene restyles the person. Recover the supplied face, hair, expression, and pose before typography.
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image Generation Compilation Route / 图像生成 Compilation Route
+
+Use this compilation route when an image model creates the portrait scene or an integrated
+type concept. Exact lettering, identity masks, and final typography should move
+to deterministic compositing when the model cannot guarantee them.
+
+当图像模型负责人物场景或文字交织概念时使用这份 compilation route。模型无法保证准确文案、身份蒙版或最终排版时，
+这些部分必须转入确定性合成。
+
+## Required Inputs / 必填输入
+
+```text
+Platform:
+Aspect ratio:
+Authorized portrait source:
+Identity anchors:
+Exact title:
+First read:
+Scene cue:
+Type personality:
+Occlusion map:
+Face-safe zone:
+Platform-safe zone:
+Text handling:
+Topic-specific forbidden:
+```
+
+## Model Prompt / 模型生成提示词
+
+```text
+Create a portrait-led social cover for {{PLATFORM}} at {{ASPECT_RATIO}}.
+
+Preserve the authorized portrait using {{IDENTITY_ANCHORS}}. The person must be
+recognizable before typography or color treatment. Use only {{SCENE_CUE}} as the
+supporting scene evidence.
+
+Use the Interwoven Portrait Type Cover grammar. The exact title is
+{{EXACT_TITLE}} and its first read is {{FIRST_READ}}. Route it through
+{{TYPE_PERSONALITY}} and the supplied occlusion map: {{OCCLUSION_MAP}}. Let a few
+selected strokes pass behind the head, body, or one foreground object, while the
+remaining strokes stay in front or follow a real scene plane. Protect
+{{FACE_SAFE_ZONE}} and {{PLATFORM_SAFE_ZONE}}. Build depth with overlap, scale,
+crop, and perspective only.
+
+If exact glyphs cannot be guaranteed, generate a clean portrait scene and mask
+plan with reserved type corridors, then hand off the verified title to
+deterministic compositing. Do not invent slogans, change identity, add a second
+person, or scatter decorative lettering.
+
+Avoid glossy 3D extrusion, generic drop shadows, illegible pseudo-text, face
+collisions, stock-poster poses, unnecessary props, logos, watermarks, and
+{{TOPIC_SPECIFIC_FORBIDDEN}}.
+```
+
+## Fidelity Gate / 保真门
+
+- Identity anchors survive before type is inspected.
+- Title corridors and masks are clear enough for exact post-layout.
+- One axis controls the title and one or two overlaps establish depth.
+- Face and platform safety areas remain clean.
+- The output reads as one portrait-type composition, not a photo plus overlay.

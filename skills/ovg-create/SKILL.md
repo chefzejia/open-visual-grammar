@@ -1,89 +1,35 @@
 ---
 name: ovg-create
-description: 从文章、脚本、产品说明或视觉简报创建 OVG 视觉资产。当用户要求配图、做封面、把正文转成视觉命题或按 Open Visual Grammar 生成图片时使用；不用于逆向参考风格或只审查已有成品。
+description: 从文章、脚本、产品说明或视觉简报直接选择一个 OVG Pattern 并生成可交付视觉资产。
 ---
 
 # OVG Create
 
-把内容主张编译成可验收的视觉资产。先决定画面要证明什么，再选择 Pattern；Pattern 选定后，尊重它真正拥有的版式路由、密度、字体和材质边界。
-
-## 入口
-
-1. 读取 OVG 根目录的 `AGENTS.md` 和 `CATALOG.md`。
-2. 按交付类型只打开一个 `registry/*.md`。
-3. 编辑类封面先读取 registry 指定的视觉论证语法。
-4. 视觉论证成立后选择一个 Pattern，再按其 `load_next` 读取 adapter 和 runtime。
-
-不要先挑风格再从正文寻找理由。不要一次加载所有 Pattern。
-
-## 输入契约
-
-- `Primary source` 是当前图片真正服务的最小正文、段落、脚本或简报。
-- 额外材料只有在改变受众、事实边界、视觉主张、交付规格或复用目标时才进入输入。
-- 文章主张、视觉动作、主体和具体证据由内容决定，不能由 Pattern 发明。
-- Pattern 拥有版式路由、密度范围、标题与场景关系、材质和情绪温度。
-
-若 Pattern 的高保真边界与渠道要求冲突，改选 Pattern。不要保留风格名称，再删掉它的风格签名。
-
-## 视觉权责门
-
-编译前把决定分成三类：
-
-- 内容拥有：第一眼信息、修正、视觉动作、主体与具体证据；
-- Pattern 拥有：版式路由、尺度节奏、密度范围、配色、物体画法、透视、字体层级、材质和情绪温度；
-- Runtime 拥有：画幅、文字生成或后排策略、输入方式和导出约束。
-
-Runtime prompt 只能编译这些决定，不能补写第二套美术方向。凡是改变配色、透视、物体构造、
-版式、材质或温度的词，都必须能追溯到所选 Pattern；凡是新增的叙事物件，都必须能追溯到
-正文证据或已经确认的视觉动作。无法归属的词删除，不用更多禁用词与它对冲。
+把内容主张编译成一个可验收的视觉资产。Pattern 是视觉方法的唯一真源；
+Prompt 只为当前请求临时生成。
 
 ## 工作流
 
-1. 明确交付类型、渠道、画幅和图片是否真的有助于点击、理解或操作。
-2. 从 Primary source 完成视觉论证：读者误解、修正、代价、第一眼信息、视觉动作、主体和具体证据。
-3. 视觉动作必须是可见关系或物理动词。只能说明宽泛主题时停止，不生成。
-4. 选择能承载该论证的 Pattern。读取它的风格签名、适用边界和失败方式。
-   需要视觉校准时，先读 Pattern 的 `refs/README.md`，再实际查看其中点名的 WebP；不能只凭文字摘要想象参考图。
-5. 按 Pattern 自己的路由规则选择构图，再根据动作、主体、证据与画幅形成实例。构图属于 Pattern，不是上游或 runtime 的自由发挥；Pattern 也不得改写文章主张。
-6. 写出 visual score，执行视觉权责门，再编译一次性 runtime prompt。Prompt 是编译产物，不是视觉方法真源。
-7. 用户要求生成时，一次生成一个候选。计费或请求状态不明时不自动重试。
-8. 按语义一致性、Pattern 保真度和 runtime 完成度依次验收。没有通过时只修正最高层根因。
+1. 读取根目录 `AGENTS.md`、`CATALOG.md` 和 `patterns-index.json`。
+2. 根据 artifact kind、视觉动作、题材边界和交付比例选一个 Pattern。
+3. 完整读取 `patterns/<slug>/PATTERN.md`，只使用它声明的构图家族、材质、密度、文字行为和失败边界。
+4. 从 primary source 写一个临时视觉简报：第一眼信息、需要修正的误解、视觉动作、主体和具体证据。
+5. 用 Pattern 内置的 direct compilation route 编译一次 prompt。不要发明第二套风格方向。
+6. 用户要求生成时一次只请求一张；请求状态不明时不自动重试。
+7. 立刻检查主题、构图、Pattern 保真度、文字和尺寸。只有用户明确认可的公开安全 WebP 才能放入 Pattern `examples/`。
 
-## Visual Score
+## 内容与 Pattern 的权责
 
-```text
-Artifact kind:
-Runtime:
-Visual job:
-Primary source:
-Supporting sources:
-Source inclusion rule:
-Reader pain:
-False belief:
-Correction:
-Stakes:
-First read:
-Visual action:
-Why it bites:
-Main subject:
-Concrete evidence:
-Pattern:
-Pattern layout route:
-Layout instance:
-Pattern fidelity anchors:
-Pattern density:
-Text handling:
-Pattern reference handling:
-Pattern temperature:
-Topic-specific forbidden:
-```
+- 内容输入决定读者第一眼要理解什么、主体是谁、发生什么动作、哪些证据必须出现。
+- Pattern 决定构图、尺度节奏、密度、配色、材质、透视、文字与图像的关系以及情绪温度。
+- 当前消费项目决定模型、画幅、输入图和导出格式。
 
-## 交付边界
+如果一个 Pattern 与交付约束冲突，换 Pattern；不要保留名称却删除它的核心签名。
 
-- 精确中文优先使用确定性排版，但字体、尺度和位置必须继续服从 Pattern，不能作为通用黑体覆盖在留白上。
-- 参考图只用于校准结构、密度、材料与温度，不逐像素复制。
-- 单次 prompt、候选图和拒绝稿留在消费项目的临时目录。
-- 只有经过确认的可复用方法回流 OVG；只有最终选中的素材进入消费项目正式资产目录。
-- OVG 晋升与渠道交付是两个动作。只有人工明确确认其可复用价值后，才按 `docs/reference-intake-protocol.md` 把公开安全的结果另存为无损 WebP；不要因此替换消费项目的 PNG 交付文件。
+## 文字与结构图
 
-普通视觉任务不自动进入评测模式。用户要求审查成品或候选明显偏离时，使用 `ovg-review` 的三层诊断，而不是积累更多禁用词。
+短文字可以直接在 prompt 中逐字描述。复杂信息可以把结构图作为模型输入，结构图只传递分区、顺序、相对尺度和箭头关系；最终文字、内容和材质必须由一次生图完成。不要使用 HTML、SVG、Canvas 或后期叠字补救图片 Pattern。
+
+## 边界
+
+一次性 prompt、请求日志、候选图、拒绝稿和 API 诊断留在消费项目或临时目录。OVG 只接收 Pattern 方法、公开安全的 refs 和人工确认的 WebP 示例。不要创建 candidate、eval、promotion 或 maturity 记录。

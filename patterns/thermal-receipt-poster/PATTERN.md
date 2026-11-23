@@ -4,12 +4,10 @@
 id: thermal-receipt-poster
 artifact_kinds:
   - image-cover
-runtimes:
+surfaces:
   - image-generation
 when_to_use: Vertical social posters that turn verified daily facts into a receipt-like record with thermal-paper material, fixed fields, and dry human humor.
 avoid_when: Dense data, long copy, fake measurements, exact UI proof, multi-scene illustration, or topics that need decorative nostalgia rather than a record.
-load_next:
-  image-generation: adapters/image-generation.md
 ```
 
 中文名：热敏小票记录海报
@@ -27,11 +25,11 @@ that missing measurements are real.
 CN：热敏小票记录海报把一段已核验的生活记录压缩成窄幅收据式视觉文档。它使用固定字段顺序、热敏纸表面、
 等宽信息层级、克制留白和冷幽默的人味，让记忆像一张记录凭证，但不把缺失的测量数据伪装成事实。
 
-This Pattern is calibrated from the public YouMind skill `热敏小票海报生成器`.
+This Pattern is calibrated from the public skill `热敏小票海报生成器`.
 The source page and its copy are evidence only; this Pattern keeps the reusable
 record contract and does not copy a slogan, private story, or preview image.
 
-本 Pattern 参考 YouMind 公开技能“热敏小票海报生成器”。来源页面和文案只作证据；本 Pattern 只保留可迁移的
+本 Pattern 参考“热敏小票海报生成器”描述。来源页面和文案只作证据；本 Pattern 只保留可迁移的
 记录契约，不复制口号、私密故事或预览图。
 
 ## Invariants / 不变量
@@ -173,7 +171,7 @@ style must not manufacture content to make the poster look full.
 - 与 `semantic-concept-poster` 不同，引语只是记录字段之一，不独占整张画布；
 - 与 `whimsical-journal-sketch` 不同，小票物件和准确字段顺序承担身份，而不是松散碎片或手账拼贴。
 
-## Runtime Adapter Slots / 运行时槽位
+## Runtime Compilation Route Slots / 直接输入槽位
 
 ```text
 ARTIFACT_KIND
@@ -225,3 +223,130 @@ FORBIDDEN
 3. 一句短引语是否获得停顿，但没有取代记录结构？
 4. 纸张与打印处理是否克制、温和且非摄影化？
 5. 去掉装饰性材质词后，竖向记录是否仍然读成同一方法？
+
+## Direct Compilation Route: Image Generation / 直接生成路线：Image Generation
+
+# Image-Generation Meta-Prompt / 图像生成元提示词
+
+This compilation route compiles the `thermal-receipt-poster` Pattern for image
+generation. Exact dates, numbers, names, and quotes should be placed by a
+deterministic typesetting step whenever the consuming runtime supports it.
+
+```text
+Create one vertical {{ARTIFACT_KIND}} for {{AUDIENCE}} at {{ASPECT_RATIO}}.
+
+The upstream record is authoritative and exact:
+- Language: {{LANGUAGE}}
+- Record anchor: {{RECORD_ANCHOR}}
+- Date: {{DATE}}
+- Place: {{PLACE}}
+- Mood or state: {{MOOD_OR_STATE}}
+- Detail lines: {{DETAIL_LINES}}
+- Quote: {{QUOTE}}
+- Footer: {{FOOTER}}
+- Text handling: {{TEXT_HANDLING}}
+
+Use the Thermal Receipt Poster visual grammar. Turn the supplied record into one
+continuous, narrow receipt or ticket document. Establish the record anchor first,
+then keep the field order: identity, mood or state, factual detail lines, one
+short quote, and the supplied footer or closing mark. Omit fields that are not
+provided. Never invent amounts, steps, temperatures, timestamps, barcode data,
+proper nouns, or plausible measurements.
+
+Choose Record Strip, Long Receipt, or Quiet Stub according to the amount of
+verified content. Keep the paper field continuous and vertically scannable. Use
+monospaced or narrow receipt-like typography with clear line spacing and simple
+section separators. Preserve every exact string according to {{TEXT_HANDLING}};
+do not generate pseudo-text when deterministic placement is available.
+
+Use warm off-white thermal paper, charcoal or black print, slight horizontal
+banding, uneven heat coverage, and restrained paper-edge or roll cues. Set
+{{PAPER_INTENSITY}} without adding stains, sepia grime, glossy plastic, or a
+photographic prop. Keep density low to medium and let blank paper remain visible.
+The quote may be slightly heavier or larger, but it remains one field inside the
+record rather than a marketing headline.
+
+Keep the tone observational, lightly dry, and human. Do not add a second event,
+decorative story, invented joke, fake total, barcode, stamp, icon, logo, or
+watermark. Avoid dashboards, card stacks, vintage travel-poster decoration,
+coffee stains, film grain, glossy 3D, and generic nostalgia. {{FORBIDDEN}}
+```
+
+## Slot Guidance / 槽位说明
+
+- `RECORD_ANCHOR`: one supplied date, place, event, or state that makes the record identifiable.
+- `DETAIL_LINES`: short factual lines only; keep their order if the source gives one.
+- `QUOTE`: one verified short line. Leave blank when the source has no quote.
+- `FOOTER`: a supplied closing phrase or omit it; never invent a receipt total.
+- `TEXT_HANDLING`: use `deterministic typesetting` for exact strings or `short checked text only` when the runtime must render text.
+- `PAPER_INTENSITY`: choose `light`, `medium`, or `strong` thermal banding without changing the palette or layout.
+- `FORBIDDEN`: add topic-specific factual or visual mistakes without repeating the Pattern contract.
+
+- `RECORD_ANCHOR`：填写一个上游提供的日期、地点、事件或状态，让记录可识别；
+- `DETAIL_LINES`：只放短事实行，来源有顺序时保持顺序；
+- `QUOTE`：填写一句经过核对的短句，没有就留空；
+- `FOOTER`：使用来源提供的收束语，否则省略，不能凭空生成小票总计；
+- `TEXT_HANDLING`：准确字符串选择“确定性排版”，运行时必须绘字时才用“只生成经核对的短文字”；
+- `PAPER_INTENSITY`：选择 `light`、`medium` 或 `strong` 的热敏打印带，不改变配色或版式；
+- `FORBIDDEN`：补充主题特有的事实或视觉错误，不重复 Pattern 契约。
+
+## Fidelity Gate / 保真门
+
+- One continuous receipt silhouette is visible at feed size.
+- Field order remains readable before paper texture is inspected.
+- Exact facts are not changed, embellished, or replaced by plausible metrics.
+- The quote stays short and subordinate to the record contract.
+- Removing thermal adjectives still leaves the same vertical record method.
+
+## Failure Recovery / 失败恢复
+
+- **Icon substitution:** if a blank field becomes a weather, transport, work, or
+  status pictogram, collapse the brief to one record scaffold and forbid all
+  semantic icons. Keep the missing facts for deterministic typesetting.
+- **Event collision:** if the prompt names multiple visual events, choose one
+  record anchor and remove every secondary scene before retrying.
+- **Decorative padding:** if the receipt fills empty corridors with symbols or
+  invented metrics, restore the quiet-stub route and require continuous paper,
+  rules, separators, and blank fields only.
+
+## 失败恢复
+
+- **图标替代：** 如果空字段被天气、交通、工作或状态图标填充，把简报收窄为一张记录骨架，并禁止所有语义图标；缺失事实交给确定性排版。
+- **事件冲突：** 如果提示词同时写了多个视觉事件，只保留一个记录锚点，移除所有次要场景后再重试。
+- **装饰填充：** 如果小票用符号或虚构指标填满空走廊，恢复 Quiet Stub 路由，只允许连续纸面、规则、分隔线和空白字段。
+
+## Durable Iteration Notes / 已沉淀的迭代规则
+
+# Direct Iteration Notes / 直接迭代笔记
+
+This record absorbs the former thermal-receipt transfer check.
+
+这份记录吸收已删除的热敏小票迁移检查。
+
+## Stable Checks / 稳定检查
+
+- One continuous receipt or ticket silhouette owns the canvas. Identity anchor,
+  date/place, detail lines, quote, and footer follow a stable field order.
+- Every date, place, name, number, and measurement is traceable to the supplied
+  record. Missing fields are omitted; plausible filler is not allowed.
+- Warm off-white paper, dark print, slight horizontal banding, and uneven heat
+  coverage stay restrained. Sparse records remain sparse.
+- A short quote may create a pause inside the record but never becomes an
+  advertising headline. The output is not a dashboard, card stack, or prop photo.
+
+- 一条连续的小票或票据剪影占据画面。身份锚点、日期/地点、明细、引语和页脚保持稳定字段顺序。
+- 每个日期、地点、姓名、数字和测量值都必须能追溯到上游记录。缺失字段直接省略，不能用看似合理的内容填充。
+- 暖近白纸、深色打印、轻微横向带和不均匀受热保持克制，记录稀疏时允许版面稀疏。
+- 短引语可以在记录中形成停顿，但不能变成广告式大标题。成品不是仪表盘、卡片堆或道具照片。
+
+## Transfer Set / 迁移主题组
+
+The same record method must work for a travel failure, a personal adjustment,
+and an operational interruption. Removing thermal adjectives should still leave
+the same vertical record and field order.
+
+## Failure Recovery / 失败恢复
+
+Remove decorative barcodes, fake totals, invented timestamps, sepia grime,
+coffee stains, and padded lines. If factual discipline or the receipt silhouette
+repeatedly fails, delete the Pattern rather than keeping a nostalgic variant.
